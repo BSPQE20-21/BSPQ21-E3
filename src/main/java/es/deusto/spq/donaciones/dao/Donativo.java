@@ -1,5 +1,6 @@
 package es.deusto.spq.donaciones.dao;
 
+
 public class Donativo  {
 	private int valor;
 	private String fecha;
