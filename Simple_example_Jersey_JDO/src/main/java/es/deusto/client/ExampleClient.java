@@ -13,6 +13,19 @@ import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.MessageData;
 import es.deusto.serialization.UserData;
 
+// This class is the client side of the arquitecture. There is nothing else on this side but we are going to need:
+// GUI - windows
+// Add more patterns ? 
+// - Controlles 
+// - service locator 
+// We have this done for the other project EasyBooking it should not be hard to replicate
+
+
+// Methods we will need: 
+// register user (already done but we need more parameters)
+// login 
+// include expense
+
 public class ExampleClient {
 
 	private Client client;

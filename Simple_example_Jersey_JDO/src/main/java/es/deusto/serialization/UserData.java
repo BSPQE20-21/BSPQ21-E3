@@ -1,5 +1,7 @@
 package es.deusto.serialization;
 
+
+// same but with more detail
 public class UserData {
 
     private String login;

@@ -1,5 +1,7 @@
 package es.deusto.serialization;
 
+// expenses
+// more detail
 public class MessageData {
 
     private String message;

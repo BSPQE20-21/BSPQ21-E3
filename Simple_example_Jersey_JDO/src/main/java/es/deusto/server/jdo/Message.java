@@ -3,6 +3,9 @@ package es.deusto.server.jdo;
 import javax.jdo.annotations.PersistenceCapable;
 import java.util.Date;
 
+
+// this sould be our expenses 
+
 @PersistenceCapable
 public class Message {
 	User user=null;

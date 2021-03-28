@@ -8,6 +8,11 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.Persistent;
 import java.util.HashSet;
 
+
+// This class will be similar we just need to add more parameters because our user has more info 
+// the user has a collection of expenses so we will have a Hashset like this: 
+// Set<Expense> expenses = new HashSet<Expense>(); 
+
 @PersistenceCapable
 public class User {
 	@PrimaryKey

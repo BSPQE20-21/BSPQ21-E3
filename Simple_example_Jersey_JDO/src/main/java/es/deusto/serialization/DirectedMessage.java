@@ -1,5 +1,7 @@
 package es.deusto.serialization;
 
+// the relationship between the user and the message or in our case user and expenses
+
 public class DirectedMessage {
 
     private UserData userData;

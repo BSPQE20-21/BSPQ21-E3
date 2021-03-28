@@ -20,6 +20,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+
+// This is the server part. 
+
 @Path("/server")
 @Produces(MediaType.APPLICATION_JSON)
 public class Server {
@@ -33,7 +36,7 @@ public class Server {
 		this.pm = pmf.getPersistenceManager();
 		this.tx = pm.currentTransaction();
 	}
-
+	// this part is making a query to get all the messages from a certain user
 	@POST
 	@Path("/sayMessage")
 	public Response sayMessage(DirectedMessage directedMessage) {
@@ -69,7 +72,7 @@ public class Server {
 			return Response.status(Status.BAD_REQUEST).entity("Login details supplied for message delivery are not correct").build();
 		}
 	}
-	
+	// this part is registring an user into the DB
 	@POST
 	@Path("/register")
 	public Response registerUser(UserData userData) {
