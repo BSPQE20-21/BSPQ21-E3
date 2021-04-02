@@ -18,24 +18,29 @@ public class User {
 	@PrimaryKey
 	String login=null;
 	String password=null;
+	// Long or string ? 
+	long cardNumber;
+	int age;   
 	
 	@Persistent(mappedBy="user", dependentElement="true")
 	@Join
-	Set<Message> messages = new HashSet<Message>();
+	Set<Expense> expenses = new HashSet<Expense>();
 	
 	
 	
-	public User(String login, String password) {
+	public User(String login, String password, long cardNumber, int age) {
 		this.login = login;
 		this.password = password;
+		this.cardNumber = cardNumber; 
+		this.age = age;
 	}
-	
-	public void addMessage(Message message) {
-		messages.add(message);
+	// TODO review this 
+	public void addMessage(Expense expenses) {
+		expenses.add(expense);
 	}
 
-	public void removeMessage(Message message) {
-		messages.remove(message);
+	public void removeMessage(Expense expenses) {
+		expenses.remove(expense);
 	}
 
 	public String getLogin() {
@@ -49,15 +54,27 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public int getAge(){
+		return this.age; 
+	}
+	public void setAge(int age){
+		this.age = age; 
+	}
+	public long getCardNumber(){
+		return this.cardNumber; 
+	}
+	public void setCardNumber(long cardNumber){
+		this.cardNumber = cardNumber; 
+	}
 	
-	 public Set<Message> getMessages() {return this.messages;}
+	 public Set<Expense> getMessages() {return this.expenses;}
 	 
 	 public String toString() {
-		StringBuffer messagesStr = new StringBuffer();
-		for (Message message: this.messages) {
-			messagesStr.append(message.toString() + " - ");
+		StringBuffer expensesStr = new StringBuffer();
+		for (Expense ex: this.expenses) {
+			expensesStr.append(ex.toString() + " - ");
 		}
-        return "User: login --> " + this.login + ", password -->  " + this.password + ", messages --> [" + messagesStr + "]";
+        return "User: login --> " + this.login + ", password -->  " + this.password + ", expenses --> [" + expensesStr + "]";
     }
 }
 

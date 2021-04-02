@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+// I am not sure if we need it 
 public class LoginWindow extends JFrame implements ActionListener {
 
     JPanel panel;

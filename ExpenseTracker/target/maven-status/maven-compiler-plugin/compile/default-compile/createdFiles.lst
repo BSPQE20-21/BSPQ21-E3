@@ -1,0 +1,9 @@
+es/deusto/server/jdo/User.class
+es/deusto/server/Server.class
+es/deusto/client/LoginWindow.class
+es/deusto/client/ExampleClient.class
+es/deusto/serialization/DirectedMessage.class
+es/deusto/server/jdo/Message.class
+es/deusto/serialization/UserData.class
+es/deusto/serialization/MessageData.class
+es/deusto/server/jdo/Main.class
