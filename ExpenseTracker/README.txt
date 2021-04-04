@@ -1,3 +1,6 @@
+STEPS 
+=========
+
 lunch MySQL 
 
 mvn clean compile
