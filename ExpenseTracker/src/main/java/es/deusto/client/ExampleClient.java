@@ -22,6 +22,7 @@ import es.deusto.server.jdo.Expense;
 // - service locator 
 // We have this done for the other project EasyBooking it should not be hard to replicate
 
+
 // Methods we will need: 
 // register user (already done but we need more parameters)
 // login 
