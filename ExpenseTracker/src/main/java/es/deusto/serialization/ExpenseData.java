@@ -10,6 +10,7 @@ public class ExpenseData {
     private double amount;
     private Category category;
 
+
     public ExpenseData() {
 
     }

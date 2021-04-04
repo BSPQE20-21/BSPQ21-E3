@@ -31,7 +31,7 @@ public class Main
         {	
             tx.begin();
             System.out.println("Persisting users");
-			User dipina = new User("dipina", "dipina", "1111111111111111", 32);
+			User dipina = new User("dipina", "dipina", "1111111111111111", 32,1000);
 			Expense expense1 = new Expense("This is a test", 0.0, Category.OTHERS);
 			dipina.getMessages().add(expense1);
 			pm.makePersistent(dipina);					 

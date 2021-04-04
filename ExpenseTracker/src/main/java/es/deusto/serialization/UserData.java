@@ -8,6 +8,7 @@ public class UserData {
     private String password;
     private String cardNumber;
     private int age;
+    private double expenseLimit; 
     
     public UserData() {
 
@@ -45,7 +46,16 @@ public class UserData {
         this.password = password;
     }
 
+    public double getExpenseLimit() {
+        return this.expenseLimit;
+    }
+
+    public void setExpenseLimit(double expenseLimit){
+        this.expenseLimit = expenseLimit;
+    }
+
+
     public String toString() {
-        return "[login=" + login + ", password=" + password + "]";
+        return "[login=" + login + ", password=" + password + ", expense limit=" + expenseLimit + ", age=" + age+ ", card Number=" + cardNumber+" ]";
     }
 }

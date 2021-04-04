@@ -96,7 +96,7 @@ public class Server {
 				System.out.println("Password set user: " + user);
 			} else {
 				System.out.println("Creating user: " + user);
-				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(), userData.getAge());
+				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(), userData.getAge(),userData.getExpenseLimit());
 				pm.makePersistent(user);					 
 				System.out.println("User created: " + user);
 			}
