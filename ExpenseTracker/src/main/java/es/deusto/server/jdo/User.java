@@ -18,8 +18,7 @@ public class User {
 	@PrimaryKey
 	String login=null;
 	String password=null;
-	// Long or string ? 
-	long cardNumber;
+	String cardNumber=null;
 	int age;   
 	
 	@Persistent(mappedBy="user", dependentElement="true")
@@ -28,18 +27,18 @@ public class User {
 	
 	
 	
-	public User(String login, String password, long cardNumber, int age) {
+	public User(String login, String password, String cardNumber, int age) {
 		this.login = login;
 		this.password = password;
 		this.cardNumber = cardNumber; 
 		this.age = age;
 	}
 	// TODO review this 
-	public void addMessage(Expense expenses) {
+	public void addExpense(Expense expense) {
 		expenses.add(expense);
 	}
 
-	public void removeMessage(Expense expenses) {
+	public void removeExpense(Expense expense) {
 		expenses.remove(expense);
 	}
 
@@ -60,10 +59,10 @@ public class User {
 	public void setAge(int age){
 		this.age = age; 
 	}
-	public long getCardNumber(){
+	public String getCardNumber(){
 		return this.cardNumber; 
 	}
-	public void setCardNumber(long cardNumber){
+	public void setCardNumber(String cardNumber){
 		this.cardNumber = cardNumber; 
 	}
 	

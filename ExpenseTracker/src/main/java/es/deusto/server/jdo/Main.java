@@ -31,14 +31,12 @@ public class Main
         {	
             tx.begin();
             System.out.println("Persisting users");
-			User dipina = new User("dipina", "dipina");
-			Message message1 = new Message("This is a test message!");
-			Message message2 = new Message("This is a SECOND test message!");
-			dipina.getMessages().add(message1);
-			dipina.getMessages().add(message2);
+			User dipina = new User("dipina", "dipina", "1111111111111111", 32);
+			Expense expense1 = new Expense("This is a test", 0.0, Category.OTHERS);
+			dipina.getMessages().add(expense1);
 			pm.makePersistent(dipina);					 
             tx.commit();
-            System.out.println("User and his messages have been persisted");
+            System.out.println("User and his expense have been persisted");
         }
         finally
         {
@@ -59,8 +57,8 @@ public class Main
         {
             tx.begin();
             System.out.println("Retrieving Extent for Messages");
-            Extent<Message> e = pm.getExtent(Message.class, true);
-            Iterator<Message> iter = e.iterator();
+            Extent<Expense> e = pm.getExtent(Expense.class, true);
+            Iterator<Expense> iter = e.iterator();
             while (iter.hasNext())
             {
                 Object obj = iter.next();

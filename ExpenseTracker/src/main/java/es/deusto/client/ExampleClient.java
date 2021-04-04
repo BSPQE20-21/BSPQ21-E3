@@ -10,8 +10,10 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import es.deusto.serialization.DirectedMessage;
-import es.deusto.serialization.MessageData;
+import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
+import es.deusto.server.jdo.Category;
+import es.deusto.server.jdo.Expense;
 
 // This class is the client side of the arquitecture. There is nothing else on this side but we are going to need:
 // GUI - windows
@@ -51,7 +53,31 @@ public class ExampleClient {
 		}
 	}
 
-	public void sayMessage(String login, String password, String message) {
+	/*
+	 * public void sayMessage(String login, String password, String message) {
+	 * WebTarget sayHelloWebTarget = webTarget.path("sayMessage");
+	 * Invocation.Builder invocationBuilder =
+	 * sayHelloWebTarget.request(MediaType.APPLICATION_JSON);
+	 * 
+	 * DirectedMessage directedMessage = new DirectedMessage(); UserData userData =
+	 * new UserData(); userData.setLogin(login); userData.setPassword(password);
+	 * 
+	 * directedMessage.setUserData(userData);
+	 * 
+	 * MessageData messageData = new MessageData(); messageData.setMessage(message);
+	 * directedMessage.setMessageData(messageData);
+	 * 
+	 * Response response = invocationBuilder.post(Entity.entity(directedMessage,
+	 * MediaType.APPLICATION_JSON)); if (response.getStatus() !=
+	 * Status.OK.getStatusCode()) {
+	 * System.out.println("Error connecting with the server. Code: " +
+	 * response.getStatus()); } else { String responseMessage =
+	 * response.readEntity(String.class);
+	 * System.out.println("* Message coming from the server: '" + responseMessage +
+	 * "'"); } }
+	 */
+	
+	public void sayMessage(String login, String password, Expense expense) {
 		WebTarget sayHelloWebTarget = webTarget.path("sayMessage");
 		Invocation.Builder invocationBuilder = sayHelloWebTarget.request(MediaType.APPLICATION_JSON);
 
@@ -62,9 +88,12 @@ public class ExampleClient {
 
 		directedMessage.setUserData(userData);
 
-		MessageData messageData = new MessageData();
-		messageData.setMessage(message);
-		directedMessage.setMessageData(messageData);
+		ExpenseData expenseData = new ExpenseData();
+		expenseData.setText(expense.getText());
+		expenseData.setAmount(expense.getAmount());
+		expenseData.setCategory(expense.getCategory());
+		
+		directedMessage.setExpenseData(expenseData);
 
 		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
@@ -86,6 +115,7 @@ public class ExampleClient {
 
 		ExampleClient exampleClient = new ExampleClient(hostname, port);
 		exampleClient.registerUser("dipina", "dipina");
-		exampleClient.sayMessage("dipina", "dipina", "This is a test!...");
+		Expense expense = new Expense("This is a test!...", 0.0, Category.OTHERS);
+		exampleClient.sayMessage("dipina", "dipina", expense);
 	}
 }

@@ -7,9 +7,9 @@ import javax.jdo.JDOHelper;
 import javax.jdo.Transaction;
 
 import es.deusto.server.jdo.User;
-import es.deusto.server.jdo.Message;
+import es.deusto.server.jdo.Expense;
 import es.deusto.serialization.DirectedMessage;
-import es.deusto.serialization.MessageData;
+import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
 
 import javax.ws.rs.GET;
@@ -36,23 +36,23 @@ public class Server {
 		this.pm = pmf.getPersistenceManager();
 		this.tx = pm.currentTransaction();
 	}
-	// this part is making a query to get all the messages from a certain user
+	// this part is making a query to get all the expenses from a certain user
 	@POST
 	@Path("/sayMessage")
-	public Response sayMessage(DirectedMessage directedMessage) {
+	public Response sayMessage(DirectedMessage directedExpense) {
 		User user = null;
 		try{
 			tx.begin();
 			System.out.println("Creating query ...");
 			
-			Query<User> q = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE login == \"" + directedMessage.getUserData().getLogin() + "\" &&  password == \"" + directedMessage.getUserData().getPassword() + "\"");
+			Query<User> q = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE login == \"" + directedExpense.getUserData().getLogin() + "\" &&  password == \"" + directedExpense.getUserData().getPassword() + "\"");
 			q.setUnique(true);
 			user = (User)q.execute();
 			
 			System.out.println("User retrieved: " + user);
 			if (user != null)  {
-				Message message = new Message(directedMessage.getMessageData().getMessage());
-				user.getMessages().add(message);
+				Expense expense = new Expense(directedExpense.getExpenseData().getText(), directedExpense.getExpenseData().getAmount(), directedExpense.getExpenseData().getCategory());
+				user.getMessages().add(expense);
 				pm.makePersistent(user);					 
 			}
 			tx.commit();
@@ -65,9 +65,12 @@ public class Server {
 		if (user != null) {
 			cont++;
 			System.out.println(" * Client number: " + cont);
-			MessageData messageData = new MessageData();
-			messageData.setMessage(directedMessage.getMessageData().getMessage());
-			return Response.ok(messageData).build();
+			ExpenseData expenseData = new ExpenseData();
+			expenseData.setText(directedExpense.getExpenseData().getText());
+			expenseData.setAmount(directedExpense.getExpenseData().getAmount());
+			expenseData.setCategory(directedExpense.getExpenseData().getCategory());
+			
+			return Response.ok(expenseData).build();
 		} else {
 			return Response.status(Status.BAD_REQUEST).entity("Login details supplied for message delivery are not correct").build();
 		}
@@ -93,7 +96,7 @@ public class Server {
 				System.out.println("Password set user: " + user);
 			} else {
 				System.out.println("Creating user: " + user);
-				user = new User(userData.getLogin(), userData.getPassword());
+				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(), userData.getAge());
 				pm.makePersistent(user);					 
 				System.out.println("User created: " + user);
 			}

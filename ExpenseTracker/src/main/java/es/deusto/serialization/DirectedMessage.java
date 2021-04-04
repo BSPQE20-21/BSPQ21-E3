@@ -5,7 +5,7 @@ package es.deusto.serialization;
 public class DirectedMessage {
 
     private UserData userData;
-    private MessageData messageData;
+    private ExpenseData expenseData;
 
     public DirectedMessage() {
 
@@ -19,11 +19,11 @@ public class DirectedMessage {
         return this.userData;
     }
 
-    public void setMessageData(MessageData messageData) {
-        this.messageData = messageData;
+    public void setExpenseData(ExpenseData expenseData) {
+        this.expenseData = expenseData;
     }
 
-    public MessageData getMessageData() {
-        return this.messageData;
+    public ExpenseData getExpenseData() {
+        return this.expenseData;
     }
 }

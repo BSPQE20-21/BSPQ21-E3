@@ -6,10 +6,28 @@ public class UserData {
 
     private String login;
     private String password;
-
+    private String cardNumber;
+    private int age;
+    
     public UserData() {
 
     }
+
+    public String getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
     public String getLogin() {
         return this.login;
