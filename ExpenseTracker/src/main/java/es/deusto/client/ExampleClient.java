@@ -166,6 +166,33 @@ public class ExampleClient implements ActionListener, Runnable  {
 			System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
 	}
+	
+	public void storeExpense(String login, String password, Expense expense) {
+		WebTarget storeExpenseWebTarget = webTarget.path("register");
+		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
+		
+		DirectedMessage directedMessage = new DirectedMessage();
+		UserData userData = new UserData();
+		userData.setLogin(login);
+		userData.setPassword(password);
+
+		directedMessage.setUserData(userData);
+
+		ExpenseData expenseData = new ExpenseData();
+		expenseData.setText(expense.getText());
+		expenseData.setAmount(expense.getAmount());
+		expenseData.setCategory(expense.getCategory());
+		
+		directedMessage.setExpenseData(expenseData);
+
+		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
+		if (response.getStatus() != Status.OK.getStatusCode()) {
+			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+		} else {
+			String responseMessage = response.readEntity(String.class);
+			System.out.println("* Message coming from the server: '" + responseMessage + "'");
+		}
+	}
 
 	public static void main(String[] args) {
 		if (args.length != 2) {
