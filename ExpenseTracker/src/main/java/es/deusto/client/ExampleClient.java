@@ -204,7 +204,7 @@ public class ExampleClient implements ActionListener, Runnable  {
 		String port = args[1];
 
 		ExampleClient exampleClient = new ExampleClient(hostname, port);
-		exampleClient.registerUser("dipina", "dipina", "1111111111111111", 32,1000);
+		exampleClient.registerUser("dipina", "dipina", "1111111111111111", 32, 1000);
 		Expense expense = new Expense("This is a test!...", 0.0, Category.OTHERS);
 		exampleClient.sayMessage("dipina", "dipina", expense);
 	}
