@@ -51,21 +51,28 @@ public class ExampleClient implements ActionListener, Runnable  {
 	
 		JPanel registerPanel = new JPanel();
 		registerPanel.setLayout(new BoxLayout(registerPanel, BoxLayout.Y_AXIS));
+		// EMAIL 
 		registerPanel.add(new JLabel("Email: "));
 		this.emailField = new JTextField(20);
 		registerPanel.add(this.emailField);
+		// PASSWORD 
 		registerPanel.add(new JLabel("Password: "));
 		this.passwordField = new JPasswordField(10);
 		registerPanel.add(this.passwordField);
+		// CARD NUMBER
 		registerPanel.add(new JLabel("Card Number: "));
 		this.carNumberField = new JTextField(10);
 		registerPanel.add(this.carNumberField);
+		// AGE
 		registerPanel.add(new JLabel("Age: "));
 		this.ageField = new JTextField(10);
 		registerPanel.add(this.ageField);
+		// EXPENSE LIMIT
 		registerPanel.add(new JLabel("Expense Limit: ")); 
 		this.expenseLimitField = new JTextField(10);
 		registerPanel.add(this.expenseLimitField);
+
+
 		this.buttonRegister = new JButton("Register");
 		registerPanel.add(this.buttonRegister); 
 		this.buttonEnd = new JButton("End");
@@ -73,6 +80,8 @@ public class ExampleClient implements ActionListener, Runnable  {
 		buttonRegister.addActionListener(this);
 
 		this.frame = new JFrame("Registration"); 
+		this.frame.setTitle("REGISTRATION");
+
 		this.frame.setSize(600,500);
 		this.frame.getContentPane().add(registerPanel,"North"); 
 
