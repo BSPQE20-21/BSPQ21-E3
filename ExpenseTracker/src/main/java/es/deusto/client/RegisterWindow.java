@@ -81,7 +81,7 @@ public class RegisterWindow extends JFrame implements ActionListener {
 		
 		if (target == this.buttonRegister) {
 			try {
-				System.out.println("entra");
+				
 				String login = this.emailField.getText(); 
 				String password = String.valueOf(this.passwordField.getPassword()); 
 				String cardNumber = this.carNumberField.getText(); 
@@ -96,7 +96,7 @@ public class RegisterWindow extends JFrame implements ActionListener {
 				userData.setExpenseLimit(expenseLimit);
 				
 				client.registerUser(userData);
-				setVisible(false);
+				this.frame.setVisible(false);
 				
 				AddExpenseWindow aew = new AddExpenseWindow(userData);
 				aew.setVisible(true);
