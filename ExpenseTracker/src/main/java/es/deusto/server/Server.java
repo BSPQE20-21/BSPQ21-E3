@@ -112,6 +112,33 @@ public class Server {
       
 		}
 	}
+	
+	@POST
+	@Path("/store")
+	public Response storeExpense(DirectedMessage directedMessage) {
+		try
+        {	
+            tx.begin();
+            
+			Expense expense = null;
+		
+			System.out.println("Storing expense: " + expense);
+			expense = new Expense(directedMessage.getExpenseData().getText(), directedMessage.getExpenseData().getAmount(), directedMessage.getExpenseData().getCategory());
+			pm.makePersistent(expense);					 
+			System.out.println("Expense stored: " + expense);
+			
+			tx.commit();
+			return Response.ok().build();
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+      
+		}
+	}
 
 	@GET
 	@Path("/hello")

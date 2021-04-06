@@ -36,7 +36,7 @@ import es.deusto.server.jdo.Expense;
 public class ExampleClient implements ActionListener, Runnable  {
 	
 	private JFrame frame; 
-	private JButton buttonRegister; 
+	private JButton buttonRegister, buttonEnd; 
 	private JTextField emailField, carNumberField, ageField, expenseLimitField;  
 	private JPasswordField passwordField; 
 	private Thread thread;
@@ -68,6 +68,9 @@ public class ExampleClient implements ActionListener, Runnable  {
 		registerPanel.add(this.expenseLimitField);
 		this.buttonRegister = new JButton("Register");
 		registerPanel.add(this.buttonRegister); 
+		this.buttonEnd = new JButton("End");
+		registerPanel.add(this.buttonEnd); 
+		buttonRegister.addActionListener(this);
 
 		this.frame = new JFrame("Registration"); 
 		this.frame.setSize(600,500);
@@ -85,8 +88,13 @@ public class ExampleClient implements ActionListener, Runnable  {
 
 	public void actionPerformed(ActionEvent e) {
 		JButton target = (JButton) e.getSource();
+		if (target == this.buttonEnd) {
+			this.stop();
+			System.exit(0);
+		}
 		if (target == this.buttonRegister) {
 			try {
+				System.out.println("entra");
 				String login = this.emailField.getText(); 
 				String password = String.valueOf(this.passwordField.getPassword()); 
 				String cardNumber = this.carNumberField.getText(); 
@@ -166,6 +174,33 @@ public class ExampleClient implements ActionListener, Runnable  {
 			System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
 	}
+	
+	public void storeExpense(String login, String password, Expense expense) {
+		WebTarget storeExpenseWebTarget = webTarget.path("register");
+		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
+		
+		DirectedMessage directedMessage = new DirectedMessage();
+		UserData userData = new UserData();
+		userData.setLogin(login);
+		userData.setPassword(password);
+
+		directedMessage.setUserData(userData);
+
+		ExpenseData expenseData = new ExpenseData();
+		expenseData.setText(expense.getText());
+		expenseData.setAmount(expense.getAmount());
+		expenseData.setCategory(expense.getCategory());
+		
+		directedMessage.setExpenseData(expenseData);
+
+		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
+		if (response.getStatus() != Status.OK.getStatusCode()) {
+			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+		} else {
+			String responseMessage = response.readEntity(String.class);
+			System.out.println("* Message coming from the server: '" + responseMessage + "'");
+		}
+	}
 
 	public static void main(String[] args) {
 		if (args.length != 2) {
@@ -176,10 +211,14 @@ public class ExampleClient implements ActionListener, Runnable  {
 		String hostname = args[0];
 		String port = args[1];
 
-		ExampleClient exampleClient = new ExampleClient(hostname, port);
+		
+		ExampleClient client = new ExampleClient(hostname, port);
+
+		/*
 		exampleClient.registerUser("dipina", "dipina", "1111111111111111", 32,1000);
 		Expense expense = new Expense("This is a test!...", 0.0, Category.OTHERS);
 		exampleClient.sayMessage("dipina", "dipina", expense);
+		*/
 	}
 
 	@Override
