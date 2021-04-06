@@ -15,6 +15,8 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 
+import es.deusto.serialization.UserData;
+
 public class RegisterWindow extends JFrame implements ActionListener {
 
 	private JFrame frame; 
@@ -85,7 +87,20 @@ public class RegisterWindow extends JFrame implements ActionListener {
 				String cardNumber = this.carNumberField.getText(); 
 				int age = Integer.parseInt(this.ageField.getText());
 				double expenseLimit = Double.parseDouble(this.expenseLimitField.getText()); 
-				client.registerUser(login, password, cardNumber, age, expenseLimit);
+				
+				UserData userData = new UserData();
+				userData.setLogin(login);
+				userData.setPassword(password);
+				userData.setCardNumber(cardNumber);
+				userData.setAge(age); 
+				userData.setExpenseLimit(expenseLimit);
+				
+				client.registerUser(userData);
+				setVisible(false);
+				
+				AddExpenseWindow aew = new AddExpenseWindow(userData);
+				aew.setVisible(true);
+				
 			} catch (NumberFormatException exc) {
 				// TODO 
 			}

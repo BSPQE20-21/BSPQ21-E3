@@ -47,16 +47,11 @@ public class ExampleClient {
 	}
 
 	
-	public void registerUser(String login, String password, String cardNumber, int age, double expenseLimit) {
+	public void registerUser(UserData userData) {
 		WebTarget registerUserWebTarget = webTarget.path("register");
 		Invocation.Builder invocationBuilder = registerUserWebTarget.request(MediaType.APPLICATION_JSON);
 		
-		UserData userData = new UserData();
-		userData.setLogin(login);
-		userData.setPassword(password);
-		userData.setCardNumber(cardNumber);
-		userData.setAge(age); 
-		userData.setExpenseLimit(expenseLimit);
+	
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			System.out.println("Error connecting with the server. Code: " + response.getStatus());
