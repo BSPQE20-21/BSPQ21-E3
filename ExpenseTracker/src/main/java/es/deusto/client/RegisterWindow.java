@@ -102,7 +102,7 @@ public class RegisterWindow extends JFrame implements ActionListener {
 				client.registerUser(userData);
 				this.frame.setVisible(false);
 				
-				AddExpenseWindow aew = new AddExpenseWindow(userData);
+				AddExpenseWindow aew = new AddExpenseWindow(userData, client);
 				//aew.setVisible(true);
 				
 			} catch (NumberFormatException exc) {

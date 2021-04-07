@@ -111,7 +111,7 @@ public class ExampleClient {
 		}
 	}
 	
-	public void storeExpense(UserData userData, String text, double amount, Category category) {
+	public void storeExpense(UserData userData, ExpenseData expenseData) {
 		WebTarget storeExpenseWebTarget = webTarget.path("store");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
 		
@@ -119,11 +119,6 @@ public class ExampleClient {
 
 		directedMessage.setUserData(userData);
 
-		ExpenseData expenseData = new ExpenseData();
-		expenseData.setText(text);
-		expenseData.setAmount(amount);
-		expenseData.setCategory(category);
-		
 		directedMessage.setExpenseData(expenseData);
 
 		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));

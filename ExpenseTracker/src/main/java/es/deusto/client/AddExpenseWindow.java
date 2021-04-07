@@ -12,7 +12,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
+import es.deusto.server.jdo.Category;
 
 public class AddExpenseWindow extends JFrame implements ActionListener {
 	
@@ -23,9 +25,10 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 	
 	JButton submit, cancel;
 	JLabel expenseName, expenseAmount, expenseCategory;
-	JComboBox<String> comboCategory;
+	JComboBox<Category> comboCategory;
 	JTextField name_text, amount_text;
 
+	private ExampleClient client;
 	
 	public void switchPanel(JPanel current, JPanel next) {
 		current.setVisible(false);
@@ -35,7 +38,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		
 	}
 	
-	public AddExpenseWindow(UserData userData) {
+	public AddExpenseWindow(UserData userData, ExampleClient client) {
 		
 		JPanel panelAddExpense;
 		panelAddExpense = new JPanel(new GridLayout(2, 1));
@@ -52,13 +55,12 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		panelAddExpense.add(amount_text);
 		
 		expenseCategory = new JLabel("Category: ");
-		comboCategory = new JComboBox<String>();
-		comboCategory.addItem("Food");
-		comboCategory.addItem("Clothes");
-		comboCategory.addItem("Entertainment");
-		comboCategory.addItem("Gas");
-		comboCategory.addItem("Healthcare");
-		comboCategory.addItem("Others");
+		comboCategory = new JComboBox<Category>();
+		
+		for (Category c : Category.values()) {
+			comboCategory.addItem(c);
+		}
+		
 		panelAddExpense.add(expenseCategory);
 		panelAddExpense.add(comboCategory);
 		
@@ -74,6 +76,16 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
+				String name = name_text.getText();
+				double amount = Double.parseDouble(amount_text.getText());
+				Category category = (Category) comboCategory.getSelectedItem();
+				
+				ExpenseData expenseData = new ExpenseData();
+				expenseData.setText(name);
+				expenseData.setAmount(amount);
+				expenseData.setCategory(category);
+				
+				client.storeExpense(userData, expenseData);
 				//switchPanel(panelAddExpense, NEXTPANEL);
 				
 			}
