@@ -65,7 +65,7 @@ public class LoginWindow extends JFrame implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
 				RegisterWindow rw = new RegisterWindow(client);
-				rw.setVisible(true);
+				//rw.setVisible(true);
 				
 			}
 		});
