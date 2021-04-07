@@ -38,12 +38,12 @@ public class ExampleClient {
 
 	private Client client;
 	private WebTarget webTarget;
-	private RegisterWindow rw;
+	private LoginWindow lw;
 
 	public ExampleClient(String hostname, String port) {
 		client = ClientBuilder.newClient();
 		webTarget = client.target(String.format("http://%s:%s/rest/server", hostname, port));
-		rw = new RegisterWindow(this);
+		lw = new LoginWindow(this);
 	}
 
 	
