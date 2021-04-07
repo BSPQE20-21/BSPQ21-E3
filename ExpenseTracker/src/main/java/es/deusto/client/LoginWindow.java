@@ -20,8 +20,12 @@ import javax.swing.JTextField;
 // I am not sure if we need it 
 public class LoginWindow extends JFrame implements ActionListener {
 
-    JPanel panel;
-    JLabel user_label, password_label;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JPanel panel;
+	JLabel user_label, password_label, message;
     JTextField userName_text;
     JPasswordField password_text;
     JButton login, register;
@@ -40,7 +44,7 @@ public class LoginWindow extends JFrame implements ActionListener {
         password_label.setText("Password:");
         password_text = new JPasswordField(10);
 
-        panel = new JPanel();
+        panel = new JPanel(new GridLayout(3,1));
         
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
