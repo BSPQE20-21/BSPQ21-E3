@@ -38,7 +38,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 	public AddExpenseWindow(UserData userData) {
 		
 		JPanel panelAddExpense;
-		panelAddExpense = new JPanel(new GridLayout(3, 1));
+		panelAddExpense = new JPanel(new GridLayout(2, 1));
 		
 		//Expense details
 		expenseName = new JLabel("Name: ");
@@ -60,8 +60,12 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		comboCategory.addItem("Healthcare");
 		comboCategory.addItem("Others");
 		panelAddExpense.add(expenseCategory);
-		panelAddExpense.add(name_text);
+		panelAddExpense.add(comboCategory);
 		
+
+
+		JPanel buttonJPanel;
+		buttonJPanel = new JPanel(new GridLayout(3, 1));
 		//Add/cancel buttons
 		JButton add = new JButton("Add");
 		
@@ -87,11 +91,16 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 			}
 		});
 		
-		
+		buttonJPanel.add(add); 
+		buttonJPanel.add(cancel);
+
+
+		getContentPane().add(panelAddExpense,"North"); 
+		getContentPane().add(buttonJPanel,"South"); 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Please Login Here !");
 		setSize(300, 100);
-		//setVisible(true);
+		setVisible(true);
 	}
 
 	@Override
