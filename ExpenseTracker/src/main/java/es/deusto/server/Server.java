@@ -38,7 +38,7 @@ public class Server {
 	}
 	// this part is making a query to get all the expenses from a certain user
 	@POST
-	@Path("/sayMessage")
+	@Path("/store")
 	public Response sayMessage(DirectedMessage directedExpense) {
 		User user = null;
 		try{
@@ -112,7 +112,7 @@ public class Server {
       
 		}
 	}
-	
+	/*
 	@POST
 	@Path("/store")
 	public Response storeExpense(DirectedMessage directedMessage) {
@@ -139,7 +139,7 @@ public class Server {
       
 		}
 	}
-
+	*/
 	@GET
 	@Path("/hello")
 	@Produces(MediaType.TEXT_PLAIN)
