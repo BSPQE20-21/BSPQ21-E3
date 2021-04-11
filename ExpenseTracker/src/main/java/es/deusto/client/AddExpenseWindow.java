@@ -19,7 +19,10 @@ import es.deusto.server.jdo.Category;
 
 public class AddExpenseWindow extends JFrame implements ActionListener {
 	
-	/**
+	/**This window les the user store data about expenses/purchases
+	 * expenseName = description of the purchase
+	 * expenseAmount = the money spended
+	 * expenseCategory (comboBox that gets the data from an Enum)
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -66,8 +69,6 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		panelAddExpense.add(expenseCategory);
 		panelAddExpense.add(comboCategory);
 		
-
-
 		JPanel buttonJPanel;
 		buttonJPanel = new JPanel();
 		buttonJPanel.setLayout(new BoxLayout(buttonJPanel, BoxLayout.Y_AXIS));
@@ -94,9 +95,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 			}
 		});
 		
-		
 		JButton cancel = new JButton("Cancel");
-		
 		cancel.addActionListener(new ActionListener() {
 			
 			@Override

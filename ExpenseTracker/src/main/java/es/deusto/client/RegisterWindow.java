@@ -19,7 +19,11 @@ import es.deusto.serialization.UserData;
 
 public class RegisterWindow extends JFrame implements ActionListener {
 
-	/**
+	/** This window allows users to introduce all the data for their registration
+	 * emailField
+	 * carNumberField
+	 * ageField
+	 * expenseLimitField
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
