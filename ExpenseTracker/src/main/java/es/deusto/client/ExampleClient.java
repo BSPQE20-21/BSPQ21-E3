@@ -17,6 +17,7 @@ import javax.ws.rs.core.Response.Status;
 import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
+import es.deusto.serialization.LoginData;
 import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
 import es.deusto.server.jdo.User;
@@ -60,29 +61,6 @@ public class ExampleClient {
 		}
 	}
 
-	/*
-	 * public void sayMessage(String login, String password, String message) {
-	 * WebTarget sayHelloWebTarget = webTarget.path("sayMessage");
-	 * Invocation.Builder invocationBuilder =
-	 * sayHelloWebTarget.request(MediaType.APPLICATION_JSON);
-	 * 
-	 * DirectedMessage directedMessage = new DirectedMessage(); UserData userData =
-	 * new UserData(); userData.setLogin(login); userData.setPassword(password);
-	 * 
-	 * directedMessage.setUserData(userData);
-	 * 
-	 * MessageData messageData = new MessageData(); messageData.setMessage(message);
-	 * directedMessage.setMessageData(messageData);
-	 * 
-	 * Response response = invocationBuilder.post(Entity.entity(directedMessage,
-	 * MediaType.APPLICATION_JSON)); if (response.getStatus() !=
-	 * Status.OK.getStatusCode()) {
-	 * System.out.println("Error connecting with the server. Code: " +
-	 * response.getStatus()); } else { String responseMessage =
-	 * response.readEntity(String.class);
-	 * System.out.println("* Message coming from the server: '" + responseMessage +
-	 * "'"); } }
-	 */
 	
 	public void sayMessage(String login, String password, Expense expense) {
 		WebTarget sayHelloWebTarget = webTarget.path("sayMessage");
@@ -128,6 +106,31 @@ public class ExampleClient {
 			String responseMessage = response.readEntity(String.class);
 			System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
+	}
+
+	public UserData validateUser(String login, String password){
+		WebTarget storeExpenseWebTarget = webTarget.path("validate");
+		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
+		
+
+		LoginData loginData = new LoginData(); 
+		loginData.setLogin(login); 
+		loginData.setPassword(password); 
+		Response response = invocationBuilder.post(Entity.entity(loginData, MediaType.APPLICATION_JSON));
+		UserData userData = response.readEntity(UserData.class);
+		if (response.getStatus() != Status.OK.getStatusCode()) {
+			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+		} else {
+			
+			
+		}
+		System.out.println(userData);
+		
+		
+		return userData; 
+		
+	
+
 	}
 
 	public static void main(String[] args) {

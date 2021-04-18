@@ -11,6 +11,7 @@ import es.deusto.server.jdo.Expense;
 import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
+import es.deusto.serialization.LoginData;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -36,10 +37,9 @@ public class Server {
 		this.pm = pmf.getPersistenceManager();
 		this.tx = pm.currentTransaction();
 	}
-	// this part is making a query to get all the expenses from a certain user
 	@POST
 	@Path("/store")
-	public Response sayMessage(DirectedMessage directedExpense) {
+	public Response storeExpense(DirectedMessage directedExpense) {
 		User user = null;
 		try{
 			tx.begin();
@@ -77,6 +77,52 @@ public class Server {
 	}
 	// this part is registring an user into the DB
 	@POST
+	@Path("/validate")
+	@Produces({MediaType.APPLICATION_JSON})
+	 public Response validateUser(LoginData loginData) {
+		try
+        {	
+            tx.begin();
+			User user = null;
+			UserData userData = new UserData(); 
+			try {
+				user = pm.getObjectById(User.class, loginData.getLogin());
+			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
+				System.out.println("Exception launched: " + jonfe.getMessage());
+			}
+			System.out.println("User: " + user);
+			if (user != null) {
+				if((loginData.getPassword()).equals(user.getPassword())){
+					System.out.println("Hello: " + user);
+					
+					userData.setLogin(user.getLogin()); 
+					userData.setPassword(user.getPassword()); 
+					userData.setCardNumber(user.getCardNumber()); 
+					userData.setAge(user.getAge()); 
+					userData.setExpenseLimit(user.getExpenseLimit()); 
+					
+				}
+		
+			} else {
+				System.out.println("User not registred");
+				
+			}
+			tx.commit();
+
+
+			return Response.ok().entity(userData).build();
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+      
+		}
+	}
+
+	@POST
 	@Path("/register")
 	public Response registerUser(UserData userData) {
 		try
@@ -112,34 +158,9 @@ public class Server {
       
 		}
 	}
-	/*
-	@POST
-	@Path("/store")
-	public Response storeExpense(DirectedMessage directedMessage) {
-		try
-        {	
-            tx.begin();
-            
-			Expense expense = null;
-		
-			System.out.println("Storing expense: " + expense);
-			expense = new Expense(directedMessage.getExpenseData().getText(), directedMessage.getExpenseData().getAmount(), directedMessage.getExpenseData().getCategory());
-			pm.makePersistent(expense);					 
-			System.out.println("Expense stored: " + expense);
-			
-			tx.commit();
-			return Response.ok().build();
-        }
-        finally
-        {
-            if (tx.isActive())
-            {
-                tx.rollback();
-            }
-      
-		}
-	}
-	*/
+
+
+
 	@GET
 	@Path("/hello")
 	@Produces(MediaType.TEXT_PLAIN)

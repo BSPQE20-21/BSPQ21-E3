@@ -16,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-
+import es.deusto.serialization.UserData;
 
 public class LoginWindow extends JFrame implements ActionListener {
 
@@ -32,7 +32,7 @@ public class LoginWindow extends JFrame implements ActionListener {
     private ExampleClient client;
 
     LoginWindow(ExampleClient client) {
-        
+        this.client = client; 
         // User Label
         user_label = new JLabel();
         user_label.setText("Email:");
@@ -95,6 +95,21 @@ public class LoginWindow extends JFrame implements ActionListener {
     	String userName = userName_text.getText();
         String password = String.valueOf(password_text.getPassword()); 
        // TODO create method validate user
+         
+       UserData userData = client.validateUser(userName, password);
+
+       
+       if(userData.getLogin() != null){
+        this.setVisible(false); 
+        AddExpenseWindow aew = new AddExpenseWindow(userData, client);
+
+       }else{
+        System.out.println("User not registred");
+
+       }
+
+       
+
         
     }
     
