@@ -16,24 +16,13 @@ import javax.ws.rs.core.Response.Status;
 
 import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
+import es.deusto.serialization.ExpenseList;
 import es.deusto.serialization.UserData;
 import es.deusto.serialization.LoginData;
 import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
 import es.deusto.server.jdo.User;
-
-// This class is the client side of the arquitecture. There is nothing else on this side but we are going to need:
-// GUI - windows
-// Add more patterns ? 
-// - Controlles 
-// - service locator 
-// We have this done for the other project EasyBooking it should not be hard to replicate
-
-
-// Methods we will need: 
-// register user (already done but we need more parameters)
-// login 
-// include expense
+import java.util.*; 
 
 public class ExampleClient {
 
@@ -121,16 +110,28 @@ public class ExampleClient {
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
-			
-			
+					
 		}
-		System.out.println(userData);
-		
-		
+			
 		return userData; 
-		
 	
+	}
 
+	public ExpenseList showExpenses(UserData userData){
+		WebTarget storeExpenseWebTarget = webTarget.path("showExpenses");
+		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
+		
+		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
+		ExpenseList expenses = response.readEntity(ExpenseList.class);
+		
+		if (response.getStatus() != Status.OK.getStatusCode()) {
+			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+		} else {
+					
+		}
+			
+		return expenses; 
+	
 	}
 
 	public static void main(String[] args) {

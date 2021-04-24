@@ -14,8 +14,10 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import es.deusto.serialization.ExpenseData;
+import es.deusto.serialization.ExpenseList;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
+import java.util.*; 
 
 public class AddExpenseWindow extends JFrame implements ActionListener {
 	
@@ -43,7 +45,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 	}
 	
 	public AddExpenseWindow(UserData userData, ExampleClient client) {
-		
+		this.client = client; 
 		JPanel panelAddExpense;
 		panelAddExpense = new JPanel();
 		panelAddExpense.setLayout(new BoxLayout(panelAddExpense, BoxLayout.Y_AXIS));
@@ -105,7 +107,21 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 			}
 		});
 		
+		JButton allExepenses = new JButton("All Exepenses");
+		allExepenses.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//switchPanel(panelAddExpense, PREVIOUSPANEL);
+				ExpenseList expenses = client.showExpenses(userData);
+				System.out.println(expenses);	
+				AllExpensesWindow allexp = new AllExpensesWindow(client, expenses); 
+			}		
+			
+		});
 		buttonJPanel.add(add); 
+		buttonJPanel.add(allExepenses); 
+		// cancel has no functionality
 		buttonJPanel.add(cancel);
 
 		getContentPane().add(panelAddExpense,"North"); 

@@ -12,6 +12,7 @@ import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
 import es.deusto.serialization.LoginData;
+import es.deusto.serialization.ExpenseList;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -20,7 +21,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-
+import java.util.*;
+import javax.jdo.Extent;
 
 // This is the server part. 
 
@@ -100,7 +102,6 @@ public class Server {
 					userData.setCardNumber(user.getCardNumber()); 
 					userData.setAge(user.getAge()); 
 					userData.setExpenseLimit(user.getExpenseLimit()); 
-					
 				}
 		
 			} else {
@@ -108,7 +109,6 @@ public class Server {
 				
 			}
 			tx.commit();
-
 
 			return Response.ok().entity(userData).build();
         }
@@ -159,7 +159,45 @@ public class Server {
 		}
 	}
 
+	@POST
+	@Path("/showExpenses")
+	
+	public Response showExpenses(UserData userData) 
+	{
+		try
+        {	
+            tx.begin();
+			//ExpenseList list = new ExpenseList();
+			List<Expense> list = new ArrayList<Expense>(); 
+			
+			try {
+				String condition = userData.getLogin();
+				Extent<Expense> extent = pm.getExtent(Expense.class, true);
+				Query<Expense> query = pm.newQuery(extent, condition);
+	
+				for (Expense ex : (List<Expense>)query.execute()) {
+					list.add(ex);
+				}
+				
+				tx.commit();
 
+			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
+				System.out.println("Exception launched: " + jonfe.getMessage());
+			}	
+			System.out.println(list);	
+			return Response.ok().entity(list).build();
+			
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+		}
+		
+	}
+	
 
 	@GET
 	@Path("/hello")
