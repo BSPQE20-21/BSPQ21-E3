@@ -15,8 +15,10 @@ import javax.swing.SwingUtilities;
 
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.ExpenseList;
+
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
+import es.deusto.server.jdo.Expense;
 import java.util.*; 
 
 public class AddExpenseWindow extends JFrame implements ActionListener {
@@ -113,7 +115,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//switchPanel(panelAddExpense, PREVIOUSPANEL);
-				ExpenseList expenses = client.showExpenses(userData);
+				Set<Expense> expenses = client.showExpenses(userData);
 				System.out.println(expenses);	
 				AllExpensesWindow allexp = new AllExpensesWindow(client, expenses); 
 			}		

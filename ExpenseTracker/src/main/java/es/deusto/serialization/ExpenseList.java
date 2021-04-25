@@ -1,24 +1,24 @@
 package es.deusto.serialization;
 import java.util.*; 
+import es.deusto.server.jdo.Expense;
 
 public class ExpenseList {
 
-    private ArrayList<ExpenseData> expenses;
+    private Set<Expense> expenses;
 
     public ExpenseList() {
-        expenses = new ArrayList<>();
+        expenses = new HashSet<>();
     }
 
-    public void setExpenseList(ArrayList<ExpenseData> expenses){
+    public void setExpenseList(Set<Expense> expenses){
         this.expenses = expenses; 
     
     }
     
-    public ArrayList<ExpenseData> getExpenseList(){
-        return expenses; 
+    public Set<Expense> getExpenseList(){
+        return this.expenses; 
     
     }
-  
 }
     
 

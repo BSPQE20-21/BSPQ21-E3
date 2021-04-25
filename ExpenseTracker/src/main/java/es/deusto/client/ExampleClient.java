@@ -117,7 +117,7 @@ public class ExampleClient {
 	
 	}
 
-	public ExpenseList showExpenses(UserData userData){
+	public 	Set<Expense> showExpenses(UserData userData){
 		WebTarget storeExpenseWebTarget = webTarget.path("showExpenses");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
 		
@@ -129,8 +129,9 @@ public class ExampleClient {
 		} else {
 					
 		}
-			
-		return expenses; 
+	
+		System.out.println(expenses.getExpenseList());
+		return expenses.getExpenseList(); 
 	
 	}
 

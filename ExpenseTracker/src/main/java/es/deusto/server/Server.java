@@ -90,12 +90,12 @@ public class Server {
 			try {
 				user = pm.getObjectById(User.class, loginData.getLogin());
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
-				System.out.println("Exception launched: " + jonfe.getMessage());
+				//System.out.println("Exception launched: " + jonfe.getMessage());
 			}
 			System.out.println("User: " + user);
 			if (user != null) {
 				if((loginData.getPassword()).equals(user.getPassword())){
-					System.out.println("Hello: " + user);
+					//System.out.println("Hello: " + user);
 					
 					userData.setLogin(user.getLogin()); 
 					userData.setPassword(user.getPassword()); 
@@ -133,18 +133,18 @@ public class Server {
 			try {
 				user = pm.getObjectById(User.class, userData.getLogin());
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
-				System.out.println("Exception launched: " + jonfe.getMessage());
+				//System.out.println("Exception launched: " + jonfe.getMessage());
 			}
 			System.out.println("User: " + user);
 			if (user != null) {
 				System.out.println("Setting password user: " + user);
 				user.setPassword(userData.getPassword());
-				System.out.println("Password set user: " + user);
+				//System.out.println("Password set user: " + user);
 			} else {
-				System.out.println("Creating user: " + user);
+				//System.out.println("Creating user: " + user);
 				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(), userData.getAge(),userData.getExpenseLimit());
 				pm.makePersistent(user);					 
-				System.out.println("User created: " + user);
+				//System.out.println("User created: " + user);
 			}
 			tx.commit();
 			return Response.ok().build();
@@ -161,31 +161,37 @@ public class Server {
 
 	@POST
 	@Path("/showExpenses")
-	
+	@Produces({MediaType.APPLICATION_JSON})
 	public Response showExpenses(UserData userData) 
 	{
+		
 		try
         {	
             tx.begin();
-			//ExpenseList list = new ExpenseList();
-			List<Expense> list = new ArrayList<Expense>(); 
+			ExpenseList expenses = new ExpenseList(); 
+			User user = null;
 			
 			try {
-				String condition = userData.getLogin();
-				Extent<Expense> extent = pm.getExtent(Expense.class, true);
-				Query<Expense> query = pm.newQuery(extent, condition);
-	
-				for (Expense ex : (List<Expense>)query.execute()) {
-					list.add(ex);
-				}
 				
-				tx.commit();
+				//System.out.println("Creating query ...");
+			
+				//Query<User> q = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE login == \"" + userData.getLogin() + "\" &&  password == \"" + userData.getPassword() + "\"");
+				//q.setUnique(true);
+				//user = (User)q.execute();
+				user = pm.getObjectById(User.class, userData.getLogin());
+				//System.out.println("User retrieved: " + user);
+				if (user != null){	
+					expenses.setExpenseList(user.getMessages());
+				}
+		
 
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
+
 				System.out.println("Exception launched: " + jonfe.getMessage());
 			}	
-			System.out.println(list);	
-			return Response.ok().entity(list).build();
+			
+			tx.commit();
+			return Response.ok().entity(expenses).build();
 			
         }
         finally
