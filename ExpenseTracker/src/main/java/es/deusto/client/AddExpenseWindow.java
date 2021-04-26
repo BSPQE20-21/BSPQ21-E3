@@ -43,7 +43,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		current.setEnabled(false);
 		next.setVisible(true);
 		next.setEnabled(true);
-		
+		  
 	}
 	
 	public AddExpenseWindow(UserData userData, ExampleClient client) {
