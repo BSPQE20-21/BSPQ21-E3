@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>Messaging</groupId>
-	<artifactId>SavingMessagesJDOREST</artifactId>
+	<artifactId>ExpeseTracker</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>SavingMessagesJDOREST</name>
+	<name>ExpeseTracker</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
