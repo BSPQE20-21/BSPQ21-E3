@@ -10,7 +10,9 @@ import es.deusto.serialization.UserData;
 public class ExampleClientTest {
 
 	ExampleClient exampleClient;
-    
+	UserData userExpected; 
+	String login;
+	String password;
 
 	/*
 	 * @Before public void setUp() throws Exception { exampleClient = new
@@ -28,10 +30,10 @@ public class ExampleClientTest {
     public void setUp() throws Exception {
     	
     	exampleClient = new ExampleClient("127.0.0.1", "8080");
-    	String login = "user";
-    	String password = "12345";
+    	login = "user";
+    	password = "12345";
     	
-    	UserData userExpected = new UserData();
+    	userExpected = new UserData();
     	userExpected.setLogin("user");
     	userExpected.setPassword("12345");
     	userExpected.setAge(20);
