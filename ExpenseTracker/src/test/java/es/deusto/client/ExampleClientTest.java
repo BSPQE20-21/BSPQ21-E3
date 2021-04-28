@@ -1,20 +1,23 @@
 package es.deusto.client;
 
 import org.junit.Test;
-import org.junit.Assert; 
+import org.junit.Before;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Assert;
+
 import es.deusto.serialization.UserData;
 
 public class ExampleClientTest {
 	ExampleClient exampleClient;
 	UserData userExpected; 
-	String login;
-	String password;
 
+	@Before
 	public void setUp() throws Exception {
     	
     	exampleClient = new ExampleClient("127.0.0.1", "8080");
-    	login = "user";
-    	password = "12345";
     	
     	userExpected = new UserData();
     	userExpected.setLogin("user");
@@ -42,8 +45,12 @@ public class ExampleClientTest {
 
 	@Test
 	public void testValidateUser() throws Exception {
-		UserData userDB = exampleClient.validateUser(login, password);
-    	Assert.assertEquals(userExpected, userDB);
+		UserData userDB = exampleClient.validateUser("user", "12345");
+    	Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
+    	Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
+    	Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
+    	Assert.assertEquals(userDB.getAge(), userExpected.getAge());
+    	Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
 
 	}
 
