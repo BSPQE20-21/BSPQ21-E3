@@ -1,10 +1,14 @@
 package es.deusto.client;
 
 import org.junit.Test;
+import org.mockito.Mockito;
 import org.junit.Before;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
+
+import java.util.List;
 
 import org.junit.Assert;
 
@@ -30,8 +34,13 @@ public class ExampleClientTest {
 
 	@Test
 	public void testRegisterUser() throws Exception {
-		//exampleClient.registerUser(userExpected);
-
+		//UserData mockedUser = mock(UserData.class);
+		//verify(exampleClient.registerUser(mockedUser));
+		
+		//ExampleClient exampleClient2 = Mockito.mock(ExampleClient.class);
+		ExampleClient exampleClient2 = Mockito.spy(new ExampleClient("127.0.0.1", "8080"));
+		verify(exampleClient2, times(1)).registerUser(userExpected);
+	
 	}
 
 	@Test
