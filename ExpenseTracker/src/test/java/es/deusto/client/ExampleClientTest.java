@@ -30,6 +30,7 @@ public class ExampleClientTest {
 
 	@Test
 	public void testRegisterUser() throws Exception {
+		//exampleClient.registerUser(userExpected);
 
 	}
 
@@ -51,6 +52,7 @@ public class ExampleClientTest {
     	Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
     	Assert.assertEquals(userDB.getAge(), userExpected.getAge());
     	Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
+    	//Assert.assertSame(userExpected, userDB);
 
 	}
 
