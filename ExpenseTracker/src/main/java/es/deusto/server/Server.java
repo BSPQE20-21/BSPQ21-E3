@@ -205,10 +205,5 @@ public class Server {
 	}
 	
 
-	@GET
-	@Path("/hello")
-	@Produces(MediaType.TEXT_PLAIN)
-	public Response sayHello() {
-		return Response.ok("Hello world!").build();
-	}
+
 }
