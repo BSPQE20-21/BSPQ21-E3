@@ -23,6 +23,8 @@ import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
 import es.deusto.server.jdo.User;
 import java.util.*; 
+import es.deusto.log.LoggerFile; 
+import java.util.logging.Level; 
 
 public class ExampleClient {
 
@@ -46,7 +48,8 @@ public class ExampleClient {
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
-			System.out.println("User correctly registered");
+			//System.out.println("User correctly registered");
+			LoggerFile.log(Level.INFO, LoggerFile.class.getName()); 
 		}
 	}
 
@@ -73,8 +76,10 @@ public class ExampleClient {
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
-			String responseMessage = response.readEntity(String.class);
-			System.out.println("* Message coming from the server: '" + responseMessage + "'");
+			//String responseMessage = response.readEntity(String.class);
+			LoggerFile.log(Level.INFO, LoggerFile.class.getName()); 
+
+			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
 	}
 	
@@ -92,8 +97,9 @@ public class ExampleClient {
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
-			String responseMessage = response.readEntity(String.class);
-			System.out.println("* Message coming from the server: '" + responseMessage + "'");
+			//String responseMessage = response.readEntity(String.class);
+			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
+			LoggerFile.log(Level.INFO, LoggerFile.class.getName()); 
 		}
 	}
 
