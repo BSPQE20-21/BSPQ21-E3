@@ -129,7 +129,7 @@ public class ExampleClient {
 		
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		//ExpenseList expenses = response.readEntity(ExpenseList.class);
-		ExpenseList expenses = response.readEntity(ExpenseList.class); 
+		ExpenseList expenseList = response.readEntity(ExpenseList.class); 
 
 
 		if (response.getStatus() != Status.OK.getStatusCode()) {
@@ -138,6 +138,7 @@ public class ExampleClient {
 					
 		}
 		
+		Set<ExpenseData> expenses = expenseList.getExpenseList(); 
 		//System.out.println(expenses.getExpenseList());
 		return expenses; 
 	

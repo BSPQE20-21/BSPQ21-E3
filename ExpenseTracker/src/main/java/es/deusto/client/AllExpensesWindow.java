@@ -6,27 +6,26 @@ import java.util.*;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
-import es.deusto.server.jdo.Expense;
+
 
 public class AllExpensesWindow extends JFrame {
     private ExampleClient client;
-    private Set<Expense> expenses; 
+    private Set<ExpenseData> expenses; 
     
 
-    public AllExpensesWindow(ExampleClient client, Set<Expense> expenses) {
+    public AllExpensesWindow(ExampleClient client, Set<ExpenseData> expenses) {
 		this.client  = client; 
         this.expenses = expenses; 
         JPanel panel = new JPanel(); 
         
      
-        DefaultListModel<Expense> dlm = new DefaultListModel<Expense> ();
-        for(Expense e : expenses ){
-            
-            System.out.println(e);
-            dlm.addElement(e);
+        DefaultListModel<String> dlm = new DefaultListModel<String> ();
+        for(ExpenseData e : expenses){
+                        
+            dlm.addElement(e.toString());
         }    
-        System.out.println("here2");
-        JList<Expense> jList = new JList<Expense>(dlm);
+       
+        JList<String> jList = new JList<String>(dlm);
         
         panel.add(jList); 
 
