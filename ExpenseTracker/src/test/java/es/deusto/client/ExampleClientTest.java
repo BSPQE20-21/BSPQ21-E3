@@ -41,6 +41,7 @@ public class ExampleClientTest {
 		//ExampleClient exampleClient2 = Mockito.spy(new ExampleClient("127.0.0.1", "8080"));
 		//verify(exampleClient2, times(1)).registerUser(userExpected);
 	
+		
 	}
 
 	@Test
