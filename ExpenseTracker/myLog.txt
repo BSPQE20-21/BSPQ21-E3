@@ -1,2 +1,4 @@
 abr. 29, 2021 9:28:24 A. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: es.deusto.log.LoggerFile
+abr. 29, 2021 8:05:37 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: es.deusto.log.LoggerFile
