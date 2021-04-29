@@ -39,6 +39,12 @@ public class ExpenseData {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+	@Override
+	public String toString() {
+		return "Description:" + text + " (" + amount + "), Category:" + category + "";
+	}
+
+
     
     
   
