@@ -168,10 +168,7 @@ public class Server {
 		try
         {	
             tx.begin();
-			ExpenseList expenseList = new ExpenseList(); 
-			Set<ExpenseData> expenses = new HashSet<ExpenseData>(); 
-			
-
+			ExpenseList expenses = new ExpenseList(); 
 			User user = null;
 			
 			try {
@@ -184,17 +181,7 @@ public class Server {
 				user = pm.getObjectById(User.class, userData.getLogin());
 				//System.out.println("User retrieved: " + user);
 				if (user != null){	
-
-					
-					
-					for (Expense e: user.getMessages()){
-						ExpenseData exp = new ExpenseData(); 
-						exp.setText(e.getText()); 
-						exp.setAmount(e.getAmount()); 
-						exp.setCategory(e.getCategory()); 
-						expenses.add(exp); 
-					}
-					expenseList.setExpenseList(expenses); 
+					expenses.setExpenseList(user.getMessages());
 				}
 		
 
@@ -204,7 +191,7 @@ public class Server {
 			}	
 			
 			tx.commit();
-			return Response.ok().entity(expenseList).build();
+			return Response.ok().entity(expenses).build();
 			
         }
         finally

@@ -14,8 +14,16 @@ public class UserData {
 
     }
 
-    
-    public String getCardNumber() {
+	public UserData(String login, String password, String cardNumber, int age, double expenseLimit) {
+		super();
+		this.login = login;
+		this.password = password;
+		this.cardNumber = cardNumber;
+		this.age = age;
+		this.expenseLimit = expenseLimit;
+	}
+
+	public String getCardNumber() {
 		return cardNumber;
 	}
 

@@ -7,10 +7,11 @@ import java.util.*;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
-
+import es.deusto.server.jdo.Expense;
 
 public class AllExpensesWindow extends JFrame implements ActionListener {
     private ExampleClient client;
+<<<<<<< HEAD
     private Set<ExpenseData> expenses; 
     private UserData userData; 
     private JButton addExpense; 
@@ -33,6 +34,26 @@ public class AllExpensesWindow extends JFrame implements ActionListener {
         }    
        
         JList<String> jList = new JList<String>(dlm);
+=======
+    private Set<Expense> expenses; 
+    
+
+    public AllExpensesWindow(ExampleClient client, Set<Expense> expenses) {
+		this.client  = client; 
+        this.expenses = expenses; 
+        JPanel panel = new JPanel(); 
+        
+     
+        DefaultListModel<Expense> dlm = new DefaultListModel<Expense> ();
+        for(Expense e : expenses ){
+            
+            System.out.println(e);
+            dlm.addElement(e);
+        }    
+        System.out.println("here2");
+        JList<Expense> jList = new JList<Expense>(dlm);
+        
+>>>>>>> 3c7b1d3f77b75baf6ab216648258671c346c5436
         panel.add(jList); 
 
         buttonPanel = new JPanel(); 
