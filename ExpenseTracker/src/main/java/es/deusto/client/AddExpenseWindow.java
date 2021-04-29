@@ -117,7 +117,8 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 				//switchPanel(panelAddExpense, PREVIOUSPANEL);
 				Set<ExpenseData> expenses = client.showExpenses(userData);
 				System.out.println(expenses);	
-				AllExpensesWindow allexp = new AllExpensesWindow(client, expenses); 
+				AllExpensesWindow allexp = new AllExpensesWindow(client, expenses, userData); 
+				setVisible(false); 
 			}		
 			
 		});
