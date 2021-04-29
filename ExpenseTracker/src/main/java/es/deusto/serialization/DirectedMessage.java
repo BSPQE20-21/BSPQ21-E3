@@ -4,6 +4,7 @@ package es.deusto.serialization;
 
 public class DirectedMessage {
 
+    
     private UserData userData;
     private ExpenseData expenseData;
 

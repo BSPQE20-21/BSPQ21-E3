@@ -14,6 +14,7 @@ public class UserData {
 
     }
 
+    
     public String getCardNumber() {
 		return cardNumber;
 	}

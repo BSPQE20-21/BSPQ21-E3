@@ -14,6 +14,7 @@ public class UserDataTest {
 
 	}
 
+	
 	@Test
 	public void testSetCardNumber() throws Exception {
 

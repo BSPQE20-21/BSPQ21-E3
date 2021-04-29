@@ -10,6 +10,7 @@ public class LoginData {
     }
 
     
+    
     public String getLogin() {
         return this.login;
     }

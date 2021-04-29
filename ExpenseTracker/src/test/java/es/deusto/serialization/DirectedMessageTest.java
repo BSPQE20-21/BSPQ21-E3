@@ -13,6 +13,7 @@ public class DirectedMessageTest {
 	public void testSetUserData() throws Exception {
 
 	}
+	
 
 	@Test
 	public void testGetUserData() throws Exception {

@@ -13,6 +13,7 @@ public class LoginDataTest {
 	public void testGetLogin() throws Exception {
 
 	}
+	
 
 	@Test
 	public void testSetLogin() throws Exception {
