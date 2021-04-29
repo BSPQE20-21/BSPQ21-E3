@@ -123,21 +123,23 @@ public class ExampleClient {
 	
 	}
 
-	public 	Set<Expense> showExpenses(UserData userData){
+	public 	Set<ExpenseData> showExpenses(UserData userData){
 		WebTarget storeExpenseWebTarget = webTarget.path("showExpenses");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
 		
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
-		ExpenseList expenses = response.readEntity(ExpenseList.class);
-		
+		//ExpenseList expenses = response.readEntity(ExpenseList.class);
+		ExpenseList expenses = response.readEntity(ExpenseList.class); 
+
+
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
 					
 		}
 	
-		System.out.println(expenses.getExpenseList());
-		return expenses.getExpenseList(); 
+		//System.out.println(expenses.getExpenseList());
+		return expenses; 
 	
 	}
 
