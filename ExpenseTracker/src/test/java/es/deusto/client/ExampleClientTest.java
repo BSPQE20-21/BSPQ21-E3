@@ -38,8 +38,8 @@ public class ExampleClientTest {
 		//verify(exampleClient.registerUser(mockedUser));
 		
 		//ExampleClient exampleClient2 = Mockito.mock(ExampleClient.class);
-		ExampleClient exampleClient2 = Mockito.spy(new ExampleClient("127.0.0.1", "8080"));
-		verify(exampleClient2, times(1)).registerUser(userExpected);
+		//ExampleClient exampleClient2 = Mockito.spy(new ExampleClient("127.0.0.1", "8080"));
+		//verify(exampleClient2, times(1)).registerUser(userExpected);
 	
 	}
 
@@ -62,7 +62,6 @@ public class ExampleClientTest {
     	Assert.assertEquals(userDB.getAge(), userExpected.getAge());
     	Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
     	//Assert.assertSame(userExpected, userDB);
-
 	}
 
 	@Test
