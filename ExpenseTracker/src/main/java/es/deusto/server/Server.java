@@ -23,6 +23,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import java.util.*;
 import javax.jdo.Extent;
+import es.deusto.log.LoggerFile; 
+import java.util.logging.Level; 
 
 // This is the server part. 
 
@@ -45,13 +47,14 @@ public class Server {
 		User user = null;
 		try{
 			tx.begin();
-			System.out.println("Creating query ...");
+			
 			
 			Query<User> q = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE login == \"" + directedExpense.getUserData().getLogin() + "\" &&  password == \"" + directedExpense.getUserData().getPassword() + "\"");
 			q.setUnique(true);
 			user = (User)q.execute();
 			
-			System.out.println("User retrieved: " + user);
+			//System.out.println("User retrieved: " + user);
+			LoggerFile.log(Level.INFO,  "User retrieved: " + user);
 			if (user != null)  {
 				Expense expense = new Expense(directedExpense.getExpenseData().getText(), directedExpense.getExpenseData().getAmount(), directedExpense.getExpenseData().getCategory());
 				user.getMessages().add(expense);
@@ -66,7 +69,8 @@ public class Server {
 		
 		if (user != null) {
 			cont++;
-			System.out.println(" * Client number: " + cont);
+			//System.out.println(" * Client number: " + cont);
+			LoggerFile.log(Level.INFO,  " * Client number: " + cont);
 			ExpenseData expenseData = new ExpenseData();
 			expenseData.setText(directedExpense.getExpenseData().getText());
 			expenseData.setAmount(directedExpense.getExpenseData().getAmount());
@@ -91,6 +95,7 @@ public class Server {
 				user = pm.getObjectById(User.class, loginData.getLogin());
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
 				//System.out.println("Exception launched: " + jonfe.getMessage());
+				LoggerFile.log(Level.SEVERE,  jonfe.getMessage());
 			}
 			System.out.println("User: " + user);
 			if (user != null) {
@@ -105,7 +110,8 @@ public class Server {
 				}
 		
 			} else {
-				System.out.println("User not registred");
+				LoggerFile.log(Level.INFO,  "User not registred");
+				//System.out.println("User not registred");
 				
 			}
 			tx.commit();
@@ -134,16 +140,19 @@ public class Server {
 				user = pm.getObjectById(User.class, userData.getLogin());
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
 				//System.out.println("Exception launched: " + jonfe.getMessage());
+				LoggerFile.log(Level.SEVERE,  jonfe.getMessage());
 			}
 			System.out.println("User: " + user);
 			if (user != null) {
-				System.out.println("Setting password user: " + user);
+				//System.out.println("Setting password user: " + user);
+				LoggerFile.log(Level.INFO,  "Setting password user: " + user);	
 				user.setPassword(userData.getPassword());
 				//System.out.println("Password set user: " + user);
 			} else {
 				//System.out.println("Creating user: " + user);
 				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(), userData.getAge(),userData.getExpenseLimit());
-				pm.makePersistent(user);					 
+				pm.makePersistent(user);	
+				LoggerFile.log(Level.INFO,  "User created: " + user);				 
 				//System.out.println("User created: " + user);
 			}
 			tx.commit();
@@ -195,8 +204,8 @@ public class Server {
 		
 
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
-
-				System.out.println("Exception launched: " + jonfe.getMessage());
+				LoggerFile.log(Level.SEVERE,  jonfe.getMessage());
+				//System.out.println("Exception launched: " + jonfe.getMessage());
 			}	
 			
 			tx.commit();

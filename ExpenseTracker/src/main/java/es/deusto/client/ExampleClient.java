@@ -76,8 +76,8 @@ public class ExampleClient {
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
-			//String responseMessage = response.readEntity(String.class);
-			LoggerFile.log(Level.INFO, LoggerFile.class.getName()); 
+			String responseMessage = response.readEntity(String.class);
+			LoggerFile.log(Level.INFO, "* Message coming from the server: '" + responseMessage + "'"); 
 
 			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
@@ -95,11 +95,12 @@ public class ExampleClient {
 
 		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+			LoggerFile.log(Level.INFO, "Error connecting with the server. Code: " + response.getStatus()); 
+			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
-			//String responseMessage = response.readEntity(String.class);
+			String responseMessage = response.readEntity(String.class);
 			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
-			LoggerFile.log(Level.INFO, LoggerFile.class.getName()); 
+			LoggerFile.log(Level.INFO, "* Message coming from the server: '" + responseMessage + "'"); 
 		}
 	}
 
@@ -114,11 +115,12 @@ public class ExampleClient {
 		Response response = invocationBuilder.post(Entity.entity(loginData, MediaType.APPLICATION_JSON));
 		UserData userData = response.readEntity(UserData.class);
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+			LoggerFile.log(Level.INFO, "Error connecting with the server. Code: " + response.getStatus()); 
+			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
+			LoggerFile.log(Level.INFO, "User validated"); 
 					
 		}
-			
 		return userData; 
 	
 	}
@@ -133,7 +135,8 @@ public class ExampleClient {
 
 
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+			LoggerFile.log(Level.INFO, "Error connecting with the server. Code: " + response.getStatus()); 
+			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
 					
 		}
@@ -155,15 +158,6 @@ public class ExampleClient {
 		
 		ExampleClient client = new ExampleClient(hostname, port);
 
-		/*
-		exampleClient.registerUser("dipina", "dipina", "1111111111111111", 32,1000);
-=======
-		ExampleClient exampleClient = new ExampleClient(hostname, port);
-		exampleClient.registerUser("dipina", "dipina", "1111111111111111", 32, 1000);
->>>>>>> 83ccbaa010ca5229c38104e4ad1917d880d1417f
-		Expense expense = new Expense("This is a test!...", 0.0, Category.OTHERS);
-		exampleClient.sayMessage("dipina", "dipina", expense);
-		*/
 	}
 
 }
