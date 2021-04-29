@@ -62,8 +62,7 @@ public class Server {
 			if (tx.isActive()) {
 				tx.rollback();
 			}
-		}
-		
+		}		
 		if (user != null) {
 			cont++;
 			System.out.println(" * Client number: " + cont);
@@ -117,10 +116,10 @@ public class Server {
             if (tx.isActive())
             {
                 tx.rollback();
-            }
-      
+            }      
 		}
 	}
+	// Store the information of the user inside BD 
 
 	@POST
 	@Path("/register")
@@ -158,7 +157,7 @@ public class Server {
       
 		}
 	}
-
+	// Returns a list of expenses related to a concrete user 
 	@POST
 	@Path("/showExpenses")
 	@Produces({MediaType.APPLICATION_JSON})
@@ -168,7 +167,8 @@ public class Server {
 		try
         {	
             tx.begin();
-			ExpenseList expenses = new ExpenseList(); 
+			//ExpenseList expenses = new ExpenseList(); 
+			Set<ExpenseData> expenses = new HashSet<ExpenseData>(); 
 			User user = null;
 			
 			try {
@@ -181,7 +181,17 @@ public class Server {
 				user = pm.getObjectById(User.class, userData.getLogin());
 				//System.out.println("User retrieved: " + user);
 				if (user != null){	
-					expenses.setExpenseList(user.getMessages());
+					//expenses.setExpenseList(user.getMessages());
+					Set<Expense> expense = (user.getMessages());
+					for(Expense e: expense){
+						ExpenseData ex = new ExpenseData(); 
+						ex.setText(e.getText()); 
+						ex.setAmount(e.getAmount()); 
+						ex.setCategory(e.getCategory());
+						expenses.add(ex); 
+
+					}
+
 				}
 		
 
