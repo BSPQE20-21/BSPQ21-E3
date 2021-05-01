@@ -21,6 +21,13 @@ public class Expense {
         this.amount = amount; 
         this.category = category;
     }
+    
+    public Expense() {
+        this.text = "";
+		this.timestamp = 0;
+        this.amount = 0; 
+        this.category = null;
+    }
 
 	public String getText() {
 		return text;
