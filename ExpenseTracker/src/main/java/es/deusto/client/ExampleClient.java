@@ -50,10 +50,11 @@ public class ExampleClient {
 
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-
-			System.out.println("Error connecting with the server. Code: " + response.getStatus());
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting"));
+			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
-			logger.info(resourceBundle.getString("persisting_user"));
+			LoggerFile.log(Level.INFO, resourceBundle.getString("persisting_user"));
+			//logger.info(resourceBundle.getString("persisting_user"));
 			//System.out.println("User correctly registered");
 			
 		}
@@ -80,13 +81,14 @@ public class ExampleClient {
 
 		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			System.out.println("Error connecting with the server. Code: " + response.getStatus());
-			logger.info(resourceBundle.getString("error_connecting"));
+			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
+			//logger.info(resourceBundle.getString("error_connecting"));
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting"));
 		} else {
 			//String responseMessage = response.readEntity(String.class);
-			logger.info(resourceBundle.getString("persisting_user"));
+			//logger.info(resourceBundle.getString("persisting_user"));
+			LoggerFile.log(Level.INFO, resourceBundle.getString("persisting_user"));
 			//LoggerFile.log(Level.INFO, "* Message coming from the server: '" + responseMessage + "'"); 
-
 			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
 	}
@@ -103,14 +105,14 @@ public class ExampleClient {
 
 		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			//LoggerFile.log(Level.INFO, "Error connecting with the server. Code: " + response.getStatus()); 
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting")); 
 			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
-			logger.info(resourceBundle.getString("error_connecting"));
+			//logger.info(resourceBundle.getString("error_connecting"));
 		} else {
 			//String responseMessage = response.readEntity(String.class);
 			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
-			//LoggerFile.log(Level.INFO, "* Message coming from the server: '" + responseMessage + "'"); 
-			logger.info(resourceBundle.getString("store_expense"));
+			LoggerFile.log(Level.INFO, resourceBundle.getString("store_expense")); 
+			//logger.info(resourceBundle.getString("store_expense"));
 		}
 	}
 
@@ -125,12 +127,13 @@ public class ExampleClient {
 		Response response = invocationBuilder.post(Entity.entity(loginData, MediaType.APPLICATION_JSON));
 		UserData userData = response.readEntity(UserData.class);
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			//LoggerFile.log(Level.INFO, "Error connecting with the server. Code: " + response.getStatus()); 
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting")); 
 			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
-			logger.info(resourceBundle.getString("error_connecting"));
+			//logger.info(resourceBundle.getString("error_connecting"));
+
 		} else {
-			//LoggerFile.log(Level.INFO, "User validated"); 
-			logger.info(resourceBundle.getString("validate_user"));
+			LoggerFile.log(Level.INFO, resourceBundle.getString("validate_user")); 
+			//logger.info(resourceBundle.getString("validate_user"));
 
 					
 		}
@@ -148,11 +151,12 @@ public class ExampleClient {
 
 
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			//LoggerFile.log(Level.INFO, "Error connecting with the server. Code: " + response.getStatus()); 
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting")); 
 			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
-			logger.info(resourceBundle.getString("error_connecting"));
+			//logger.info(resourceBundle.getString("error_connecting"));
 		} else {
-			logger.info(resourceBundle.getString("show_expenses"));
+			LoggerFile.log(Level.INFO, resourceBundle.getString("show_expenses")); 
+			//logger.info(resourceBundle.getString("show_expenses"));
 					
 		}
 		
@@ -173,9 +177,12 @@ public class ExampleClient {
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
 		resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag("es"));
 
-		logger.info(resourceBundle.getString("starting_msg"));
-		logger.info(resourceBundle.getString("app_title"));
-        logger.info(resourceBundle.getString("app_underline"));
+		//logger.info(resourceBundle.getString("starting_msg"));
+		//logger.info(resourceBundle.getString("app_title"));
+        //logger.info(resourceBundle.getString("app_underline"));
+		LoggerFile.log(Level.INFO, resourceBundle.getString("starting_msg")); 
+		LoggerFile.log(Level.INFO, resourceBundle.getString("app_title")); 
+		LoggerFile.log(Level.INFO, resourceBundle.getString("app_underline")); 
 		
 		ExampleClient client = new ExampleClient(hostname, port);
 

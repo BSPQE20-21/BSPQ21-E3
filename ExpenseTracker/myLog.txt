@@ -26,3 +26,17 @@ may. 01, 2021 10:49:42 A. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: User validated
 may. 01, 2021 10:53:11 A. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: User validated
+may. 01, 2021 12:39:17 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Sesión iniciada
+may. 01, 2021 12:45:28 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Sesión iniciada
+may. 01, 2021 12:47:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 01, 2021 12:47:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 01, 2021 12:47:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 01, 2021 12:48:00 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Sesión iniciada
+may. 01, 2021 12:48:22 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
