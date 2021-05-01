@@ -4,3 +4,25 @@ abr. 29, 2021 8:05:37 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: es.deusto.log.LoggerFile
 abr. 29, 2021 8:25:35 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: User validated
+may. 01, 2021 9:49:11 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:08:50 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:13:51 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:15:56 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:18:15 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:32:40 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:33:34 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:36:04 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:38:17 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:49:42 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
+may. 01, 2021 10:53:11 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User validated
