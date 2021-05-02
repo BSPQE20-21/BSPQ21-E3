@@ -199,6 +199,25 @@
     				<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
   				</configuration>
 			</plugin>
+			
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <formats>
+                        <format>xml</format>
+                    </formats>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>cobertura</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
 		</plugins>
 	</build>
@@ -284,6 +303,10 @@
 				<artifactId>maven-pmd-plugin</artifactId> 
 				<version>3.11.0</version>
 		   </plugin>
+		   <plugin>
+				<groupId>org.codehaus.mojo</groupId> 
+				<artifactId>cobertura-maven-plugin</artifactId>
+           </plugin>
 		</plugins>
 	 </reporting>
 </project>
