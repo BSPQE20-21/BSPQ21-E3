@@ -33,7 +33,7 @@ public class ExampleClientTest {
 	Expense expenseExpected;
 	
 	//ResourceBundle resourceBundle;
-
+/*
 	@Before
 	public void setUp() throws Exception {
     	
@@ -113,7 +113,7 @@ public class ExampleClientTest {
 		Assert.assertEquals(dMExpected, mockedDM);
 	}
 	
-
+	
 	@Test
 	public void testValidateUser() throws Exception {
 		ResourceBundle.getBundle("SystemMessages", Locale.forLanguageTag("es"));
@@ -125,7 +125,7 @@ public class ExampleClientTest {
     	Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
     	//Assert.assertSame(userExpected, userDB);
 	}
-
+	
 	
 	@Test
 	public void testShowExpenses() throws Exception {
@@ -135,7 +135,7 @@ public class ExampleClientTest {
 		Assert.assertEquals(mockedUser.getLogin(), userExpected.getLogin());
 		Assert.assertEquals(mockedUser.getPassword(), userExpected.getPassword());
 	}
-		
+	*/	
 	
 	
 	/*

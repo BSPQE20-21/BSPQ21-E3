@@ -212,7 +212,8 @@
 							<destFile>${basedir}/target/jacoco.exec</destFile>
 							<dataFile>${basedir}/target/jacoco.exec</dataFile>
 							<output>file</output>
-							<append>true</append>               
+							<append>true</append>  
+							<argLine>jaCoCoArgLine -Xmx1024m </argLine>             
 							
 						</configuration>
 					</execution>
