@@ -27,7 +27,8 @@ public class UserDataTest {
 	@Test
 	public void testUserData() throws Exception {
 		UserData userMireya = new UserData("Mireya", "11111", "111111111", 20, 1000);
-		//assertEquals(userMireya, userData);
+
+		assertEquals(userMireya.getLogin(), userData.getLogin());
 	}
 
 	@Test
