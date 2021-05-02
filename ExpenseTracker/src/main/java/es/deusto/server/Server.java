@@ -81,7 +81,7 @@ public class Server {
 			return Response.status(Status.BAD_REQUEST).entity("Login details supplied for message delivery are not correct").build();
 		}
 	}
-	// this part is registring an user into the DB
+	// this part is registering an user into the DB
 	@POST
 	@Path("/validate")
 	@Produces({MediaType.APPLICATION_JSON})
@@ -111,7 +111,7 @@ public class Server {
 		
 			} else {
 				LoggerFile.log(Level.INFO,  "User not registred");
-				//System.out.println("User not registred");
+				//System.out.println("User not registered");
 				
 			}
 			tx.commit();

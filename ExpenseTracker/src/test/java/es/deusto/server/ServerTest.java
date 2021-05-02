@@ -14,6 +14,7 @@ import org.databene.contiperf.Required;
 
 import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
+import es.deusto.serialization.LoginData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.User;
@@ -67,14 +68,18 @@ public class ServerTest {
 	
 	@Test
 	public void testValidateUser() throws Exception {
-		
+		LoginData logindata = new LoginData("user", "12345");
+		UserData userBD = new UserData("user","12345", "123456789", 20, 2000);
+		Assert.assertNotEquals(userBD.getLogin(), user.getLogin());
+    	Assert.assertNotEquals(userBD.getPassword(), user.getPassword());
+    	Response response = server.validateUser(logindata);
+    	Assert.assertEquals(responseExpected, response);
 	}
 	
 	@Test
 	public void testRegisterUser() throws Exception {
 		server.registerUser(user);
 		UserData userBD = new UserData("user2","13345", "143456789", 21, 3000);
-		
     	Assert.assertNotEquals(userBD.getLogin(), user.getLogin());
     	Assert.assertNotEquals(userBD.getPassword(), user.getPassword());
     	Assert.assertNotEquals(userBD.getCardNumber(), user.getCardNumber());

@@ -9,6 +9,12 @@ public class LoginData {
 
     }
 
+	public LoginData(String login, String password) {
+		super();
+		this.login = login;
+		this.password = password;
+	}
+
 
 	public String getLogin() {
         return this.login;
