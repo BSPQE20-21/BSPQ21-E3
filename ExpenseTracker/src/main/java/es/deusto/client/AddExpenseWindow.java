@@ -40,6 +40,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 	private ExampleClient client;
 	
 	public void switchPanel(JPanel current, JPanel next) {
+		
 		current.setVisible(false);
 		current.setEnabled(false);
 		next.setVisible(true);
