@@ -112,7 +112,7 @@ public class ExampleClientTest {
 		mockedDM.setExpenseData(mockedExpenseData);
 		Assert.assertEquals(dMExpected, mockedDM);
 	}
-
+	
 
 	@Test
 	public void testValidateUser() throws Exception {

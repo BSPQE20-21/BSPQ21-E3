@@ -1,5 +1,6 @@
 package es.deusto.serialization;
 
+
 import static org.junit.Assert.assertSame;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -25,9 +26,8 @@ public class UserDataTest {
 
 	@Test
 	public void testUserData() throws Exception {
-		
-		//assertSame(new UserData("Mireya", "11111", "111111111", 20, 1000), userData);
-		
+		UserData userMireya = new UserData("Mireya", "11111", "111111111", 20, 1000);
+		assertEquals(userMireya, userData);
 	}
 
 	@Test
@@ -86,9 +86,5 @@ public class UserDataTest {
 		assertEquals(3000, userData2.getExpenseLimit());
 	}
 
-	@Test
-	public void testToString() throws Exception {
-
-	}
 
 }
