@@ -21,6 +21,7 @@ import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
 import java.util.*; 
 
+
 public class AddExpenseWindow extends JFrame implements ActionListener {
 	
 	/**This window les the user store data about expenses/purchases

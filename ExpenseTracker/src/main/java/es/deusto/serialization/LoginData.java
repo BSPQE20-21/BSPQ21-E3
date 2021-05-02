@@ -9,9 +9,8 @@ public class LoginData {
 
     }
 
-    
-    
-    public String getLogin() {
+
+	public String getLogin() {
         return this.login;
     }
 

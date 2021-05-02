@@ -18,6 +18,7 @@ public class LoggerFile {
         //instance the logger
         logger = Logger.getLogger(LoggerFile.class.getName());
         //instance the filehandler
+        
         fileHandler = new FileHandler("myLog.txt",true);
         //instance formatter, set formatting, and handler
         plainText = new SimpleFormatter();
@@ -37,7 +38,7 @@ public class LoggerFile {
     }
     public static void log(Level level, String msg){
         getLogger().log(level, msg);
-        System.out.println(msg);
+        //System.out.println(msg);
     }
     
 }

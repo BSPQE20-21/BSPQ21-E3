@@ -12,7 +12,14 @@ public class ExpenseData {
 
 
 	
-    public ExpenseData() {
+    public ExpenseData(String text, double amount, Category category) {
+		super();
+		this.text = text;
+		this.amount = amount;
+		this.category = category;
+	}
+
+	public ExpenseData() {
 
     }
 
