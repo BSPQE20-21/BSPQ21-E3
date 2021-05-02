@@ -16,6 +16,7 @@ import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
+import es.deusto.server.jdo.User;
 
 
 @PerfTest(invocations = 5)
@@ -39,7 +40,7 @@ public class ServerTest {
     	expenseDataExpected.setText("expenseUno");
     	dMExpected.setUserData(user);
     	dMExpected.setExpenseData(expenseDataExpected);
-    	responseExpected = Response.ok(dMExpected).build();
+    	responseExpected = Response.ok().build();
 	}
 
 	@Test
@@ -63,22 +64,28 @@ public class ServerTest {
 	}
 	
 	
-	/*
+	
 	@Test
 	public void testValidateUser() throws Exception {
 		
 	}
-	/*
+	
 	@Test
 	public void testRegisterUser() throws Exception {
 		server.registerUser(user);
-		ArgumentCaptor<UserData> userCaptor = ArgumentCaptor.forClass(UserData.class);
-		verify(server).registerUser(userCaptor.capture());
-		UserData newUser = userCaptor.getValue();
-		Assert.assertEquals(user.getLogin(), newUser.getLogin());
+		UserData userBD = new UserData("user2","13345", "143456789", 21, 3000);
+		
+    	Assert.assertNotEquals(userBD.getLogin(), user.getLogin());
+    	Assert.assertNotEquals(userBD.getPassword(), user.getPassword());
+    	Assert.assertNotEquals(userBD.getCardNumber(), user.getCardNumber());
+    	Assert.assertNotEquals(userBD.getAge(), user.getAge());
+    	Assert.assertNotEquals(userBD.getExpenseLimit(), user.getExpenseLimit(), 0);
+    	Response response = server.registerUser(user);
+    	Assert.assertEquals(responseExpected, response);
+    	
 
 	}
-	*/
+	
 	@Test
 	public void testShowExpenses() throws Exception {
 		
