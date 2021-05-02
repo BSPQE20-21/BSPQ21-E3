@@ -55,7 +55,6 @@ public class ExampleClientTest {
     	expenseDataExpected.setCategory(expenseExpected.getCategory());
     	expenseDataExpected.setText(expenseExpected.getText());
     	
-    	//TestSayMessageVariables
     	dMExpected.setUserData(userExpected);
     	dMExpected.setExpenseData(expenseDataExpected);
     	

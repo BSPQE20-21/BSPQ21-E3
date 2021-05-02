@@ -7,11 +7,15 @@ import org.junit.platform.commons.annotation.Testable;
 import org.mockito.ArgumentCaptor;
 import static org.mockito.Mockito.*;
 
+import javax.ws.rs.core.Response;
+
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
 
 import es.deusto.serialization.DirectedMessage;
+import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
+import es.deusto.server.jdo.Category;
 
 
 @PerfTest(invocations = 5)
@@ -21,13 +25,21 @@ public class ServerTest {
 	
 	Server server;
 	UserData user;
-	
+	ExpenseData expenseDataExpected;
+	DirectedMessage dMExpected;
+	Response responseExpected;
 
 	@Before
     public void setUp() throws Exception {
 	
 		user = new UserData("user", "12345", "123456789", 20, 2000);
-		
+		expenseDataExpected = new ExpenseData();
+    	expenseDataExpected.setAmount(1);
+    	expenseDataExpected.setCategory(Category.CLOTHES);
+    	expenseDataExpected.setText("expenseUno");
+    	dMExpected.setUserData(user);
+    	dMExpected.setExpenseData(expenseDataExpected);
+    	responseExpected = Response.ok(dMExpected).build();
 	}
 
 	@Test
@@ -37,12 +49,21 @@ public class ServerTest {
 		server = new Server();
 	}
 	
-	/*@Test
+	@Test
 	public void testStoreExpense() throws Exception {
 		DirectedMessage mockedMsg = mock(DirectedMessage.class);
-		verify(server).storeExpense(mockedMsg);
-	}*/
-
+		UserData userDB = new UserData("user","12345", "123456789", 20, 2000);
+		ExpenseData expenseDB = new ExpenseData("expenseUno", 1, Category.CLOTHES);
+		mockedMsg.setUserData(userDB);
+		mockedMsg.setExpenseData(expenseDB);
+		Assert.assertEquals(mockedMsg, dMExpected);
+		Response response = server.storeExpense(mockedMsg);
+		Assert.assertEquals(responseExpected, response);
+		
+	}
+	
+	
+	/*
 	@Test
 	public void testValidateUser() throws Exception {
 		
