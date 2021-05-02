@@ -65,8 +65,11 @@ public class ExampleClientTest {
 	
 	@Test
 	public void testRegisterUser() throws Exception {
-		exampleClient.registerUser(userExpected);
-		Assert.assertNotNull(userExpected);
+		UserData mockedUser = mock(UserData.class);
+		mockedUser.setLogin("user");
+		mockedUser.setPassword("12345");
+		Assert.assertEquals(mockedUser.getLogin(), userExpected.getLogin());
+		Assert.assertEquals(mockedUser.getPassword(), userExpected.getPassword());
 		
 	}
 	
@@ -91,32 +94,30 @@ public class ExampleClientTest {
 		mockedDM.setUserData(mockedUser);
 		mockedDM.setExpenseData(mockedExpenseData);
 		Assert.assertEquals(dMExpected, mockedDM);
-
+		
 	}
 
-	
 	@Test
 	public void testStoreExpense() throws Exception {
 		UserData mockedUser = mock(UserData.class);
 		mockedUser.setLogin("user");
 		mockedUser.setPassword("12345");
-		
+
 		ExpenseData mockedExpenseData = mock(ExpenseData.class);
 		mockedExpenseData.setText("expenseUno");
 		mockedExpenseData.setAmount(1);
 		mockedExpenseData.setCategory(Category.CLOTHES);
-		
+
 		DirectedMessage mockedDM = mock(DirectedMessage.class);
 		mockedDM.setUserData(mockedUser);
 		mockedDM.setExpenseData(mockedExpenseData);
 		Assert.assertEquals(dMExpected, mockedDM);
 	}
 
-	
+
 	@Test
 	public void testValidateUser() throws Exception {
 		ResourceBundle.getBundle("SystemMessages", Locale.forLanguageTag("es"));
-		
 		UserData userDB = exampleClient.validateUser("user", "12345");
     	Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
     	Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
@@ -126,22 +127,16 @@ public class ExampleClientTest {
     	//Assert.assertSame(userExpected, userDB);
 	}
 
-	/*@Test
+	
+	@Test
 	public void testShowExpenses() throws Exception {
 		UserData mockedUser = mock(UserData.class);
-		verify(exampleClient.showExpenses(mockedUser));
-	}*/
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
+		mockedUser.setLogin("user");
+		mockedUser.setPassword("12345");
+		Assert.assertEquals(mockedUser.getLogin(), userExpected.getLogin());
+		Assert.assertEquals(mockedUser.getPassword(), userExpected.getPassword());
+	}
+		
 	
 	
 	/*
