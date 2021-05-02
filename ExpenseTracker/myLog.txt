@@ -46,3 +46,73 @@ May 02, 2021 9:08:06 AM es.deusto.log.LoggerFile log
 INFO: Expense Tracker
 May 02, 2021 9:08:06 AM es.deusto.log.LoggerFile log
 INFO: -----------------------------------
+may. 02, 2021 1:16:39 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retrieved: User: login --> user, password -->  12345, expenses --> [Message: message --> Jeans, timestamp -->  Wed Apr 14 13:39:53 CEST 2021, amount = 20.0, category --> CLOTHES - Message: message --> Apples , timestamp -->  Thu Apr 29 09:28:24 CEST 2021, amount = 5.0, category --> FOOD - Message: message --> Movies, timestamp -->  Thu Apr 29 20:05:37 CEST 2021, amount = 20.0, category --> ENTERNTAINMENT - ]
+may. 02, 2021 1:16:39 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN:  * Client number: 1
+may. 02, 2021 1:25:02 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retrieved: User: login --> user, password -->  12345, expenses --> [Message: message --> Movies, timestamp -->  Thu Apr 29 20:05:37 CEST 2021, amount = 20.0, category --> ENTERNTAINMENT - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:16:39 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Jeans, timestamp -->  Wed Apr 14 13:39:53 CEST 2021, amount = 20.0, category --> CLOTHES - Message: message --> Apples , timestamp -->  Thu Apr 29 09:28:24 CEST 2021, amount = 5.0, category --> FOOD - ]
+may. 02, 2021 1:25:02 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN:  * Client number: 1
+may. 02, 2021 1:27:55 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retrieved: User: login --> user, password -->  12345, expenses --> [Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:25:02 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Jeans, timestamp -->  Wed Apr 14 13:39:53 CEST 2021, amount = 20.0, category --> CLOTHES - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:16:39 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Movies, timestamp -->  Thu Apr 29 20:05:37 CEST 2021, amount = 20.0, category --> ENTERNTAINMENT - Message: message --> Apples , timestamp -->  Thu Apr 29 09:28:24 CEST 2021, amount = 5.0, category --> FOOD - ]
+may. 02, 2021 1:27:55 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN:  * Client number: 1
+may. 02, 2021 1:28:21 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retrieved: User: login --> user, password -->  12345, expenses --> [Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:27:55 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Jeans, timestamp -->  Wed Apr 14 13:39:53 CEST 2021, amount = 20.0, category --> CLOTHES - Message: message --> Apples , timestamp -->  Thu Apr 29 09:28:24 CEST 2021, amount = 5.0, category --> FOOD - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:25:02 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Movies, timestamp -->  Thu Apr 29 20:05:37 CEST 2021, amount = 20.0, category --> ENTERNTAINMENT - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:16:39 CEST 2021, amount = 1.0, category --> CLOTHES - ]
+may. 02, 2021 1:28:21 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN:  * Client number: 1
+may. 02, 2021 1:40:37 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retrieved: User: login --> user, password -->  12345, expenses --> [Message: message --> Apples , timestamp -->  Thu Apr 29 09:28:24 CEST 2021, amount = 5.0, category --> FOOD - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:16:39 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:25:02 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Movies, timestamp -->  Thu Apr 29 20:05:37 CEST 2021, amount = 20.0, category --> ENTERNTAINMENT - Message: message --> Jeans, timestamp -->  Wed Apr 14 13:39:53 CEST 2021, amount = 20.0, category --> CLOTHES - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:28:21 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:27:55 CEST 2021, amount = 1.0, category --> CLOTHES - ]
+may. 02, 2021 1:40:37 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN:  * Client number: 1
+may. 02, 2021 1:47:19 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retrieved: User: login --> user, password -->  12345, expenses --> [Message: message --> Movies, timestamp -->  Thu Apr 29 20:05:37 CEST 2021, amount = 20.0, category --> ENTERNTAINMENT - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:27:55 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Jeans, timestamp -->  Wed Apr 14 13:39:53 CEST 2021, amount = 20.0, category --> CLOTHES - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:25:02 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:28:21 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:40:37 CEST 2021, amount = 1.0, category --> CLOTHES - Message: message --> Apples , timestamp -->  Thu Apr 29 09:28:24 CEST 2021, amount = 5.0, category --> FOOD - Message: message --> expensiveExpense, timestamp -->  Sun May 02 13:16:39 CEST 2021, amount = 1.0, category --> CLOTHES - ]
+may. 02, 2021 1:47:19 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN:  * Client number: 1
+may. 02, 2021 1:52:17 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 02, 2021 1:52:17 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 02, 2021 1:52:17 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 02, 2021 1:52:27 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Sesión iniciada
+may. 02, 2021 1:52:30 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 02, 2021 1:52:42 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 02, 2021 1:54:09 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 02, 2021 1:54:09 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 02, 2021 1:54:09 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 02, 2021 1:54:45 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Sesión iniciada
+may. 02, 2021 1:56:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 02, 2021 1:56:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 02, 2021 1:56:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 02, 2021 1:57:04 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Sesión iniciada
+may. 02, 2021 2:00:26 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 02, 2021 2:00:26 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 02, 2021 2:00:26 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 02, 2021 2:00:33 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario está siendo validado
+may. 02, 2021 2:07:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 02, 2021 2:07:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 02, 2021 2:07:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 02, 2021 2:07:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario está siendo validado
+may. 02, 2021 2:08:10 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario está siendo validado

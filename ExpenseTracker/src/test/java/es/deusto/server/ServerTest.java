@@ -3,6 +3,7 @@ package es.deusto.server;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.platform.commons.annotation.Testable;
 import org.mockito.ArgumentCaptor;
 import static org.mockito.Mockito.*;
 
@@ -15,6 +16,7 @@ import es.deusto.serialization.UserData;
 
 @PerfTest(invocations = 5)
 @Required(max = 1200, average = 250)
+@Testable
 public class ServerTest {
 	
 	Server server;
@@ -34,7 +36,7 @@ public class ServerTest {
 	public void testServer() throws Exception {
 		server = new Server();
 	}
-
+	
 	@Test
 	public void testStoreExpense() throws Exception {
 		DirectedMessage mockedMsg = mock(DirectedMessage.class);
@@ -45,7 +47,7 @@ public class ServerTest {
 	public void testValidateUser() throws Exception {
 		
 	}
-
+	/*
 	@Test
 	public void testRegisterUser() throws Exception {
 		server.registerUser(user);
@@ -55,7 +57,7 @@ public class ServerTest {
 		Assert.assertEquals(user.getLogin(), newUser.getLogin());
 
 	}
-
+	*/
 	@Test
 	public void testShowExpenses() throws Exception {
 		

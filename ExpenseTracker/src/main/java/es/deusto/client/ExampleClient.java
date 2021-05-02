@@ -33,7 +33,7 @@ public class ExampleClient {
 	private LoginWindow lw;
 	private static ResourceBundle resourceBundle; 
 
-	private static final Logger logger = Logger.getLogger("Example Client");
+	//private static final Logger logger = Logger.getLogger(ExampleClient.class.getName());
 
 	public ExampleClient(String hostname, String port) {
 		client = ClientBuilder.newClient();
@@ -48,6 +48,7 @@ public class ExampleClient {
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting"));
+			//logger.info(resourceBundle.getString("error_connecting")); 
 			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
 		} else {
 			LoggerFile.log(Level.INFO, resourceBundle.getString("persisting_user"));
@@ -128,7 +129,10 @@ public class ExampleClient {
 			//logger.info(resourceBundle.getString("error_connecting"));
 
 		} else {
+			
 			LoggerFile.log(Level.INFO, resourceBundle.getString("validate_user")); 
+			
+			
 			//logger.info(resourceBundle.getString("validate_user"));
 
 					
@@ -171,7 +175,7 @@ public class ExampleClient {
 		String hostname = args[0];
 		String port = args[1];
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
-		resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag("es"));
+		//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag("es"));
 
 		//logger.info(resourceBundle.getString("starting_msg"));
 		//logger.info(resourceBundle.getString("app_title"));

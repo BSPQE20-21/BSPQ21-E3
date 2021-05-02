@@ -25,6 +25,7 @@ import java.util.*;
 import javax.jdo.Extent;
 import es.deusto.log.LoggerFile; 
 import java.util.logging.Level; 
+import java.util.logging.Logger;
 
 // This is the server part. 
 
@@ -35,6 +36,9 @@ public class Server {
 	private int cont = 0;
 	private PersistenceManager pm=null;
 	private Transaction tx=null;
+	//private static final Logger logger = Logger.getLogger("Server");
+	
+	private static ResourceBundle resourceBundle; 
 
 	public Server() {
 		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -54,7 +58,8 @@ public class Server {
 			user = (User)q.execute();
 			
 			//System.out.println("User retrieved: " + user);
-			LoggerFile.log(Level.INFO,  "User retrieved: " + user);
+			LoggerFile.log(Level.INFO,  "-" + user);
+			
 			if (user != null)  {
 				Expense expense = new Expense(directedExpense.getExpenseData().getText(), directedExpense.getExpenseData().getAmount(), directedExpense.getExpenseData().getCategory());
 				user.getMessages().add(expense);
@@ -70,7 +75,7 @@ public class Server {
 		if (user != null) {
 			cont++;
 			//System.out.println(" * Client number: " + cont);
-			LoggerFile.log(Level.INFO,  " * Client number: " + cont);
+			
 			ExpenseData expenseData = new ExpenseData();
 			expenseData.setText(directedExpense.getExpenseData().getText());
 			expenseData.setAmount(directedExpense.getExpenseData().getAmount());
@@ -78,6 +83,7 @@ public class Server {
 			
 			return Response.ok(expenseData).build();
 		} else {
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error"));
 			return Response.status(Status.BAD_REQUEST).entity("Login details supplied for message delivery are not correct").build();
 		}
 	}
@@ -110,7 +116,8 @@ public class Server {
 				}
 		
 			} else {
-				LoggerFile.log(Level.INFO,  "User not registred");
+				
+				//LoggerFile.log(Level.INFO,  "User not registred");
 				//System.out.println("User not registred");
 				
 			}
@@ -152,7 +159,7 @@ public class Server {
 				//System.out.println("Creating user: " + user);
 				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(), userData.getAge(),userData.getExpenseLimit());
 				pm.makePersistent(user);	
-				LoggerFile.log(Level.INFO,  "User created: " + user);				 
+				LoggerFile.log(Level.INFO,  "-" + user);				 
 				//System.out.println("User created: " + user);
 			}
 			tx.commit();
