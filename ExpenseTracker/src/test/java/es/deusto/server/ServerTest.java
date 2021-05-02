@@ -9,7 +9,7 @@ import static org.mockito.Mockito.*;
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
 
-
+import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.UserData;
 
 
@@ -37,12 +37,13 @@ public class ServerTest {
 
 	@Test
 	public void testStoreExpense() throws Exception {
-		
+		DirectedMessage mockedMsg = mock(DirectedMessage.class);
+		verify(server).storeExpense(mockedMsg);
 	}
 
 	@Test
 	public void testValidateUser() throws Exception {
-	
+		
 	}
 
 	@Test
@@ -57,7 +58,7 @@ public class ServerTest {
 
 	@Test
 	public void testShowExpenses() throws Exception {
-
+		
 	}
 
 
