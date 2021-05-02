@@ -41,13 +41,10 @@ public class ExampleClient {
 		lw = new LoginWindow(this);
 	}
 
-	
 	public void registerUser(UserData userData) {
 		WebTarget registerUserWebTarget = webTarget.path("register");
 		Invocation.Builder invocationBuilder = registerUserWebTarget.request(MediaType.APPLICATION_JSON);
 		
-		
-
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting"));
@@ -60,7 +57,6 @@ public class ExampleClient {
 		}
 	}
 
-	
 	public void sayMessage(String login, String password, Expense expense) {
 		WebTarget sayHelloWebTarget = webTarget.path("sayMessage");
 		Invocation.Builder invocationBuilder = sayHelloWebTarget.request(MediaType.APPLICATION_JSON);

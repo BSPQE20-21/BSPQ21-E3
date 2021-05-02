@@ -40,3 +40,9 @@ may. 01, 2021 12:48:00 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: Sesión iniciada
 may. 01, 2021 12:48:22 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: Los gastos se han recuperado de la BD
+May 02, 2021 9:08:06 AM es.deusto.log.LoggerFile log
+INFO: Empezando ...
+May 02, 2021 9:08:06 AM es.deusto.log.LoggerFile log
+INFO: Expense Tracker
+May 02, 2021 9:08:06 AM es.deusto.log.LoggerFile log
+INFO: -----------------------------------
