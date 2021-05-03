@@ -33,7 +33,7 @@ public class ServerTest {
 
 	@Before
     public void setUp() throws Exception {
-		server = new Server(); 
+		server = new Server();
 		user = new UserData("user", "12345", "123456789", 20, 2000);
 		expenseDataExpected = new ExpenseData();
     	expenseDataExpected.setAmount(1);
@@ -60,7 +60,7 @@ public class ServerTest {
 		myMsg.setExpenseData(expenseDB);
 		//Assert.assertEquals(myMsg, dMExpected);
 		//Response response = server.storeExpense(myMsg);
-		//Assert.assertEquals(responseExpected, response);
+		//Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
 		
 	}
 	
@@ -72,7 +72,8 @@ public class ServerTest {
 		Assert.assertEquals(userBD.getLogin(), user.getLogin());
     	Assert.assertEquals(userBD.getPassword(), user.getPassword());
     	Response response = server.validateUser(logindata);
-    	//Assert.assertEquals(responseExpected, response);
+    	//Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+    	
 	}
 	
 	@Test
@@ -85,7 +86,7 @@ public class ServerTest {
     	Assert.assertNotEquals(userBD.getAge(), user.getAge());
     	Assert.assertNotEquals(userBD.getExpenseLimit(), user.getExpenseLimit(), 0);
     	//Response response = server.registerUser(user);
-    	//Assert.assertEquals(responseExpected, response);
+    	//Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
     	
 
 	}
