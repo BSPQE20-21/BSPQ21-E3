@@ -1,5 +1,6 @@
 package es.deusto.serialization;
 
+import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Before;
@@ -26,7 +27,9 @@ public class DirectedMessageTest {
 		usrDt.setExpenseLimit(1000);
 		dMsg = new DirectedMessage(usrDt, expDt);
 		
-		
+		expDt2.setAmount(1);
+		expDt2.setCategory(Category.CLOTHES);
+		expDt2.setText("ropa");
 
 	}
 	
@@ -47,27 +50,39 @@ public class DirectedMessageTest {
 		userData2.setExpenseLimit(1000);
 		userData2.setLogin("Eduardo");
 		userData2.setPassword("11111");
-		//Assert.assertEquals(usrDt, userData2);
+
+		assertEquals(usrDt.getLogin(), userData2.getLogin());
+		assertEquals(usrDt.getPassword(), userData2.getPassword());
+		assertEquals(usrDt.getCardNumber(), userData2.getCardNumber());
+		assertEquals(usrDt.getAge(), userData2.getAge());
+		assertEquals(usrDt.getExpenseLimit(), userData2.getExpenseLimit());
 	}
 	
 
 	@Test
 	public void testGetUserData() throws Exception {
-		//assertEquals(usrDt, new UserData("Eduardo", "11111", "111111111", 22, 1000));
+		UserData eduUsr = new UserData("Eduardo", "11111", "111111111", 22, 1000);
+		assertEquals(usrDt.getLogin(), eduUsr.getLogin());
+		assertEquals(usrDt.getPassword(), eduUsr.getPassword());
+		assertEquals(usrDt.getCardNumber(), eduUsr.getCardNumber());
+		assertEquals(usrDt.getAge(), eduUsr.getAge());
+		assertEquals(usrDt.getExpenseLimit(), eduUsr.getExpenseLimit());
 	}
-
-	@SuppressWarnings("deprecation")
+ 
 	@Test
 	public void testSetExpenseData() throws Exception {
-		expDt2.setAmount(1);
-		expDt2.setCategory(Category.CLOTHES);
-		expDt2.setText("ropa");
-		//Assert.assertEquals(expDt, expDt2);
+		ExpenseData eduExp = new ExpenseData("ropa", 1, Category.CLOTHES);
+		assertEquals(expDt.getText(), eduExp.getText());
+		assertEquals(expDt.getAmount(), eduExp.getAmount());
+		assertEquals(expDt.getCategory(), eduExp.getCategory());
 	}
 
 	@Test
 	public void testGetExpenseData() throws Exception {
-		//Assert.assertSame(expDt, new ExpenseData("ropa", 1, Category.CLOTHES));
+		ExpenseData eduExp = new ExpenseData("ropa", 1, Category.CLOTHES);
+		assertEquals(expDt.getText(), eduExp.getText());
+		assertEquals(expDt.getAmount(), eduExp.getAmount());
+		assertEquals(expDt.getCategory(), eduExp.getCategory());
 	}
 	
 

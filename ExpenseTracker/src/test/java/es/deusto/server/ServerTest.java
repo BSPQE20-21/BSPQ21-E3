@@ -53,17 +53,16 @@ public class ServerTest {
 	
 	@Test
 	public void testStoreExpense() throws Exception {
-		DirectedMessage mockedMsg = mock(DirectedMessage.class);
 		UserData userDB = new UserData("user","12345", "123456789", 20, 2000);
 		ExpenseData expenseDB = new ExpenseData("expenseUno", 1, Category.CLOTHES);
-		mockedMsg.setUserData(userDB);
-		mockedMsg.setExpenseData(expenseDB);
-		//Assert.assertEquals(mockedMsg, dMExpected);
-		//Response response = server.storeExpense(mockedMsg);
+		DirectedMessage myMsg = new DirectedMessage();
+		myMsg.setUserData(userDB);
+		myMsg.setExpenseData(expenseDB);
+		//Assert.assertEquals(myMsg, dMExpected);
+		//Response response = server.storeExpense(myMsg);
 		//Assert.assertEquals(responseExpected, response);
 		
 	}
-	
 	
 	
 	@Test

@@ -1,10 +1,5 @@
 package es.deusto.client;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
@@ -44,7 +39,7 @@ public class ExampleClient {
 	public void registerUser(UserData userData) {
 		WebTarget registerUserWebTarget = webTarget.path("register");
 		Invocation.Builder invocationBuilder = registerUserWebTarget.request(MediaType.APPLICATION_JSON);
-		
+
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		if (response.getStatus() != Status.OK.getStatusCode()) {
 			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting"));
@@ -54,7 +49,7 @@ public class ExampleClient {
 			LoggerFile.log(Level.INFO, resourceBundle.getString("persisting_user"));
 			//logger.info(resourceBundle.getString("persisting_user"));
 			//System.out.println("User correctly registered");
-			
+
 		}
 	}
 
@@ -73,7 +68,7 @@ public class ExampleClient {
 		expenseData.setText(expense.getText());
 		expenseData.setAmount(expense.getAmount());
 		expenseData.setCategory(expense.getCategory());
-		
+
 		directedMessage.setExpenseData(expenseData);
 
 		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
@@ -89,11 +84,11 @@ public class ExampleClient {
 			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
 	}
-	
+
 	public void storeExpense(UserData userData, ExpenseData expenseData) {
 		WebTarget storeExpenseWebTarget = webTarget.path("store");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
-		
+
 		DirectedMessage directedMessage = new DirectedMessage();
 
 		directedMessage.setUserData(userData);
@@ -116,7 +111,7 @@ public class ExampleClient {
 	public UserData validateUser(String login, String password){
 		WebTarget storeExpenseWebTarget = webTarget.path("validate");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
-		
+
 
 		LoginData loginData = new LoginData(); 
 		loginData.setLogin(login); 
@@ -129,22 +124,22 @@ public class ExampleClient {
 			//logger.info(resourceBundle.getString("error_connecting"));
 
 		} else {
-			
+
 			LoggerFile.log(Level.INFO, resourceBundle.getString("validate_user")); 
-			
-			
+
+
 			//logger.info(resourceBundle.getString("validate_user"));
 
-					
+			
 		}
 		return userData; 
-	
+
 	}
 
 	public 	Set<ExpenseData> showExpenses(UserData userData){
 		WebTarget storeExpenseWebTarget = webTarget.path("showExpenses");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
-		
+
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		//ExpenseList expenses = response.readEntity(ExpenseList.class);
 		ExpenseList expenseList = response.readEntity(ExpenseList.class); 
@@ -157,13 +152,12 @@ public class ExampleClient {
 		} else {
 			LoggerFile.log(Level.INFO, resourceBundle.getString("show_expenses")); 
 			//logger.info(resourceBundle.getString("show_expenses"));
-					
 		}
-		
+
 		Set<ExpenseData> expenses = expenseList.getExpenseList(); 
 		//System.out.println(expenses.getExpenseList());
 		return expenses; 
-	
+
 	}
 
 	public static void main(String[] args) {
@@ -183,7 +177,7 @@ public class ExampleClient {
 		LoggerFile.log(Level.INFO, resourceBundle.getString("starting_msg")); 
 		LoggerFile.log(Level.INFO, resourceBundle.getString("app_title")); 
 		LoggerFile.log(Level.INFO, resourceBundle.getString("app_underline")); 
-		
+
 		ExampleClient client = new ExampleClient(hostname, port);
 
 	}

@@ -24,6 +24,7 @@ import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
+import es.deusto.server.jdo.User;
 
 public class ExampleClientTest {
 	ExampleClient exampleClient;
@@ -64,11 +65,11 @@ public class ExampleClientTest {
 	
 	@Test
 	public void testRegisterUser() throws Exception {
-		UserData mockedUser = mock(UserData.class);
-		mockedUser.setLogin("user1");
-		mockedUser.setPassword("1234");
-		Assert.assertNotEquals(mockedUser.getLogin(), userExpected.getLogin());
-		Assert.assertNotEquals(mockedUser.getPassword(), userExpected.getPassword());
+		UserData newUser = new UserData();
+		newUser.setLogin("user1");
+		newUser.setPassword("1234");
+		Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
+		Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
 		
 	}
 	
@@ -98,19 +99,19 @@ public class ExampleClientTest {
 
 	@Test
 	public void testStoreExpense() throws Exception {
-		UserData mockedUser = mock(UserData.class);
-		mockedUser.setLogin("user");
-		mockedUser.setPassword("12345");
+		UserData newUser = new UserData();
+		newUser.setLogin("user");
+		newUser.setPassword("12345");
 
-		ExpenseData mockedExpenseData = mock(ExpenseData.class);
-		mockedExpenseData.setText("expenseUno");
-		mockedExpenseData.setAmount(1);
-		mockedExpenseData.setCategory(Category.CLOTHES);
+		ExpenseData newExpData = new ExpenseData();
+		newExpData.setText("expenseUno");
+		newExpData.setAmount(1);
+		newExpData.setCategory(Category.CLOTHES);
 
-		DirectedMessage mockedDM = mock(DirectedMessage.class);
-		mockedDM.setUserData(mockedUser);
-		mockedDM.setExpenseData(mockedExpenseData);
-		Assert.assertNotEquals(dMExpected, mockedDM);
+		DirectedMessage newDM = new DirectedMessage();
+		newDM.setUserData(newUser);
+		newDM.setExpenseData(newExpData);
+		Assert.assertNotEquals(dMExpected, newDM);
 	}
 	
 	/*
@@ -129,11 +130,11 @@ public class ExampleClientTest {
 	
 	@Test
 	public void testShowExpenses() throws Exception {
-		UserData mockedUser = mock(UserData.class);
-		mockedUser.setLogin("user1");
-		mockedUser.setPassword("1234");
-		Assert.assertNotEquals(mockedUser.getLogin(), userExpected.getLogin());
-		Assert.assertNotEquals(mockedUser.getPassword(), userExpected.getPassword());
+		UserData newUser = new UserData();
+		newUser.setLogin("user1");
+		newUser.setPassword("1234");
+		Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
+		Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
 	}
 		
 	
