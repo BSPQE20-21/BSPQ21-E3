@@ -41,7 +41,6 @@ public class DirectedMessageTest {
 		//assertEquals(dMsg, DMSG);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Test
 	public void testSetUserData() throws Exception {
 		UserData userData2 = new UserData();
