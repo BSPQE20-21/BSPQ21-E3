@@ -27,7 +27,6 @@ import es.deusto.server.jdo.Expense;
 import es.deusto.server.jdo.User;
 
 public class ExampleClientTest {
-<<<<<<< HEAD
     ExampleClient exampleClient;
     UserData userExpected; 
     DirectedMessage dMExpected = new DirectedMessage();
@@ -96,43 +95,7 @@ public class ExampleClientTest {
         mockedDM.setExpenseData(mockedExpenseData);
         Assert.assertNotEquals(dMExpected, mockedDM);
         
-=======
-	ExampleClient exampleClient;
-	UserData userExpected; 
-	DirectedMessage dMExpected = new DirectedMessage();
-	ExpenseData expenseDataExpected;
-	Expense expenseExpected;
-	
-	//ResourceBundle resourceBundle;
-
-	@Before
-	public void setUp() throws Exception {
-    	
-    	exampleClient = new ExampleClient("127.0.0.1", "8080");
-    	userExpected = new UserData();
-    	userExpected.setLogin("user");
-    	userExpected.setPassword("12345");
-    	userExpected.setAge(20);
-    	userExpected.setCardNumber("123456789");
-    	userExpected.setExpenseLimit(2000);
-    	
-    	expenseExpected = new Expense();
-    	expenseExpected.setText("expenseUno");
-    	expenseExpected.setAmount(1);
-    	expenseExpected.setCategory(Category.CLOTHES);
-    	
-    	expenseDataExpected = new ExpenseData();
-    	expenseDataExpected.setAmount(expenseExpected.getAmount());
-    	expenseDataExpected.setCategory(expenseExpected.getCategory());
-    	expenseDataExpected.setText(expenseExpected.getText());
-    	
-    	dMExpected.setUserData(userExpected);
-    	dMExpected.setExpenseData(expenseDataExpected);
-    	
-    	
->>>>>>> branch 'main' of https://github.com/BSPQE20-21/BSPQ21-E3
     }
-<<<<<<< HEAD
 
     @Test
     public void testStoreExpense() throws Exception {
@@ -144,45 +107,7 @@ public class ExampleClientTest {
         newExpData.setText("expenseUno");
         newExpData.setAmount(1);
         newExpData.setCategory(Category.CLOTHES);
-=======
-	
-	
-	@Test
-	public void testRegisterUser() throws Exception {
-		UserData newUser = new UserData();
-		newUser.setLogin("user1");
-		newUser.setPassword("1234");
-		Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
-		Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
-		
-	}
-	
-	@Test
-	public void testSayMessage() throws Exception {
-	
-		UserData mockedUser = mock(UserData.class);
-		mockedUser.setLogin("user");
-		mockedUser.setPassword("12345");
-		
-		Expense mockedExpense = mock(Expense.class);
-		mockedExpense.setText("expenseUno");
-		mockedExpense.setAmount(1);
-		mockedExpense.setCategory(Category.CLOTHES);
-		
-		ExpenseData mockedExpenseData = mock(ExpenseData.class);
-		mockedExpenseData.setText(mockedExpense.getText());
-		mockedExpenseData.setAmount(mockedExpense.getAmount());
-		mockedExpenseData.setCategory(mockedExpense.getCategory());
-		
-		DirectedMessage mockedDM = mock(DirectedMessage.class);
-		mockedDM.setUserData(mockedUser);
-		mockedDM.setExpenseData(mockedExpenseData);
-		Assert.assertNotEquals(dMExpected, mockedDM);
-		
-	}
->>>>>>> branch 'main' of https://github.com/BSPQE20-21/BSPQ21-E3
 
-<<<<<<< HEAD
         DirectedMessage newDM = new DirectedMessage();
         newDM.setUserData(newUser);
         newDM.setExpenseData(newExpData);
@@ -225,61 +150,6 @@ public class ExampleClientTest {
      * 
      * assertEquals(expenses, exampleClient.showExpenses(userData)); }
      */
-=======
-	@Test
-	public void testStoreExpense() throws Exception {
-		UserData newUser = new UserData();
-		newUser.setLogin("user");
-		newUser.setPassword("12345");
-
-		ExpenseData newExpData = new ExpenseData();
-		newExpData.setText("expenseUno");
-		newExpData.setAmount(1);
-		newExpData.setCategory(Category.CLOTHES);
-
-		DirectedMessage newDM = new DirectedMessage();
-		newDM.setUserData(newUser);
-		newDM.setExpenseData(newExpData);
-		Assert.assertNotEquals(dMExpected, newDM);
-	}
-	
-	/*
-	@Test
-	public void testValidateUser() throws Exception {
-		ResourceBundle.getBundle("SystemMessages", Locale.forLanguageTag("es"));
-		UserData userDB = exampleClient.validateUser("user", "12345");
-    	Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
-    	Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
-    	Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
-    	Assert.assertEquals(userDB.getAge(), userExpected.getAge());
-    	Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
-    	//Assert.assertSame(userExpected, userDB);
-	}
-	*/
-	
-	@Test
-	public void testShowExpenses() throws Exception {
-		UserData newUser = new UserData();
-		newUser.setLogin("user1");
-		newUser.setPassword("1234");
-		Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
-		Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
-	}
-		
-	
-	
-	/*
-	 * @Before public void setUp() throws Exception { exampleClient = new
-	 * ExampleClient(hostname, port); exampleClient.storeExpense(userData,
-	 * expenseData); }
-	 * 
-	 * @Test public void testRegisterUser() { ExpenseList expenses = new
-	 * ExpenseList();
-	 * 
-	 * 
-	 * assertEquals(expenses, exampleClient.showExpenses(userData)); }
-	 */
->>>>>>> branch 'main' of https://github.com/BSPQE20-21/BSPQ21-E3
     
     
   
