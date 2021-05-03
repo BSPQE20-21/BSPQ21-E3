@@ -1,15 +1,23 @@
 package es.deusto.serialization;
 
+import es.deusto.server.jdo.Category;
+
 // the relationship between the user and the message or in our case user and expenses
 
 public class DirectedMessage {
 
-    
-    private UserData userData;
+	
+
+	public DirectedMessage(UserData userData, ExpenseData expenseData) {
+		super();
+		this.userData = userData;
+		this.expenseData = expenseData;
+	}
+
+	private UserData userData;
     private ExpenseData expenseData;
-
+    
     public DirectedMessage() {
-
     }
 
     public void setUserData(UserData userData) {
@@ -27,4 +35,6 @@ public class DirectedMessage {
     public ExpenseData getExpenseData() {
         return this.expenseData;
     }
+
+	
 }

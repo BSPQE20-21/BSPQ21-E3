@@ -10,7 +10,6 @@ public class ExpenseList {
         expenses = new HashSet<>();
     }
    
-
     public void setExpenseList(Set<ExpenseData> expenses){
         this.expenses = expenses; 
     
