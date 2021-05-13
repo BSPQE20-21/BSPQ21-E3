@@ -22,22 +22,26 @@ import es.deusto.server.jdo.Expense;
 import java.util.*; 
 
 
+/** 
+*@class ADD EXPENSE WINDOW
+*This class constructs the window that allows users to add expenses 
+*The class is based on a formulary where users can add the following attributes
+*> expenseName = description of the purchase
+*> expenseAmount = the money spended
+*> expenseCategory (comboBox that gets the data from an Enum) 
+*/
+
 public class AddExpenseWindow extends JFrame implements ActionListener {
 	
-	/**This window les the user store data about expenses/purchases
-	 * expenseName = description of the purchase
-	 * expenseAmount = the money spended
-	 * expenseCategory (comboBox that gets the data from an Enum)
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	
-	JButton submit, cancel;
-	JLabel expenseName, expenseAmount, expenseCategory;
-	JComboBox<Category> comboCategory;
+	JButton submit, cancel; /**< Jbuttons that allow us to add a new expense */
+	JLabel expenseName, expenseAmount, expenseCategory; 
+	JComboBox<Category> comboCategory; /**< Shows all the categories that the user can add*/
 	JTextField name_text, amount_text;
 
-	private ExampleClient client;
+	private ExampleClient client; 
 	
 	public void switchPanel(JPanel current, JPanel next) {
 		
@@ -47,6 +51,11 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		next.setEnabled(true);
 		  
 	}
+	/**
+ 	* Constructor of the window
+ 	* UserData is passed as a parameter so the expense can be assigned to the loged in user
+ 	* 
+ 	*/
 	
 	public AddExpenseWindow(UserData userData, ExampleClient client) {
 		this.client = client; 
@@ -55,6 +64,12 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		panelAddExpense.setLayout(new BoxLayout(panelAddExpense, BoxLayout.Y_AXIS));
 		
 		//Expense details
+		/* This part of the code creates the form 
+		*Each variable has a label and a text field
+		*ExpenseName
+		*ExpenseAmount
+		*ExpenseCategory
+		*/
 		expenseName = new JLabel("Description: ");
 		name_text = new JTextField(14);
 		panelAddExpense.add(expenseName);
@@ -81,6 +96,8 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		//Add/cancel buttons
 		JButton add = new JButton("Add");
 		
+		
+
 		add.addActionListener(new ActionListener() {
 			
 			@Override
