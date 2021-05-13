@@ -21,6 +21,8 @@ import java.util.*;
 import es.deusto.log.LoggerFile; 
 import java.util.logging.Level; 
 import java.util.logging.Logger;
+
+
 public class ExampleClient {
 
 	private Client client;
@@ -29,13 +31,26 @@ public class ExampleClient {
 	private static ResourceBundle resourceBundle; 
 
 	//private static final Logger logger = Logger.getLogger(ExampleClient.class.getName());
-
+	/**
+	 * Constructor of the CLIENT 
+	 * Here is called the @see es.deusto.client.LoginWindow so the first window where the user can loged in is opened
+	 * @param hostname this information is stored insite the pom.xml and will be asigned in the main with an arg
+	 * @param port this information is stored insite the pom.xml and will be asigned in the main with an arg
+	 */
+	
 	public ExampleClient(String hostname, String port) {
 		client = ClientBuilder.newClient();
 		webTarget = client.target(String.format("http://%s:%s/rest/server", hostname, port));
 		lw = new LoginWindow(this);
 	}
 
+	/**
+	 * This method allows a user to be registered insite the DB 
+	 * It calls the server side method @see es.deusto.server.Server (registerUser)
+	 * @param UserData userData -  the information of the user that sould be register is passed
+	 * @return nothing should be returned in this class 
+	 * 
+	 */
 	public void registerUser(UserData userData) {
 		WebTarget registerUserWebTarget = webTarget.path("register");
 		Invocation.Builder invocationBuilder = registerUserWebTarget.request(MediaType.APPLICATION_JSON);
@@ -52,7 +67,8 @@ public class ExampleClient {
 
 		}
 	}
-
+	
+	//TODO review this method (do we use it)?   
 	public void sayMessage(String login, String password, Expense expense) {
 		WebTarget sayHelloWebTarget = webTarget.path("sayMessage");
 		Invocation.Builder invocationBuilder = sayHelloWebTarget.request(MediaType.APPLICATION_JSON);
@@ -85,6 +101,7 @@ public class ExampleClient {
 		}
 	}
 
+
 	public void storeExpense(UserData userData, ExpenseData expenseData) {
 		WebTarget storeExpenseWebTarget = webTarget.path("store");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
@@ -107,7 +124,13 @@ public class ExampleClient {
 			//logger.info(resourceBundle.getString("store_expense"));
 		}
 	}
-
+	/**
+	 * This method validated if the user that is trying to access the site is already loged in or not
+	 * This will call the @see es.deusto.server.Server (validateUser) which will access the BD and check if the user is registred
+	 * @param login - email
+	 * @param password 
+	 * @return UserData - it will return the actual loged in user
+	 */
 	public UserData validateUser(String login, String password){
 		WebTarget storeExpenseWebTarget = webTarget.path("validate");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
@@ -136,6 +159,15 @@ public class ExampleClient {
 
 	}
 
+	/**
+	 * This method looks inside the DB for all the expenses of a concrete user
+	 * This method will call the @see es.deusto.server.Server (showExpense) that will be the one accesing the BD
+	 * This method is called inside the @see es.deusto.client.AddExpenseWindow
+	 * @param userData - the user that is logged in
+	 * @return Set<ExpenseData> a set of all the expenses of the concrete user
+	 * 
+	 */
+
 	public 	Set<ExpenseData> showExpenses(UserData userData){
 		WebTarget storeExpenseWebTarget = webTarget.path("showExpenses");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
@@ -160,6 +192,7 @@ public class ExampleClient {
 
 	}
 
+	
 	public static void main(String[] args) {
 		if (args.length != 2) {
 			System.out.println("Use: java Client.Client [host] [port]");

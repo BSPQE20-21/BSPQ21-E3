@@ -31,7 +31,7 @@ import java.util.*;
 *> expenseCategory (comboBox that gets the data from an Enum) 
 */
 
-public class AddExpenseWindow extends JFrame implements ActionListener {
+public class AddExpenseWindow extends JFrame  {
 	
 
 	private static final long serialVersionUID = 1L;
@@ -43,6 +43,12 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 
 	private ExampleClient client; 
 	
+
+	/**
+	 * (Not used method) 
+	 * The main putpose is to change from one window to another making visible TRUE visible FALSE the desired windows
+	 */
+
 	public void switchPanel(JPanel current, JPanel next) {
 		
 		current.setVisible(false);
@@ -54,7 +60,10 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 	/**
  	* Constructor of the window
  	* UserData is passed as a parameter so the expense can be assigned to the loged in user
- 	* 
+ 	*Expense details
+	*>ExpenseName
+	*>ExpenseAmount
+	*>ExpenseCategory	
  	*/
 	
 	public AddExpenseWindow(UserData userData, ExampleClient client) {
@@ -63,13 +72,7 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		panelAddExpense = new JPanel();
 		panelAddExpense.setLayout(new BoxLayout(panelAddExpense, BoxLayout.Y_AXIS));
 		
-		//Expense details
-		/* This part of the code creates the form 
-		*Each variable has a label and a text field
-		*ExpenseName
-		*ExpenseAmount
-		*ExpenseCategory
-		*/
+	
 		expenseName = new JLabel("Description: ");
 		name_text = new JTextField(14);
 		panelAddExpense.add(expenseName);
@@ -97,7 +100,10 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		JButton add = new JButton("Add");
 		
 		
-
+		/** The action listener is assigned to the ADD button
+		 * Each time we click on ADD a new wxpense is creted and stored in the DB 
+		 * The client is called so it can manage the connection with the server and send the request of storage
+		 */
 		add.addActionListener(new ActionListener() {
 			
 			@Override
@@ -154,9 +160,5 @@ public class AddExpenseWindow extends JFrame implements ActionListener {
 		setVisible(true);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-	}
 
 }

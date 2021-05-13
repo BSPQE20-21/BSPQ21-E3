@@ -9,14 +9,26 @@ import java.awt.*;
 import javax.swing.*;
 import es.deusto.server.jdo.Expense;
 
-public class AllExpensesWindow extends JFrame implements ActionListener {
-    private ExampleClient client;
+/** 
+*@class ALL EXPENSE WINDOW
+*This class constructs the window that allows users to show expenses 
+*/
 
-    private Set<ExpenseData> expenses; 
+public class AllExpensesWindow extends JFrame {
+    private ExampleClient client; 
+
+    private Set<ExpenseData> expenses;  /**< Set that contains all the expenses of the user */
     private UserData userData; 
     private JButton addExpense; 
     private JPanel panel, buttonPanel; 
     
+    /**
+     * Contractor of the window that recieves the following parameters
+     * @param ExampleClient client - so we can make the connection with the client 
+     * @param Set<ExpenseData> expneses - list of expenses assigned to the loged in user
+     * @UserData userData - the information of the loged in user
+     * This constructor is called inside the  @see es.deusto.client.AddExpenseWindo
+     */
 
     public AllExpensesWindow(ExampleClient client, Set<ExpenseData> expenses, UserData userData) {
 		this.client  = client; 
@@ -63,10 +75,8 @@ public class AllExpensesWindow extends JFrame implements ActionListener {
     }
 
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-	}
+	
+	
     
 		
     
