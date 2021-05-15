@@ -36,7 +36,7 @@ public class AllExpensesWindow extends JFrame {
         panel = new JPanel(); 
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-        JLabel titleLabel = new JLabel("YOUR EXPENSES");
+        JLabel titleLabel = new JLabel(client.getResourceBundle().getString("expenseTitle"));
         panel.add(titleLabel); 
     
         DefaultListModel<String> dlm = new DefaultListModel<String> ();
@@ -52,7 +52,7 @@ public class AllExpensesWindow extends JFrame {
         buttonPanel = new JPanel(); 
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.X_AXIS));
 
-        addExpense = new JButton("Add Expense"); 
+        addExpense = new JButton(client.getResourceBundle().getString("addExpenseButton")); 
 
         buttonPanel.add(addExpense); 
         addExpense.addActionListener(new ActionListener(){
@@ -69,7 +69,7 @@ public class AllExpensesWindow extends JFrame {
         getContentPane().add(buttonPanel, "South"); 
         getContentPane().add(panel,"Center"); 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setTitle("All your expenses");
+		setTitle(client.getResourceBundle().getString("expenseTitle"));
 		setSize(600, 500);
 		setVisible(true);
     }

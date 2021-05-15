@@ -205,6 +205,9 @@ public class ExampleClient {
 		return expenses; 
 
 	}
+	public ResourceBundle getResourceBundle(){
+		return resourceBundle; 
+	}
 
 	
 	public static void main(String[] args) {

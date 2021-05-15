@@ -138,3 +138,9 @@ may. 15, 2021 1:11:01 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: El usuario esta siendo validado
 may. 15, 2021 1:11:03 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 15, 2021 7:25:24 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 15, 2021 7:25:24 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 15, 2021 7:25:24 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------

@@ -72,17 +72,17 @@ public class AddExpenseWindow extends JFrame  {
 		panelAddExpense.setLayout(new BoxLayout(panelAddExpense, BoxLayout.Y_AXIS));
 		
 	
-		expenseName = new JLabel("Description: ");
+		expenseName = new JLabel(client.getResourceBundle().getString("description"));
 		name_text = new JTextField(14);
 		panelAddExpense.add(expenseName);
 		panelAddExpense.add(name_text);
 		
-		expenseAmount = new JLabel("Amount: ");
+		expenseAmount = new JLabel(client.getResourceBundle().getString("amount"));
 		amount_text = new JTextField(6);
 		panelAddExpense.add(expenseAmount);
 		panelAddExpense.add(amount_text);
 		
-		expenseCategory = new JLabel("Category: ");
+		expenseCategory = new JLabel(client.getResourceBundle().getString("category"));
 		comboCategory = new JComboBox<Category>();
 		
 		for (Category c : Category.values()) {
@@ -96,7 +96,7 @@ public class AddExpenseWindow extends JFrame  {
 		buttonJPanel = new JPanel();
 		buttonJPanel.setLayout(new BoxLayout(buttonJPanel, BoxLayout.Y_AXIS));
 		//Add buttons
-		JButton add = new JButton("Add");
+		JButton add = new JButton(client.getResourceBundle().getString("add"));
 		
 		
 		/** The action listener is assigned to the ADD button
@@ -125,7 +125,7 @@ public class AddExpenseWindow extends JFrame  {
 		
 		
 		
-		JButton allExepenses = new JButton("All Exepenses");
+		JButton allExepenses = new JButton(client.getResourceBundle().getString("showExpense"));
 		/**
 		 * This ACTION LISTENER is related to the allExpenses JButton \n
 		 * After clicking on it a new window is opened @see es.deusto.client.AllExpensesWindow \n
@@ -151,7 +151,7 @@ public class AddExpenseWindow extends JFrame  {
 		getContentPane().add(panelAddExpense,"North"); 
 		getContentPane().add(buttonJPanel,"South"); 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setTitle("Add your expenses here");
+		setTitle(client.getResourceBundle().getString("addExpenses"));
 		setSize(600, 500);
 		setVisible(true);
 	}

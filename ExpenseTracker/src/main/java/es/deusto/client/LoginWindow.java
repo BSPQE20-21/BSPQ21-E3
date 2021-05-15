@@ -42,13 +42,13 @@ public class LoginWindow extends JFrame implements ActionListener {
         this.client = client; 
         // User Label
         user_label = new JLabel();
-        user_label.setText("Email:");
+        user_label.setText(client.getResourceBundle().getString("email"));
         userName_text = new JTextField(15);
         
         // Password
 
         password_label = new JLabel();
-        password_label.setText("Password:");
+        password_label.setText(client.getResourceBundle().getString("password"));
         password_text = new JPasswordField(10);
 
         panel = new JPanel(new GridLayout(3,1));
@@ -62,13 +62,13 @@ public class LoginWindow extends JFrame implements ActionListener {
 
         JPanel buttonPanel = new JPanel();
         
-        login = new JButton("LOGIN");
+        login = new JButton(client.getResourceBundle().getString("login"));
         
         buttonPanel.add(login);
         
         login.addActionListener(this);
         
-        register = new JButton("REGISTER");
+        register = new JButton(client.getResourceBundle().getString("register"));
         
         register.addActionListener(new ActionListener() {
 			
@@ -88,7 +88,7 @@ public class LoginWindow extends JFrame implements ActionListener {
         // Adding the listeners to components..
         
         add(panel, BorderLayout.CENTER);
-        setTitle("Please Login Here !");
+        setTitle(client.getResourceBundle().getString("login_msg"));
         setSize(600, 500);
         getContentPane().add(panel,"North");
         getContentPane().add(buttonPanel,"South");
