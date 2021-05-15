@@ -27,7 +27,7 @@ public class AllExpensesWindow extends JFrame {
      * @param ExampleClient client - so we can make the connection with the client 
      * @param Set<ExpenseData> expneses - list of expenses assigned to the loged in user
      * @UserData userData - the information of the loged in user
-     * This constructor is called inside the  @see es.deusto.client.AddExpenseWindo
+     * This constructor is called inside the  @see es.deusto.client.AddExpenseWindow
      */
 
     public AllExpensesWindow(ExampleClient client, Set<ExpenseData> expenses, UserData userData) {

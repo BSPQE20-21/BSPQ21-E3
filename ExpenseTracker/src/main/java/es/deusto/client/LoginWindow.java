@@ -17,12 +17,15 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import es.deusto.serialization.UserData;
-
+/**
+ * @class LOGIN WINDOW
+ * The initial window that allows each user to enter the aplication if they are already registred.
+ * If the user is not registered there is a way to change the window to @see es.deusto.client.RegisterWindow
+ * 
+ */
 public class LoginWindow extends JFrame implements ActionListener {
 
-    /**
-	 * 
-	 */
+  
 	private static final long serialVersionUID = 1L;
 	JPanel panel;
 	JLabel user_label, password_label, message;
@@ -30,7 +33,11 @@ public class LoginWindow extends JFrame implements ActionListener {
     JPasswordField password_text;
     JButton login, register;
     private ExampleClient client;
-
+    /**
+     * Constructor of the window it just receiver the client created on the @see es.deusto.client.ExampleClient
+     * All the Jlabels, JtextFields and JButtons are created as a form so the users can easily add their data to the window
+     * @param client
+     */
     LoginWindow(ExampleClient client) {
         this.client = client; 
         // User Label
@@ -89,7 +96,12 @@ public class LoginWindow extends JFrame implements ActionListener {
 
     }
 
-  
+    /**
+     * The ACTION LISTENER is related to the JButton LoginIn
+     * The user introduces the email and the password and the method validate user @see es.deusto.client.Client.validaUser is called
+     * This method return a TRUE or FALSE and only if the user is stored(TRUE) he/she will be able to acces the program 
+     * 
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
     	String userName = userName_text.getText();
@@ -98,18 +110,9 @@ public class LoginWindow extends JFrame implements ActionListener {
          
        UserData userData = client.validateUser(userName, password);
 
-       
        if(userData.getLogin() != null){
         this.setVisible(false); 
         AddExpenseWindow aew = new AddExpenseWindow(userData, client);
-
-       }else{
-        System.out.println("User not registred");
-
-       }
-
-       
-
         
     }
     

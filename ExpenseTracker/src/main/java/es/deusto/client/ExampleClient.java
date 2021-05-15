@@ -21,7 +21,15 @@ import java.util.*;
 import es.deusto.log.LoggerFile; 
 import java.util.logging.Level; 
 import java.util.logging.Logger;
-
+/**
+ * The main CLIENT SIDE class\n
+ * The purpose of this class is to create the client and the WEBTARGET as well as to initialize the first window\n
+ * All the methods defined in this class are a bridge to the server side where the real actions are performed, none of this methods
+ * acces the DB they call the server side methods that acces them.\n
+ * This class has a resourceBoundle that detects the lenguage of the computer and stores the information inside the logger accordly
+ * 
+ * 
+ */
 
 public class ExampleClient {
 
@@ -30,7 +38,7 @@ public class ExampleClient {
 	private LoginWindow lw;
 	private static ResourceBundle resourceBundle; 
 
-	//private static final Logger logger = Logger.getLogger(ExampleClient.class.getName());
+	
 	/**
 	 * Constructor of the CLIENT 
 	 * Here is called the @see es.deusto.client.LoginWindow so the first window where the user can loged in is opened
@@ -100,7 +108,13 @@ public class ExampleClient {
 			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
 		}
 	}
-
+	/**
+	 * This method is called when the user introduces a new EXPENSE and desired to store it into the DB
+	 * Both userData and ExpenseData are needed so the relationship between who buys who is stored
+	 * @param userData - the loged user
+	 * @param expenseData - the expese that he/she desired to store
+	 * 
+	 */
 
 	public void storeExpense(UserData userData, ExpenseData expenseData) {
 		WebTarget storeExpenseWebTarget = webTarget.path("store");

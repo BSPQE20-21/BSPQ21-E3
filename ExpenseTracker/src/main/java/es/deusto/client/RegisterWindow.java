@@ -16,16 +16,14 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 
 import es.deusto.serialization.UserData;
-
+/** This window allows users to introduce all the data for their registration\n
+ * In order to create a user the following info is needed: \n
+ * emailField, carNumberField, ageField, expenseLimitField
+ * 
+ */
 public class RegisterWindow extends JFrame implements ActionListener {
 
-	/** This window allows users to introduce all the data for their registration
-	 * emailField
-	 * carNumberField
-	 * ageField
-	 * expenseLimitField
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private JFrame frame; 
 	private JButton buttonRegister, buttonEnd; 
@@ -35,7 +33,10 @@ public class RegisterWindow extends JFrame implements ActionListener {
 	private final AtomicBoolean running = new AtomicBoolean(false);
 	private ExampleClient client;
 	
-	
+	/**
+	 * The constructor of the register window. \n
+	 * @param client
+	 */
 	public RegisterWindow(ExampleClient client) {
 		this.client = client;
 		
@@ -83,7 +84,13 @@ public class RegisterWindow extends JFrame implements ActionListener {
 	
 	
 	}
-
+	/**
+	 * This ACTION EVENT is connected to the REGISTER Jbutton\n
+	 * Once the user introduces all the data a new OBJECT will be created (USER DATA)
+	 * and the method es.desuto.client.ExampleClient.registerUser is called\n
+	 * After that the user is sent to a new window es.deusto.client.AddExpenseWindow, so he/she can use all the fuctionalities of the system
+	 * 
+	 */
 	public void actionPerformed(ActionEvent e) {
 		JButton target = (JButton) e.getSource();
 		

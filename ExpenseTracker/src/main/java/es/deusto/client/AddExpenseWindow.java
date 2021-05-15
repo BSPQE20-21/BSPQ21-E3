@@ -26,9 +26,9 @@ import java.util.*;
 *@class ADD EXPENSE WINDOW
 *This class constructs the window that allows users to add expenses 
 *The class is based on a formulary where users can add the following attributes
-*> expenseName = description of the purchase
-*> expenseAmount = the money spended
-*> expenseCategory (comboBox that gets the data from an Enum) 
+* expenseName = description of the purchase \n
+* expenseAmount = the money spended \n
+* expenseCategory (comboBox that gets the data from an Enum) \n
 */
 
 public class AddExpenseWindow extends JFrame  {
@@ -36,7 +36,7 @@ public class AddExpenseWindow extends JFrame  {
 
 	private static final long serialVersionUID = 1L;
 	
-	JButton submit, cancel; /**< Jbuttons that allow us to add a new expense */
+	JButton submit; /**< Jbuttons that allow us to add a new expense */
 	JLabel expenseName, expenseAmount, expenseCategory; 
 	JComboBox<Category> comboCategory; /**< Shows all the categories that the user can add*/
 	JTextField name_text, amount_text;
@@ -60,10 +60,9 @@ public class AddExpenseWindow extends JFrame  {
 	/**
  	* Constructor of the window
  	* UserData is passed as a parameter so the expense can be assigned to the loged in user
- 	*Expense details
-	*>ExpenseName
-	*>ExpenseAmount
-	*>ExpenseCategory	
+ 	* @param UserData the user that is loged in 
+	* @param ExampleClient the client created in @see es.deusto.client.ExampleClient
+	* 	
  	*/
 	
 	public AddExpenseWindow(UserData userData, ExampleClient client) {
@@ -96,7 +95,7 @@ public class AddExpenseWindow extends JFrame  {
 		JPanel buttonJPanel;
 		buttonJPanel = new JPanel();
 		buttonJPanel.setLayout(new BoxLayout(buttonJPanel, BoxLayout.Y_AXIS));
-		//Add/cancel buttons
+		//Add buttons
 		JButton add = new JButton("Add");
 		
 		
@@ -124,17 +123,15 @@ public class AddExpenseWindow extends JFrame  {
 			}
 		});
 		
-		JButton cancel = new JButton("Cancel");
-		cancel.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//switchPanel(panelAddExpense, PREVIOUSPANEL);
-				
-			}
-		});
+		
 		
 		JButton allExepenses = new JButton("All Exepenses");
+		/**
+		 * This ACTION LISTENER is related to the allExpenses JButton \n
+		 * After clicking on it a new window is opened @see es.deusto.client.AllExpensesWindow \n
+		 * Before changing the window a request is made to the DB where given a USER all the expenses related to he/she are extracted \n
+		 * In order to do so the method showExpenses is called (@see es.Deusto.client.ExampleClient.showExpenses)
+		 */
 		allExepenses.addActionListener(new ActionListener(){
 
 			@Override
@@ -149,8 +146,7 @@ public class AddExpenseWindow extends JFrame  {
 		});
 		buttonJPanel.add(add); 
 		buttonJPanel.add(allExepenses); 
-		// cancel has no functionality
-		buttonJPanel.add(cancel);
+		
 
 		getContentPane().add(panelAddExpense,"North"); 
 		getContentPane().add(buttonJPanel,"South"); 
