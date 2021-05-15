@@ -26,7 +26,13 @@ import javax.jdo.Extent;
 import es.deusto.log.LoggerFile; 
 import java.util.logging.Level; 
 
-// This is the server part. 
+/**
+ * This class is the most important part os the server side\n
+ * It is filled with methods that access and store or stract values from the DB\n
+ * To acces the DB we use Jenkins\n
+ * The es.deusto.client.ExampleClient methods usually are connected to the ones in this class
+ * 
+ */
 
 @Path("/server")
 @Produces(MediaType.APPLICATION_JSON)
@@ -36,11 +42,23 @@ public class Server {
 	private PersistenceManager pm=null;
 	private Transaction tx=null;
 
+	/**
+	 * Constructor. \n
+	 * The persiscanceManager is initialices as well as the Transaction
+	 */
 	public Server() {
 		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 		this.pm = pmf.getPersistenceManager();
 		this.tx = pm.currentTransaction();
 	}
+
+	/**
+	 * STORE EXPENSE\n
+	 * The idea is to store the expense and the relationship between the user\n 
+	 * This method is called from the es.deusto.client.ExampleClient.storeExpense class which receives the info from the es.deusto.client.AddExpenseWindow\n
+	 * @param directedExpense - is the object that stores both the user and the expense
+	 * @return RESPONSE (OK or NOT)
+	 */
 	@POST
 	@Path("/store")
 	public Response storeExpense(DirectedMessage directedExpense) {
@@ -81,7 +99,15 @@ public class Server {
 			return Response.status(Status.BAD_REQUEST).entity("Login details supplied for message delivery are not correct").build();
 		}
 	}
-	// this part is registring an user into the DB
+	/**
+	 * VALIDATE USER.\n
+	 * This method access the DB and searches if the given user is already stored\n
+	 * This method is called from the client side class es.deusto.client.ExampleClient 
+	 * and the data is recieved from the es.deusto.client.LoginWindow\n
+	 * 
+	 * @param loginData - user and password of the user
+	 * @return - USER DATA it will return the actual user if it is already registred 
+	 */
 	@POST
 	@Path("/validate")
 	@Produces({MediaType.APPLICATION_JSON})
@@ -128,6 +154,15 @@ public class Server {
 		}
 	}
 
+	/**
+	 * REGISTER USER.\n
+	 * This method stores a new user inside the DB\n
+	 * This method is called in the es.deusto.client.ExampleClient class and the data of the user is obtain in the es.deusto.client.RegisterWindow\n
+	 * 
+	 * @param userData
+	 * @return (Just and OK or not OK)
+	 */
+
 	@POST
 	@Path("/register")
 	public Response registerUser(UserData userData) {
@@ -167,7 +202,15 @@ public class Server {
       
 		}
 	}
-
+	/**
+	 * SHOW EXPENSE.\n
+	 * This method returns all the expenses related to a concrete user.
+	 * This method is called from the es.deusto.client.ExampleClient class and the user is the one that is logged in\n
+	 * It should return ALL the expenses related to one user and in order to do that a SET<ExpenseData> is created so we can return all the info.
+	 * 
+	 * @param userData - the user that is logged in
+	 * @return it will return a set of expenses
+	 */
 	@POST
 	@Path("/showExpenses")
 	@Produces({MediaType.APPLICATION_JSON})
