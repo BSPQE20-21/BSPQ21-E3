@@ -39,12 +39,12 @@ public class AllExpensesWindow extends JFrame {
         JLabel titleLabel = new JLabel(client.getResourceBundle().getString("expenseTitle"));
         panel.add(titleLabel); 
     
-        DefaultListModel<String> dlm = new DefaultListModel<String> ();
+        DefaultListModel<ExpenseData> dlm = new DefaultListModel<ExpenseData> ();
         for(ExpenseData e : expenses){
-            dlm.addElement(e.toString());
+            dlm.addElement(e);
         }    
        
-        JList<String> jList = new JList<String>(dlm);
+        JList<ExpenseData> jList = new JList<ExpenseData>(dlm);
         panel.add(jList); 
 
         buttonPanel = new JPanel(); 
@@ -71,9 +71,10 @@ public class AllExpensesWindow extends JFrame {
             @Override
 			public void actionPerformed(ActionEvent e) {
 			
-				int value = jList.getSelectedIndex(); 
+				ExpenseData value = (ExpenseData) jList.getSelectedValue();
                 System.out.println(value);
 				//setVisible(false); 
+                client.deleteExpense(value);
 			}		
         });
 

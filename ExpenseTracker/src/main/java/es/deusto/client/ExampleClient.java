@@ -205,6 +205,22 @@ public class ExampleClient {
 		return expenses; 
 
 	}
+	public void deleteExpense(ExpenseData expenseData) {
+		WebTarget storeExpenseWebTarget = webTarget.path("store");
+		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
+
+		Response response = invocationBuilder.post(Entity.entity(expenseData, MediaType.APPLICATION_JSON));
+		if (response.getStatus() != Status.OK.getStatusCode()) {
+			
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting")); 
+			
+		} else {
+			//TODO
+			LoggerFile.log(Level.INFO, resourceBundle.getString("store_expense")); 
+		}
+
+	}
+	
 	public ResourceBundle getResourceBundle(){
 		return resourceBundle; 
 	}

@@ -160,3 +160,95 @@ may. 16, 2021 11:03:03 A.Â M. es.deusto.log.LoggerFile log
 INFORMACIÃ“N: -----------------------------------
 may. 16, 2021 11:03:13 A.Â M. es.deusto.log.LoggerFile log
 INFORMACIÃ“N: El usuario esta siendo validado
+may. 16, 2021 12:34:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 12:34:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 12:34:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 12:37:03 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 12:37:03 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 12:37:03 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 12:37:38 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Persistiendo userio
+may. 16, 2021 12:37:46 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 12:38:35 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Un gasto ha sido guardado con exito
+may. 16, 2021 12:38:37 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 12:47:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 12:47:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 12:47:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 12:48:27 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 12:48:27 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 12:48:28 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 12:48:37 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 12:48:42 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 12:50:40 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 12:50:40 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 12:50:40 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 12:50:51 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 12:50:54 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 12:53:41 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 12:53:41 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 12:53:41 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 12:53:54 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 12:53:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 1:11:55 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 1:11:55 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 1:11:55 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 1:12:08 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 1:12:10 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 1:12:14 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: ERROR DE CONEXION
+may. 16, 2021 1:15:56 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 1:15:56 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 1:15:56 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 1:16:06 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 1:16:12 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 1:16:15 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: ERROR DE CONEXION
+may. 16, 2021 1:38:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 1:38:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 1:38:49 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 1:39:00 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 1:39:02 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Los gastos se han recuperado de la BD
+may. 16, 2021 1:39:05 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: ERROR DE CONEXION

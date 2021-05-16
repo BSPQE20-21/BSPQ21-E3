@@ -29,5 +29,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/UNAI/Downloads/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/UNAI/Desktop/Unai/UNI/3- Segundo Cuatri/SPQ/cobertura-2.1.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
