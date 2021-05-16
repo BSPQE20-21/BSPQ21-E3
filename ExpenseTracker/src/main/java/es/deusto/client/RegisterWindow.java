@@ -16,16 +16,14 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 
 import es.deusto.serialization.UserData;
-
+/** This window allows users to introduce all the data for their registration\n
+ * In order to create a user the following info is needed: \n
+ * emailField, carNumberField, ageField, expenseLimitField
+ * 
+ */
 public class RegisterWindow extends JFrame implements ActionListener {
 
-	/** This window allows users to introduce all the data for their registration
-	 * emailField
-	 * carNumberField
-	 * ageField
-	 * expenseLimitField
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private JFrame frame; 
 	private JButton buttonRegister, buttonEnd; 
@@ -35,41 +33,44 @@ public class RegisterWindow extends JFrame implements ActionListener {
 	private final AtomicBoolean running = new AtomicBoolean(false);
 	private ExampleClient client;
 	
-	
+	/**
+	 * The constructor of the register window. \n
+	 * @param client
+	 */
 	public RegisterWindow(ExampleClient client) {
 		this.client = client;
 		
 		JPanel registerPanel = new JPanel();
 		registerPanel.setLayout(new BoxLayout(registerPanel, BoxLayout.Y_AXIS));
 		// EMAIL 
-		registerPanel.add(new JLabel("Email: "));
+		registerPanel.add(new JLabel(client.getResourceBundle().getString("email")));
 		this.emailField = new JTextField(20);
 		registerPanel.add(this.emailField);
 		// PASSWORD 
-		registerPanel.add(new JLabel("Password: "));
+		registerPanel.add(new JLabel(client.getResourceBundle().getString("password")));
 		this.passwordField = new JPasswordField(10);
 		registerPanel.add(this.passwordField);
 		// CARD NUMBER
-		registerPanel.add(new JLabel("Card Number: "));
+		registerPanel.add(new JLabel(client.getResourceBundle().getString("cardNumber")));
 		this.carNumberField = new JTextField(10);
 		registerPanel.add(this.carNumberField);
 		// AGE
-		registerPanel.add(new JLabel("Age: "));
+		registerPanel.add(new JLabel(client.getResourceBundle().getString("age")));
 		this.ageField = new JTextField(10);
 		registerPanel.add(this.ageField);
 		// EXPENSE LIMIT
-		registerPanel.add(new JLabel("Expense Limit: ")); 
+		registerPanel.add(new JLabel(client.getResourceBundle().getString("expenseLimit"))); 
 		this.expenseLimitField = new JTextField(10);
 		registerPanel.add(this.expenseLimitField);
 
 
-		this.buttonRegister = new JButton("Register");
+		this.buttonRegister = new JButton(client.getResourceBundle().getString("register"));
 		registerPanel.add(this.buttonRegister); 
 		
 		buttonRegister.addActionListener(this);
 
 		this.frame = new JFrame("Registration"); 
-		this.frame.setTitle("REGISTRATION");
+		this.frame.setTitle(client.getResourceBundle().getString("register"));
 
 		this.frame.setSize(600,500);
 		this.frame.getContentPane().add(registerPanel,"North"); 
@@ -83,7 +84,13 @@ public class RegisterWindow extends JFrame implements ActionListener {
 	
 	
 	}
-
+	/**
+	 * This ACTION EVENT is connected to the REGISTER JButton\n
+	 * Once the user introduces all the data a new OBJECT will be created (USER DATA)
+	 * and the method es.desuto.client.ExampleClient.registerUser is called\n
+	 * After that the user is sent to a new window es.deusto.client.AddExpenseWindow, so he/she can use all the fuctionalities of the system
+	 * 
+	 */
 	public void actionPerformed(ActionEvent e) {
 		JButton target = (JButton) e.getSource();
 		

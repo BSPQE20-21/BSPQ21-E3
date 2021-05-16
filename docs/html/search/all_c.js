@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['testdirectedmessage',['testDirectedMessage',['../classes_1_1deusto_1_1serialization_1_1_directed_message_test.html#a704726ef8705632cb089bc25d8283b75',1,'es::deusto::serialization::DirectedMessageTest']]],
+  ['testgetage',['testGetAge',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#a28ec7d8b20979ac4728275517ffb44f2',1,'es::deusto::serialization::UserDataTest']]],
+  ['testgetcardnumber',['testGetCardNumber',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#ae66eef68b1682794e0433b331e6ccff5',1,'es::deusto::serialization::UserDataTest']]],
+  ['testgetexpensedata',['testGetExpenseData',['../classes_1_1deusto_1_1serialization_1_1_directed_message_test.html#a142287faad08832ef77c93c8e1ffe0b3',1,'es::deusto::serialization::DirectedMessageTest']]],
+  ['testgetexpenselimit',['testGetExpenseLimit',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#ab89ad0d38dbae7e956619e6543586122',1,'es::deusto::serialization::UserDataTest']]],
+  ['testgetlogin',['testGetLogin',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#a7bee65127b733f7cd3e57839fda83723',1,'es::deusto::serialization::UserDataTest']]],
+  ['testgetpassword',['testGetPassword',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#a7219ec968af5364963f2868497d8a6af',1,'es::deusto::serialization::UserDataTest']]],
+  ['testgetuserdata',['testGetUserData',['../classes_1_1deusto_1_1serialization_1_1_directed_message_test.html#a35a07f027c5c110942644ebe2ac429b9',1,'es::deusto::serialization::DirectedMessageTest']]],
+  ['testregisteruser',['testRegisterUser',['../classes_1_1deusto_1_1client_1_1_example_client_test.html#a59d9c8bd0d8d85e0b0ded16ef0f9cb85',1,'es.deusto.client.ExampleClientTest.testRegisterUser()'],['../classes_1_1deusto_1_1server_1_1_server_test.html#ab50ebca6957682f2a7e6e51dc06278cf',1,'es.deusto.server.ServerTest.testRegisterUser()']]],
+  ['testsaymessage',['testSayMessage',['../classes_1_1deusto_1_1client_1_1_example_client_test.html#a286cc9fa7dd37f1e7c19f0134d994891',1,'es::deusto::client::ExampleClientTest']]],
+  ['testserver',['testServer',['../classes_1_1deusto_1_1server_1_1_server_test.html#a9c697e77e1422a1d0835f6e6a38036f4',1,'es::deusto::server::ServerTest']]],
+  ['testsetage',['testSetAge',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#aa3241903064474a486744a64fbcd9c13',1,'es::deusto::serialization::UserDataTest']]],
+  ['testsetcardnumber',['testSetCardNumber',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#a4f08dcab38f34ee37a4417e6c3e3e8e8',1,'es::deusto::serialization::UserDataTest']]],
+  ['testsetexpensedata',['testSetExpenseData',['../classes_1_1deusto_1_1serialization_1_1_directed_message_test.html#abe0459a79b0888b65191c8662fdad324',1,'es::deusto::serialization::DirectedMessageTest']]],
+  ['testsetexpenselimit',['testSetExpenseLimit',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#ac7e111d2323a6970210cfa086b2eedff',1,'es::deusto::serialization::UserDataTest']]],
+  ['testsetlogin',['testSetLogin',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#a3311a4ff455e3d78280ec5da51a01998',1,'es::deusto::serialization::UserDataTest']]],
+  ['testsetpassword',['testSetPassword',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#aad240f31ab64b02d0121e4e594185767',1,'es::deusto::serialization::UserDataTest']]],
+  ['testsetuserdata',['testSetUserData',['../classes_1_1deusto_1_1serialization_1_1_directed_message_test.html#a91132b0ba7c7932be8b7dfded1e7e74a',1,'es::deusto::serialization::DirectedMessageTest']]],
+  ['testshowexpenses',['testShowExpenses',['../classes_1_1deusto_1_1client_1_1_example_client_test.html#adedccf184289eaf6d6cc3f53a2fdc621',1,'es::deusto::client::ExampleClientTest']]],
+  ['teststoreexpense',['testStoreExpense',['../classes_1_1deusto_1_1client_1_1_example_client_test.html#ad8b31f30dcc49c24a0473d59f0c8d9ef',1,'es.deusto.client.ExampleClientTest.testStoreExpense()'],['../classes_1_1deusto_1_1server_1_1_server_test.html#a7406203a7ff08400597008ca722f6205',1,'es.deusto.server.ServerTest.testStoreExpense()']]],
+  ['testuserdata',['testUserData',['../classes_1_1deusto_1_1serialization_1_1_user_data_test.html#ac1b9100261a66d06a4c8bf4f80e859ba',1,'es::deusto::serialization::UserDataTest']]],
+  ['testvalidateuser',['testValidateUser',['../classes_1_1deusto_1_1server_1_1_server_test.html#af493f29fde42af9e7d4c065f49bf8502',1,'es::deusto::server::ServerTest']]],
+  ['tostring',['toString',['../classes_1_1deusto_1_1serialization_1_1_expense_data.html#a89e0bc878ddf158ee69e56f26d0aa8e0',1,'es.deusto.serialization.ExpenseData.toString()'],['../classes_1_1deusto_1_1serialization_1_1_login_data.html#a638424167a2321d58645b31fe9aef420',1,'es.deusto.serialization.LoginData.toString()'],['../classes_1_1deusto_1_1serialization_1_1_user_data.html#ac2a905aeaf972596d8fd135d76c763cd',1,'es.deusto.serialization.UserData.toString()'],['../classes_1_1deusto_1_1server_1_1jdo_1_1_expense.html#a0f197f3e223803cab5fba71cc481af31',1,'es.deusto.server.jdo.Expense.toString()'],['../classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a65366a578a6dcc53e3a77d6eabbbf8cf',1,'es.deusto.server.jdo.User.toString()']]]
+];

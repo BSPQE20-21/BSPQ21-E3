@@ -1,7 +1,9 @@
 package es.deusto.serialization;
 
 
-// same but with more detail
+/**
+ * The object that contains all the information about an user\n
+ */
 public class UserData {
 
     private String login;
@@ -10,10 +12,20 @@ public class UserData {
     private int age;
     private double expenseLimit; 
    
+    /**
+     * Empty constructor
+     */
     public UserData() {
 
     }
-
+    /**
+     * Complete constructor
+     * @param login 
+     * @param password
+     * @param cardNumber 
+     * @param age
+     * @param expenseLimit
+     */
 	public UserData(String login, String password, String cardNumber, int age, double expenseLimit) {
 		super();
 		this.login = login;
@@ -22,6 +34,10 @@ public class UserData {
 		this.age = age;
 		this.expenseLimit = expenseLimit;
 	}
+	
+	/**
+     * Getters and Setters for the UserData class
+     */
 
 	public String getCardNumber() {
 		return cardNumber;
@@ -63,7 +79,12 @@ public class UserData {
         this.expenseLimit = expenseLimit;
     }
 
-
+    /**
+     * TO STRING\n
+	 * Method that provides a string conversion display to print the data.
+	 * The format is the following:\n
+     * [login= , password= , expenseLimit= , age= , cardNumber= ]
+     */
     public String toString() {
         return "[login=" + login + ", password=" + password + ", expense limit=" + expenseLimit + ", age=" + age+ ", card Number=" + cardNumber+" ]";
     }

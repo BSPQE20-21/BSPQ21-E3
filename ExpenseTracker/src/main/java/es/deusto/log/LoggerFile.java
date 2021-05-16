@@ -15,12 +15,12 @@ public class LoggerFile {
     Formatter plainText;
 
     private LoggerFile() throws IOException{
-        //instance the logger
+        //Instance the logger
         logger = Logger.getLogger(LoggerFile.class.getName());
-        //instance the filehandler
+        //Instance the filehandler
         
         fileHandler = new FileHandler("myLog.txt",true);
-        //instance formatter, set formatting, and handler
+        //Instance formatter, set formatting and handler
         plainText = new SimpleFormatter();
         fileHandler.setFormatter(plainText);
         logger.addHandler(fileHandler);
