@@ -594,3 +594,41 @@ may. 16, 2021 4:39:13 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: -----------------------------------
 may. 16, 2021 4:39:30 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 4:57:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 4:57:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 4:57:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 4:58:59 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 5:03:43 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 5:03:44 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 5:03:44 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 5:04:08 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 5:04:14 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: ERROR DE CONEXION
+may. 16, 2021 5:07:20 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 5:07:21 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 5:07:21 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 5:07:47 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 5:07:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Modificar Usuario
+may. 16, 2021 5:09:31 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 5:09:31 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 5:09:31 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 5:09:51 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 5:09:58 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Modificar Usuario

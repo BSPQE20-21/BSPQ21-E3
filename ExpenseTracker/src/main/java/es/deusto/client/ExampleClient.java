@@ -221,9 +221,14 @@ public class ExampleClient {
 
 	}
 
-
+	/**
+	 * UPDATE USER\n
+	 * This method connects with the server part and request to update the info of the DB
+	 * @param userData - the updated user
+	 * @return user - the updated user so it can be passed trought the windows
+	 */
 	public UserData updateUser(UserData userData){
-		WebTarget storeExpenseWebTarget = webTarget.path("validate");
+		WebTarget storeExpenseWebTarget = webTarget.path("update");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
 
 
@@ -244,6 +249,7 @@ public class ExampleClient {
 
 			
 		}
+		System.out.println(uData);
 		return uData; 
 
 	}

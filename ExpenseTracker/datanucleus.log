@@ -432,3 +432,83 @@
 16:39:54,148 (qtp1478835287-25) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
 16:39:54,181 (qtp1478835287-25) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
 16:39:54,384 (qtp1478835287-25) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:55:54,724 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:55:56,708 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:55:56,709 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:55:56,833 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:55:56,834 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:55:56,834 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1642 ms, enhance=263 ms, total=1905 ms. Compruebe el LOG para los detalles
+16:56:55,177 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:56:57,285 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:56:57,286 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:56:57,342 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:56:57,342 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:56:57,343 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1928 ms, enhance=208 ms, total=2136 ms. Compruebe el LOG para los detalles
+16:58:38,795 (qtp1478835287-24) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:58:38,806 (qtp1478835287-24) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:58:38,807 (qtp1478835287-24) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:58:48,288 (qtp1478835287-24) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:59:49,620 (qtp1478835287-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:59:49,620 (qtp1478835287-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:59:49,620 (qtp1478835287-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:59:49,766 (qtp1478835287-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:02:48,231 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:02:49,260 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:02:49,260 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:02:49,293 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:02:49,294 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:02:49,305 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=903 ms, enhance=98 ms, total=1001 ms. Compruebe el LOG para los detalles
+17:03:13,856 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:03:15,746 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:03:15,749 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:03:15,764 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:03:15,764 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:03:15,765 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1598 ms, enhance=246 ms, total=1844 ms. Compruebe el LOG para los detalles
+17:04:02,133 (qtp1478835287-26) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:04:02,142 (qtp1478835287-26) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:04:02,145 (qtp1478835287-26) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:04:06,309 (qtp1478835287-26) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:04:14,015 (qtp1478835287-25) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:04:14,016 (qtp1478835287-25) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:04:14,016 (qtp1478835287-25) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:04:14,322 (qtp1478835287-25) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:06:27,712 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:06:28,751 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:06:28,753 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:06:28,780 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:06:28,781 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:06:28,783 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=826 ms, enhance=112 ms, total=938 ms. Compruebe el LOG para los detalles
+17:06:53,494 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:06:54,279 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:06:54,280 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:06:54,301 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:06:54,301 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:06:54,303 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=686 ms, enhance=104 ms, total=790 ms. Compruebe el LOG para los detalles
+17:07:39,234 (qtp1478835287-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:07:39,234 (qtp1478835287-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:07:39,234 (qtp1478835287-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:07:42,649 (qtp1478835287-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:07:58,041 (qtp1478835287-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:07:58,042 (qtp1478835287-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:07:58,042 (qtp1478835287-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:07:58,248 (qtp1478835287-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:08:53,361 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:08:53,929 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:08:53,931 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:08:53,950 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:08:53,950 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:08:53,951 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=466 ms, enhance=90 ms, total=556 ms. Compruebe el LOG para los detalles
+17:09:11,672 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:09:12,164 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:09:12,164 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:09:12,166 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:09:12,166 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:09:12,167 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=452 ms, enhance=30 ms, total=482 ms. Compruebe el LOG para los detalles
+17:09:46,116 (qtp468797188-26) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:09:46,116 (qtp468797188-26) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:09:46,117 (qtp468797188-26) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:09:48,641 (qtp468797188-26) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:09:57,501 (qtp468797188-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:09:57,501 (qtp468797188-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:09:57,501 (qtp468797188-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:09:57,711 (qtp468797188-20) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers

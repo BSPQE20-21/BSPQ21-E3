@@ -271,12 +271,17 @@ public class Server {
 		}
 	}
 
-
+	/**
+	 * UPDATE THE INFO OF A USER\n
+	 * This method makes possible for the user to update some of the information and update it inside the BD
+	 * 
+	 * @param userData -> the user that is logged in after the changes made in the window
+	 * @return the suer with the changes
+	 */
 
 	@POST
 	@Path("/update")
 	@Produces("application/json")
-	
 	public Response updateuser(UserData userData) {
 		try {
 			tx.begin();
