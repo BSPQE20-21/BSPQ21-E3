@@ -121,14 +121,13 @@ public class Server {
 			try {
 				user = pm.getObjectById(User.class, loginData.getLogin());
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
-				// System.out.println("Exception launched: " + jonfe.getMessage());
+				
 				LoggerFile.log(Level.SEVERE, jonfe.getMessage());
 			}
 			System.out.println("User: " + user);
 			if (user != null) {
 				if ((loginData.getPassword()).equals(user.getPassword())) {
-					// System.out.println("Hello: " + user);
-
+				
 					userData.setLogin(user.getLogin());
 					userData.setPassword(user.getPassword());
 					userData.setCardNumber(user.getCardNumber());
@@ -138,7 +137,7 @@ public class Server {
 
 			} else {
 				LoggerFile.log(Level.INFO, "User not registred");
-				// System.out.println("User not registred");
+				
 
 			}
 			tx.commit();
@@ -153,7 +152,6 @@ public class Server {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * REGISTER USER.\n
 	 * This method stores a new user inside the DB\n
 	 * This method is called in the es.deusto.client.ExampleClient class and the data of the user is obtained in the es.deusto.client.RegisterWindow\n
@@ -171,22 +169,22 @@ public class Server {
 			try {
 				user = pm.getObjectById(User.class, userData.getLogin());
 			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
-				// System.out.println("Exception launched: " + jonfe.getMessage());
+
 				LoggerFile.log(Level.SEVERE, jonfe.getMessage());
 			}
 			System.out.println("User: " + user);
 			if (user != null) {
-				// System.out.println("Setting password user: " + user);
+		
 				LoggerFile.log(Level.INFO, "Setting password user: " + user);
 				user.setPassword(userData.getPassword());
-				// System.out.println("Password set user: " + user);
+	
 			} else {
-				// System.out.println("Creating user: " + user);
+				
 				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(),
 						userData.getAge(), userData.getExpenseLimit());
 				pm.makePersistent(user);
 				LoggerFile.log(Level.INFO, "User created: " + user);
-				// System.out.println("User created: " + user);
+				
 			}
 			tx.commit();
 			return Response.ok().build();
@@ -222,15 +220,7 @@ public class Server {
 
 			try {
 
-				// System.out.println("Creating query ...");
-
-				// Query<User> q = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE
-				// login == \"" + userData.getLogin() + "\" && password == \"" +
-				// userData.getPassword() + "\"");
-				// q.setUnique(true);
-				// user = (User)q.execute();
 				user = pm.getObjectById(User.class, userData.getLogin());
-				// System.out.println("User retrieved: " + user);
 				if (user != null) {
 					for (Expense e : user.getMessages()) {
 						ExpenseData exp = new ExpenseData();
@@ -257,17 +247,21 @@ public class Server {
 		}
 
 	}
-
+	//TODO
 	@POST
 	@Path("/delete")
 	public Response deleteExpense(ExpenseData expenseData) {
 		try {
 			tx.begin();
 			Query<Expense> q = pm.newQuery("SELECT FROM " + Expense.class.getName() + " WHERE text == \"" + expenseData.getText() + "\" && amount == \"" + expenseData.getAmount() + "\"");
+			q.setUnique(true);
+			Expense expense = (Expense)q.execute();
+			System.out.println(q);
+			if (expense != null)  {
 
-			//pm.deletePersistent(expenseData);
-			q.deletePersistentAll();
-
+				pm.deletePersistent(expense);
+	
+			}
 			tx.commit();
 			return Response.ok().build();
 		} finally {
@@ -275,7 +269,48 @@ public class Server {
 				tx.rollback();
 			}
 		}
-
 	}
+
+
+
+	@POST
+	@Path("/update")
+	@Produces("application/json")
+	
+	public Response updateuser(UserData userData) {
+		try {
+			tx.begin();
+			User user = null;
+			
+			try {
+				user = pm.getObjectById(User.class, userData.getLogin());
+				pm.retrieve(user);
+			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
+				
+				LoggerFile.log(Level.SEVERE, jonfe.getMessage());
+			}
+			
+			if (user != null) {
+			
+				user.setLogin(userData.getLogin());
+				user.setPassword(userData.getPassword());
+				user.setCardNumber(userData.getCardNumber());
+				user.setAge(userData.getAge());
+				user.setExpenseLimit(userData.getExpenseLimit());
+				pm.makePersistent(user); 
+				tx.commit();
+
+			} 
+		
+			return Response.ok().entity(userData).build();
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+
+		}
+	}
+
+
 
 }

@@ -144,8 +144,26 @@ public class AddExpenseWindow extends JFrame  {
 			}		
 			
 		});
+		JButton modifyUser = new JButton(client.getResourceBundle().getString("modifyUser"));
+		modifyUser.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				ModifyUserWindow muw = new ModifyUserWindow(client, userData); 
+				setVisible(false); 
+			}		
+			
+		});
+
+
+
 		buttonJPanel.add(add); 
 		buttonJPanel.add(allExepenses); 
+		buttonJPanel.add(modifyUser); 
+
+
+
 		
 
 		getContentPane().add(panelAddExpense,"North"); 

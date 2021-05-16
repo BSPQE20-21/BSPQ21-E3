@@ -220,6 +220,34 @@ public class ExampleClient {
 		}
 
 	}
+
+
+	public UserData updateUser(UserData userData){
+		WebTarget storeExpenseWebTarget = webTarget.path("validate");
+		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
+
+
+		
+		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
+		UserData uData = response.readEntity(UserData.class);
+		if (response.getStatus() != Status.OK.getStatusCode()) {
+			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting")); 
+			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
+			//logger.info(resourceBundle.getString("error_connecting"));
+
+		} else {
+
+			LoggerFile.log(Level.INFO, resourceBundle.getString("modifyUser")); 
+
+
+			//logger.info(resourceBundle.getString("validate_user"));
+
+			
+		}
+		return uData; 
+
+	}
+
 	
 	public ResourceBundle getResourceBundle(){
 		return resourceBundle; 

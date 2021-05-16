@@ -41,6 +41,9 @@ public class User {
 	public String getLogin() {
 		return this.login;
 	}
+	public void setLogin(String login){
+		this.login = login; 
+	}
 
 	public String getPassword() {
 		return this.password;
