@@ -102,8 +102,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa28b04cc2643cf60072fc2a680288cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00033">33</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<div class="textblock"><p>This class is the most important part os the server side<br />
+It is filled with methods that access and store or stract values from the DB<br />
+To acces the DB we use Jenkins<br />
+The <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> methods usually are connected to the ones in this class </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00039">39</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a84f78162a65dd737f224eb2f94c43023"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84f78162a65dd737f224eb2f94c43023">&#9670;&nbsp;</a></span>Server()</h2>
@@ -119,8 +123,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor. <br />
+The persiscanceManager is initialices as well as the Transaction </p>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00039">39</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00049">49</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
@@ -140,8 +146,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>REGISTER USER.<br />
+This method stores a new user inside the DB<br />
+This method is called in the <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> class and the data of the user is obtain in the <a class="el" href="classes_1_1deusto_1_1client_1_1_register_window.html">es.deusto.client.RegisterWindow</a><br />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Just and OK or not OK) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00133">133</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00168">168</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
@@ -160,8 +176,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>SHOW EXPENSE.<br />
+This method returns all the expenses related to a concrete user. This method is called from the <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> class and the user is the one that is logged in<br />
+It should return ALL the expenses related to one user and in order to do that a SET&lt;ExpenseData&gt; is created so we can return all the info.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>- the user that is logged in </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>it will return a set of expenses </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00174">174</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00217">217</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
@@ -180,8 +206,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>STORE EXPENSE<br />
+The idea is to store the expense and the relationship between the user<br />
+ This method is called from the <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html#aba5fe3dfb882ef22d0bd49b5915871d3">es.deusto.client.ExampleClient.storeExpense</a> class which receives the info from the <a class="el" href="classes_1_1deusto_1_1client_1_1_add_expense_window.html">es.deusto.client.AddExpenseWindow</a><br />
+</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directedExpense</td><td>- is the object that stores both the user and the expense </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>RESPONSE (OK or NOT) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00046">46</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00064">64</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
@@ -200,8 +236,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>VALIDATE USER.<br />
+This method access the DB and searches if the given user is already stored<br />
+This method is called from the client side class <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> and the data is recieved from the <a class="el" href="classes_1_1deusto_1_1client_1_1_login_window.html">es.deusto.client.LoginWindow</a><br />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginData</td><td>- user and password of the user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- USER DATA it will return the actual user if it is already registred </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00088">88</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00114">114</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>

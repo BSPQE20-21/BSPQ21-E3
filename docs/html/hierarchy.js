@@ -17,11 +17,13 @@ var hierarchy =
     [ "es.deusto.serialization.UserData", "classes_1_1deusto_1_1serialization_1_1_user_data.html", null ],
     [ "es.deusto.serialization.UserDataTest", "classes_1_1deusto_1_1serialization_1_1_user_data_test.html", null ],
     [ "ActionListener", null, [
+      [ "es.deusto.client.LoginWindow", "classes_1_1deusto_1_1client_1_1_login_window.html", null ],
       [ "es.deusto.client.RegisterWindow", "classes_1_1deusto_1_1client_1_1_register_window.html", null ]
     ] ],
     [ "JFrame", null, [
       [ "es.deusto.client.AddExpenseWindow", "classes_1_1deusto_1_1client_1_1_add_expense_window.html", null ],
       [ "es.deusto.client.AllExpensesWindow", "classes_1_1deusto_1_1client_1_1_all_expenses_window.html", null ],
+      [ "es.deusto.client.LoginWindow", "classes_1_1deusto_1_1client_1_1_login_window.html", null ],
       [ "es.deusto.client.RegisterWindow", "classes_1_1deusto_1_1client_1_1_register_window.html", null ]
     ] ]
 ];
