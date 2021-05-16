@@ -7,7 +7,7 @@ import es.deusto.serialization.UserData;
  * MODIFY USER
  * Once the user is logged in give them the possibility to change some of the parameters\n
  * The window is similar to the register window but the user info is displaey and changes can be made in all the parameters except the login/email\n
- * 
+ * This class is called from the es.deusto.client.AddExpenseWindow
  */
 public class ModifyUserWindow extends JFrame {
 
@@ -96,7 +96,6 @@ public class ModifyUserWindow extends JFrame {
 				
 			}
 		});
-
 
 		this.frame = new JFrame("Modify user"); 
 		this.frame.setTitle(client.getResourceBundle().getString("modifyUser"));
