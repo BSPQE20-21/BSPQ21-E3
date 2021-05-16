@@ -19,7 +19,7 @@ public class AllExpensesWindow extends JFrame {
 
     private Set<ExpenseData> expenses;  /**< Set that contains all the expenses of the user */
     private UserData userData; 
-    private JButton addExpense; 
+    private JButton addExpense, deleteExpense; 
     private JPanel panel, buttonPanel; 
     
     /**
@@ -41,12 +41,10 @@ public class AllExpensesWindow extends JFrame {
     
         DefaultListModel<String> dlm = new DefaultListModel<String> ();
         for(ExpenseData e : expenses){
-                        
             dlm.addElement(e.toString());
         }    
        
         JList<String> jList = new JList<String>(dlm);
-
         panel.add(jList); 
 
         buttonPanel = new JPanel(); 
@@ -55,6 +53,7 @@ public class AllExpensesWindow extends JFrame {
         addExpense = new JButton(client.getResourceBundle().getString("addExpenseButton")); 
 
         buttonPanel.add(addExpense); 
+
         addExpense.addActionListener(new ActionListener(){
 
 			@Override
@@ -65,6 +64,18 @@ public class AllExpensesWindow extends JFrame {
 			}		
 			
 		});
+
+        deleteExpense = new JButton(client.getResourceBundle().getString("deleteExpense")); 
+        buttonPanel.add(deleteExpense); 
+        deleteExpense.addActionListener(new ActionListener(){
+            @Override
+			public void actionPerformed(ActionEvent e) {
+			
+				int value = jList.getSelectedIndex(); 
+                System.out.println(value);
+				//setVisible(false); 
+			}		
+        });
 
         getContentPane().add(buttonPanel, "South"); 
         getContentPane().add(panel,"Center"); 

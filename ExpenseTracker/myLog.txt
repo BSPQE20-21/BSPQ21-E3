@@ -144,3 +144,19 @@ may. 15, 2021 7:25:24 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: Expense Tracker
 may. 15, 2021 7:25:24 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: -----------------------------------
+may. 16, 2021 10:39:36 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 10:39:36 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 10:39:36 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 10:39:48 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
+may. 16, 2021 11:03:03 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Empezando ...
+may. 16, 2021 11:03:03 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: Expense Tracker
+may. 16, 2021 11:03:03 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: -----------------------------------
+may. 16, 2021 11:03:13 A. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: El usuario esta siendo validado
