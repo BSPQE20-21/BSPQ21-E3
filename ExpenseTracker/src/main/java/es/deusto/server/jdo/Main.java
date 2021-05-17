@@ -16,6 +16,9 @@ import javax.jdo.Transaction;
 */
 public class Main
 {
+    /**The main method of the class
+     * @param args
+     */
     public static void main(String args[])
     {
         // Create a PersistenceManagerFactory for this datastore

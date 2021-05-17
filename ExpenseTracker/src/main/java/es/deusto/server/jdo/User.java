@@ -8,6 +8,10 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.Persistent;
 import java.util.HashSet;
 
+/**"Persistent Classes are user defined classes whose instances can be stored in a database using JDO"
+ *This class defines the creation of a user
+ *
+ */
 @PersistenceCapable
 public class User {
 
@@ -22,6 +26,13 @@ public class User {
 	@Join
 	Set<Expense> expenses = new HashSet<Expense>();
 
+	/**The User constructor method to create users
+	 * @param login
+	 * @param password
+	 * @param cardNumber
+	 * @param age
+	 * @param expenseLimit
+	 */
 	public User(String login, String password, String cardNumber, int age, double expenseLimit) {
 		this.login = login;
 		this.password = password;
@@ -30,10 +41,16 @@ public class User {
 		this.expenseLimit = expenseLimit;
 	}
 
+	/**Adds an expense
+	 * @param expense
+	 */
 	public void addExpense(Expense expense) {
 		expenses.add(expense);
 	}
 
+	/**Removes an expense
+	 * @param expense
+	 */
 	public void removeExpense(Expense expense) {
 		expenses.remove(expense);
 	}
@@ -81,6 +98,9 @@ public class User {
 		return this.expenses;
 	}
 
+	/**The structure of the printed string is the following:
+	 *User: login --> , password --> , expenses --> [ ]
+	 */
 	public String toString() {
 		StringBuffer expensesStr = new StringBuffer();
 		for (Expense ex : this.expenses) {

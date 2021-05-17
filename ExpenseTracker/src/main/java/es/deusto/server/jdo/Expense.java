@@ -6,6 +6,10 @@ import java.util.Date;
 
 // this sould be our expenses 
 
+/**This class defines the creation of an expense
+ *
+ *
+ */
 @PersistenceCapable
 public class Expense {
 	User user=null; // who 
@@ -15,6 +19,11 @@ public class Expense {
     Category category; // this should be selected from a list that cannot be hardcoded
 	
 
+    /**The constructor of the expense class
+     * @param text
+     * @param amount
+     * @param category
+     */
     public Expense(String text, double amount, Category category) {
         this.text = text;
 		this.timestamp = System.currentTimeMillis();
@@ -22,6 +31,9 @@ public class Expense {
         this.category = category;
     }
     
+    /**Empty expense constructor to create empty expenses
+     * 
+     */
     public Expense() {
         this.text = "";
 		this.timestamp = 0;
@@ -61,7 +73,10 @@ public class Expense {
         this.amount = amount;
     }
 
+    /**The structure of the printed string is the following:
+     *Expense: expense -->  , timestamp --> , amount = 
+     */
     public String toString() {
-        return "Message: message --> " + this.text + ", timestamp -->  " + new Date(this.timestamp)+ ", amount = " + this.amount + ", category --> " + this.category;
+        return "Expense: expense --> " + this.text + ", timestamp -->  " + new Date(this.timestamp)+ ", amount = " + this.amount + ", category --> " + this.category;
     }
 }
