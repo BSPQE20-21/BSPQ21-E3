@@ -100,14 +100,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a12f56d7a970c3c41fefe8ed2db835c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa28b04cc2643cf60072fc2a680288cde"><td class="memItemLeft" align="right" valign="top">Response&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1deusto_1_1server_1_1_server.html#aa28b04cc2643cf60072fc2a680288cde">showExpenses</a> (<a class="el" href="classes_1_1deusto_1_1serialization_1_1_user_data.html">UserData</a> userData)</td></tr>
 <tr class="separator:aa28b04cc2643cf60072fc2a680288cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9fc28b2ce1a31d8176a23768e48f173"><td class="memItemLeft" align="right" valign="top">Response&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1deusto_1_1server_1_1_server.html#aa9fc28b2ce1a31d8176a23768e48f173">deleteExpense</a> (<a class="el" href="classes_1_1deusto_1_1serialization_1_1_expense_data.html">ExpenseData</a> expenseData)</td></tr>
+<tr class="separator:aa9fc28b2ce1a31d8176a23768e48f173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae24e983f2b93173ee25d366a522a936"><td class="memItemLeft" align="right" valign="top">Response&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1deusto_1_1server_1_1_server.html#aae24e983f2b93173ee25d366a522a936">updateuser</a> (<a class="el" href="classes_1_1deusto_1_1serialization_1_1_user_data.html">UserData</a> userData)</td></tr>
+<tr class="separator:aae24e983f2b93173ee25d366a522a936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is the most important part os the server side<br />
-It is filled with methods that access and store or stract values from the DB<br />
-To acces the DB we use Jenkins<br />
-The <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> methods usually are connected to the ones in this class </p>
+ It is filled with methods that access and store or stract values from the DB<br />
+ To acces the DB we use Jenkins<br />
+ The <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> methods usually are connected to the ones in this class </p>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00039">39</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00038">38</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a84f78162a65dd737f224eb2f94c43023"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84f78162a65dd737f224eb2f94c43023">&#9670;&nbsp;</a></span>Server()</h2>
@@ -124,13 +128,33 @@ The <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.
       </table>
 </div><div class="memdoc">
 <p>Constructor. <br />
-The persiscanceManager is initialices as well as the Transaction </p>
+The PersistenceManager is initialized as well as the Transaction </p>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00049">49</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00048">48</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa9fc28b2ce1a31d8176a23768e48f173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9fc28b2ce1a31d8176a23768e48f173">&#9670;&nbsp;</a></span>deleteExpense()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response es.deusto.server.Server.deleteExpense </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classes_1_1deusto_1_1serialization_1_1_expense_data.html">ExpenseData</a>&#160;</td>
+          <td class="paramname"><em>expenseData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00253">253</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
 <a id="a12f56d7a970c3c41fefe8ed2db835c0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12f56d7a970c3c41fefe8ed2db835c0a">&#9670;&nbsp;</a></span>registerUser()</h2>
 
@@ -148,16 +172,16 @@ The persiscanceManager is initialices as well as the Transaction </p>
 </div><div class="memdoc">
 <p>REGISTER USER.<br />
 This method stores a new user inside the DB<br />
-This method is called in the <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> class and the data of the user is obtain in the <a class="el" href="classes_1_1deusto_1_1client_1_1_register_window.html">es.deusto.client.RegisterWindow</a><br />
- </p><dl class="params"><dt>Parameters</dt><dd>
+This method is called in the <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> class and the data of the user is obtained in the <a class="el" href="classes_1_1deusto_1_1client_1_1_register_window.html">es.deusto.client.RegisterWindow</a><br />
+</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">userData</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>(Just and OK or not OK) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>(OK or not OK) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00168">168</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00164">164</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
@@ -177,8 +201,8 @@ This method is called in the <a class="el" href="classes_1_1deusto_1_1client_1_1
       </table>
 </div><div class="memdoc">
 <p>SHOW EXPENSE.<br />
-This method returns all the expenses related to a concrete user. This method is called from the <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> class and the user is the one that is logged in<br />
-It should return ALL the expenses related to one user and in order to do that a SET&lt;ExpenseData&gt; is created so we can return all the info.</p>
+ This method returns all the expenses related to a concrete user. This method is called from the <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> class and the user is the one that is logged in<br />
+ It should return ALL the expenses related to one user and in order to do that a SET&lt;ExpenseData&gt; is created so we can return all the info.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">userData</td><td>- the user that is logged in </td></tr>
@@ -187,7 +211,7 @@ It should return ALL the expenses related to one user and in order to do that a 
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>it will return a set of expenses </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00217">217</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00212">212</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
@@ -215,9 +239,38 @@ The idea is to store the expense and the relationship between the user<br />
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>RESPONSE (OK or NOT) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RESPONSE (OK or NOT OK) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00064">64</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00063">63</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+
+</div>
+</div>
+<a id="aae24e983f2b93173ee25d366a522a936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae24e983f2b93173ee25d366a522a936">&#9670;&nbsp;</a></span>updateuser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response es.deusto.server.Server.updateuser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classes_1_1deusto_1_1serialization_1_1_user_data.html">UserData</a>&#160;</td>
+          <td class="paramname"><em>userData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UPDATE THE INFO OF A USER<br />
+This method makes possible for the user to update some of the information and update it inside the BD</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>-&gt; the user that is logged in after the changes made in the window </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the suer with the changes </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00285">285</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>
@@ -238,7 +291,7 @@ The idea is to store the expense and the relationship between the user<br />
 </div><div class="memdoc">
 <p>VALIDATE USER.<br />
 This method access the DB and searches if the given user is already stored<br />
-This method is called from the client side class <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> and the data is recieved from the <a class="el" href="classes_1_1deusto_1_1client_1_1_login_window.html">es.deusto.client.LoginWindow</a><br />
+This method is called from the client side class <a class="el" href="classes_1_1deusto_1_1client_1_1_example_client.html">es.deusto.client.ExampleClient</a> and the data is received from the <a class="el" href="classes_1_1deusto_1_1client_1_1_login_window.html">es.deusto.client.LoginWindow</a><br />
  </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">loginData</td><td>- user and password of the user </td></tr>
@@ -247,7 +300,7 @@ This method is called from the client side class <a class="el" href="classes_1_1
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>- USER DATA it will return the actual user if it is already registred </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00114">114</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_server_8java_source.html#l00116">116</a> of file <a class="el" href="_server_8java_source.html">Server.java</a>.</p>
 
 </div>
 </div>

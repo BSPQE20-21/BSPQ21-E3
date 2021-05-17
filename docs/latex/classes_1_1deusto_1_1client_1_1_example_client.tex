@@ -7,13 +7,15 @@
 \item 
 void \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_a1c17371c17dde2b7664f2ad17ee79e4b}{register\+User} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data)
 \item 
-void \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_ae2e3b42bf8ef3a646d92e2b308e38005}{say\+Message} (String login, String password, \hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_expense}{Expense} expense)
-\item 
 void \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_aba5fe3dfb882ef22d0bd49b5915871d3}{store\+Expense} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data, \hyperlink{classes_1_1deusto_1_1serialization_1_1_expense_data}{Expense\+Data} expense\+Data)
 \item 
 \hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_a740fa7000d0cd30603ce100b299ba8ba}{validate\+User} (String login, String password)
 \item 
 Set$<$ \hyperlink{classes_1_1deusto_1_1serialization_1_1_expense_data}{Expense\+Data} $>$ \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_a527d2790290c153cae5b16133a38269a}{show\+Expenses} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data)
+\item 
+void \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_a206d3d1f399368f11a36b929af4337d4}{delete\+Expense} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_expense_data}{Expense\+Data} expense\+Data)
+\item 
+\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_afbee30635a2cfe7fb7cfc58393b40bfb}{update\+User} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data)
 \item 
 Resource\+Bundle \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_a85a29c19dfbfcad9d08dcc17d688d8d3}{get\+Resource\+Bundle} ()
 \end{DoxyCompactItemize}
@@ -58,6 +60,16 @@ Definition at line 49 of file Example\+Client.\+java.
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_a206d3d1f399368f11a36b929af4337d4}\label{classes_1_1deusto_1_1client_1_1_example_client_a206d3d1f399368f11a36b929af4337d4}} 
+\index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!delete\+Expense@{delete\+Expense}}
+\index{delete\+Expense@{delete\+Expense}!es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}}
+\subsubsection{\texorpdfstring{delete\+Expense()}{deleteExpense()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Example\+Client.\+delete\+Expense (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_expense_data}{Expense\+Data}}]{expense\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file Example\+Client.\+java.
+
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_a85a29c19dfbfcad9d08dcc17d688d8d3}\label{classes_1_1deusto_1_1client_1_1_example_client_a85a29c19dfbfcad9d08dcc17d688d8d3}} 
 \index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!get\+Resource\+Bundle@{get\+Resource\+Bundle}}
 \index{get\+Resource\+Bundle@{get\+Resource\+Bundle}!es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}}
@@ -66,7 +78,7 @@ Definition at line 49 of file Example\+Client.\+java.
 
 
 
-Definition at line 208 of file Example\+Client.\+java.
+Definition at line 227 of file Example\+Client.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_a9eadbc017db92b83cad1f6b72c10bae2}\label{classes_1_1deusto_1_1client_1_1_example_client_a9eadbc017db92b83cad1f6b72c10bae2}} 
 \index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!main@{main}}
@@ -76,7 +88,7 @@ Definition at line 208 of file Example\+Client.\+java.
 
 
 
-Definition at line 213 of file Example\+Client.\+java.
+Definition at line 232 of file Example\+Client.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_a1c17371c17dde2b7664f2ad17ee79e4b}\label{classes_1_1deusto_1_1client_1_1_example_client_a1c17371c17dde2b7664f2ad17ee79e4b}} 
 \index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!register\+User@{register\+User}}
@@ -99,16 +111,6 @@ nothing should be returned in this class
 
 Definition at line 62 of file Example\+Client.\+java.
 
-\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_ae2e3b42bf8ef3a646d92e2b308e38005}\label{classes_1_1deusto_1_1client_1_1_example_client_ae2e3b42bf8ef3a646d92e2b308e38005}} 
-\index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!say\+Message@{say\+Message}}
-\index{say\+Message@{say\+Message}!es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}}
-\subsubsection{\texorpdfstring{say\+Message()}{sayMessage()}}
-{\footnotesize\ttfamily void es.\+deusto.\+client.\+Example\+Client.\+say\+Message (\begin{DoxyParamCaption}\item[{String}]{login,  }\item[{String}]{password,  }\item[{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_expense}{Expense}}]{expense }\end{DoxyParamCaption})}
-
-
-
-Definition at line 80 of file Example\+Client.\+java.
-
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_a527d2790290c153cae5b16133a38269a}\label{classes_1_1deusto_1_1client_1_1_example_client_a527d2790290c153cae5b16133a38269a}} 
 \index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!show\+Expenses@{show\+Expenses}}
 \index{show\+Expenses@{show\+Expenses}!es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}}
@@ -130,7 +132,7 @@ Set$<$\+Expense\+Data$>$ a set of all the expenses of the concrete user
 \end{DoxyReturn}
 
 
-Definition at line 185 of file Example\+Client.\+java.
+Definition at line 154 of file Example\+Client.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_aba5fe3dfb882ef22d0bd49b5915871d3}\label{classes_1_1deusto_1_1client_1_1_example_client_aba5fe3dfb882ef22d0bd49b5915871d3}} 
 \index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!store\+Expense@{store\+Expense}}
@@ -147,7 +149,26 @@ This method is called when the user introduces a new E\+X\+P\+E\+N\+SE and desir
 \end{DoxyParams}
 
 
-Definition at line 119 of file Example\+Client.\+java.
+Definition at line 88 of file Example\+Client.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_afbee30635a2cfe7fb7cfc58393b40bfb}\label{classes_1_1deusto_1_1client_1_1_example_client_afbee30635a2cfe7fb7cfc58393b40bfb}} 
+\index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!update\+User@{update\+User}}
+\index{update\+User@{update\+User}!es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}}
+\subsubsection{\texorpdfstring{update\+User()}{updateUser()}}
+{\footnotesize\ttfamily \hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} es.\+deusto.\+client.\+Example\+Client.\+update\+User (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data}}]{user\+Data }\end{DoxyParamCaption})}
+
+U\+P\+D\+A\+TE U\+S\+ER~\newline
+This method connects with the server part and request to update the info of the DB 
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & -\/ the updated user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+user -\/ the updated user so it can be passed trought the windows 
+\end{DoxyReturn}
+
+
+Definition at line 199 of file Example\+Client.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_example_client_a740fa7000d0cd30603ce100b299ba8ba}\label{classes_1_1deusto_1_1client_1_1_example_client_a740fa7000d0cd30603ce100b299ba8ba}} 
 \index{es\+::deusto\+::client\+::\+Example\+Client@{es\+::deusto\+::client\+::\+Example\+Client}!validate\+User@{validate\+User}}
@@ -170,7 +191,7 @@ User\+Data -\/ it will return the actual loged in user
 \end{DoxyReturn}
 
 
-Definition at line 148 of file Example\+Client.\+java.
+Definition at line 117 of file Example\+Client.\+java.
 
 
 

@@ -12,6 +12,10 @@ void \hyperlink{classes_1_1deusto_1_1server_1_1_server_test_a7406203a7ff08400597
 void \hyperlink{classes_1_1deusto_1_1server_1_1_server_test_af493f29fde42af9e7d4c065f49bf8502}{test\+Validate\+User} ()  throws Exception 
 \item 
 void \hyperlink{classes_1_1deusto_1_1server_1_1_server_test_ab50ebca6957682f2a7e6e51dc06278cf}{test\+Register\+User} ()  throws Exception 
+\item 
+void \hyperlink{classes_1_1deusto_1_1server_1_1_server_test_ade86728a524037a1712106cd4741c690}{test\+Show\+Expenses} ()  throws Exception 
+\item 
+void \hyperlink{classes_1_1deusto_1_1server_1_1_server_test_ad64ead953df265e40d07bdc0ab11137c}{test\+Update\+User} ()  throws Exception
 \end{DoxyCompactItemize}
 
 
@@ -29,9 +33,14 @@ Definition at line 26 of file Server\+Test.\+java.
 \subsubsection{\texorpdfstring{set\+Up()}{setUp()}}
 {\footnotesize\ttfamily void es.\+deusto.\+server.\+Server\+Test.\+set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
 
+This method is the S\+ET UP that will create the instances and objects needed to perform all the tests 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
 
 
-Definition at line 35 of file Server\+Test.\+java.
+Definition at line 38 of file Server\+Test.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_test_ab50ebca6957682f2a7e6e51dc06278cf}\label{classes_1_1deusto_1_1server_1_1_server_test_ab50ebca6957682f2a7e6e51dc06278cf}} 
 \index{es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}!test\+Register\+User@{test\+Register\+User}}
@@ -41,7 +50,7 @@ Definition at line 35 of file Server\+Test.\+java.
 
 
 
-Definition at line 80 of file Server\+Test.\+java.
+Definition at line 96 of file Server\+Test.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_test_a9c697e77e1422a1d0835f6e6a38036f4}\label{classes_1_1deusto_1_1server_1_1_server_test_a9c697e77e1422a1d0835f6e6a38036f4}} 
 \index{es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}!test\+Server@{test\+Server}}
@@ -49,9 +58,24 @@ Definition at line 80 of file Server\+Test.\+java.
 \subsubsection{\texorpdfstring{test\+Server()}{testServer()}}
 {\footnotesize\ttfamily void es.\+deusto.\+server.\+Server\+Test.\+test\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
 
+This is a performance test that calls the constructor of the server multiple times imitating the situation where several client will contact the server at the same time. 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
 
 
-Definition at line 50 of file Server\+Test.\+java.
+Definition at line 58 of file Server\+Test.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_test_ade86728a524037a1712106cd4741c690}\label{classes_1_1deusto_1_1server_1_1_server_test_ade86728a524037a1712106cd4741c690}} 
+\index{es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}!test\+Show\+Expenses@{test\+Show\+Expenses}}
+\index{test\+Show\+Expenses@{test\+Show\+Expenses}!es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}}
+\subsubsection{\texorpdfstring{test\+Show\+Expenses()}{testShowExpenses()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server\+Test.\+test\+Show\+Expenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
+
+
+
+Definition at line 111 of file Server\+Test.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_test_a7406203a7ff08400597008ca722f6205}\label{classes_1_1deusto_1_1server_1_1_server_test_a7406203a7ff08400597008ca722f6205}} 
 \index{es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}!test\+Store\+Expense@{test\+Store\+Expense}}
@@ -59,9 +83,25 @@ Definition at line 50 of file Server\+Test.\+java.
 \subsubsection{\texorpdfstring{test\+Store\+Expense()}{testStoreExpense()}}
 {\footnotesize\ttfamily void es.\+deusto.\+server.\+Server\+Test.\+test\+Store\+Expense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
 
+The idea of the test is to store an expense which is related to a concrete user (this relationship is represented in the Direct\+Message object) and to check if it was done correctly~\newline
+To do so we look if the R\+E\+S\+P\+O\+N\+SE is OK and if it we can say that the expense has been correctly stored. 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
 
 
-Definition at line 55 of file Server\+Test.\+java.
+Definition at line 69 of file Server\+Test.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_test_ad64ead953df265e40d07bdc0ab11137c}\label{classes_1_1deusto_1_1server_1_1_server_test_ad64ead953df265e40d07bdc0ab11137c}} 
+\index{es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}!test\+Update\+User@{test\+Update\+User}}
+\index{test\+Update\+User@{test\+Update\+User}!es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}}
+\subsubsection{\texorpdfstring{test\+Update\+User()}{testUpdateUser()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server\+Test.\+test\+Update\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
+
+
+
+Definition at line 118 of file Server\+Test.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_test_af493f29fde42af9e7d4c065f49bf8502}\label{classes_1_1deusto_1_1server_1_1_server_test_af493f29fde42af9e7d4c065f49bf8502}} 
 \index{es\+::deusto\+::server\+::\+Server\+Test@{es\+::deusto\+::server\+::\+Server\+Test}!test\+Validate\+User@{test\+Validate\+User}}
@@ -71,7 +111,7 @@ Definition at line 55 of file Server\+Test.\+java.
 
 
 
-Definition at line 69 of file Server\+Test.\+java.
+Definition at line 84 of file Server\+Test.\+java.
 
 
 

@@ -12,6 +12,9 @@ var dir_a21d685e197beff303ac1f895439446b =
     [ "LoginWindow.java", "_login_window_8java.html", [
       [ "LoginWindow", "classes_1_1deusto_1_1client_1_1_login_window.html", "classes_1_1deusto_1_1client_1_1_login_window" ]
     ] ],
+    [ "ModifyUserWindow.java", "_modify_user_window_8java.html", [
+      [ "ModifyUserWindow", "classes_1_1deusto_1_1client_1_1_modify_user_window.html", "classes_1_1deusto_1_1client_1_1_modify_user_window" ]
+    ] ],
     [ "RegisterWindow.java", "_register_window_8java.html", [
       [ "RegisterWindow", "classes_1_1deusto_1_1client_1_1_register_window.html", "classes_1_1deusto_1_1client_1_1_register_window" ]
     ] ]

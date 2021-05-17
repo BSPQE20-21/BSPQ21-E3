@@ -12,6 +12,7 @@ var classes_1_1deusto_1_1server_1_1jdo_1_1_user =
     [ "setAge", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#adc28a24f0a24c86ca31b10d8ffb23232", null ],
     [ "setCardNumber", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a5d9f161786d9f77554530b3538629808", null ],
     [ "setExpenseLimit", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#acb8264d9e7fd3f2ba112f66ddc28ddeb", null ],
+    [ "setLogin", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a46efd811e38a1196322d0ddf6809c70b", null ],
     [ "setPassword", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a2e052b5a7cab949f61580edf44bbd233", null ],
     [ "toString", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a65366a578a6dcc53e3a77d6eabbbf8cf", null ]
 ];

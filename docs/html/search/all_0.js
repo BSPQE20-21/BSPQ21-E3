@@ -4,6 +4,10 @@ var searchData=
   ['addexpense',['addExpense',['../classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a8a3a248ef33c0833a482d95150dde9df',1,'es::deusto::server::jdo::User']]],
   ['addexpensewindow',['AddExpenseWindow',['../classes_1_1deusto_1_1client_1_1_add_expense_window.html',1,'es.deusto.client.AddExpenseWindow'],['../classes_1_1deusto_1_1client_1_1_add_expense_window.html#a02db23fc03228f06fef302c1df129b27',1,'es.deusto.client.AddExpenseWindow.AddExpenseWindow()']]],
   ['addexpensewindow_2ejava',['AddExpenseWindow.java',['../_add_expense_window_8java.html',1,'']]],
+  ['addexpensewindowtest',['AddExpenseWindowTest',['../classes_1_1deusto_1_1client_1_1_add_expense_window_test.html',1,'es::deusto::client']]],
+  ['addexpensewindowtest_2ejava',['AddExpenseWindowTest.java',['../_add_expense_window_test_8java.html',1,'']]],
   ['allexpenseswindow',['AllExpensesWindow',['../classes_1_1deusto_1_1client_1_1_all_expenses_window.html',1,'es.deusto.client.AllExpensesWindow'],['../classes_1_1deusto_1_1client_1_1_all_expenses_window.html#a62b81dbdca10e545b226a51f1660c673',1,'es.deusto.client.AllExpensesWindow.AllExpensesWindow()']]],
-  ['allexpenseswindow_2ejava',['AllExpensesWindow.java',['../_all_expenses_window_8java.html',1,'']]]
+  ['allexpenseswindow_2ejava',['AllExpensesWindow.java',['../_all_expenses_window_8java.html',1,'']]],
+  ['allexpenseswindowtest',['AllExpensesWindowTest',['../classes_1_1deusto_1_1client_1_1_all_expenses_window_test.html',1,'es::deusto::client']]],
+  ['allexpenseswindowtest_2ejava',['AllExpensesWindowTest.java',['../_all_expenses_window_test_8java.html',1,'']]]
 ];
