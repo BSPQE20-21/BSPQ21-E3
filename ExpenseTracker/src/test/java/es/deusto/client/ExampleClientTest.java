@@ -26,7 +26,14 @@ import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
 import es.deusto.server.jdo.User;
 
+/**
+ * This class is a collection of test that validates that the CLIENT side methods work properly well\n
+ * All the methods that are included inside es.deusto.client.ExampleClient are going to be tested
+ * 
+ */
+
 public class ExampleClientTest {
+
     ExampleClient exampleClient;
     UserData userExpected; 
     DirectedMessage dMExpected = new DirectedMessage();
@@ -34,6 +41,13 @@ public class ExampleClientTest {
     Expense expenseExpected;
     
     //ResourceBundle resourceBundle;
+
+	/**
+	 * The SET UP of the test case\n
+	 * Thanks to this method the objects used to validate the test are generated\n
+	 * An exampleClient will be created as well as a default user and expense. 
+	 * @throws Exception
+	 */
 
     @Before
     public void setUp() throws Exception {
@@ -62,7 +76,10 @@ public class ExampleClientTest {
         
     }
     
-    
+    /**
+     * This test is related to es.deusto.client.ClientExample.registerUser \n
+     * @throws Exception
+     */
     @Test
     public void testRegisterUser() throws Exception {
         UserData newUser = new UserData();
