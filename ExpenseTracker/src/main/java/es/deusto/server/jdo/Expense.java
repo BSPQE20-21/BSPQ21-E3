@@ -17,7 +17,7 @@ public class Expense {
 	long timestamp; // when 
 	double amount; // how much 
     Category category; // this should be selected from a list that cannot be hardcoded
-	
+	 
 
     /**The constructor of the expense class
      * @param text
