@@ -30,7 +30,10 @@ public class ServerTest {
 	ExpenseData expenseDataExpected;
 	DirectedMessage dMExpected = new DirectedMessage();
 	Response responseExpected;
-
+	/**
+	 * This method is the SET UP that will create the instances and objects needed to perform all the tests
+	 * @throws Exception
+	 */
 	@Before
     public void setUp() throws Exception {
 		server = new Server();
@@ -44,6 +47,11 @@ public class ServerTest {
     	responseExpected = Response.ok().build();
 	}
 	
+	/**
+	 * This is a performance test that calls the constructor of the server multiple times imitating the situation where 
+	 * several client will contact the server at the same time.
+	 * @throws Exception
+	 */
 	@Test
 	@PerfTest(invocations = 100, threads = 20)
 	@Required(max = 20000, average = 3000)
@@ -51,6 +59,12 @@ public class ServerTest {
 		server = new Server();
 	}
 	
+	/**
+	 * The idea of the test is to store an expense which is related to a concrete user (this relationship is represented in the DirectMessage object)
+	 * and to check if it was done correctly\n
+	 * To do so we look if the RESPONSE is OK and if it we can say that the expense has been correctly stored.
+	 * @throws Exception
+	 */
 	@Test
 	public void testStoreExpense() throws Exception {
 		UserData userDB = new UserData("user","12345", "123456789", 20, 2000);
@@ -58,44 +72,56 @@ public class ServerTest {
 		DirectedMessage myMsg = new DirectedMessage();
 		myMsg.setUserData(userDB);
 		myMsg.setExpenseData(expenseDB);
-		//Assert.assertEquals(myMsg, dMExpected);
-		//Response response = server.storeExpense(myMsg);
-		//Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+
+	
+		Response response = server.storeExpense(myMsg);
+		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
 		
 	}
 	
 	
 	@Test
 	public void testValidateUser() throws Exception {
-		LoginData logindata = new LoginData("user", "12345");
-		UserData userBD = new UserData("user","12345", "123456789", 20, 2000);
-		Assert.assertEquals(userBD.getLogin(), user.getLogin());
-    	Assert.assertEquals(userBD.getPassword(), user.getPassword());
-    	Response response = server.validateUser(logindata);
-    	//Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
-    	
+
+		LoginData loginData = new LoginData("user", "12345");
+    	Response response = server.validateUser(loginData);
+		// TODO  response read entity returns an error
+		//UserData userData = response.readEntity(UserData.class);
+		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+    	//Assert.assertEquals(loginData.getLogin(), userData.getLogin());
+		//Assert.assertEquals(loginData.getPassword(), userData.getPassword());
 	}
 	
 	@Test
 	public void testRegisterUser() throws Exception {
 		//server.registerUser(user);
-		UserData userBD = new UserData("user2","13345", "143456789", 21, 3000);
-    	Assert.assertNotEquals(userBD.getLogin(), user.getLogin());
-    	Assert.assertNotEquals(userBD.getPassword(), user.getPassword());
-    	Assert.assertNotEquals(userBD.getCardNumber(), user.getCardNumber());
-    	Assert.assertNotEquals(userBD.getAge(), user.getAge());
-    	Assert.assertNotEquals(userBD.getExpenseLimit(), user.getExpenseLimit(), 0);
-    	//Response response = server.registerUser(user);
-    	//Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+		//UserData userBD = new UserData("user2","13345", "143456789", 21, 3000);
+    	//Assert.assertNotEquals(userBD.getLogin(), user.getLogin());
+    	//Assert.assertNotEquals(userBD.getPassword(), user.getPassword());
+    	//Assert.assertNotEquals(userBD.getCardNumber(), user.getCardNumber());
+    	//Assert.assertNotEquals(userBD.getAge(), user.getAge());
+    	//Assert.assertNotEquals(userBD.getExpenseLimit(), user.getExpenseLimit(), 0);
+    	Response response = server.registerUser(user);
+    	Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
     	
 
 	}
-	/*
+	
 	@Test
 	public void testShowExpenses() throws Exception {
-		
+		Response response = server.showExpenses(user); 
+    	Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+
 	}
-	*/
+	
+	@Test
+	public void testUpdateUser()throws Exception{
+		Response response = server.updateuser(user); 
+    	Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+
+
+
+	}
 
 
 }

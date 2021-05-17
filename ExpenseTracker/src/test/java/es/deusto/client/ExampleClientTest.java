@@ -4,8 +4,8 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.junit.Before;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
 import java.util.Locale;
@@ -40,7 +40,7 @@ public class ExampleClientTest {
     ExpenseData expenseDataExpected;
     Expense expenseExpected;
     
-    //ResourceBundle resourceBundle;
+    ResourceBundle resourceBundle;
 
 	/**
 	 * The SET UP of the test case\n
@@ -72,48 +72,38 @@ public class ExampleClientTest {
         
         dMExpected.setUserData(userExpected);
         dMExpected.setExpenseData(expenseDataExpected);
+
+        
         
         
     }
-    
+
+
     /**
      * This test is related to es.deusto.client.ClientExample.registerUser \n
      * @throws Exception
      */
+    /*
     @Test
     public void testRegisterUser() throws Exception {
         UserData newUser = new UserData();
         newUser.setLogin("user1");
         newUser.setPassword("1234");
-        Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
-        Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
+        //assertThrows(Exception.class, exampleClient.registerUser(userExpected)); 
         
-    }
-    
-    @Test
-    public void testSayMessage() throws Exception {
-    
-        UserData mockedUser = mock(UserData.class);
-        mockedUser.setLogin("user");
-        mockedUser.setPassword("12345");
         
-        Expense mockedExpense = mock(Expense.class);
-        mockedExpense.setText("expenseUno");
-        mockedExpense.setAmount(1);
-        mockedExpense.setCategory(Category.CLOTHES);
-        
-        ExpenseData mockedExpenseData = mock(ExpenseData.class);
-        mockedExpenseData.setText(mockedExpense.getText());
-        mockedExpenseData.setAmount(mockedExpense.getAmount());
-        mockedExpenseData.setCategory(mockedExpense.getCategory());
-        
-        DirectedMessage mockedDM = mock(DirectedMessage.class);
-        mockedDM.setUserData(mockedUser);
-        mockedDM.setExpenseData(mockedExpenseData);
-        Assert.assertNotEquals(dMExpected, mockedDM);
-        
-    }
+        //Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
+       //   Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
 
+    }
+    
+    */
+
+   /**
+    * 
+    * @throws Exception
+    */
+    /*
     @Test
     public void testStoreExpense() throws Exception {
         UserData newUser = new UserData();
@@ -129,22 +119,31 @@ public class ExampleClientTest {
         newDM.setUserData(newUser);
         newDM.setExpenseData(newExpData);
         Assert.assertNotEquals(dMExpected, newDM);
+
     }
-    
+   */
+    /**
+     * 
+     * @throws Exception
+     */
     /*
     @Test
     public void testValidateUser() throws Exception {
-        ResourceBundle.getBundle("SystemMessages", Locale.forLanguageTag("es"));
+
+        //exampleClient.getResourceBundle().getString("update"); 
         UserData userDB = exampleClient.validateUser("user", "12345");
+        
         Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
         Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
         Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
         Assert.assertEquals(userDB.getAge(), userExpected.getAge());
         Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
         //Assert.assertSame(userExpected, userDB);
+       
     }
     */
     
+    /*
     @Test
     public void testShowExpenses() throws Exception {
         UserData newUser = new UserData();
@@ -153,8 +152,7 @@ public class ExampleClientTest {
         Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
         Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
     }
-        
-    
+    */  
     
     /*
      * @Before public void setUp() throws Exception { exampleClient = new
@@ -168,14 +166,5 @@ public class ExampleClientTest {
      * assertEquals(expenses, exampleClient.showExpenses(userData)); }
      */
     
-    
-  
-    
-    
-        
-        
-        
-    
-
 
 }

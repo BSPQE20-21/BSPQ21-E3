@@ -580,3 +580,369 @@
 15:40:31,567 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
 15:40:31,574 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
 15:40:31,663 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:41:40,617 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+15:41:41,044 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+15:41:41,044 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+15:41:41,051 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+15:41:41,051 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+15:41:41,052 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=321 ms, enhance=70 ms, total=391 ms. Compruebe el LOG para los detalles
+15:41:58,766 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+15:41:59,161 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+15:41:59,161 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+15:41:59,162 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+15:41:59,162 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+15:41:59,167 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=356 ms, enhance=28 ms, total=384 ms. Compruebe el LOG para los detalles
+15:42:02,115 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:42:02,116 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:42:02,117 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:42:04,250 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:42:04,708 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:42:04,709 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:42:04,709 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:42:04,811 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:42:05,413 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:42:05,414 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:42:05,414 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:42:05,573 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:42:05,663 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:42:05,664 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:42:05,665 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:42:05,776 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:42:05,836 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:42:05,837 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:42:05,837 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:42:05,912 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:00:46,252 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:00:47,758 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:00:47,789 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:00:47,793 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:00:47,796 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:00:47,826 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1272 ms, enhance=189 ms, total=1461 ms. Compruebe el LOG para los detalles
+16:00:57,529 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:00:57,531 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:00:57,532 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:01:04,168 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:01:05,673 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:01:05,678 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:01:05,682 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:01:06,244 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:01:06,439 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:01:06,439 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:01:06,440 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:01:06,915 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:01:07,266 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:01:07,266 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:01:07,267 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:01:07,632 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:01:07,812 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:01:07,816 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:01:07,818 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:01:07,983 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:04:38,858 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:04:40,241 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:04:40,244 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:04:40,254 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:04:40,254 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:04:40,255 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1200 ms, enhance=159 ms, total=1359 ms. Compruebe el LOG para los detalles
+16:04:50,920 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:04:50,923 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:04:50,926 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:04:58,378 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:04:59,745 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:04:59,745 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:04:59,746 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:00,167 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:00,418 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:00,433 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:00,448 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:00,779 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:01,038 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:01,040 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:01,045 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:01,438 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:01,710 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:01,711 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:01,721 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:01,974 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:08:29,269 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:08:31,424 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:08:31,428 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:08:31,451 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:08:31,452 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:08:31,467 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1790 ms, enhance=257 ms, total=2047 ms. Compruebe el LOG para los detalles
+16:08:44,322 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:08:44,329 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:08:44,332 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:08:56,105 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:08:58,308 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:08:58,323 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:08:58,325 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:08:59,008 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:08:59,334 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:08:59,394 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:08:59,394 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:00,002 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:00,237 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:00,248 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:00,249 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:00,862 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:01,199 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:01,200 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:01,204 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:01,858 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:45,585 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:17:46,926 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:17:46,927 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:17:46,937 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:17:46,937 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:17:46,955 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1097 ms, enhance=161 ms, total=1258 ms. Compruebe el LOG para los detalles
+16:17:57,589 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:57,592 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:57,594 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:18:04,702 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:18:05,944 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:18:05,944 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:18:05,945 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:18:06,350 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:18:06,566 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:18:06,566 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:18:06,567 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:18:07,070 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:18:07,316 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:18:07,316 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:18:07,316 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:18:07,754 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:18:08,019 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:18:08,019 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:18:08,020 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:18:08,451 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:21:35,020 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:21:37,317 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:21:37,330 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:21:37,381 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:21:37,381 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:21:37,397 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1740 ms, enhance=328 ms, total=2068 ms. Compruebe el LOG para los detalles
+16:21:49,913 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:21:49,960 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:21:49,965 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:22:02,589 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:22:04,747 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:22:04,748 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:22:04,748 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:22:05,454 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:22:05,788 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:22:05,789 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:22:05,807 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:22:06,187 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:22:06,417 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:22:06,417 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:22:06,418 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:22:06,891 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:22:07,328 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:22:07,328 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:22:07,329 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:22:07,641 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:25:37,387 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:25:39,049 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:25:39,049 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:25:39,051 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:25:39,051 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:25:39,213 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1454 ms, enhance=110 ms, total=1564 ms. Compruebe el LOG para los detalles
+16:25:57,883 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:25:57,887 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:25:57,891 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:26:07,679 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:26:09,426 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:26:09,428 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:26:09,429 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:26:10,018 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:26:10,227 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:26:10,227 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:26:10,228 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:26:10,725 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:26:11,032 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:26:11,033 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:26:11,033 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:26:11,544 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:26:11,818 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:26:11,818 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:26:11,818 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:26:12,182 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:43:32,838 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:43:33,983 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:43:33,984 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:43:33,985 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:43:33,989 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:43:33,995 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=899 ms, enhance=148 ms, total=1047 ms. Compruebe el LOG para los detalles
+16:43:42,344 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:43:42,345 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:43:42,356 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:43:47,963 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:43:49,190 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:43:49,193 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:43:49,193 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:43:49,589 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:43:53,948 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@7c9b78e3" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@264c5d07" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:43:54,545 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:43:54,568 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:43:54,569 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:43:55,042 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:43:55,229 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:43:55,230 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:43:55,230 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:43:55,682 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:43:55,909 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:43:55,909 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:43:55,910 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:43:56,226 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:56:06,108 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:56:07,436 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:56:07,438 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:56:07,441 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:56:07,442 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:56:07,444 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1158 ms, enhance=89 ms, total=1247 ms. Compruebe el LOG para los detalles
+16:56:16,414 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:56:16,417 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:56:16,423 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:56:23,830 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:56:29,287 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:56:29,289 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:56:29,289 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:56:29,564 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:56:31,292 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@b558294" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@65cc8228" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:56:31,771 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:56:31,771 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:56:31,772 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:56:32,147 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:56:32,365 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:56:32,366 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:56:32,367 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:56:32,775 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:56:32,982 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:56:32,985 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:56:32,986 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:56:33,300 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:02:41,055 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:02:42,618 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:02:42,620 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:02:42,627 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:02:42,627 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:02:42,630 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1328 ms, enhance=144 ms, total=1472 ms. Compruebe el LOG para los detalles
+17:02:52,274 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:02:52,275 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:02:52,285 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:02:59,740 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:03:04,080 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:03:04,080 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:03:04,081 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:03:04,630 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:03:06,052 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@777c350f" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@76b224cd" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+17:03:06,546 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:03:06,547 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:03:06,548 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:03:06,949 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:03:07,140 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:03:07,141 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:03:07,142 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:03:07,406 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:03:07,649 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:03:07,649 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:03:07,650 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:03:07,955 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:04:08,377 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:04:10,327 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:04:10,330 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:04:10,337 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:04:10,338 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:04:10,339 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1618 ms, enhance=255 ms, total=1873 ms. Compruebe el LOG para los detalles
+17:04:21,610 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:04:21,611 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:04:21,620 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:04:28,098 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:04:32,265 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:04:32,272 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:04:32,272 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:04:32,665 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:04:34,204 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@4c9e38" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@57b9e423" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+17:04:34,661 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:04:34,666 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:04:34,693 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:04:34,987 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:04:35,231 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:04:35,231 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:04:35,232 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:04:35,564 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:04:35,729 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:04:35,730 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:04:35,730 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:04:36,004 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:10:07,136 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:10:08,664 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:10:08,664 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:10:08,672 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:10:08,672 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:10:08,694 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1272 ms, enhance=200 ms, total=1472 ms. Compruebe el LOG para los detalles
+17:10:19,086 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:10:19,107 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:10:19,111 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:10:27,228 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:10:31,650 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:10:31,650 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:10:31,651 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:10:32,180 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:10:33,099 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:10:33,099 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:10:33,099 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:10:33,552 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:10:34,924 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:10:34,925 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:10:34,925 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:10:35,289 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:10:36,765 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@47547132" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@971e903" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+17:10:37,213 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:10:37,213 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:10:37,213 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:10:37,665 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:10:37,768 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:10:37,768 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:10:37,768 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:10:38,208 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:10:38,473 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:10:38,493 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:10:38,493 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:10:38,895 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:12:19,132 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+17:12:20,962 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+17:12:20,962 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+17:12:20,975 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+17:12:20,975 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+17:12:20,976 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1355 ms, enhance=403 ms, total=1758 ms. Compruebe el LOG para los detalles
+17:12:30,251 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:12:30,265 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:12:30,266 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:12:37,331 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:12:41,333 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:12:41,333 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:12:41,337 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:12:41,783 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:12:42,777 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:12:42,777 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:12:42,779 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:12:43,160 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:12:44,475 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:12:44,475 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:12:44,478 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:12:44,820 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:12:46,680 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@6f3f0fae" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@36dfbdaf" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+17:12:47,180 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:12:47,182 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:12:47,182 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:12:47,558 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:12:47,756 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:12:47,757 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:12:47,757 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:12:48,108 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17:12:48,262 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+17:12:48,263 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+17:12:48,263 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+17:12:48,500 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers

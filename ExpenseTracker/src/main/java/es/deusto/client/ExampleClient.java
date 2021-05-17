@@ -76,38 +76,7 @@ public class ExampleClient {
 		}
 	}
 	
-	//TODO review this method (do we use it)?   
-	public void sayMessage(String login, String password, Expense expense) {
-		WebTarget sayHelloWebTarget = webTarget.path("sayMessage");
-		Invocation.Builder invocationBuilder = sayHelloWebTarget.request(MediaType.APPLICATION_JSON);
-
-		DirectedMessage directedMessage = new DirectedMessage();
-		UserData userData = new UserData();
-		userData.setLogin(login);
-		userData.setPassword(password);
-
-		directedMessage.setUserData(userData);
-
-		ExpenseData expenseData = new ExpenseData();
-		expenseData.setText(expense.getText());
-		expenseData.setAmount(expense.getAmount());
-		expenseData.setCategory(expense.getCategory());
-
-		directedMessage.setExpenseData(expenseData);
-
-		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));
-		if (response.getStatus() != Status.OK.getStatusCode()) {
-			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
-			//logger.info(resourceBundle.getString("error_connecting"));
-			LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting"));
-		} else {
-			//String responseMessage = response.readEntity(String.class);
-			//logger.info(resourceBundle.getString("persisting_user"));
-			LoggerFile.log(Level.INFO, resourceBundle.getString("persisting_user"));
-			//LoggerFile.log(Level.INFO, "* Message coming from the server: '" + responseMessage + "'"); 
-			//System.out.println("* Message coming from the server: '" + responseMessage + "'");
-		}
-	}
+	
 	/**
 	 * This method is called when the user introduces a new EXPENSE and desired to store it into the DB
 	 * Both userData and ExpenseData are needed so the relationship between who buys who is stored
