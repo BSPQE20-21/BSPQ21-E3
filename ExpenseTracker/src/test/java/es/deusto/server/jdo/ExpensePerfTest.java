@@ -2,20 +2,27 @@ package es.deusto.server.jdo;
 
 import org.junit.Test;
 import org.junit.Before;
+import org.junit.Rule;
 
 import es.deusto.server.jdo.*;
 import static org.junit.Assert.*;
 import org.apache.log4j.Logger;
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 
-/**
- * This class validates the constructor and getters and setters of the Expense
- * class (JDO)
+/**This class is a copy of ExpenseTest, in this class will be validated the performance
+ * 
  */
-public class ExpenseTest {
+public class ExpensePerfTest {
 
 	Expense exT1, exT2;
 	User user; 
 	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	
+	@Rule
+	public ContiPerfRule i = new ContiPerfRule();
+	
 
 	@Before
 	public void setUp() throws Exception {
@@ -27,13 +34,10 @@ public class ExpenseTest {
 
 	}
 
-	/**
-	 * Tests that the constructor works properly by validating that the new object
-	 * created is of the correct type
-	 * 
-	 * @throws Exception
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testExpense() throws Exception {
 		logger.info("Starting testExpense");
 		Expense exNew = new Expense("Apple", 1, Category.FOOD);
@@ -42,13 +46,10 @@ public class ExpenseTest {
 
 	}
 
-	/**
-	 * Checks if the text of the user is correctly returned
-	 * 
-	 * @throws Exception
-	 */
 
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testGetText() throws Exception {
 		logger.info("Starting testGetText");
 		assertEquals(exT1.getText(), "Apple");
@@ -56,12 +57,10 @@ public class ExpenseTest {
 
 	}
 
-	/**
-	 * This test makes a change in the text-description using the SETTER
-	 * and validates that the expense is correctly changed because it should be different than the second expense.
-	 * @throws Exception
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testSetText() throws Exception {
 		logger.info("Starting testSetText");
 		exT1.setText("Orange");
@@ -69,22 +68,20 @@ public class ExpenseTest {
 		logger.info("Finishing testSetText");
 
 	}
-	/**
-	 * This test validates that the getter of the category returns the correct category. 
-	 * @throws Exception
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testGetCategory() throws Exception {
 		logger.info("Starting testGetCategory");
 		assertEquals(exT1.getCategory(), Category.FOOD);
 		logger.info("Finishing testGetCategory");
 
 	}
-	/**
-	 * This test checks if the setter of category changes correctly the values. 
-	 * @throws Exception
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testSetCategory() throws Exception {
 		logger.info("Starting testSetCategory");
 		exT1.setCategory(Category.OTHERS);
@@ -96,11 +93,10 @@ public class ExpenseTest {
 
 
 	}
-	/**
-	 * This test validates that the getter of user returns the correct value 
-	 * @throws Exception
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testGetUser() throws Exception {
 		logger.info("Starting testGetUser");
 		assertEquals(exT1.getUser(), exT2.getUser());
@@ -108,10 +104,10 @@ public class ExpenseTest {
 
 	}
 
-	/**
-	 * This test assigns a user to an expense and validates that the associeation is correctly made.
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testSetUser() throws Exception {
 		logger.info("Starting testSetUser");
 		exT1.setUser(user); 
@@ -123,11 +119,10 @@ public class ExpenseTest {
 
 	}
 
-	/**
-	 * This test validates that the amount getter returns a correct value
-	 * @throws Exception
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testGetAmount() throws Exception {
 		logger.info("Starting testGetAmount");
 		assertEquals(exT1.getAmount(), 1,0); 
@@ -135,11 +130,10 @@ public class ExpenseTest {
 
 
 	}
-	/**
-	 * This test changes the value of the amount using the setter and checks if it correctly done. 
-	 * @throws Exception
-	 */
+	
 	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
 	public void testSetAmount() throws Exception {
 		logger.info("Starting testSetAmount");
 		exT1.setAmount(5); 

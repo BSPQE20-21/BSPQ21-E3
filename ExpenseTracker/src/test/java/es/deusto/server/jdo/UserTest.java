@@ -5,6 +5,7 @@ import org.junit.Before;
 import es.deusto.server.jdo.User;
 import es.deusto.server.jdo.Expense;
 import static org.junit.Assert.*;
+import org.apache.log4j.Logger;
 
 
 /**
@@ -15,6 +16,8 @@ public class UserTest {
 
 	User userT1, userT2; 
 	Expense exT1; 
+	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+
 
 	/**
 	 * The SET UP of the test case\n
@@ -24,9 +27,12 @@ public class UserTest {
 	 */
 	@Before
 	public void setUp()throws Exception {
+		logger.info("Entering setUp");
 		userT1 = new User("user", "123", "1234567", 20, 200); 
 		userT2 = new User("user", "124", "1234567", 20, 200); 
 		exT1 = new Expense("Apple", 1, Category.FOOD); 
+		logger.info("Leaving setUp");
+
 	}
 
 	/**
@@ -36,8 +42,10 @@ public class UserTest {
 	 */
 	@Test
 	public void testUser() throws Exception {
+		logger.info("Starting testUser");
 		assertEquals(User.class, userT1.getClass()); 
-	
+		logger.info("Finishing testUser");
+
 	}
 
 	/**
@@ -47,8 +55,11 @@ public class UserTest {
 	 */
 	@Test
 	public void testAddExpense() throws Exception {
+		logger.info("Starting testAddExpense");
 		userT1.addExpense(exT1);
 		assertNotEquals(userT1.getMessages(), userT2.getMessages()); 
+		logger.info("Finishing testAddExpense");
+
 
 	}
 	/**
@@ -58,8 +69,11 @@ public class UserTest {
 	 */
 	@Test
 	public void testRemoveExpense() throws Exception {
+		logger.info("Starting testRemoveExpense");
 		userT1.removeExpense(exT1);
 		assertEquals(userT1.getMessages(), userT2.getMessages()); 
+		logger.info("Finishing testRemoveExpense");
+
 
 	}
 	/**
@@ -68,7 +82,9 @@ public class UserTest {
 	 */
 	@Test
 	public void testGetLogin() throws Exception {
+		logger.info("Starting testGetLogin");
 		assertEquals(userT1.getLogin(), "user"); 
+		logger.info("Finishing testGetLogin");
 
 
 	}
@@ -79,11 +95,13 @@ public class UserTest {
 	 */
 	@Test
 	public void testSetLogin() throws Exception {
+		logger.info("Starting testSetLogin");
 		userT1.setLogin("userNew");
 		assertNotEquals(userT1.getLogin(), userT2.getLogin()); 
 
 		userT1.setLogin("user");
 		assertEquals(userT1.getLogin(), userT2.getLogin()); 
+		logger.info("Finishing testSetLogin");
 
 
 	}
@@ -95,7 +113,9 @@ public class UserTest {
 	 */
 	@Test
 	public void testGetPassword() throws Exception {
+		logger.info("Starting testGetPassword");
 		assertEquals(userT1.getPassword(), "123"); 
+		logger.info("Finishing testGetPassword");
 
 	}
 
@@ -106,11 +126,13 @@ public class UserTest {
 	 */
 	@Test
 	public void testSetPassword() throws Exception {
+		logger.info("Starting testSetPassword");
 		userT1.setPassword("pasNew");
 		assertNotEquals(userT1.getPassword(), userT2.getPassword()); 
 
 		userT1.setPassword("123");
 		assertEquals(userT1.getPassword(), userT2.getPassword()); 
+		logger.info("Finishing testSetPassword");
 
 	}
 	/**
@@ -119,7 +141,9 @@ public class UserTest {
 	 */
 	@Test
 	public void testGetAge() throws Exception {
+		logger.info("Starting testGetAge");
 		assertEquals(userT1.getAge(), 20); 
+		logger.info("Finishing testGetAge");
 
 	}
 
@@ -129,11 +153,13 @@ public class UserTest {
 	 */
 	@Test
 	public void testSetAge() throws Exception {
+		logger.info("Starting testSetAge");
 		userT1.setAge(21);
 		assertNotEquals(userT1.getAge(), userT2.getAge()); 
 
 		userT1.setAge(20);
 		assertEquals(userT1.getAge(), userT2.getAge());
+		logger.info("Finishing testSetAge");
 
 	}
 	/**
@@ -142,7 +168,9 @@ public class UserTest {
 	 */
 	@Test
 	public void testGetCardNumber() throws Exception {
+		logger.info("Starting testGetCardNumber");
 		assertEquals(userT1.getCardNumber(), userT2.getCardNumber()); 
+		logger.info("Finishing testGetCardNumber");
 
 	}
 	/**
@@ -151,11 +179,13 @@ public class UserTest {
 	 */
 	@Test
 	public void testSetCardNumber() throws Exception {
+		logger.info("Starting testSetCardNumber");
 		userT1.setCardNumber("21");
 		assertNotEquals(userT1.getCardNumber(), userT2.getCardNumber()); 
 
 		userT1.setCardNumber("1234567");
 		assertEquals(userT1.getCardNumber(), userT2.getCardNumber());
+		logger.info("Finishing testSetCardNumber");
 
 	}
 	/**
@@ -164,7 +194,9 @@ public class UserTest {
 	 */
 	@Test
 	public void testGetExpenseLimit() throws Exception {
+		logger.info("Starting testGetExpenseLimit");
 		assertEquals(userT1.getExpenseLimit(), userT2.getExpenseLimit(), 0); 
+		logger.info("Finishing testGetExpenseLimit");
 
 	}
 
@@ -176,11 +208,14 @@ public class UserTest {
 	 */
 	@Test
 	public void testSetExpenseLimit() throws Exception {
+		logger.info("Starting testSetExpenseLimit");
 		userT1.setExpenseLimit(21);
 		assertNotEquals(userT1.getExpenseLimit(), userT2.getExpenseLimit()); 
 
 		userT1.setExpenseLimit(2000);
 		assertEquals(userT1.getExpenseLimit(), userT2.getExpenseLimit(),0);
+		logger.info("Finishing testSetExpenseLimit");
+
 	}
 
 	/**
@@ -189,7 +224,9 @@ public class UserTest {
 	 */
 	@Test
 	public void testGetMessages() throws Exception {
+		logger.info("Starting testGetMessages");
 		assertEquals(userT1.getMessages(), userT2.getMessages()); 
+		logger.info("Finishing testGetMessages");
 
 	}
 
