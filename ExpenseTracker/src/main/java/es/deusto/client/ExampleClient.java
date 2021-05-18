@@ -21,6 +21,7 @@ import java.util.*;
 import es.deusto.log.LoggerFile; 
 import java.util.logging.Level; 
 import java.util.logging.Logger;
+
 /**
  * The main CLIENT SIDE class\n
  * The purpose of this class is to create the client and the WEBTARGET as well as to initialize the first window\n
@@ -36,7 +37,8 @@ public class ExampleClient {
 	private Client client;
 	private WebTarget webTarget;
 	private LoginWindow lw;
-	private static ResourceBundle resourceBundle; 
+	private ResourceBundle resourceBundle; 
+	
 
 	
 	/**
@@ -50,6 +52,8 @@ public class ExampleClient {
 		client = ClientBuilder.newClient();
 		webTarget = client.target(String.format("http://%s:%s/rest/server", hostname, port));
 		lw = new LoginWindow(this);
+		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
+
 	}
 
 	/**
@@ -237,7 +241,7 @@ public class ExampleClient {
 
 		String hostname = args[0];
 		String port = args[1];
-		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
+		
 		//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag("es"));
 
 		//logger.info(resourceBundle.getString("starting_msg"));

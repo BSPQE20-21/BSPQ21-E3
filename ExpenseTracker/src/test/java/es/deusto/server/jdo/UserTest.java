@@ -29,7 +29,7 @@ public class UserTest {
 	public void setUp()throws Exception {
 		logger.info("Entering setUp");
 		userT1 = new User("user", "123", "1234567", 20, 200); 
-		userT2 = new User("user", "124", "1234567", 20, 200); 
+		userT2 = new User("user", "123", "1234567", 20, 200); 
 		exT1 = new Expense("Apple", 1, Category.FOOD); 
 		logger.info("Leaving setUp");
 
@@ -212,7 +212,7 @@ public class UserTest {
 		userT1.setExpenseLimit(21);
 		assertNotEquals(userT1.getExpenseLimit(), userT2.getExpenseLimit()); 
 
-		userT1.setExpenseLimit(2000);
+		userT1.setExpenseLimit(200);
 		assertEquals(userT1.getExpenseLimit(), userT2.getExpenseLimit(),0);
 		logger.info("Finishing testSetExpenseLimit");
 

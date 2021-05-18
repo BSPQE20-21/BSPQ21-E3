@@ -87,7 +87,7 @@ public class ExampleClientTest {
      * This test is related to es.deusto.client.ClientExample.registerUser \n
      * @throws Exception
      */
-    /*
+    
     @Test
     public void testRegisterUser() throws Exception {
         UserData newUser = new UserData();
@@ -101,7 +101,7 @@ public class ExampleClientTest {
 
     }
     
-    */
+    
 
    /**
     * 

@@ -4,18 +4,24 @@ import org.junit.Test;
 import org.junit.Before;
 import org.junit.Rule;
 
+
 import es.deusto.server.jdo.User;
 import es.deusto.server.jdo.Expense;
 import static org.junit.Assert.*;
-
+import org.junit.platform.commons.annotation.Testable;
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
 import org.databene.contiperf.junit.ContiPerfRule;
+
 import org.apache.log4j.Logger;
 
 /**
  * This class is a copy of UserTest, in this class will be validated the performance 
  */
+
+@PerfTest(invocations = 5)
+@Required(max = 1200, average = 250)
+@Testable
 public class UserPerfTest {
 
 
@@ -33,7 +39,7 @@ public class UserPerfTest {
 	public void setUp()throws Exception {
 		logger.info("Entering setUp");
 		userT1 = new User("user", "123", "1234567", 20, 200); 
-		userT2 = new User("user", "124", "1234567", 20, 200); 
+		userT2 = new User("user", "123", "1234567", 20, 200); 
 		exT1 = new Expense("Apple", 1, Category.FOOD); 
 		logger.info("Leaving setUp");
 	}
@@ -198,7 +204,7 @@ public class UserPerfTest {
 		userT1.setExpenseLimit(21);
 		assertNotEquals(userT1.getExpenseLimit(), userT2.getExpenseLimit()); 
 
-		userT1.setExpenseLimit(2000);
+		userT1.setExpenseLimit(200);
 		assertEquals(userT1.getExpenseLimit(), userT2.getExpenseLimit(),0);
 		logger.debug("Finishing testSetExpenseLimit");
 

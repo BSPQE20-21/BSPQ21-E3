@@ -91,7 +91,7 @@ public class ExpenseTest {
 		assertNotEquals(exT1.getCategory(), exT2.getCategory());
 
 		exT1.setCategory(Category.FOOD);
-		assertEquals(exT1.getAmount(), exT2.getCategory());
+		assertEquals(exT1.getCategory(), exT2.getCategory());
 		logger.info("Finishing testSetCategory");
 
 

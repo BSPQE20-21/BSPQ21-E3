@@ -7,13 +7,18 @@ import org.junit.Rule;
 import es.deusto.server.jdo.*;
 import static org.junit.Assert.*;
 import org.apache.log4j.Logger;
+
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
 import org.databene.contiperf.junit.ContiPerfRule;
+import org.junit.platform.commons.annotation.Testable;
 
 /**This class is a copy of ExpenseTest, in this class will be validated the performance
  * 
  */
+@PerfTest(invocations = 5)
+@Required(max = 1200, average = 250)
+@Testable
 public class ExpensePerfTest {
 
 	Expense exT1, exT2;
@@ -88,7 +93,7 @@ public class ExpensePerfTest {
 		assertNotEquals(exT1.getCategory(), exT2.getCategory());
 
 		exT1.setCategory(Category.FOOD);
-		assertEquals(exT1.getAmount(), exT2.getCategory());
+		assertEquals(exT1.getCategory(), exT2.getCategory());
 		logger.info("Finishing testSetCategory");
 
 

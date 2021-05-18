@@ -15,11 +15,13 @@ import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.UserPerfTest;
 
 
+
 public class LoginWindowTest {
 	ExampleClient exampleClient;
 	LoginWindow lw;
 	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
 
+	
 
 	/**The SET UP of the test case\n
 	 * Thanks to this method the objects used to validate the test are generated\n
