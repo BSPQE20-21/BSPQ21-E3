@@ -8,12 +8,14 @@ import java.util.Set;
 
 import javax.swing.JFrame;
 
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
+import es.deusto.server.jdo.UserPerfTest;
 
 public class AllExpensesWindowTest {
 	ExpenseData expenseData;
@@ -21,6 +23,7 @@ public class AllExpensesWindowTest {
 	UserData userExpected;
 	AllExpensesWindow aew;
 	Set<ExpenseData> expenses;
+	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
 
 	/**The SET UP of the test case\n
 	 * Thanks to this method the objects used to validate the test are generated\n
@@ -29,6 +32,7 @@ public class AllExpensesWindowTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		logger.info("Entering setUp");
 		expenseData = new ExpenseData("apple", 1.0, Category.FOOD);
 		exampleClient = new ExampleClient("127.0.0.1", "8080");
         userExpected = new UserData();
@@ -41,7 +45,7 @@ public class AllExpensesWindowTest {
     	expenses.add(expenseData);
 
 		aew = new AllExpensesWindow(exampleClient, expenses, userExpected);
-
+		logger.info("Leaving setUp");
 		
 	}
 
@@ -51,8 +55,10 @@ public class AllExpensesWindowTest {
 	 */
 	@Test
 	public void testAllExpensesWindowClass() throws Exception {
+		logger.info("Starting testAllExpensesWindowClass");
 		assertEquals(aew.getClass(), AllExpensesWindow.class);
-		
+		logger.info("Finishing testAllExpensesWindowClass");
+
 	}
 	
 	/**This method validates if the created window is visible
@@ -60,7 +66,10 @@ public class AllExpensesWindowTest {
 	 */
 	@Test
 	public void testAllExpensesWindowVisible() throws Exception {
+		logger.info("Starting testAllExpensesWindowVisible");
 		assertTrue(aew.isVisible());
+		logger.info("Finishing testAllExpensesWindowVisible");
+
 	}
 	
 	/**This method validates if the created window disposes on close
@@ -68,13 +77,15 @@ public class AllExpensesWindowTest {
 	 */
 	@Test
 	public void testAllExpensesWindowCloseOperation() throws Exception {
+		logger.info("Starting testAllExpensesWindowCloseOperation");
 		assertEquals(aew.getDefaultCloseOperation(), JFrame.DISPOSE_ON_CLOSE);
-		
+		logger.info("Finishing testAllExpensesWindowCloseOperation");
+
 	}
 
 	@Test
 	public void testActionPerformed() throws Exception {
-
+		//TODO
 	}
 
 }

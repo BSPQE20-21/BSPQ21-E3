@@ -17,6 +17,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 
 import es.deusto.serialization.DirectedMessage;
@@ -25,6 +26,7 @@ import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
 import es.deusto.server.jdo.User;
+import es.deusto.server.jdo.UserPerfTest;
 
 /**
  * This class is a collection of test that validates that the CLIENT side methods work properly well\n
@@ -41,6 +43,8 @@ public class ExampleClientTest {
     Expense expenseExpected;
     
     ResourceBundle resourceBundle;
+	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+
 
 	/**
 	 * The SET UP of the test case\n
@@ -51,7 +55,7 @@ public class ExampleClientTest {
 
     @Before
     public void setUp() throws Exception {
-        
+		logger.info("Entering setUp");
         exampleClient = new ExampleClient("127.0.0.1", "8080");
         userExpected = new UserData();
         userExpected.setLogin("user");
@@ -73,8 +77,8 @@ public class ExampleClientTest {
         dMExpected.setUserData(userExpected);
         dMExpected.setExpenseData(expenseDataExpected);
 
-        
-        
+		logger.info("Leaving setUp");
+
         
     }
 
