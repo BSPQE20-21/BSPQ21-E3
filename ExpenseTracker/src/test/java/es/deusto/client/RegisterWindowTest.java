@@ -5,14 +5,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import javax.swing.JFrame;
 
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
 import es.deusto.serialization.UserData;
+import es.deusto.server.jdo.UserPerfTest;
 
 public class RegisterWindowTest {
 	ExampleClient exampleClient;
 	RegisterWindow rw;
+	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+
 
 	/**The SET UP of the test case\n
 	 * Thanks to this method the objects used to validate the test are generated\n
@@ -21,8 +25,10 @@ public class RegisterWindowTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		logger.info("Entering setUp");
 		exampleClient = new ExampleClient("127.0.0.1", "8080");
 		rw = new RegisterWindow(exampleClient);
+		logger.info("Finishing setUp");
 
 	}
 
@@ -31,8 +37,10 @@ public class RegisterWindowTest {
 	 */
 	@Test
 	public void testRegisterWindowClass() throws Exception {
+		logger.info("Starting testRegisterWindowClass");
 		assertEquals(rw.getClass(), RegisterWindow.class);
-		
+		logger.info("Finishing testRegisterWindowClass");
+
 	}
 	
 	/**This method validates if the created window is visible
@@ -40,7 +48,10 @@ public class RegisterWindowTest {
 	 */
 	@Test
 	public void testRegisterWindowVisible() throws Exception {
+		logger.info("Starting testRegisterWindowVisible");
 		assertTrue(rw.isVisible());
+		logger.info("Finishing testRegisterWindowVisible");
+
 	}
 	
 	/**This method validates if the created window disposes on close
@@ -48,12 +59,14 @@ public class RegisterWindowTest {
 	 */
 	@Test
 	public void testRegisterWindowCloseOperation() throws Exception {
+		logger.info("Starting testRegisterWindowCloseOperation");
 		assertEquals(rw.getDefaultCloseOperation(), JFrame.DISPOSE_ON_CLOSE);
+		logger.info("Finishing testRegisterWindowCloseOperation");
 		
 	}
 	@Test
 	public void testRegisterWindow() throws Exception {
-
+		//TODO
 	}
 
 

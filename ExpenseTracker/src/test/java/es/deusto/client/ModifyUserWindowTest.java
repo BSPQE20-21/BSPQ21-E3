@@ -5,18 +5,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import javax.swing.JFrame;
 
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
+import es.deusto.server.jdo.UserPerfTest;
 
 
 public class ModifyUserWindowTest {
 	ExampleClient exampleClient;
 	UserData userExpected;
 	ModifyUserWindow muw;
+	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+
 
 	/**The SET UP of the test case\n
 	 * Thanks to this method the objects used to validate the test are generated\n
@@ -25,6 +29,7 @@ public class ModifyUserWindowTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		logger.info("Entering setUp");
 		exampleClient = new ExampleClient("127.0.0.1", "8080");
         userExpected = new UserData();
         userExpected.setLogin("user");
@@ -33,8 +38,8 @@ public class ModifyUserWindowTest {
         userExpected.setCardNumber("123456789");
         userExpected.setExpenseLimit(2000);
 		muw = new ModifyUserWindow(exampleClient, userExpected);
+		logger.info("Leaving setUp");
 
-		
 	}
 
 
@@ -43,8 +48,10 @@ public class ModifyUserWindowTest {
 	 */
 	@Test
 	public void testModifyUserWindowClass() throws Exception {
+		logger.info("Starting testModifyUserWindowClass");
 		assertEquals(muw.getClass(), ModifyUserWindow.class);
-		
+		logger.info("Finishing testModifyUserWindowClass");
+
 	}
 	
 	/**This method validates if the created window is visible
@@ -52,7 +59,10 @@ public class ModifyUserWindowTest {
 	 */
 	@Test
 	public void testModifyUserWindowVisible() throws Exception {
+		logger.info("Starting testModifyUserWindowVisible");
 		assertTrue(muw.isVisible());
+		logger.info("Finishing testModifyUserWindowVisible");
+
 	}
 	
 	/**This method validates if the created window disposes on close
@@ -60,14 +70,16 @@ public class ModifyUserWindowTest {
 	 */
 	@Test
 	public void testModifyUserWindowCloseOperation() throws Exception {
+		logger.info("Starting testModifyUserWindowCloseOperation");
 		assertEquals(muw.getDefaultCloseOperation(), JFrame.DISPOSE_ON_CLOSE);
-		
+		logger.info("Finishing testModifyUserWindowCloseOperation");
+
 	}
 	
 
 	@Test
 	public void testActionPerformed() throws Exception {
-
+		//TODO
 	}
 
 }
