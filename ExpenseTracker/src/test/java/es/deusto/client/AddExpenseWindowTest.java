@@ -22,7 +22,7 @@ public class AddExpenseWindowTest {
 	ExampleClient exampleClient;
 	UserData userExpected;
 	AddExpenseWindow aew;
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(AddExpenseWindowTest.class.getName());
 
 
 	/**The SET UP of the test case\n

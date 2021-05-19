@@ -43,7 +43,7 @@ public class ExampleClientTest {
     Expense expenseExpected;
     
     ResourceBundle resourceBundle;
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(ExampleClientTest.class.getName());
 
 
 	/**

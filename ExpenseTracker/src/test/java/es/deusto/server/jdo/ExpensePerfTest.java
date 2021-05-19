@@ -23,7 +23,7 @@ public class ExpensePerfTest {
 
 	Expense exT1, exT2;
 	User user; 
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(ExpensePerfTest.class.getName());
 	
 	@Rule
 	public ContiPerfRule i = new ContiPerfRule();

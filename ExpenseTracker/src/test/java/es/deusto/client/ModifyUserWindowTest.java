@@ -19,7 +19,7 @@ public class ModifyUserWindowTest {
 	ExampleClient exampleClient;
 	UserData userExpected;
 	ModifyUserWindow muw;
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(ModifyUserWindowTest.class.getName());
 
 
 	/**The SET UP of the test case\n

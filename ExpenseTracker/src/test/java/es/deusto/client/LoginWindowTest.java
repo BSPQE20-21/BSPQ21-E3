@@ -19,7 +19,7 @@ import es.deusto.server.jdo.UserPerfTest;
 public class LoginWindowTest {
 	ExampleClient exampleClient;
 	LoginWindow lw;
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(LoginWindowTest.class.getName());
 
 	
 

@@ -16,7 +16,7 @@ public class UserTest {
 
 	User userT1, userT2; 
 	Expense exT1; 
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(UserTest.class.getName());
 
 
 	/**

@@ -23,7 +23,7 @@ public class AllExpensesWindowTest {
 	UserData userExpected;
 	AllExpensesWindow aew;
 	Set<ExpenseData> expenses;
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(AllExpensesWindowTest.class.getName());
 
 	/**The SET UP of the test case\n
 	 * Thanks to this method the objects used to validate the test are generated\n

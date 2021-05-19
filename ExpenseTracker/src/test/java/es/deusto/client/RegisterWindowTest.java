@@ -15,7 +15,7 @@ import es.deusto.server.jdo.UserPerfTest;
 public class RegisterWindowTest {
 	ExampleClient exampleClient;
 	RegisterWindow rw;
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(RegisterWindowTest.class.getName());
 
 
 	/**The SET UP of the test case\n

@@ -15,7 +15,7 @@ public class ExpenseTest {
 
 	Expense exT1, exT2;
 	User user; 
-	static Logger logger = Logger.getLogger(UserPerfTest.class.getName());
+	static Logger logger = Logger.getLogger(ExpenseTest.class.getName());
 
 	@Before
 	public void setUp() throws Exception {
