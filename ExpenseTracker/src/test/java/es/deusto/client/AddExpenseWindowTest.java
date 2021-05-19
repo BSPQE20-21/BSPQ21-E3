@@ -76,6 +76,8 @@ public class AddExpenseWindowTest {
 	 */
 	@Test
 	public void testAddExpenseWindowCloseOperation() throws Exception {
+		// NO FUNCIONA 
+		// org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
 		logger.info("Starting testAddExpenseWindowCloseOperation");
 		assertEquals(aew.getDefaultCloseOperation(), JFrame.DISPOSE_ON_CLOSE);
 		logger.info("Finishing testAddExpenseWindowCloseOperation");

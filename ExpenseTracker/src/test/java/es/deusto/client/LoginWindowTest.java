@@ -66,6 +66,7 @@ public class LoginWindowTest {
 	 */
 	@Test
 	public void testLoginWindowCloseOperation() throws Exception {
+		// org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
 		logger.info("Starting testLoginWindowCloseOperation");
 		assertEquals(lw.getDefaultCloseOperation(), JFrame.DISPOSE_ON_CLOSE);
 		logger.info("Finishing testLoginWindowCloseOperation");

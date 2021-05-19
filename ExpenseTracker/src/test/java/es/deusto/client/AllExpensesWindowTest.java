@@ -66,6 +66,7 @@ public class AllExpensesWindowTest {
 	 */
 	@Test
 	public void testAllExpensesWindowVisible() throws Exception {
+	
 		logger.info("Starting testAllExpensesWindowVisible");
 		assertTrue(aew.isVisible());
 		logger.info("Finishing testAllExpensesWindowVisible");
@@ -77,6 +78,8 @@ public class AllExpensesWindowTest {
 	 */
 	@Test
 	public void testAllExpensesWindowCloseOperation() throws Exception {
+		// TODO esto no parece funcionar 
+		// org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
 		logger.info("Starting testAllExpensesWindowCloseOperation");
 		assertEquals(aew.getDefaultCloseOperation(), JFrame.DISPOSE_ON_CLOSE);
 		logger.info("Finishing testAllExpensesWindowCloseOperation");

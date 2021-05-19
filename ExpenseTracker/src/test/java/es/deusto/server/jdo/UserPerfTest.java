@@ -31,6 +31,8 @@ public class UserPerfTest {
 
 
 	@Rule
+	// TODO - error in the test that says the following --> java.lang.RuntimeException: java.lang.NoSuchFieldException: fNext
+	// at org.databene.contiperf.junit.ContiPerfRule.apply(ContiPerfRule.java:176)
 	public ContiPerfRule i = new ContiPerfRule();
 	
 	
