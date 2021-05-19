@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import es.deusto.serialization.UserData;
+import org.apache.log4j.Logger;
 /**
  * MODIFY USER
  * Once the user is logged in give them the possibility to change some of the parameters\n
@@ -20,6 +21,9 @@ public class ModifyUserWindow extends JFrame {
 
 	private ExampleClient client;
     private final UserData userData; 
+
+	static Logger logger = Logger.getLogger(ModifyUserWindow.class.getName());
+
     
 	
 	/**
@@ -27,6 +31,8 @@ public class ModifyUserWindow extends JFrame {
 	 * @param client
 	 */
 	public ModifyUserWindow(ExampleClient client, UserData userData) {
+		logger.info("Entering constructor");
+
 		this.client = client;
         this.userData = userData; 
 		
@@ -61,6 +67,7 @@ public class ModifyUserWindow extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Entering Action Listener of the buttonUpdate button");
 
                 String login = emailField.getText();
 				String password = String.valueOf(passwordField.getPassword()); 
@@ -74,7 +81,7 @@ public class ModifyUserWindow extends JFrame {
 				uData.setCardNumber(cardNumber);
 				uData.setAge(age); 
 				uData.setExpenseLimit(expenseLimit);
-				
+				logger.info("Updating user ..."); 
 				UserData usData = client.updateUser(uData);
                 userData.setLogin(usData.getLogin());
                 userData.setPassword(usData.getPassword());
@@ -89,8 +96,10 @@ public class ModifyUserWindow extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
+				logger.info("Entering the action listener of the return button"); 
                 setVisible(false);
+				logger.info("Opening the AddExpenseWindow"); 
+
                 AddExpenseWindow aew = new AddExpenseWindow(userData,client); 
 				
 				

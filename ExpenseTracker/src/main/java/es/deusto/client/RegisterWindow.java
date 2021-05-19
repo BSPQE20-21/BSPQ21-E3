@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
+import org.apache.log4j.Logger;
 
 import es.deusto.serialization.UserData;
 /** This window allows users to introduce all the data for their registration\n
@@ -32,12 +33,16 @@ public class RegisterWindow extends JFrame implements ActionListener {
 	private Thread thread;
 	private final AtomicBoolean running = new AtomicBoolean(false);
 	private ExampleClient client;
-	
+
+	static Logger logger = Logger.getLogger(RegisterWindow.class.getName());
+
 	/**
 	 * The constructor of the register window. \n
 	 * @param client
 	 */
 	public RegisterWindow(ExampleClient client) {
+		logger.info("Entering constructor");
+		
 		this.client = client;
 		
 		JPanel registerPanel = new JPanel();
@@ -96,7 +101,7 @@ public class RegisterWindow extends JFrame implements ActionListener {
 		
 		if (target == this.buttonRegister) {
 			try {
-				
+				logger.info("Entering Action Listener of register button");
 				String login = this.emailField.getText(); 
 				String password = String.valueOf(this.passwordField.getPassword()); 
 				String cardNumber = this.carNumberField.getText(); 
@@ -109,10 +114,10 @@ public class RegisterWindow extends JFrame implements ActionListener {
 				userData.setCardNumber(cardNumber);
 				userData.setAge(age); 
 				userData.setExpenseLimit(expenseLimit);
-				
+				logger.info("Storing the user ... "); 
 				client.registerUser(userData);
 				this.frame.setVisible(false);
-				
+				logger.info("Opening the AddExpenseWindow");
 				AddExpenseWindow aew = new AddExpenseWindow(userData, client);
 				//aew.setVisible(true);
 				

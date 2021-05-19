@@ -8,7 +8,7 @@ import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 import es.deusto.server.jdo.Expense;
-
+import org.apache.log4j.Logger;
 /** 
 *@class ALL EXPENSE WINDOW
 *This class constructs the window that allows users to show expenses 
@@ -21,7 +21,8 @@ public class AllExpensesWindow extends JFrame {
     private UserData userData; 
     private JButton addExpense, deleteExpense; 
     private JPanel panel, buttonPanel; 
-    
+    static Logger logger = Logger.getLogger(AllExpensesWindow.class.getName());
+
     /**
      * Contractor of the window that recieves the following parameters
      * @param ExampleClient client - so we can make the connection with the client 
@@ -31,7 +32,8 @@ public class AllExpensesWindow extends JFrame {
      */
 
     public AllExpensesWindow(ExampleClient client, Set<ExpenseData> expenses, UserData userData) {
-		this.client  = client; 
+		logger.info("Entering constructor");
+        this.client  = client; 
         this.expenses = expenses; 
         panel = new JPanel(); 
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -58,7 +60,9 @@ public class AllExpensesWindow extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			
+                logger.info("Entering Action Listener of the addExpense button");
+				logger.info("Opening the AddExpenseWindow");
+
 				AddExpenseWindow aew = new AddExpenseWindow(userData, client);
 				setVisible(false); 
 			}		
@@ -70,7 +74,7 @@ public class AllExpensesWindow extends JFrame {
         deleteExpense.addActionListener(new ActionListener(){
             @Override
 			public void actionPerformed(ActionEvent e) {
-			
+                logger.info("Entering Action Listener of the deleteExpense");
 				ExpenseData value = (ExpenseData) jList.getSelectedValue();
                 System.out.println(value);
 				//setVisible(false); 

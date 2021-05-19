@@ -20,6 +20,7 @@ import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.Expense;
 import java.util.*; 
+import org.apache.log4j.Logger;
 
 
 /** 
@@ -42,7 +43,7 @@ public class AddExpenseWindow extends JFrame  {
 	JTextField name_text, amount_text;
 
 	private ExampleClient client; 
-	
+	static Logger logger = Logger.getLogger(AddExpenseWindow.class.getName());
 
 	/**
 	 * (Not used method) 
@@ -66,6 +67,7 @@ public class AddExpenseWindow extends JFrame  {
  	*/
 	
 	public AddExpenseWindow(UserData userData, ExampleClient client) {
+		logger.info("Entering constructor");
 		this.client = client; 
 		JPanel panelAddExpense;
 		panelAddExpense = new JPanel();
@@ -104,9 +106,11 @@ public class AddExpenseWindow extends JFrame  {
 		 * The client is called so it can manage the connection with the server and send the request of storage
 		 */
 		add.addActionListener(new ActionListener() {
+
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Entering Action Listener of the add button");
 				
 				String name = name_text.getText();
 				double amount = Double.parseDouble(amount_text.getText());
@@ -116,7 +120,8 @@ public class AddExpenseWindow extends JFrame  {
 				expenseData.setText(name);
 				expenseData.setAmount(amount);
 				expenseData.setCategory(category);
-				
+				logger.info("Storing expenses ...");
+
 				client.storeExpense(userData, expenseData);
 				//switchPanel(panelAddExpense, NEXTPANEL);
 				
@@ -136,9 +141,11 @@ public class AddExpenseWindow extends JFrame  {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Entering Action Listener of the all expenses button");
 				//switchPanel(panelAddExpense, PREVIOUSPANEL);
 				Set<ExpenseData> expenses = client.showExpenses(userData);
 				System.out.println(expenses);	
+				logger.info("Opening the all expense window");
 				AllExpensesWindow allexp = new AllExpensesWindow(client, expenses, userData); 
 				setVisible(false); 
 			}		
@@ -149,7 +156,8 @@ public class AddExpenseWindow extends JFrame  {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				logger.info("Entering Action Listener of the modifyUser button");
+				logger.info("Opening the ModifyUserWindow");
 				ModifyUserWindow muw = new ModifyUserWindow(client, userData); 
 				setVisible(false); 
 			}		
@@ -172,6 +180,8 @@ public class AddExpenseWindow extends JFrame  {
 		setTitle(client.getResourceBundle().getString("addExpenses"));
 		setSize(600, 500);
 		setVisible(true);
+
+		
 	}
 
 

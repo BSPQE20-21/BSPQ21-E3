@@ -17,6 +17,8 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import es.deusto.serialization.UserData;
+import org.apache.log4j.Logger;
+
 /**
  * @class LOGIN WINDOW
  * The initial window that allows each user to enter the aplication if they are already registred.
@@ -33,12 +35,16 @@ public class LoginWindow extends JFrame implements ActionListener {
     JPasswordField password_text;
     JButton login, register;
     private ExampleClient client;
+    static Logger logger = Logger.getLogger(LoginWindow.class.getName());
+
     /**
      * Constructor of the window just receives the client created on the @see es.deusto.client.ExampleClient
      * All the JLabels, JTextFields and JButtons are created as a form so the users can easily add their data to the window
      * @param client
      */
     LoginWindow(ExampleClient client) {
+        logger.info("Entering constructor");
+
         this.client = client; 
         // User Label
         user_label = new JLabel();
@@ -74,6 +80,9 @@ public class LoginWindow extends JFrame implements ActionListener {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Entering Action Listener of the register button");
+				logger.info("Opening the all RegisterWindow ");
+
 				setVisible(false);
 				RegisterWindow rw = new RegisterWindow(client);
 				//rw.setVisible(true);
@@ -104,14 +113,19 @@ public class LoginWindow extends JFrame implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent ae) {
+        logger.info("Entering Action Listener ");
+
     	String userName = userName_text.getText();
         String password = String.valueOf(password_text.getPassword()); 
        // TODO create method validate user
-         
+       logger.info("Validating the user ... "); 
        UserData userData = client.validateUser(userName, password);
 
        if(userData.getLogin() != null){
         this.setVisible(false); 
+
+        logger.info("Opening the AddExpenseWindow");
+
         AddExpenseWindow aew = new AddExpenseWindow(userData, client);
         
     }
