@@ -1,0 +1,9 @@
+[es.deusto.client.ExampleClient.main()] INFO  es.deusto.client.ExampleClient  - Empezando ...
+[es.deusto.client.ExampleClient.main()] INFO  es.deusto.client.ExampleClient  - Expense Tracker
+[es.deusto.client.ExampleClient.main()] INFO  es.deusto.client.ExampleClient  - -----------------------------------
+[es.deusto.client.ExampleClient.main()] INFO  es.deusto.client.LoginWindow  - Entering constructor
+[AWT-EventQueue-0] INFO  es.deusto.client.LoginWindow  - Entering Action Listener 
+[AWT-EventQueue-0] INFO  es.deusto.client.LoginWindow  - Validating the user ... 
+[AWT-EventQueue-0] INFO  es.deusto.client.ExampleClient  - El usuario esta siendo validado
+[AWT-EventQueue-0] INFO  es.deusto.client.LoginWindow  - Opening the AddExpenseWindow
+[AWT-EventQueue-0] INFO  es.deusto.client.AddExpenseWindow  - Entering constructor
