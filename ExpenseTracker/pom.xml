@@ -114,6 +114,11 @@
             <version>2.3.4</version>
             <scope>test</scope>
         </dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-site-plugin</artifactId>
+			<version>3.9.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -150,28 +155,31 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.4.19.v20190610</version>
             </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<forkCount>3</forkCount>
+					<reuseForks>true</reuseForks>
+				
+				</configuration>
+				
+			</plugin>
+		
+			
 			
 			<plugin>
-  				<groupId>org.apache.maven.plugins</groupId>
-  				<artifactId>maven-surefire-plugin</artifactId>
-				
-  				<configuration>
-    				<forkCount>3</forkCount>
-    				<reuseForks>true</reuseForks>
-    				<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-  				</configuration>
-			</plugin>
-			
-            <plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.3</version>
+				<version>0.8.2</version>
 				<executions>
 					<execution>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
+					<!-- attached to Maven test phase -->
 					<execution>
 						<id>report</id>
 						<phase>test</phase>
@@ -181,15 +189,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-			<groupId>com.soebes.maven.plugins.dmg</groupId>
-				<artifactId>doxygen-maven-plugin</artifactId>
-				<version>1.1.0</version>
-				<configuration>
-				<configurationFile>${doxygen.config.file}</configurationFile>
-				</configuration>
-			</plugin>
-		</plugins>
+		 </plugins>
 	</build>
 
 	<profiles>
@@ -233,7 +233,7 @@
 	 		<plugin> 
 				 <groupId>org.apache.maven.plugins</groupId> 
 				 <artifactId>maven-javadoc-plugin</artifactId> 
-				 <version>3.0.0</version>
+				 <version>3.2.0</version>
 	 		<configuration>
 				 <show>private</show>
 				 <nohelp>true</nohelp>
@@ -242,12 +242,12 @@
 		   <plugin>
 			   <groupId>org.apache.maven.plugins</groupId> 
 			   <artifactId>maven-project-info-reports-plugin</artifactId> 
-			   <version>2.9</version>
+			   <version>3.1.2</version>
 		   </plugin>
 		   <plugin>
 	 			<groupId>org.apache.maven.plugins</groupId> 
 				 <artifactId>maven-checkstyle-plugin</artifactId> 
-				 <version>3.0.0</version>
+				 <version>3.1.2</version>
 		   </plugin>
 		   <plugin>
 			   <groupId>org.codehaus.mojo</groupId> 
@@ -257,7 +257,7 @@
 		   <plugin>
 	 			<groupId>org.apache.maven.plugins</groupId> 
 				 <artifactId>maven-surefire-report-plugin</artifactId> 
-				 <version>2.21.0</version>
+				 <version>2.0</version>
 		   </plugin>
 		   <plugin>
 	 			<groupId>com.googlecode.maven-overview-plugin</groupId> 
@@ -267,14 +267,14 @@
 		   <plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.3</version>
+				<version>0.8.7</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId> 
 				<artifactId>maven-pmd-plugin</artifactId> 
-				<version>3.11.0</version>
+				<version>3.14.0</version>
 			</plugin>
 		   
          </plugins>
-	 </reporting>
+	 </reporting> 
 </project>
