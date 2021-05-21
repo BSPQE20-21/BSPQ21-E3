@@ -15,6 +15,7 @@ import org.databene.contiperf.junit.ContiPerfRule;
 
 import org.apache.log4j.Logger;
 
+
 /**
  * This class is a copy of UserTest, in this class will be validated the performance 
  */
@@ -222,6 +223,24 @@ public class UserPerfTest {
 		logger.debug("Finishing testGetMessages");
 
 	}
+
+	/**
+	 * This test validates that the toString method creates an string with the correct format
+	 * @throws Exception
+	 */
+	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
+	public void testToString() throws Exception {
+		logger.info("Starting testToString");
+
+		assertEquals("User: login --> " + userT1.getLogin() + ", password -->  " + userT1.getPassword() + ", expenses --> " + userT1.getMessages()
+		, userT1.toString());
+
+		logger.info("Leaving testToString");
+
+	}
+
 
 
 }

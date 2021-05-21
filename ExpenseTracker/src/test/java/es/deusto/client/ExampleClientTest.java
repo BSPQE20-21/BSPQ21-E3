@@ -79,7 +79,7 @@ public class ExampleClientTest {
         
         dMExpected.setUserData(userExpected);
         dMExpected.setExpenseData(expenseDataExpected);
-
+        exampleClient.registerUser(userExpected);
 		logger.info("Leaving setUp");
 
         
@@ -99,13 +99,34 @@ public class ExampleClientTest {
         logger.info("Finishing testRegisterUser");
     }
     
+    /**
+     * This test validates the user in the DB
+     * @throws Exception
+     */
+    
+    @Test
+    public void testValidateUser() throws Exception {
+        logger.info("Entering testValidateUser");
+
+        //exampleClient.getResourceBundle().getString("update"); 
+        logger.info("Validating the user ...");
+        UserData userDB = exampleClient.validateUser(userExpected.getLogin(), userExpected.getPassword());
+        
+        Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
+        Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
+        Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
+        Assert.assertEquals(userDB.getAge(), userExpected.getAge(),0);
+        Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
+        //Assert.assertSame(userExpected, userDB);
+        logger.info("Leaving testValidateUser");
+       
+    }
     
 
-   /**
-    * 
+   /** 
+    * This test validates the Expense Storing in the DB
     * @throws Exception
     */
-    
     @Test
     public void testStoreExpense() throws Exception {
     	logger.info("Starting testStoreExpense");
@@ -114,30 +135,16 @@ public class ExampleClientTest {
 
     }
    
-    /**
-     * 
+
+    
+    
+    
+    /**This test handles the validation of showing the expenses 
      * @throws Exception
      */
-    
-    @Test
-    public void testValidateUser() throws Exception {
-
-        //exampleClient.getResourceBundle().getString("update"); 
-        UserData userDB = exampleClient.validateUser("userTest", "12345");
-        
-        Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
-        Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
-        Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
-        Assert.assertEquals(userDB.getAge(), userExpected.getAge());
-        Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
-        //Assert.assertSame(userExpected, userDB);
-       
-    }
-    
-    
-    
     @Test
     public void testShowExpenses() throws Exception {
+        logger.info("Starting testShowExpenses");
     	
     	Set<ExpenseData> expenseList = exampleClient.showExpenses(userExpected);
     	
@@ -148,24 +155,47 @@ public class ExampleClientTest {
 			assertEquals(expenseDataExpected.getCategory(), expense.getCategory());
 			assertEquals(expenseDataExpected.getText(), expense.getText());
 		}
-    	
+        logger.info("Finishing testShowExpenses");
+
     }
      
-    
-    /*
-     * @Before public void setUp() throws Exception { exampleClient = new
-     * ExampleClient(hostname, port); exampleClient.storeExpense(userData,
-     * expenseData); }
-     * 
-     * @Test public void testRegisterUser() { ExpenseList expenses = new
-     * ExpenseList();
-     * 
-     * 
-     * assertEquals(expenses, exampleClient.showExpenses(userData)); }
+    /**This test validates if the user is updated correctly
+     * @throws Exception
      */
+    @Test
+    public void testUpdateUser() throws Exception {
+        logger.info("Starting testUpdateUser");
+        UserData newUser = new UserData(); 
+        newUser.setLogin("userTest");
+        newUser.setPassword("newPass");
+        newUser.setAge(20);
+        newUser.setCardNumber("123456789");  
+        newUser.setExpenseLimit(2000);
+        logger.info("Updating user ...");
+
+        UserData userDB = exampleClient.updateUser(newUser);
+        
+        Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
+        Assert.assertNotEquals(userDB.getPassword(), userExpected.getPassword());
+        logger.info("Leaving testUpdateUser");
+    }
     
+    /**This test validates if the created client is from the class ExampleClient 
+     * @throws Exception
+     */
+    @Test
+    public void testMain() throws Exception {
+        logger.info("Starting testMain");
+        ExampleClient client = new ExampleClient("127.0.0.1", "8080"); 
+        assertEquals(client.getClass(), ExampleClient.class); 
+        logger.info("Leaving testMain");    
+    }
 
     
+    /**The after of the test
+     * Deletes the user after it is tested
+     * @throws Exception
+     */
     @After
     public void tearDown() throws Exception {
     	logger.info("Starting tearDown");
