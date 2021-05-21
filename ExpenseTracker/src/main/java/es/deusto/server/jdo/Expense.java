@@ -1,6 +1,11 @@
 package es.deusto.server.jdo;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.Key;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
+
 import java.util.Date;
 
 
@@ -10,8 +15,9 @@ import java.util.Date;
  *
  *
  */
-@PersistenceCapable
+@PersistenceCapable(detachable = "true")
 public class Expense {
+	
 	User user=null; // who 
 	String text=null; // the description of the purchase
 	long timestamp; // when 

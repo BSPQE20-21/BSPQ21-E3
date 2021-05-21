@@ -5,11 +5,13 @@ import org.mockito.ArgumentCaptor;
 import org.junit.Before;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation;
@@ -18,6 +20,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
+import org.junit.After;
 import org.junit.Assert;
 
 import es.deusto.serialization.DirectedMessage;
@@ -58,7 +61,7 @@ public class ExampleClientTest {
 		logger.info("Entering setUp");
         exampleClient = new ExampleClient("127.0.0.1", "8080");
         userExpected = new UserData();
-        userExpected.setLogin("user");
+        userExpected.setLogin("userTest");
         userExpected.setPassword("12345");
         userExpected.setAge(20);
         userExpected.setCardNumber("123456789");
@@ -82,6 +85,7 @@ public class ExampleClientTest {
         
     }
 
+    
 
     /**
      * This test is related to es.deusto.client.ClientExample.registerUser \n
@@ -90,15 +94,9 @@ public class ExampleClientTest {
     
     @Test
     public void testRegisterUser() throws Exception {
-        UserData newUser = new UserData();
-        newUser.setLogin("user1");
-        newUser.setPassword("1234");
-        //assertThrows(Exception.class, exampleClient.registerUser(userExpected)); 
-        
-        
-        //Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
-       //   Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
-
+    	logger.info("Starting testRegisterUser");
+        assertDoesNotThrow(()->exampleClient.registerUser(userExpected));
+        logger.info("Finishing testRegisterUser");
     }
     
     
@@ -107,35 +105,25 @@ public class ExampleClientTest {
     * 
     * @throws Exception
     */
-    /*
+    
     @Test
     public void testStoreExpense() throws Exception {
-        UserData newUser = new UserData();
-        newUser.setLogin("user");
-        newUser.setPassword("12345");
-
-        ExpenseData newExpData = new ExpenseData();
-        newExpData.setText("expenseUno");
-        newExpData.setAmount(1);
-        newExpData.setCategory(Category.CLOTHES);
-
-        DirectedMessage newDM = new DirectedMessage();
-        newDM.setUserData(newUser);
-        newDM.setExpenseData(newExpData);
-        Assert.assertNotEquals(dMExpected, newDM);
+    	logger.info("Starting testStoreExpense");
+        assertDoesNotThrow(()->exampleClient.storeExpense(userExpected, expenseDataExpected));
+        logger.info("Finishing testStoreExpense");
 
     }
-   */
+   
     /**
      * 
      * @throws Exception
      */
-    /*
+    
     @Test
     public void testValidateUser() throws Exception {
 
         //exampleClient.getResourceBundle().getString("update"); 
-        UserData userDB = exampleClient.validateUser("user", "12345");
+        UserData userDB = exampleClient.validateUser("userTest", "12345");
         
         Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
         Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
@@ -145,18 +133,24 @@ public class ExampleClientTest {
         //Assert.assertSame(userExpected, userDB);
        
     }
-    */
     
-    /*
+    
+    
     @Test
     public void testShowExpenses() throws Exception {
-        UserData newUser = new UserData();
-        newUser.setLogin("user1");
-        newUser.setPassword("1234");
-        Assert.assertNotEquals(newUser.getLogin(), userExpected.getLogin());
-        Assert.assertNotEquals(newUser.getPassword(), userExpected.getPassword());
+    	
+    	Set<ExpenseData> expenseList = exampleClient.showExpenses(userExpected);
+    	
+    	//assertEquals(1, expenseList.size());
+    	
+    	for (ExpenseData expense : expenseList) {
+			assertEquals(expenseDataExpected.getAmount(), expense.getAmount(), 0);
+			assertEquals(expenseDataExpected.getCategory(), expense.getCategory());
+			assertEquals(expenseDataExpected.getText(), expense.getText());
+		}
+    	
     }
-    */  
+     
     
     /*
      * @Before public void setUp() throws Exception { exampleClient = new
@@ -171,4 +165,12 @@ public class ExampleClientTest {
      */
     
 
+    
+    @After
+    public void tearDown() throws Exception {
+    	logger.info("Starting tearDown");
+    	exampleClient.deleteUser(userExpected);
+    	logger.info("Leaving tearDown");
+    }
+    
 }

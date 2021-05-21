@@ -2243,3 +2243,1407 @@
 15:12:24,993 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
 15:12:24,994 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
 15:12:25,152 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:17:54,332 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+15:17:54,883 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+15:17:54,885 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+15:17:54,890 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+15:17:54,890 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+15:17:54,899 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=489 ms, enhance=62 ms, total=551 ms. Compruebe el LOG para los detalles
+15:18:02,704 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:02,705 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:02,706 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:03,459 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:18:07,799 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:07,800 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:07,802 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:10,742 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:18:11,989 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:11,990 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:11,990 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:12,124 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:18:12,531 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:12,531 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:12,531 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:12,652 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:18:13,064 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:13,065 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:13,066 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:13,177 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:18:13,679 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@73d4aa54" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@2d45050c" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+15:18:13,816 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:13,816 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:13,816 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:13,936 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:18:14,033 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:14,034 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:14,034 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:14,163 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+15:18:14,290 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+15:18:14,290 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+15:18:14,290 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+15:18:14,390 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:09,665 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:05:10,139 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:05:10,140 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:05:10,152 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:05:10,154 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:05:10,162 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=423 ms, enhance=44 ms, total=467 ms. Compruebe el LOG para los detalles
+16:05:22,379 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:22,382 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:22,383 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:22,867 (qtp2040301400-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:23,265 (qtp2040301400-21) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:05:24,199 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:24,199 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:24,200 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:24,458 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:24,723 (qtp2040301400-19) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:05:25,154 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:25,154 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:25,155 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:25,386 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:26,050 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@3665337a" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@1a41994a" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:05:26,600 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:26,614 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:26,616 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:26,790 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:30,089 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:30,089 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:30,091 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:33,021 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:34,329 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:34,329 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:34,329 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:34,462 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:34,812 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:34,812 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:34,813 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:34,926 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:35,428 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:35,430 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:35,430 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:35,554 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:36,038 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@7fc5199" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@7d576ea9" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:05:36,149 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:36,150 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:36,150 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:36,250 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:36,407 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:36,407 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:36,407 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:36,503 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:05:36,671 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:05:36,672 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:05:36,672 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:05:36,785 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:08:54,263 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:08:54,693 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:08:54,694 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:08:54,697 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:08:54,698 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:08:54,715 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=389 ms, enhance=47 ms, total=436 ms. Compruebe el LOG para los detalles
+16:09:03,182 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:03,183 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:03,183 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:03,274 (qtp2040301400-18) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:04,134 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:04,134 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:04,134 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:04,238 (qtp2040301400-23) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:04,645 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:04,646 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:04,646 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:04,794 (qtp2040301400-23) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:05,033 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@6ae31d02" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@71d1f7d7" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:09:05,263 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:05,264 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:05,264 (qtp2040301400-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:05,429 (qtp2040301400-23) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:08,587 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:08,589 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:08,591 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:11,987 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:13,092 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:13,092 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:13,098 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:13,287 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:13,615 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:13,616 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:13,617 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:13,749 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:14,126 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:14,126 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:14,128 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:14,264 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:14,846 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@274b3fc6" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@2bda778a" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:09:14,980 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:14,980 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:14,980 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:15,130 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:15,215 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:15,215 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:15,216 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:15,325 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:09:15,414 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:09:15,414 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:09:15,415 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:09:15,571 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:15,086 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:10:15,593 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:10:15,596 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:10:15,609 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:10:15,609 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:10:15,614 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=458 ms, enhance=57 ms, total=515 ms. Compruebe el LOG para los detalles
+16:10:23,075 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:23,076 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:23,077 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:23,304 (qtp2040301400-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:24,138 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:24,139 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:24,139 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:24,438 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:25,067 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:25,075 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:25,078 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:25,217 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:25,381 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@63b68cfb" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@feb83d4" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:10:25,648 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:25,653 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:25,655 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:25,833 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:28,788 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:28,789 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:28,790 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:31,592 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:32,811 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:32,812 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:32,812 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:32,931 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:33,298 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:33,298 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:33,298 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:33,424 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:33,836 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:33,836 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:33,837 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:33,943 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:34,553 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@6f88d401" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@2288342c" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:10:34,672 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:34,673 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:34,673 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:34,804 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:34,896 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:34,897 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:34,898 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:34,998 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:10:35,111 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:10:35,111 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:10:35,111 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:10:35,275 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:02,751 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:17:03,308 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:17:03,315 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:17:03,320 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:17:03,320 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:17:03,332 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=495 ms, enhance=69 ms, total=564 ms. Compruebe el LOG para los detalles
+16:17:11,333 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:11,334 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:11,334 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:11,433 (qtp2040301400-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:12,221 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:12,221 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:12,222 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:12,301 (qtp2040301400-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:12,851 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:12,852 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:12,853 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:12,942 (qtp2040301400-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:13,106 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@258e7445" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@1348f026" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:17:13,434 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:13,437 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:13,449 (qtp2040301400-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:13,588 (qtp2040301400-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:16,967 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:16,968 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:16,969 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:20,123 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:21,324 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:21,324 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:21,325 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:21,453 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:21,818 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:21,818 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:21,818 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:21,915 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:22,343 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:22,343 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:22,344 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:22,482 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:23,062 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@52ac57e7" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@7d576ea9" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:17:23,209 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:23,209 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:23,209 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:23,343 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:23,460 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:23,460 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:23,461 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:23,601 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:17:23,715 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:17:23,715 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:17:23,715 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:17:23,850 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:17,457 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:19:18,004 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:19:18,011 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:19:18,017 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:19:18,017 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:19:18,030 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=504 ms, enhance=53 ms, total=557 ms. Compruebe el LOG para los detalles
+16:19:26,028 (qtp2040301400-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:26,029 (qtp2040301400-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:26,029 (qtp2040301400-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:26,129 (qtp2040301400-20) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:27,043 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:27,047 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:27,049 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:27,220 (qtp2040301400-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:27,695 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:27,699 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:27,700 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:27,847 (qtp2040301400-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:28,014 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@3e7d907b" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@34dd65c9" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:19:28,319 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:28,320 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:28,333 (qtp2040301400-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:28,485 (qtp2040301400-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:31,639 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:31,641 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:31,642 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:34,748 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:36,073 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:36,074 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:36,074 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:36,199 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:36,592 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:36,592 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:36,592 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:36,725 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:37,170 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:37,170 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:37,170 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:37,294 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:37,903 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@74197f00" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@5d548872" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:19:38,089 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:38,089 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:38,090 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:38,212 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:38,323 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:38,324 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:38,324 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:38,455 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:19:38,583 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:19:38,583 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:19:38,584 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:19:38,694 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:00,154 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:23:00,607 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:23:00,608 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:23:00,612 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:23:00,612 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:23:00,622 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=402 ms, enhance=58 ms, total=460 ms. Compruebe el LOG para los detalles
+16:23:08,557 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:08,557 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:08,558 (qtp2040301400-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:08,681 (qtp2040301400-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:09,722 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:09,723 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:09,723 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:09,828 (qtp2040301400-18) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:10,352 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:10,355 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:10,356 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:10,499 (qtp2040301400-18) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:10,728 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@7a7db96d" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@2000dc1c" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:23:11,012 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:11,012 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:11,014 (qtp2040301400-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:11,174 (qtp2040301400-18) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:14,309 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:14,310 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:14,311 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:17,632 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:18,793 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:18,794 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:18,794 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:18,989 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:19,433 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:19,433 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:19,434 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:19,558 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:20,060 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:20,060 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:20,062 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:20,174 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:20,744 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@198fb504" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@7a51ba06" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:23:20,923 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:20,924 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:20,924 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:21,027 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:21,132 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:21,133 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:21,133 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:21,277 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:23:21,412 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:23:21,412 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:23:21,412 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:23:21,549 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:39:17,170 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:39:17,736 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Expense.class" con definicion enhanced
+16:39:17,738 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:39:17,776 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\User.class" con definicion enhanced
+16:39:17,777 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:39:17,782 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=451 ms, enhance=142 ms, total=593 ms. Compruebe el LOG para los detalles
+16:39:42,807 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+16:39:42,812 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+16:39:42,814 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\apache-maven-3.8.1\bin\..\boot\plexus-classworlds-2.6.0.jar
+16:39:43,075 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+16:39:43,075 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:39:43,076 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+16:39:43,964 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:39:44,484 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Propiedades para persistencia
+16:39:44,492 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.autostartmechanism=None
+16:39:44,495 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectiondrivername=com.mysql.cj.jdbc.Driver
+16:39:44,498 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionurl=jdbc:mysql://localhost/ExpensesDB?verifyServerCertificate=false&useSSL=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+16:39:44,511 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionusername=spq
+16:39:44,514 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.mapping=mysql
+16:39:44,515 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.metadata.validate=false
+16:39:44,521 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.rdbms.checkexisttablesorviews=true
+16:39:44,523 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.readonlydatastore=false
+16:39:44,526 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatecolumns=true
+16:39:44,529 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreateconstraints=true
+16:39:44,531 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatetables=true
+16:39:44,534 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validateconstraints=false
+16:39:44,537 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validatetables=false
+16:39:44,540 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+16:39:44,541 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$1.class
+16:39:44,545 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$2.class
+16:39:44,559 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$3.class
+16:39:44,577 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow.class
+16:39:44,587 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$1.class
+16:39:44,592 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$2.class
+16:39:44,599 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow.class
+16:39:44,608 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ExampleClient.class
+16:39:44,613 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow$1.class
+16:39:44,616 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow.class
+16:39:44,622 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$1.class
+16:39:44,630 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$2.class
+16:39:44,634 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow.class
+16:39:44,642 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\RegisterWindow.class
+16:39:44,646 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\log\LoggerFile.class
+16:39:44,649 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\DirectedMessage.class
+16:39:44,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseData.class
+16:39:44,658 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseList.class
+16:39:44,661 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\LoginData.class
+16:39:44,664 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\UserData.class
+16:39:44,666 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Category.class
+16:39:44,672 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Expense.class
+16:39:44,675 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Main.class
+16:39:44,678 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\User.class
+16:39:44,681 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\Server.class
+16:39:45,147 (main) ERROR [DataNucleus.Datastore.Schema] - Una excepcion estaba tirada durante la addicion/validacion de algunas class(es) : La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.InterfaceMapping ha fallada : Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.InterfaceMapping ha fallada : Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+org.datanucleus.exceptions.NucleusException: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.InterfaceMapping ha fallada : Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:677)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+Caused by: org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	... 39 more
+Nested Throwables StackTrace:
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+16:39:45,475 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.InterfaceMapping ha fallada : Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.InterfaceMapping ha fallada : Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+org.datanucleus.exceptions.NucleusException: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.InterfaceMapping ha fallada : Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:677)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+Caused by: org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	... 39 more
+Nested Throwables StackTrace:
+Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+org.datanucleus.metadata.InvalidMemberMetaDataException: Clase "es.deusto.server.jdo.Expense" campo "es.deusto.server.jdo.Expense" : declarado como referencia ("interface" o java.lang.Object) but no hay clases de implementación de "javax.jdo.annotations.Key"
+	at org.datanucleus.metadata.MetaDataUtils.getImplementationNamesForReferenceField(MetaDataUtils.java:492)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.createPerImplementationColumnsForReferenceField(ReferenceMapping.java:340)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.prepareColumnMapping(ReferenceMapping.java:230)
+	at org.datanucleus.store.rdbms.mapping.java.ReferenceMapping.initialize(ReferenceMapping.java:104)
+	at org.datanucleus.store.rdbms.mapping.java.InterfaceMapping.initialize(InterfaceMapping.java:52)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializePK(ClassTable.java:1288)
+	at org.datanucleus.store.rdbms.table.ClassTable.preInitialize(ClassTable.java:244)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTable(RDBMSStoreManager.java:3250)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addClassTables(RDBMSStoreManager.java:3060)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2935)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3925)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+16:41:16,100 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+16:41:16,104 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+16:41:16,105 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\apache-maven-3.8.1\bin\..\boot\plexus-classworlds-2.6.0.jar
+16:41:16,398 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+16:41:16,398 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:41:16,399 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+16:41:17,046 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:41:17,453 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Propiedades para persistencia
+16:41:17,455 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.autostartmechanism=None
+16:41:17,456 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectiondrivername=com.mysql.cj.jdbc.Driver
+16:41:17,460 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionurl=jdbc:mysql://localhost/ExpensesDB?verifyServerCertificate=false&useSSL=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+16:41:17,471 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionusername=spq
+16:41:17,473 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.mapping=mysql
+16:41:17,474 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.metadata.validate=false
+16:41:17,475 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.rdbms.checkexisttablesorviews=true
+16:41:17,482 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.readonlydatastore=false
+16:41:17,484 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatecolumns=true
+16:41:17,486 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreateconstraints=true
+16:41:17,488 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatetables=true
+16:41:17,490 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validateconstraints=false
+16:41:17,491 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validatetables=false
+16:41:17,495 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+16:41:17,500 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$1.class
+16:41:17,503 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$2.class
+16:41:17,507 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$3.class
+16:41:17,515 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow.class
+16:41:17,518 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$1.class
+16:41:17,522 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$2.class
+16:41:17,529 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow.class
+16:41:17,535 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ExampleClient.class
+16:41:17,541 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow$1.class
+16:41:17,548 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow.class
+16:41:17,552 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$1.class
+16:41:17,556 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$2.class
+16:41:17,560 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow.class
+16:41:17,566 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\RegisterWindow.class
+16:41:17,576 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\log\LoggerFile.class
+16:41:17,583 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\DirectedMessage.class
+16:41:17,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseData.class
+16:41:17,591 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseList.class
+16:41:17,598 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\LoginData.class
+16:41:17,602 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\UserData.class
+16:41:17,605 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Category.class
+16:41:17,608 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Expense.class
+16:41:17,612 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Main.class
+16:41:17,617 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\User.class
+16:41:17,620 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\Server.class
+16:41:18,003 (main) ERROR [DataNucleus.MetaData] - Encontro el Meta-Data de la clase es.deusto.server.jdo.Expense pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase es.deusto.server.jdo.Expense pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:767)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:367)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+16:41:18,008 (main) ERROR [DataNucleus.MetaData] - Encontro el Meta-Data de la clase es.deusto.server.jdo.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase es.deusto.server.jdo.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:767)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:367)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+
+16:41:18,013 (main) ERROR [DataNucleus.MetaData] - Habia un error leyendo los ficheros. Por favor lee el LOG para obtener mas información. Lo siguiente puede ayudar : Hemos encontrado errores durante la inicialisación de MetaData. Compruebe por favor, las excepciones adjuntados
+Hemos encontrado errores durante la inicialisación de MetaData. Compruebe por favor, las excepciones adjuntados
+org.datanucleus.exceptions.NucleusUserException: Hemos encontrado errores durante la inicialisación de MetaData. Compruebe por favor, las excepciones adjuntados
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1378)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:767)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:367)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+Caused by: org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase es.deusto.server.jdo.Expense pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	... 33 more
+Nested Throwables StackTrace:
+Encontro el Meta-Data de la clase es.deusto.server.jdo.Expense pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase es.deusto.server.jdo.Expense pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:767)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:367)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+Encontro el Meta-Data de la clase es.deusto.server.jdo.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase es.deusto.server.jdo.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:767)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:367)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.executeInJvm(AbstractDataNucleusMojo.java:345)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeSchemaTool(AbstractSchemaToolMojo.java:336)
+	at org.datanucleus.maven.AbstractSchemaToolMojo.executeDataNucleusTool(AbstractSchemaToolMojo.java:150)
+	at org.datanucleus.maven.AbstractDataNucleusMojo.execute(AbstractDataNucleusMojo.java:126)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+16:41:51,267 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:41:51,856 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Expense.class" con definicion enhanced
+16:41:51,857 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:41:51,963 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\User.class" con definicion enhanced
+16:41:51,965 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:41:51,976 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=411 ms, enhance=276 ms, total=687 ms. Compruebe el LOG para los detalles
+16:42:13,323 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+16:42:13,327 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+16:42:13,333 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\apache-maven-3.8.1\bin\..\boot\plexus-classworlds-2.6.0.jar
+16:42:13,631 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+16:42:13,632 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:42:13,634 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+16:42:14,384 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:42:14,899 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Propiedades para persistencia
+16:42:14,906 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.autostartmechanism=None
+16:42:14,907 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectiondrivername=com.mysql.cj.jdbc.Driver
+16:42:14,910 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionurl=jdbc:mysql://localhost/ExpensesDB?verifyServerCertificate=false&useSSL=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+16:42:14,922 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionusername=spq
+16:42:14,924 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.mapping=mysql
+16:42:14,925 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.metadata.validate=false
+16:42:14,927 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.rdbms.checkexisttablesorviews=true
+16:42:14,934 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.readonlydatastore=false
+16:42:14,936 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatecolumns=true
+16:42:14,938 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreateconstraints=true
+16:42:14,940 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatetables=true
+16:42:14,942 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validateconstraints=false
+16:42:14,944 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validatetables=false
+16:42:14,950 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+16:42:14,952 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$1.class
+16:42:14,956 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$2.class
+16:42:14,961 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$3.class
+16:42:14,972 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow.class
+16:42:14,976 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$1.class
+16:42:14,989 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$2.class
+16:42:14,993 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow.class
+16:42:15,000 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ExampleClient.class
+16:42:15,004 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow$1.class
+16:42:15,007 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow.class
+16:42:15,015 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$1.class
+16:42:15,019 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$2.class
+16:42:15,023 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow.class
+16:42:15,027 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\RegisterWindow.class
+16:42:15,037 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\log\LoggerFile.class
+16:42:15,040 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\DirectedMessage.class
+16:42:15,045 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseData.class
+16:42:15,050 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseList.class
+16:42:15,056 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\LoginData.class
+16:42:15,062 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\UserData.class
+16:42:15,071 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Category.class
+16:42:15,074 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Expense.class
+16:42:15,086 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Main.class
+16:42:15,090 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\User.class
+16:42:15,099 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\HP\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\Server.class
+16:42:15,854 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:42:15,854 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:42:15,914 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:42:15,915 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:42:15,915 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:42:15,950 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:42:16,150 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+16:43:15,467 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:43:15,973 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:43:15,973 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:43:15,982 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:43:15,984 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:43:15,986 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=463 ms, enhance=48 ms, total=511 ms. Compruebe el LOG para los detalles
+16:43:55,380 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:43:56,063 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:43:56,063 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:43:56,079 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:43:56,079 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:43:56,087 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=654 ms, enhance=38 ms, total=692 ms. Compruebe el LOG para los detalles
+16:44:05,789 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:05,790 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:05,790 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:06,837 (qtp640113478-16) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:08,455 (qtp640113478-16) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:44:08,990 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:08,992 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:08,994 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:09,135 (qtp640113478-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:09,459 (qtp640113478-17) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:44:10,660 (qtp640113478-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:10,661 (qtp640113478-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:10,662 (qtp640113478-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:10,793 (qtp640113478-20) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:11,079 (qtp640113478-20) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:44:11,210 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:11,210 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:11,211 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:11,326 (qtp640113478-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:11,913 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:11,913 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:11,914 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:12,129 (qtp640113478-16) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:12,557 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:12,557 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:12,557 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:12,760 (qtp640113478-18) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:13,019 (qtp640113478-18) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:44:14,177 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:14,177 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:14,177 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:14,378 (qtp640113478-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:14,762 (qtp640113478-22) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:44:14,855 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:14,855 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:14,855 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:15,039 (qtp640113478-18) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:15,419 (qtp640113478-18) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:44:19,245 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:19,247 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:19,249 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:24,056 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:25,510 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "user" no existe!
+16:44:25,756 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:25,756 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:25,756 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:25,966 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:26,294 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "user" no existe!
+16:44:26,345 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:26,346 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:26,348 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:26,548 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:26,791 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "user" no existe!
+16:44:26,921 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:26,922 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:26,922 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:27,114 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:27,950 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@39d547e" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@3aba9252" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:44:28,033 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:28,034 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:28,034 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:28,220 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:28,396 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:28,396 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:28,396 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:28,581 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:44:28,680 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:44:28,680 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:44:28,680 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:44:28,856 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:47:46,688 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:47:47,587 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:47:47,587 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:47:47,599 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:47:47,599 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:47:47,605 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=850 ms, enhance=53 ms, total=903 ms. Compruebe el LOG para los detalles
+16:47:55,310 (qtp640113478-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:47:55,311 (qtp640113478-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:47:55,312 (qtp640113478-20) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:47:55,461 (qtp640113478-20) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:47:56,223 (qtp640113478-20) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:47:56,762 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:47:56,763 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:47:56,764 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:47:56,876 (qtp640113478-16) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:47:57,097 (qtp640113478-16) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:47:57,385 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:47:57,385 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:47:57,386 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:47:57,518 (qtp640113478-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:47:57,782 (qtp640113478-17) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@23071c00" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@4b20b037" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:47:57,984 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:47:57,985 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:47:57,985 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:47:58,192 (qtp640113478-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:48:01,080 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:48:01,081 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:48:01,082 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:48:04,110 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:48:05,446 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:48:05,451 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:48:05,451 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:48:05,598 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:48:06,073 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:48:06,073 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:48:06,074 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:48:06,214 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:48:06,637 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:48:06,638 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:48:06,639 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:48:06,737 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:48:07,254 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@243dc57b" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@2f90ad92" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:48:07,314 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:48:07,314 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:48:07,314 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:48:07,421 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:48:07,538 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:48:07,539 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:48:07,539 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:48:07,675 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:48:07,791 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:48:07,791 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:48:07,791 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:48:07,903 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:19,956 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:49:20,498 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+16:49:20,508 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:49:20,513 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+16:49:20,513 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:49:20,522 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=498 ms, enhance=54 ms, total=552 ms. Compruebe el LOG para los detalles
+16:49:28,249 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:28,307 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:28,309 (qtp640113478-18) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:28,454 (qtp640113478-18) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:28,928 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:28,928 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:28,928 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:29,120 (qtp640113478-16) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:29,772 (qtp640113478-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:29,773 (qtp640113478-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:29,774 (qtp640113478-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:29,882 (qtp640113478-23) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:30,037 (qtp640113478-23) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:49:30,089 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:30,089 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:30,090 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:30,162 (qtp640113478-16) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:30,519 (qtp640113478-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:30,519 (qtp640113478-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:30,519 (qtp640113478-23) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:30,627 (qtp640113478-23) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:30,842 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:30,842 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:30,842 (qtp640113478-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:30,928 (qtp640113478-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:31,067 (qtp640113478-17) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:49:31,922 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:31,922 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:31,922 (qtp640113478-16) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:31,986 (qtp640113478-16) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:32,119 (qtp640113478-16) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:49:32,157 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:32,157 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:32,157 (qtp640113478-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:32,218 (qtp640113478-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:32,387 (qtp640113478-22) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+16:49:35,078 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:35,080 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:35,081 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:38,154 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:39,524 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:39,524 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:39,524 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:39,682 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:40,096 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:40,096 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:40,097 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:40,256 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:40,645 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:40,645 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:40,645 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:40,751 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:41,306 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@41b7ebec" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@3f5f610d" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+16:49:41,367 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:41,367 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:41,367 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:41,507 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:41,654 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:41,654 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:41,655 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:41,809 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:49:41,927 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+16:49:41,928 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+16:49:41,928 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:49:42,035 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers

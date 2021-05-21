@@ -323,21 +323,24 @@ public class Server {
 	 */
 	@POST
 	@Path("/deleteUser")
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response deleteUser(UserData userData) {
 		try {
 			tx.begin();
 			User user = null;
 			user = pm.getObjectById(User.class, userData.getLogin());
-			pm.deletePersistent(user);
+			pm.deletePersistentAll(user);
 			tx.commit();
-			return Response.ok().build();
+			
 		} finally {
 			if (tx.isActive()) {
 				tx.rollback();
 			}
 		}
+		return Response.ok().build();
 	}
 
+	
 
 
 }
