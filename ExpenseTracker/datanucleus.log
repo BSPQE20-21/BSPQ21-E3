@@ -3647,3 +3647,63 @@ org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la cla
 16:49:41,928 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
 16:49:41,928 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
 16:49:42,035 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:55:00,127 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+16:55:01,112 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Expense.class" con definicion enhanced
+16:55:01,115 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+16:55:01,330 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\User.class" con definicion enhanced
+16:55:01,335 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+16:55:01,345 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=668 ms, enhance=531 ms, total=1199 ms. Compruebe el LOG para los detalles
+16:55:22,809 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+16:55:22,818 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+16:55:22,826 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\apache-maven-3.8.1\bin\..\boot\plexus-classworlds-2.6.0.jar
+16:55:23,088 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+16:55:23,089 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+16:55:23,093 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+16:55:23,712 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+16:55:24,149 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Propiedades para persistencia
+16:55:24,157 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.autostartmechanism=None
+16:55:24,166 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectiondrivername=com.mysql.cj.jdbc.Driver
+16:55:24,175 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionurl=jdbc:mysql://localhost/ExpensesDB?verifyServerCertificate=false&useSSL=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+16:55:24,186 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.connectionusername=spq
+16:55:24,198 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.mapping=mysql
+16:55:24,202 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.metadata.validate=false
+16:55:24,205 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.rdbms.checkexisttablesorviews=true
+16:55:24,208 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.readonlydatastore=false
+16:55:24,211 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatecolumns=true
+16:55:24,217 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreateconstraints=true
+16:55:24,224 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.schema.autocreatetables=true
+16:55:24,231 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validateconstraints=false
+16:55:24,235 (main) INFO  [DataNucleus.SchemaTool] - >>  datanucleus.validatetables=false
+16:55:24,240 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+16:55:24,245 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$1.class
+16:55:24,253 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$2.class
+16:55:24,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow$3.class
+16:55:24,278 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AddExpenseWindow.class
+16:55:24,287 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$1.class
+16:55:24,297 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow$2.class
+16:55:24,306 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\AllExpensesWindow.class
+16:55:24,314 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ExampleClient.class
+16:55:24,327 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow$1.class
+16:55:24,337 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\LoginWindow.class
+16:55:24,347 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$1.class
+16:55:24,355 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow$2.class
+16:55:24,363 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\ModifyUserWindow.class
+16:55:24,374 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\client\RegisterWindow.class
+16:55:24,383 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\log\LoggerFile.class
+16:55:24,395 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\DirectedMessage.class
+16:55:24,408 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseData.class
+16:55:24,415 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\ExpenseList.class
+16:55:24,425 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\LoginData.class
+16:55:24,433 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\serialization\UserData.class
+16:55:24,443 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Category.class
+16:55:24,449 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Expense.class
+16:55:24,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\Main.class
+16:55:24,475 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\jdo\User.class
+16:55:24,483 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\Users\UNAI\git\BSPQ21-E3\ExpenseTracker\target\classes\es\deusto\server\Server.class
+16:55:25,311 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:55:25,312 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:55:25,367 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:55:25,370 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:55:25,372 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:55:25,439 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+16:55:25,689 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
