@@ -99,8 +99,8 @@ public class ExampleClientTest {
         logger.info("Finishing testRegisterUser");
     }
     
-        /**
-     * 
+    /**
+     * This test validates the user in the DB
      * @throws Exception
      */
     
@@ -123,11 +123,10 @@ public class ExampleClientTest {
     }
     
 
-   /**
-    * 
+   /** 
+    * This test validates the Expense Storing in the DB
     * @throws Exception
     */
-    
     @Test
     public void testStoreExpense() throws Exception {
     	logger.info("Starting testStoreExpense");
@@ -140,6 +139,9 @@ public class ExampleClientTest {
     
     
     
+    /**This test handles the validation of showing the expenses 
+     * @throws Exception
+     */
     @Test
     public void testShowExpenses() throws Exception {
         logger.info("Starting testShowExpenses");
@@ -157,6 +159,9 @@ public class ExampleClientTest {
 
     }
      
+    /**This test validates if the user is updated correctly
+     * @throws Exception
+     */
     @Test
     public void testUpdateUser() throws Exception {
         logger.info("Starting testUpdateUser");
@@ -174,6 +179,10 @@ public class ExampleClientTest {
         Assert.assertNotEquals(userDB.getPassword(), userExpected.getPassword());
         logger.info("Leaving testUpdateUser");
     }
+    
+    /**This test validates if the created client is from the class ExampleClient 
+     * @throws Exception
+     */
     @Test
     public void testMain() throws Exception {
         logger.info("Starting testMain");
@@ -183,6 +192,10 @@ public class ExampleClientTest {
     }
 
     
+    /**The after of the test
+     * Deletes the user after it is tested
+     * @throws Exception
+     */
     @After
     public void tearDown() throws Exception {
     	logger.info("Starting tearDown");

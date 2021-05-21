@@ -22,9 +22,6 @@ import es.deusto.server.jdo.User;
 import org.apache.log4j.Logger;
 
 
-@PerfTest(invocations = 5)
-@Required(max = 1200, average = 250)
-@Testable
 public class ServerTest {
 	
 	Server server;
@@ -33,6 +30,7 @@ public class ServerTest {
 	DirectedMessage dMExpected = new DirectedMessage();
 	Response responseExpected;
 	static Logger logger = Logger.getLogger(ServerTest.class.getName());
+	
 	/**
 	 * This method is the SET UP that will create the instances and objects needed to perform all the tests
 	 * @throws Exception
@@ -59,12 +57,13 @@ public class ServerTest {
 	 * @throws Exception
 	 */
 	@Test
-	@PerfTest(invocations = 100, threads = 20)
-	@Required(max = 20000, average = 3000)
 	public void testServer() throws Exception {
 		server = new Server();
 	}
 
+	/**This test validates if the response of the method registerUser is the same as the expected
+	 * @throws Exception
+	 */
 	@Test
 	public void testRegisterUser() throws Exception {
 		//server.registerUser(user);
@@ -95,6 +94,9 @@ public class ServerTest {
 	}
 	
 	
+	/**This test validates if the response obtained when validating the user is the expected
+	 * @throws Exception
+	 */
 	@Test
 	public void testValidateUser() throws Exception {
 
@@ -108,6 +110,9 @@ public class ServerTest {
 	}
 	
 	
+	/**This test validates the resonse of the methos show expense is the same as the expected
+	 * @throws Exception
+	 */
 	@Test
 	public void testShowExpenses() throws Exception {
 		Response response = server.showExpenses(user); 
@@ -125,6 +130,9 @@ public class ServerTest {
 
 	}
 	
+	/**This test validates if the response of the method updateUser is the same as the expected
+	 * @throws Exception
+	 */
 	@Test
 	public void testUpdateUser()throws Exception{
 		Response response = server.updateuser(user); 
