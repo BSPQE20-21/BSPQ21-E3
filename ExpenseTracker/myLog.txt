@@ -916,3 +916,23 @@ may. 21, 2021 4:44:14 P. M. es.deusto.log.LoggerFile log
 GRAVE: No such database row
 may. 21, 2021 4:44:14 P. M. es.deusto.log.LoggerFile log
 INFORMACIÓN: User not registred
+may. 21, 2021 4:47:56 P. M. es.deusto.log.LoggerFile log
+GRAVE: No such database row
+may. 21, 2021 4:47:57 P. M. es.deusto.log.LoggerFile log
+GRAVE: No such database row
+may. 21, 2021 4:47:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User created: User: login --> userTest, password -->  12345, expenses --> []
+may. 21, 2021 4:47:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retreived: User: login --> userTest, password -->  12345, expenses --> []
+may. 21, 2021 4:47:57 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN:  * Client number: 1
+may. 21, 2021 4:49:30 P. M. es.deusto.log.LoggerFile log
+GRAVE: No such database row
+may. 21, 2021 4:49:30 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User created: User: login --> userTest, password -->  12345, expenses --> []
+may. 21, 2021 4:49:30 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User retreived: null
+may. 21, 2021 4:49:32 P. M. es.deusto.log.LoggerFile log
+GRAVE: No such database row
+may. 21, 2021 4:49:32 P. M. es.deusto.log.LoggerFile log
+INFORMACIÓN: User not registred

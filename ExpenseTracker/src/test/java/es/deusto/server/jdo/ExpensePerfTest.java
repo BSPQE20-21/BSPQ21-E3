@@ -12,6 +12,7 @@ import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
 import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.platform.commons.annotation.Testable;
+import java.util.Date;
 
 /**This class is a copy of ExpenseTest, in this class will be validated the performance
  * 
@@ -152,4 +153,15 @@ public class ExpensePerfTest {
 
 	}
 
+		/**
+	 * This test validates that the toString method creates an string with the correct
+	 */
+	@Test
+	@PerfTest(invocations = 100, threads = 2)
+	@Required(max = 200, average = 100)
+	public void testToString() throws Exception{
+		logger.info("Starting testToString");
+		assertEquals("Expense: expense --> " + exT1.getText() + ", timestamp -->  " + new Date(exT1.timestamp)+ ", amount = " + exT1.getAmount() + ", category --> " + exT1.getCategory(), exT1.toString());
+		logger.info("Leaving testToString");
+	}
 }
