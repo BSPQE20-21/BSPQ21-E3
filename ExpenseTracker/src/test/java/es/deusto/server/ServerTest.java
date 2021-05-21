@@ -3,6 +3,7 @@ package es.deusto.server;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.After;
 import org.junit.platform.commons.annotation.Testable;
 import org.mockito.ArgumentCaptor;
 import static org.mockito.Mockito.*;
@@ -18,6 +19,7 @@ import es.deusto.serialization.LoginData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
 import es.deusto.server.jdo.User;
+import org.apache.log4j.Logger;
 
 
 @PerfTest(invocations = 5)
@@ -30,6 +32,7 @@ public class ServerTest {
 	ExpenseData expenseDataExpected;
 	DirectedMessage dMExpected = new DirectedMessage();
 	Response responseExpected;
+	static Logger logger = Logger.getLogger(ServerTest.class.getName());
 	/**
 	 * This method is the SET UP that will create the instances and objects needed to perform all the tests
 	 * @throws Exception
@@ -37,7 +40,7 @@ public class ServerTest {
 	@Before
     public void setUp() throws Exception {
 		server = new Server();
-		user = new UserData("user", "12345", "123456789", 20, 2000);
+		user = new UserData("userTest", "12345", "123456789", 20, 2000);
 		expenseDataExpected = new ExpenseData();
     	expenseDataExpected.setAmount(1);
     	expenseDataExpected.setCategory(Category.CLOTHES);
@@ -67,14 +70,10 @@ public class ServerTest {
 	 */
 	@Test
 	public void testStoreExpense() throws Exception {
-		UserData userDB = new UserData("user","12345", "123456789", 20, 2000);
-		ExpenseData expenseDB = new ExpenseData("expenseUno", 1, Category.CLOTHES);
-		DirectedMessage myMsg = new DirectedMessage();
-		myMsg.setUserData(userDB);
-		myMsg.setExpenseData(expenseDB);
-
+		
+		
 	
-		Response response = server.storeExpense(myMsg);
+		Response response = server.storeExpense(dMExpected);
 		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
 		
 	}
@@ -83,7 +82,7 @@ public class ServerTest {
 	@Test
 	public void testValidateUser() throws Exception {
 
-		LoginData loginData = new LoginData("user", "12345");
+		LoginData loginData = new LoginData("userTest", "12345");
     	Response response = server.validateUser(loginData);
 		// TODO  response read entity returns an error
 		//UserData userData = response.readEntity(UserData.class);
@@ -122,6 +121,14 @@ public class ServerTest {
 
 
 	}
+
+	@After
+    public void tearDown() throws Exception {
+    	logger.info("Starting tearDown");
+		server.deleteUser(user);
+    	logger.info("Leaving tearDown");
+    }
+    
 
 
 }
