@@ -79,7 +79,7 @@ public class ExampleClientTest {
         
         dMExpected.setUserData(userExpected);
         dMExpected.setExpenseData(expenseDataExpected);
-
+        exampleClient.registerUser(userExpected);
 		logger.info("Leaving setUp");
 
         
@@ -99,6 +99,26 @@ public class ExampleClientTest {
         logger.info("Finishing testRegisterUser");
     }
     
+        /**
+     * 
+     * @throws Exception
+     */
+    
+    @Test
+    public void testValidateUser() throws Exception {
+
+        //exampleClient.getResourceBundle().getString("update"); 
+        
+        UserData userDB = exampleClient.validateUser(userExpected.getLogin(), userExpected.getPassword());
+        
+        Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
+        Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
+        Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
+        Assert.assertEquals(userDB.getAge(), userExpected.getAge(),0);
+        Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
+        //Assert.assertSame(userExpected, userDB);
+       
+    }
     
 
    /**
@@ -114,25 +134,7 @@ public class ExampleClientTest {
 
     }
    
-    /**
-     * 
-     * @throws Exception
-     */
-    
-    @Test
-    public void testValidateUser() throws Exception {
 
-        //exampleClient.getResourceBundle().getString("update"); 
-        UserData userDB = exampleClient.validateUser("userTest", "12345");
-        
-        Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
-        Assert.assertEquals(userDB.getPassword(), userExpected.getPassword());
-        Assert.assertEquals(userDB.getCardNumber(), userExpected.getCardNumber());
-        Assert.assertEquals(userDB.getAge(), userExpected.getAge());
-        Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
-        //Assert.assertSame(userExpected, userDB);
-       
-    }
     
     
     
@@ -152,18 +154,7 @@ public class ExampleClientTest {
     }
      
     
-    /*
-     * @Before public void setUp() throws Exception { exampleClient = new
-     * ExampleClient(hostname, port); exampleClient.storeExpense(userData,
-     * expenseData); }
-     * 
-     * @Test public void testRegisterUser() { ExpenseList expenses = new
-     * ExpenseList();
-     * 
-     * 
-     * assertEquals(expenses, exampleClient.showExpenses(userData)); }
-     */
-    
+
 
     
     @After

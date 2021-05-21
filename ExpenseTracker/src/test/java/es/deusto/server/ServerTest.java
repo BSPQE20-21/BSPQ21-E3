@@ -47,6 +47,9 @@ public class ServerTest {
     	expenseDataExpected.setText("expenseUno");
     	dMExpected.setUserData(user);
     	dMExpected.setExpenseData(expenseDataExpected);
+		server.registerUser(user);
+
+
     	responseExpected = Response.ok().build();
 	}
 	
@@ -61,36 +64,7 @@ public class ServerTest {
 	public void testServer() throws Exception {
 		server = new Server();
 	}
-	
-	/**
-	 * The idea of the test is to store an expense which is related to a concrete user (this relationship is represented in the DirectMessage object)
-	 * and to check if it was done correctly\n
-	 * To do so we look if the RESPONSE is OK and if it we can say that the expense has been correctly stored.
-	 * @throws Exception
-	 */
-	@Test
-	public void testStoreExpense() throws Exception {
-		
-		
-	
-		Response response = server.storeExpense(dMExpected);
-		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
-		
-	}
-	
-	
-	@Test
-	public void testValidateUser() throws Exception {
 
-		LoginData loginData = new LoginData("userTest", "12345");
-    	Response response = server.validateUser(loginData);
-		// TODO  response read entity returns an error
-		//UserData userData = response.readEntity(UserData.class);
-		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
-    	//Assert.assertEquals(loginData.getLogin(), userData.getLogin());
-		//Assert.assertEquals(loginData.getPassword(), userData.getPassword());
-	}
-	
 	@Test
 	public void testRegisterUser() throws Exception {
 		//server.registerUser(user);
@@ -106,10 +80,48 @@ public class ServerTest {
 
 	}
 	
+	/**
+	 * The idea of the test is to store an expense which is related to a concrete user (this relationship is represented in the DirectMessage object)
+	 * and to check if it was done correctly\n
+	 * To do so we look if the RESPONSE is OK and if it we can say that the expense has been correctly stored.
+	 * @throws Exception
+	 */
+	@Test
+	public void testStoreExpense() throws Exception {
+		
+		Response response = server.storeExpense(dMExpected);
+		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+		
+	}
+	
+	
+	@Test
+	public void testValidateUser() throws Exception {
+
+		LoginData loginData = new LoginData(user.getLogin(),user.getPassword());
+    	Response response = server.validateUser(loginData);
+		// TODO  response read entity returns an error
+		//UserData userData = response.readEntity(UserData.class);
+		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+    	//Assert.assertEquals(loginData.getLogin(), userData.getLogin());
+		//Assert.assertEquals(loginData.getPassword(), userData.getPassword());
+	}
+	
+	
 	@Test
 	public void testShowExpenses() throws Exception {
 		Response response = server.showExpenses(user); 
+		/*
+		ExpenseData exp = new ExpenseData();
+		exp.setText(expenseDataExpected.getText());
+		exp.setAmount(expenseDataExpected.getAmount());
+		exp.setCategory(expenseDataExpected.getCategory());
+		Assert.assertEquals(exp.getText(),expenseDataExpected.getText()); 
+		Assert.assertEquals(exp.getAmount(),expenseDataExpected.getAmount(),0);
+		Assert.assertEquals(exp.getCategory(),expenseDataExpected.getCategory());
+		*/
     	Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+
 
 	}
 	
