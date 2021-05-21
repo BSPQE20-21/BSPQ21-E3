@@ -316,6 +316,28 @@ public class Server {
 		}
 	}
 
+	/**
+	 * This method erases from the DB a user and all his or her information
+	 * @param userData
+	 * @return
+	 */
+	@POST
+	@Path("/deleteUser")
+	public Response deleteUser(UserData userData) {
+		try {
+			tx.begin();
+			User user = null;
+			user = pm.getObjectById(User.class, userData.getLogin());
+			pm.deletePersistent(user);
+			tx.commit();
+			return Response.ok().build();
+		} finally {
+			if (tx.isActive()) {
+				tx.rollback();
+			}
+		}
+	}
+
 
 
 }

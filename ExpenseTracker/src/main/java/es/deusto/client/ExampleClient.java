@@ -179,6 +179,7 @@ public class ExampleClient {
 		return expenses; 
 
 	}
+	//TODO
 	public void deleteExpense(ExpenseData expenseData) {
 		WebTarget storeExpenseWebTarget = webTarget.path("store");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
@@ -208,29 +209,41 @@ public class ExampleClient {
 		WebTarget storeExpenseWebTarget = webTarget.path("update");
 		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
 
-
-		
 		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
 		UserData uData = response.readEntity(UserData.class);
 		if (response.getStatus() != Status.OK.getStatusCode()) {
-			//LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting")); 
-			//System.out.println("Error connecting with the server. Code: " + response.getStatus());
+	
 			logger.info(resourceBundle.getString("error_connecting"));
 
 		} else {
-
-			//LoggerFile.log(Level.INFO, resourceBundle.getString("modifyUser")); 
-
 			logger.info(resourceBundle.getString("validate_user"));
-
-			
 		}
 		System.out.println(uData);
 		return uData; 
-
 	}
 
-	
+	/**
+	 * DELETE USER\n
+	 * This method connects with the server part and request to delete the info of the user inse theDB
+	 * @param userData - the updated user
+	 * 
+	 */
+	public void deleteUser(UserData userData){
+		WebTarget storeExpenseWebTarget = webTarget.path("deleteUser");
+		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
+
+		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));
+		
+		if (response.getStatus() != Status.OK.getStatusCode()) {
+			logger.info(resourceBundle.getString("error_connecting"));
+
+		} else {
+			logger.info(resourceBundle.getString("delete_user"));
+		}
+	}
+
+
+
 	public ResourceBundle getResourceBundle(){
 		return resourceBundle; 
 	}
