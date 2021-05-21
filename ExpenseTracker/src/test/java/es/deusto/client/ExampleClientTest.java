@@ -106,9 +106,10 @@ public class ExampleClientTest {
     
     @Test
     public void testValidateUser() throws Exception {
+        logger.info("Entering testValidateUser");
 
         //exampleClient.getResourceBundle().getString("update"); 
-        
+        logger.info("Validating the user ...");
         UserData userDB = exampleClient.validateUser(userExpected.getLogin(), userExpected.getPassword());
         
         Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
@@ -117,6 +118,7 @@ public class ExampleClientTest {
         Assert.assertEquals(userDB.getAge(), userExpected.getAge(),0);
         Assert.assertEquals(userDB.getExpenseLimit(), userExpected.getExpenseLimit(), 0);
         //Assert.assertSame(userExpected, userDB);
+        logger.info("Leaving testValidateUser");
        
     }
     
@@ -140,6 +142,7 @@ public class ExampleClientTest {
     
     @Test
     public void testShowExpenses() throws Exception {
+        logger.info("Starting testShowExpenses");
     	
     	Set<ExpenseData> expenseList = exampleClient.showExpenses(userExpected);
     	
@@ -150,11 +153,34 @@ public class ExampleClientTest {
 			assertEquals(expenseDataExpected.getCategory(), expense.getCategory());
 			assertEquals(expenseDataExpected.getText(), expense.getText());
 		}
-    	
+        logger.info("Finishing testShowExpenses");
+
     }
      
-    
+    @Test
+    public void testUpdateUser() throws Exception {
+        logger.info("Starting testUpdateUser");
+        UserData newUser = new UserData(); 
+        newUser.setLogin("userTest");
+        newUser.setPassword("newPass");
+        newUser.setAge(20);
+        newUser.setCardNumber("123456789");  
+        newUser.setExpenseLimit(2000);
+        logger.info("Updating user ...");
 
+        UserData userDB = exampleClient.updateUser(newUser);
+        
+        Assert.assertEquals(userDB.getLogin(), userExpected.getLogin());
+        Assert.assertNotEquals(userDB.getPassword(), userExpected.getPassword());
+        logger.info("Leaving testUpdateUser");
+    }
+    @Test
+    public void testMain() throws Exception {
+        logger.info("Starting testMain");
+        ExampleClient client = new ExampleClient("127.0.0.1", "8080"); 
+        assertEquals(client.getClass(), ExampleClient.class); 
+        logger.info("Leaving testMain");    
+    }
 
     
     @After

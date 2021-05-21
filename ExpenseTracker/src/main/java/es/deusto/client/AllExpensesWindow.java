@@ -69,19 +69,7 @@ public class AllExpensesWindow extends JFrame {
 			
 		});
 
-        deleteExpense = new JButton(client.getResourceBundle().getString("deleteExpense")); 
-        buttonPanel.add(deleteExpense); 
-        deleteExpense.addActionListener(new ActionListener(){
-            @Override
-			public void actionPerformed(ActionEvent e) {
-                logger.info("Entering Action Listener of the deleteExpense");
-				ExpenseData value = (ExpenseData) jList.getSelectedValue();
-                System.out.println(value);
-				//setVisible(false); 
-                client.deleteExpense(value);
-			}		
-        });
-
+        
         getContentPane().add(buttonPanel, "South"); 
         getContentPane().add(panel,"Center"); 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
