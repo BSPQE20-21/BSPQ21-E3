@@ -7,6 +7,7 @@ import es.deusto.server.jdo.*;
 import static org.junit.Assert.*;
 import org.apache.log4j.Logger;
 
+import java.util.Date;
 /**
  * This class validates the constructor and getters and setters of the Expense
  * class (JDO)
@@ -149,6 +150,16 @@ public class ExpenseTest {
 		assertEquals(exT1.getAmount(), exT2.getAmount(), 0);
 		logger.info("Finishing testSetAmount");
 
+	}
+
+	/**
+	 * This test validates that the toString method creates an string with the correct
+	 */
+	@Test
+	public void testToString() throws Exception{
+		logger.info("Starting testToString");
+		assertEquals("Expense: expense --> " + exT1.getText() + ", timestamp -->  " + new Date(exT1.timestamp)+ ", amount = " + exT1.getAmount() + ", category --> " + exT1.getCategory(), exT1.toString());
+		logger.info("Leaving testToString");
 	}
 
 }

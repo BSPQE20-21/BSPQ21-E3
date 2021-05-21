@@ -230,5 +230,20 @@ public class UserTest {
 
 	}
 
+	/**
+	 * This test validates that the toString method creates an string with the correct
+	 * @throws Exception
+	 */
+	@Test
+	public void testToString() throws Exception {
+		logger.info("Starting testToString");
+
+		assertEquals("User: login --> " + userT1.getLogin() + ", password -->  " + userT1.getPassword() + ", expenses --> " + userT1.getMessages()
+		, userT1.toString());
+
+		logger.info("Leaving testToString");
+
+	}
+
 
 }
