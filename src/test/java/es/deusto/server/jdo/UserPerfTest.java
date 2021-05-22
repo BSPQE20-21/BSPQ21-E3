@@ -9,9 +9,13 @@ import es.deusto.server.jdo.User;
 import es.deusto.server.jdo.Expense;
 import static org.junit.Assert.*;
 import org.junit.platform.commons.annotation.Testable;
-import org.databene.contiperf.PerfTest;
-import org.databene.contiperf.Required;
-import org.databene.contiperf.junit.ContiPerfRule;
+//import org.databene.contiperf.PerfTest;
+//import org.databene.contiperf.Required;
+//import org.databene.contiperf.junit.ContiPerfRule;
+
+import com.github.javatlacati.contiperf.PerfTest;
+import com.github.javatlacati.contiperf.Required;
+import com.github.javatlacati.contiperf.junit.ContiPerfRule;
 
 import org.apache.log4j.Logger;
 

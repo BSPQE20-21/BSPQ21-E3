@@ -21,8 +21,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
-import org.databene.contiperf.PerfTest;
-import org.databene.contiperf.Required;
+
+//import org.databene.contiperf.PerfTest;
+//import org.databene.contiperf.Required;
+
+import com.github.javatlacati.contiperf.PerfTest;
+import com.github.javatlacati.contiperf.Required;
+
 import org.junit.After;
 import org.junit.Assert;
 

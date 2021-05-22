@@ -10,8 +10,11 @@ import static org.mockito.Mockito.*;
 
 import javax.ws.rs.core.Response;
 
-import org.databene.contiperf.PerfTest;
-import org.databene.contiperf.Required;
+//import org.databene.contiperf.PerfTest;
+//import org.databene.contiperf.Required;
+
+import com.github.javatlacati.contiperf.PerfTest;
+import com.github.javatlacati.contiperf.Required;
 
 import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
