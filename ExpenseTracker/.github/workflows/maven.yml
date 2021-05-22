@@ -16,7 +16,9 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: 'adopt'   
+        distribution: 'adopt'  
+    -name: change the current directory
+      run: mvn -f ExpenseTracker/pom.xm
     - name: Clean compile
       run: mvn clean compile
     - name: Launch the server in background mode 
