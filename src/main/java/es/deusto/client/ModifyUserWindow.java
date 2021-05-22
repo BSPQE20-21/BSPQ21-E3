@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import es.deusto.serialization.*;
 import org.apache.log4j.Logger;
+import java.awt.BorderLayout;
 /**
  * MODIFY USER
  * Once the user is logged in give them the possibility to change some of the parameters\n
@@ -15,9 +16,9 @@ public class ModifyUserWindow extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JFrame frame; 
-	private JButton buttonUpdate, buttonReturn, deleteExpense 
-	private JTextField  carNumberField, ageField, expenseLimitField;  
-	private JPasswordField passwordField; 
+	private JButton buttonUpdate, buttonReturn, deleteExpense; 
+	
+	
 
 	private ExampleClient client;
     private final UserData userData; 
@@ -44,24 +45,24 @@ public class ModifyUserWindow extends JFrame {
 		registerPanel.add(emailField);
 		// PASSWORD 
 		registerPanel.add(new JLabel(client.getResourceBundle().getString("password")));
-		this.passwordField = new JPasswordField(userData.getPassword());
-		registerPanel.add(this.passwordField);
+		JPasswordField passwordField = new JPasswordField(userData.getPassword());
+		registerPanel.add(passwordField);
 		// CARD NUMBER
 		registerPanel.add(new JLabel(client.getResourceBundle().getString("cardNumber")));
-		this.carNumberField = new JTextField(userData.getCardNumber());
-		registerPanel.add(this.carNumberField);
+		JTextField carNumberField = new JTextField(userData.getCardNumber());
+		registerPanel.add(carNumberField);
 		// AGE
 		registerPanel.add(new JLabel(client.getResourceBundle().getString("age")));
-		this.ageField = new JTextField(Integer.toString(userData.getAge()));
-		registerPanel.add(this.ageField);
+		JTextField ageField = new JTextField(Integer.toString(userData.getAge()));
+		registerPanel.add(ageField);
 		// EXPENSE LIMIT
 		registerPanel.add(new JLabel(client.getResourceBundle().getString("expenseLimit"))); 
-		this.expenseLimitField = new JTextField(Double.toString(userData.getExpenseLimit()));
-		registerPanel.add(this.expenseLimitField);
+		JTextField expenseLimitField = new JTextField(Double.toString(userData.getExpenseLimit()));
+		registerPanel.add(expenseLimitField);
 
 
-		this.buttonUpdate = new JButton(client.getResourceBundle().getString("update"));
-		registerPanel.add(this.buttonUpdate); 
+		buttonUpdate = new JButton(client.getResourceBundle().getString("update"));
+		registerPanel.add(buttonUpdate); 
 		
 		buttonUpdate.addActionListener(new ActionListener() {
 			
@@ -91,45 +92,46 @@ public class ModifyUserWindow extends JFrame {
 			}
 		});
 
-		this.deleteExpense = new JButton(client.getResourceBundle().getString("deleteExpense")); 
-        registerPanel.add(this.deleteExpense); 
+		deleteExpense = new JButton(client.getResourceBundle().getString("deleteExpense")); 
+        registerPanel.add(deleteExpense); 
         this.deleteExpense.addActionListener(new ActionListener(){
             @Override
 			public void actionPerformed(ActionEvent e) {
                 logger.info("Entering Action Listener of the deleteExpense");
 			
                 
-				 
-                client.deleteUser(userData);
 				setVisible(false);
+                client.deleteUser(userData);
+				
 			}		
         });
 
-        this.buttonReturn= new JButton(client.getResourceBundle().getString("return"));
-		registerPanel.add(this.buttonReturn); 
+        buttonReturn= new JButton(client.getResourceBundle().getString("return"));
+		registerPanel.add(buttonReturn); 
         buttonReturn.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				logger.info("Entering the action listener of the return button"); 
-                setVisible(false);
+                
 				logger.info("Opening the AddExpenseWindow"); 
 
                 AddExpenseWindow aew = new AddExpenseWindow(userData,client); 
-				
+				setVisible(false);
 				
 			}
 		});
 
-		this.frame = new JFrame("Modify user"); 
-		this.frame.setTitle(client.getResourceBundle().getString("modifyUser"));
-
-		this.frame.setSize(600,500);
-		this.frame.getContentPane().add(registerPanel,"North"); 
-
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//WindowManager.middleLeft(this.frame); Is a class of the project
-		this.frame.setVisible(true);
+	
+        
+        // Adding the listeners to components..
+        
+        add(registerPanel, BorderLayout.CENTER);
+        setTitle(client.getResourceBundle().getString("modifyUser"));
+        setSize(600, 500);
+        
+        
+        setVisible(true);
 	
 	
 	}
