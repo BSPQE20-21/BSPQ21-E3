@@ -63,7 +63,7 @@ public class ModifyUserWindowTest {
 		// puede ser que no esté a TRUE 
 		// java.lang.AssertionError
 		logger.info("Starting testModifyUserWindowVisible");
-		assertFalse(muw.isVisible());
+		assertTrue(muw.isVisible());
 		logger.info("Finishing testModifyUserWindowVisible");
 
 	}
