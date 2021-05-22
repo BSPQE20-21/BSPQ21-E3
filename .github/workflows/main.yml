@@ -24,6 +24,8 @@ jobs:
       run: mysql -uroot -h127.0.0.1 < src/sql/createExpenseTrackerDB.sql
     - name: Compile 
       run: mvn clean compile
+    - name: Create Datanucleus schema
+      run: mvn datanucleus:schema-create
     - name: Launch the server in background mode 
       run: mvn jetty:run &
     - name: Sleep 
