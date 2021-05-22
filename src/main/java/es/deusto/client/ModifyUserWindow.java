@@ -2,7 +2,7 @@ package es.deusto.client;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import es.deusto.serialization.UserData;
+import es.deusto.serialization.*;
 import org.apache.log4j.Logger;
 /**
  * MODIFY USER
@@ -15,7 +15,7 @@ public class ModifyUserWindow extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JFrame frame; 
-	private JButton buttonUpdate, buttonReturn; 
+	private JButton buttonUpdate, buttonReturn, deleteExpense 
 	private JTextField  carNumberField, ageField, expenseLimitField;  
 	private JPasswordField passwordField; 
 
@@ -90,6 +90,21 @@ public class ModifyUserWindow extends JFrame {
 				userData.setExpenseLimit(usData.getExpenseLimit());
 			}
 		});
+
+		this.deleteExpense = new JButton(client.getResourceBundle().getString("deleteExpense")); 
+        registerPanel.add(this.deleteExpense); 
+        this.deleteExpense.addActionListener(new ActionListener(){
+            @Override
+			public void actionPerformed(ActionEvent e) {
+                logger.info("Entering Action Listener of the deleteExpense");
+			
+                
+				 
+                client.deleteUser(userData);
+				setVisible(false);
+			}		
+        });
+
         this.buttonReturn= new JButton(client.getResourceBundle().getString("return"));
 		registerPanel.add(this.buttonReturn); 
         buttonReturn.addActionListener(new ActionListener() {

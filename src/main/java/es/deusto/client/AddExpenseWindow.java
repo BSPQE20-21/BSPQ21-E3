@@ -13,12 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-import es.deusto.serialization.ExpenseData;
-import es.deusto.serialization.ExpenseList;
-
-import es.deusto.serialization.UserData;
-import es.deusto.server.jdo.Category;
-import es.deusto.server.jdo.Expense;
+import es.deusto.serialization.*;
+import es.deusto.server.jdo.*;
 import java.util.*; 
 import org.apache.log4j.Logger;
 
