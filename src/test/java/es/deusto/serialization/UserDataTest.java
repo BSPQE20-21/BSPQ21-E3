@@ -1,8 +1,6 @@
 package es.deusto.serialization;
 
 
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Assert;

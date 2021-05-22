@@ -4,24 +4,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.After;
-import org.junit.platform.commons.annotation.Testable;
-import org.mockito.ArgumentCaptor;
-import static org.mockito.Mockito.*;
 
 import javax.ws.rs.core.Response;
-
-//import org.databene.contiperf.PerfTest;
-//import org.databene.contiperf.Required;
-
-import com.github.javatlacati.contiperf.PerfTest;
-import com.github.javatlacati.contiperf.Required;
 
 import es.deusto.serialization.DirectedMessage;
 import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.LoginData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
-import es.deusto.server.jdo.User;
 import org.apache.log4j.Logger;
 
 
@@ -55,8 +45,8 @@ public class ServerTest {
 	}
 	
 	/**
-	 * This is a performance test that calls the constructor of the server multiple times imitating the situation where 
-	 * several client will contact the server at the same time.
+	 * This is a test that calls the constructor of the server imitating the situation where 
+	 * a client will contact the server.
 	 * @throws Exception
 	 */
 	@Test
@@ -113,7 +103,7 @@ public class ServerTest {
 	}
 	
 	
-	/**This test validates the resonse of the methos show expense is the same as the expected
+	/**This test validates the response of the methods show expense is the same as the expected
 	 * @throws Exception
 	 */
 	@Test

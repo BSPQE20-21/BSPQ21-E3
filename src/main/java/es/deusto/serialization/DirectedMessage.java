@@ -1,6 +1,5 @@
 package es.deusto.serialization;
 
-import es.deusto.server.jdo.Category;
 
 /**
  * This is the relationship between the user and their expenses.\n

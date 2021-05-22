@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.apache.log4j.Logger;
 
 import es.deusto.server.jdo.Category;
-import es.deusto.client.*;
+
 
 public class DirectedMessageTest {
 	

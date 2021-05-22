@@ -5,8 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.After;
 import org.junit.platform.commons.annotation.Testable;
-import org.mockito.ArgumentCaptor;
-import static org.mockito.Mockito.*;
+
 
 import javax.ws.rs.core.Response;
 
@@ -22,7 +21,6 @@ import es.deusto.serialization.ExpenseData;
 import es.deusto.serialization.LoginData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
-import es.deusto.server.jdo.User;
 import org.apache.log4j.Logger;
 
 
