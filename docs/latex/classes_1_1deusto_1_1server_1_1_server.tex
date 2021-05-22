@@ -1,0 +1,187 @@
+\hypertarget{classes_1_1deusto_1_1server_1_1_server}{}\section{es.\+deusto.\+server.\+Server Class Reference}
+\label{classes_1_1deusto_1_1server_1_1_server}\index{es.\+deusto.\+server.\+Server@{es.\+deusto.\+server.\+Server}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classes_1_1deusto_1_1server_1_1_server_a84f78162a65dd737f224eb2f94c43023}{Server} ()
+\item 
+Response \hyperlink{classes_1_1deusto_1_1server_1_1_server_a1a91c5bde8d3b39fc4292dc09d62b61b}{store\+Expense} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_directed_message}{Directed\+Message} directed\+Expense)
+\item 
+Response \hyperlink{classes_1_1deusto_1_1server_1_1_server_a6e5f5013058ddaf970b0b21da2e32f66}{validate\+User} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_login_data}{Login\+Data} login\+Data)
+\item 
+Response \hyperlink{classes_1_1deusto_1_1server_1_1_server_a12f56d7a970c3c41fefe8ed2db835c0a}{register\+User} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data)
+\item 
+Response \hyperlink{classes_1_1deusto_1_1server_1_1_server_aa28b04cc2643cf60072fc2a680288cde}{show\+Expenses} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data)
+\item 
+Response \hyperlink{classes_1_1deusto_1_1server_1_1_server_aa9fc28b2ce1a31d8176a23768e48f173}{delete\+Expense} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_expense_data}{Expense\+Data} expense\+Data)
+\item 
+Response \hyperlink{classes_1_1deusto_1_1server_1_1_server_aae24e983f2b93173ee25d366a522a936}{updateuser} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data)
+\item 
+Response \hyperlink{classes_1_1deusto_1_1server_1_1_server_a97535594f4d5406d52e93e093cf6c5bd}{delete\+User} (\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data} user\+Data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is the most important part os the server side~\newline
+ It is filled with methods that access and store or stract values from the DB~\newline
+ To acces the DB we use Jenkins~\newline
+ The \hyperlink{classes_1_1deusto_1_1client_1_1_example_client}{es.\+deusto.\+client.\+Example\+Client} methods usually are connected to the ones in this class 
+
+Definition at line 38 of file Server.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a84f78162a65dd737f224eb2f94c43023}\label{classes_1_1deusto_1_1server_1_1_server_a84f78162a65dd737f224eb2f94c43023}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily es.\+deusto.\+server.\+Server.\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor. ~\newline
+The Persistence\+Manager is initialized as well as the Transaction 
+
+Definition at line 48 of file Server.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_aa9fc28b2ce1a31d8176a23768e48f173}\label{classes_1_1deusto_1_1server_1_1_server_aa9fc28b2ce1a31d8176a23768e48f173}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!delete\+Expense@{delete\+Expense}}
+\index{delete\+Expense@{delete\+Expense}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{delete\+Expense()}{deleteExpense()}}
+{\footnotesize\ttfamily Response es.\+deusto.\+server.\+Server.\+delete\+Expense (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_expense_data}{Expense\+Data}}]{expense\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 253 of file Server.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a97535594f4d5406d52e93e093cf6c5bd}\label{classes_1_1deusto_1_1server_1_1_server_a97535594f4d5406d52e93e093cf6c5bd}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!delete\+User@{delete\+User}}
+\index{delete\+User@{delete\+User}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{delete\+User()}{deleteUser()}}
+{\footnotesize\ttfamily Response es.\+deusto.\+server.\+Server.\+delete\+User (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data}}]{user\+Data }\end{DoxyParamCaption})}
+
+This method erases from the DB a user and all his or her information 
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 327 of file Server.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a12f56d7a970c3c41fefe8ed2db835c0a}\label{classes_1_1deusto_1_1server_1_1_server_a12f56d7a970c3c41fefe8ed2db835c0a}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!register\+User@{register\+User}}
+\index{register\+User@{register\+User}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{register\+User()}{registerUser()}}
+{\footnotesize\ttfamily Response es.\+deusto.\+server.\+Server.\+register\+User (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data}}]{user\+Data }\end{DoxyParamCaption})}
+
+R\+E\+G\+I\+S\+T\+ER U\+S\+ER.~\newline
+This method stores a new user inside the DB~\newline
+This method is called in the \hyperlink{classes_1_1deusto_1_1client_1_1_example_client}{es.\+deusto.\+client.\+Example\+Client} class and the data of the user is obtained in the \hyperlink{classes_1_1deusto_1_1client_1_1_register_window}{es.\+deusto.\+client.\+Register\+Window}~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(OK or not OK) 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file Server.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_aa28b04cc2643cf60072fc2a680288cde}\label{classes_1_1deusto_1_1server_1_1_server_aa28b04cc2643cf60072fc2a680288cde}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!show\+Expenses@{show\+Expenses}}
+\index{show\+Expenses@{show\+Expenses}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{show\+Expenses()}{showExpenses()}}
+{\footnotesize\ttfamily Response es.\+deusto.\+server.\+Server.\+show\+Expenses (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data}}]{user\+Data }\end{DoxyParamCaption})}
+
+S\+H\+OW E\+X\+P\+E\+N\+SE.~\newline
+ This method returns all the expenses related to a concrete user. This method is called from the \hyperlink{classes_1_1deusto_1_1client_1_1_example_client}{es.\+deusto.\+client.\+Example\+Client} class and the user is the one that is logged in~\newline
+ It should return A\+LL the expenses related to one user and in order to do that a S\+E\+T$<$\+Expense\+Data$>$ is created so we can return all the info.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & -\/ the user that is logged in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+it will return a set of expenses 
+\end{DoxyReturn}
+
+
+Definition at line 212 of file Server.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a1a91c5bde8d3b39fc4292dc09d62b61b}\label{classes_1_1deusto_1_1server_1_1_server_a1a91c5bde8d3b39fc4292dc09d62b61b}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!store\+Expense@{store\+Expense}}
+\index{store\+Expense@{store\+Expense}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{store\+Expense()}{storeExpense()}}
+{\footnotesize\ttfamily Response es.\+deusto.\+server.\+Server.\+store\+Expense (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_directed_message}{Directed\+Message}}]{directed\+Expense }\end{DoxyParamCaption})}
+
+S\+T\+O\+RE E\+X\+P\+E\+N\+SE~\newline
+The idea is to store the expense and the relationship between the user~\newline
+ This method is called from the \hyperlink{classes_1_1deusto_1_1client_1_1_example_client_aba5fe3dfb882ef22d0bd49b5915871d3}{es.\+deusto.\+client.\+Example\+Client.\+store\+Expense} class which receives the info from the \hyperlink{classes_1_1deusto_1_1client_1_1_add_expense_window}{es.\+deusto.\+client.\+Add\+Expense\+Window}~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em directed\+Expense} & -\/ is the object that stores both the user and the expense \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+S\+P\+O\+N\+SE (OK or N\+OT OK) 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Server.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_aae24e983f2b93173ee25d366a522a936}\label{classes_1_1deusto_1_1server_1_1_server_aae24e983f2b93173ee25d366a522a936}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!updateuser@{updateuser}}
+\index{updateuser@{updateuser}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{updateuser()}{updateuser()}}
+{\footnotesize\ttfamily Response es.\+deusto.\+server.\+Server.\+updateuser (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_user_data}{User\+Data}}]{user\+Data }\end{DoxyParamCaption})}
+
+U\+P\+D\+A\+TE T\+HE I\+N\+FO OF A U\+S\+ER~\newline
+This method makes possible for the user to update some of the information and update it inside the BD
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & -\/$>$ the user that is logged in after the changes made in the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the suer with the changes 
+\end{DoxyReturn}
+
+
+Definition at line 285 of file Server.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a6e5f5013058ddaf970b0b21da2e32f66}\label{classes_1_1deusto_1_1server_1_1_server_a6e5f5013058ddaf970b0b21da2e32f66}} 
+\index{es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}!validate\+User@{validate\+User}}
+\index{validate\+User@{validate\+User}!es\+::deusto\+::server\+::\+Server@{es\+::deusto\+::server\+::\+Server}}
+\subsubsection{\texorpdfstring{validate\+User()}{validateUser()}}
+{\footnotesize\ttfamily Response es.\+deusto.\+server.\+Server.\+validate\+User (\begin{DoxyParamCaption}\item[{\hyperlink{classes_1_1deusto_1_1serialization_1_1_login_data}{Login\+Data}}]{login\+Data }\end{DoxyParamCaption})}
+
+V\+A\+L\+I\+D\+A\+TE U\+S\+ER.~\newline
+This method access the DB and searches if the given user is already stored~\newline
+This method is called from the client side class \hyperlink{classes_1_1deusto_1_1client_1_1_example_client}{es.\+deusto.\+client.\+Example\+Client} and the data is received from the \hyperlink{classes_1_1deusto_1_1client_1_1_login_window}{es.\+deusto.\+client.\+Login\+Window}~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em login\+Data} & -\/ user and password of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ U\+S\+ER D\+A\+TA it will return the actual user if it is already registred 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file Server.\+java.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/es/deusto/server/\hyperlink{_server_8java}{Server.\+java}\end{DoxyCompactItemize}
