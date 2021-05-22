@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
@@ -23,7 +23,9 @@ jobs:
     - name: Launch the server in background mode 
       run: mvn jetty:run &
     - name: Launch the client side
-      run: mvn exec:java -Pclient
+      run: |
+        export DISPLAY=:localhost:0.0
+        mvn exec:java -Pclient
     - name: Test with Maven
       run: mvn test -DargLine="-Dcontiperf.active=false"
     - name: Install doxygen
