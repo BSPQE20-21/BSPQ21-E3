@@ -30,7 +30,6 @@ public class LoggerFile {
     	 * Instantiation of the fileHandler
     	 */
         fileHandler = new FileHandler("myLog.txt",true);
-        //Instance formatter, set formatting and handler
         plainText = new SimpleFormatter();
         fileHandler.setFormatter(plainText);
         logger.addHandler(fileHandler);
