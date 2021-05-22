@@ -5036,3 +5036,215 @@ org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la cla
 11:10:01,470 (qtp469459127-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
 11:10:01,470 (qtp469459127-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
 11:10:01,562 (qtp469459127-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:29:04,145 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+11:29:05,284 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "/Users/Haizea/Desktop/maven/BSPQ21-E3/target/classes/es/deusto/server/jdo/User.class" con definicion enhanced
+11:29:05,286 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+11:29:05,357 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "/Users/Haizea/Desktop/maven/BSPQ21-E3/target/classes/es/deusto/server/jdo/Expense.class" con definicion enhanced
+11:29:05,361 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+11:29:05,361 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=819 ms, enhance=386 ms, total=1205 ms. Compruebe el LOG para los detalles
+11:30:18,249 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+11:30:19,734 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+11:30:19,734 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+11:30:19,745 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+11:30:19,745 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+11:30:19,748 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=1227 ms, enhance=92 ms, total=1319 ms. Compruebe el LOG para los detalles
+11:31:10,916 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.7) para el API "JDO" utilisando el JRE "{2}"
+11:31:11,807 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.User" esta enhanced.
+11:31:11,807 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.User
+11:31:11,810 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.server.jdo.Expense" esta enhanced.
+11:31:11,810 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.server.jdo.Expense
+11:31:11,816 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 2 clases. Tiempos : input=761 ms, enhance=131 ms, total=892 ms. Compruebe el LOG para los detalles
+11:31:22,195 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:22,215 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:22,219 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:28,125 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:31,600 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:31:33,671 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:33,672 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:33,675 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:34,140 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:34,722 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:31:34,937 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:34,939 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:34,939 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:35,232 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:35,830 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:31:36,124 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:36,125 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:36,126 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:36,537 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:37,065 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:31:37,738 (main) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@54980154" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@1e31e7e0" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:31:38,020 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:38,022 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:38,025 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:38,319 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:38,892 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:31:39,071 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:39,071 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:39,072 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:39,366 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:40,239 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:40,246 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:40,247 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:40,552 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:40,959 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:31:41,402 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:41,402 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:41,403 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:41,729 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:42,233 (main) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:31:42,321 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:42,322 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:42,340 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:31:42,676 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:31:57,896 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:31:57,897 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:31:57,897 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:00,728 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:03,399 (qtp878169229-17) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:03,735 (qtp878169229-15) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:03,735 (qtp878169229-15) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:03,736 (qtp878169229-15) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:03,967 (qtp878169229-15) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:05,702 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:05,705 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:05,706 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:06,018 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:07,320 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:07,321 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:07,321 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:07,638 (qtp878169229-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:08,239 (qtp878169229-19) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:08,360 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:08,361 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:08,361 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:08,555 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:09,609 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:09,609 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:09,610 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:09,800 (qtp878169229-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:10,151 (qtp878169229-19) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:10,258 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:10,258 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:10,259 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:10,504 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:11,183 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:11,183 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:11,184 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:11,407 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:12,271 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:12,273 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:12,275 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:12,590 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:13,032 (qtp878169229-21) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:13,232 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:13,232 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:13,235 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:13,441 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:13,931 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:13,931 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:13,931 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:14,221 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:14,994 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:14,995 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:14,996 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:15,152 (qtp878169229-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:15,823 (qtp878169229-19) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:15,883 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:15,883 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:15,883 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:16,138 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:16,710 (qtp878169229-21) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@12c979dd" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@50aefa52" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:32:16,786 (qtp878169229-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:16,786 (qtp878169229-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:16,786 (qtp878169229-22) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:17,096 (qtp878169229-22) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:18,422 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:18,423 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:18,423 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:18,818 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:19,635 (qtp878169229-21) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:19,826 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:19,826 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:19,826 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:20,261 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:21,325 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:21,349 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:21,354 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:21,677 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:29,319 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:29,320 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:29,320 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:29,544 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:29,967 (qtp878169229-17) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:30,035 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:30,035 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:30,035 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:30,221 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:30,831 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:30,831 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:30,831 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:31,151 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:32,187 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:32,188 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:32,188 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:32,282 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:32,635 (qtp878169229-21) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:32,791 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:32,791 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:32,792 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:33,031 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:33,741 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:33,741 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:33,741 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:33,924 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:34,223 (qtp878169229-21) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:34,283 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:34,283 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:34,284 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:34,367 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:34,789 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:34,789 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:34,790 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:34,955 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:35,597 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:35,597 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:35,597 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:35,906 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:36,276 (qtp878169229-17) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:36,317 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:36,317 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:36,317 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:36,419 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:36,770 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:36,770 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:36,771 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:36,902 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:37,534 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:37,534 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:37,534 (qtp878169229-17) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:37,782 (qtp878169229-17) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:38,032 (qtp878169229-17) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:38,099 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:38,099 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:38,101 (qtp878169229-21) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:38,201 (qtp878169229-21) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:38,816 (qtp878169229-21) INFO  [DataNucleus.Persistence] - El objeto "es.deusto.server.jdo.User@37934fb3" tiene una colleccion "es.deusto.server.jdo.User.expenses" pero el elemento "es.deusto.server.jdo.Expense@50b7ef0" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:32:39,023 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:39,023 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:39,024 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:39,243 (qtp878169229-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:40,082 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:40,082 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:40,084 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:40,472 (qtp878169229-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:41,048 (qtp878169229-19) INFO  [DataNucleus.Datastore.Retrieve] - ¡Objeto con el id "userTest" no existe!
+11:32:41,168 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:41,168 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:41,169 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:41,337 (qtp878169229-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+11:32:41,949 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+11:32:41,949 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+11:32:41,949 (qtp878169229-19) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+11:32:42,168 (qtp878169229-19) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
