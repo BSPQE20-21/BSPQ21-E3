@@ -22,8 +22,11 @@ import es.deusto.serialization.LoginData;
 import es.deusto.serialization.UserData;
 import es.deusto.server.jdo.Category;
 import org.apache.log4j.Logger;
+import org.junit.Rule;
 
-
+import com.github.javatlacati.contiperf.PerfTest;
+import com.github.javatlacati.contiperf.Required;
+import com.github.javatlacati.contiperf.junit.ContiPerfRule;
 @PerfTest(invocations = 5)
 @Required(max = 1200, average = 250)
 @Testable
@@ -35,7 +38,11 @@ public class ServerPerfTest {
 	DirectedMessage dMExpected = new DirectedMessage();
 	Response responseExpected;
 	static Logger logger = Logger.getLogger(ServerPerfTest.class.getName());
-	
+	@Rule
+	// TODO - error in the test that says the following --> java.lang.RuntimeException: java.lang.NoSuchFieldException: fNext
+	// at org.databene.contiperf.junit.ContiPerfRule.apply(ContiPerfRule.java:176)
+	public ContiPerfRule rule = new ContiPerfRule();
+
 	/**
 	 * This method is the SET UP that will create the instances and objects needed to perform all the tests
 	 * @throws Exception

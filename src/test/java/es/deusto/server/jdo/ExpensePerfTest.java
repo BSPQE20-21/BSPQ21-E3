@@ -31,10 +31,10 @@ public class ExpensePerfTest {
 	User user; 
 	static Logger logger = Logger.getLogger(ExpensePerfTest.class.getName());
 	
-	//@Rule
+	@Rule
 	// TODO - error in the test that says the following --> java.lang.RuntimeException: java.lang.NoSuchFieldException: fNext
 	// at org.databene.contiperf.junit.ContiPerfRule.apply(ContiPerfRule.java:176)
-	//public ContiPerfRule rule = new ContiPerfRule();
+	public ContiPerfRule rule = new ContiPerfRule();
 	
 
 	@Before
