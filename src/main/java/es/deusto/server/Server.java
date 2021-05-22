@@ -247,29 +247,6 @@ public class Server {
 		}
 
 	}
-	//TODO
-	@POST
-	@Path("/delete")
-	public Response deleteExpense(ExpenseData expenseData) {
-		try {
-			tx.begin();
-			Query<Expense> q = pm.newQuery("SELECT FROM " + Expense.class.getName() + " WHERE text == \"" + expenseData.getText() + "\" && amount == \"" + expenseData.getAmount() + "\"");
-			q.setUnique(true);
-			Expense expense = (Expense)q.execute();
-			System.out.println(q);
-			if (expense != null)  {
-
-				pm.deletePersistent(expense);
-	
-			}
-			tx.commit();
-			return Response.ok().build();
-		} finally {
-			if (tx.isActive()) {
-				tx.rollback();
-			}
-		}
-	}
 
 	/**
 	 * UPDATE THE INFO OF A USER\n

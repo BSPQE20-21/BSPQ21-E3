@@ -30,6 +30,7 @@ public class ServerTest {
 	 */
 	@Before
     public void setUp() throws Exception {
+		logger.info("Entering setUp");
 		server = new Server();
 		user = new UserData("userTest", "12345", "123456789", 20, 2000);
 		expenseDataExpected = new ExpenseData();
@@ -42,6 +43,7 @@ public class ServerTest {
 
 
     	responseExpected = Response.ok().build();
+		logger.info("Leaving setUp");
 	}
 	
 	/**
@@ -51,7 +53,10 @@ public class ServerTest {
 	 */
 	@Test
 	public void testServer() throws Exception {
+		logger.info("Entering testServer");
 		server = new Server();
+		logger.info("Leaving testServer");
+		
 	}
 
 	/**This test validates if the response of the method registerUser is the same as the expected
@@ -59,6 +64,7 @@ public class ServerTest {
 	 */
 	@Test
 	public void testRegisterUser() throws Exception {
+		logger.info("Entering testRegisterUser");
 		//server.registerUser(user);
 		//UserData userBD = new UserData("user2","13345", "143456789", 21, 3000);
     	//Assert.assertNotEquals(userBD.getLogin(), user.getLogin());
@@ -68,8 +74,8 @@ public class ServerTest {
     	//Assert.assertNotEquals(userBD.getExpenseLimit(), user.getExpenseLimit(), 0);
     	Response response = server.registerUser(user);
     	Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
+		logger.info("Leaving testRegisterUser");
     	
-
 	}
 	
 	/**
@@ -80,10 +86,10 @@ public class ServerTest {
 	 */
 	@Test
 	public void testStoreExpense() throws Exception {
-		
+		logger.info("Entering testStoreExpense");
 		Response response = server.storeExpense(dMExpected);
 		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
-		
+		logger.info("Leaving testStoreExpense");
 	}
 	
 	
@@ -92,7 +98,7 @@ public class ServerTest {
 	 */
 	@Test
 	public void testValidateUser() throws Exception {
-
+		logger.info("Entering testValidateUser");
 		LoginData loginData = new LoginData(user.getLogin(),user.getPassword());
     	Response response = server.validateUser(loginData);
 		// TODO  response read entity returns an error
@@ -100,6 +106,7 @@ public class ServerTest {
 		Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
     	//Assert.assertEquals(loginData.getLogin(), userData.getLogin());
 		//Assert.assertEquals(loginData.getPassword(), userData.getPassword());
+		logger.info("Leaving testValidateUser");
 	}
 	
 	
@@ -108,8 +115,10 @@ public class ServerTest {
 	 */
 	@Test
 	public void testShowExpenses() throws Exception {
+		logger.info("Entering testShowExpenses");
+
 		Response response = server.showExpenses(user); 
-		/*
+		
 		ExpenseData exp = new ExpenseData();
 		exp.setText(expenseDataExpected.getText());
 		exp.setAmount(expenseDataExpected.getAmount());
@@ -117,9 +126,9 @@ public class ServerTest {
 		Assert.assertEquals(exp.getText(),expenseDataExpected.getText()); 
 		Assert.assertEquals(exp.getAmount(),expenseDataExpected.getAmount(),0);
 		Assert.assertEquals(exp.getCategory(),expenseDataExpected.getCategory());
-		*/
+		
     	Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
-
+		logger.info("Leaving testShowExpenses");
 
 	}
 	
@@ -128,11 +137,10 @@ public class ServerTest {
 	 */
 	@Test
 	public void testUpdateUser()throws Exception{
+		logger.info("Entering testUpdateUser");
 		Response response = server.updateuser(user); 
     	Assert.assertEquals(responseExpected.getStatus(), response.getStatus());
-
-
-
+		logger.info("Leaving testUpdateUser");
 	}
 
 	@After

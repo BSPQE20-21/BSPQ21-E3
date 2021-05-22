@@ -179,25 +179,7 @@ public class ExampleClient {
 		return expenses; 
 
 	}
-	//TODO
-	public void deleteExpense(ExpenseData expenseData) {
-		WebTarget storeExpenseWebTarget = webTarget.path("store");
-		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);
 
-		Response response = invocationBuilder.post(Entity.entity(expenseData, MediaType.APPLICATION_JSON));
-		if (response.getStatus() != Status.OK.getStatusCode()) {
-			logger.info(resourceBundle.getString("error_connecting"));
-
-			//LoggerFile.log(Level.INFO, resourceBundle.getString("error_connecting")); 
-			
-		} else {
-			//TODO
-			logger.info(resourceBundle.getString("store_expense"));
-
-			//LoggerFile.log(Level.INFO, resourceBundle.getString("store_expense")); 
-		}
-
-	}
 
 	/**
 	 * UPDATE USER\n
