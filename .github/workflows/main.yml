@@ -24,7 +24,7 @@ jobs:
       run: mvn jetty:run &
     - name: Launch the client side
       run: |
-        export DISPLAY=:localhost:0.0
+        export DISPLAY=:0
         mvn exec:java -Pclient
     - name: Test with Maven
       run: mvn test -DargLine="-Dcontiperf.active=false"
