@@ -17,10 +17,11 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'  
-    -name: change the current directory
-      run: mvn -f ExpenseTracker/pom.xm
+    
     - name: Clean compile
-      run: mvn clean compile
+      run:|
+      cd ExpenseTracker
+      mvn clean compile
     - name: Launch the server in background mode 
       run: mvn jetty:run &
     - name: Launch the client side
