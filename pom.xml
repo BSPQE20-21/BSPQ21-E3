@@ -268,6 +268,13 @@
 					  <goal>copy-resources</goal>
 					</goals>
 					<configuration>
+					<outputDirectory>${basedir}/docs/contiperf</outputDirectory>
+					  <resources>          
+						<resource>
+						  <directory>${basedir}/target/contiperf-report</directory>
+						  <filtering>true</filtering>
+						</resource>
+					  </resources>
 
 					  <outputDirectory>${basedir}/docs/jacoco</outputDirectory>
 					  <resources>          
@@ -277,13 +284,7 @@
 						</resource>
 					  </resources>
 
-					  <outputDirectory>${basedir}/docs/contiperf</outputDirectory>
-					  <resources>          
-						<resource>
-						  <directory>${basedir}/target/contiperf-report</directory>
-						  <filtering>true</filtering>
-						</resource>
-					  </resources>
+					  
 
 					</configuration>            
 				  </execution>

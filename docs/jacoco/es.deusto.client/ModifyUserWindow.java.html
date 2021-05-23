@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ModifyUserWindow.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExpeseTracker</a> &gt; <a href="index.source.html" class="el_package">es.deusto.client</a> &gt; <span class="el_source">ModifyUserWindow.java</span></div><h1>ModifyUserWindow.java</h1><pre class="source lang-java linenums">package es.deusto.client;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import es.deusto.serialization.*;
+import org.apache.log4j.Logger;
+import java.awt.BorderLayout;
+/**
+ * MODIFY USER
+ * Once the user is logged in give them the possibility to change some of the parameters\n
+ * The window is similar to the register window but the user info is displaey and changes can be made in all the parameters except the login/email\n
+ * This class is called from the es.deusto.client.AddExpenseWindow
+ */
+public class ModifyUserWindow extends JFrame {
+
+
+	private static final long serialVersionUID = 1L;
+	private JFrame frame; 
+	private JButton buttonUpdate, buttonReturn, deleteExpense; 
+	
+	
+
+	private ExampleClient client;
+    private final UserData userData; 
+
+<span class="fc" id="L26">	static Logger logger = Logger.getLogger(ModifyUserWindow.class.getName());</span>
+
+    
+	
+	/**
+	 * The constructor of the modify user window. \n
+	 * @param client
+	 */
+<span class="fc" id="L34">	public ModifyUserWindow(ExampleClient client, UserData userData) {</span>
+<span class="fc" id="L35">		logger.info(&quot;Entering constructor&quot;);</span>
+
+<span class="fc" id="L37">		this.client = client;</span>
+<span class="fc" id="L38">        this.userData = userData; </span>
+		
+<span class="fc" id="L40">		JPanel registerPanel = new JPanel();</span>
+<span class="fc" id="L41">		registerPanel.setLayout(new BoxLayout(registerPanel, BoxLayout.Y_AXIS));</span>
+		// EMAIL 
+<span class="fc" id="L43">		registerPanel.add(new JLabel(client.getResourceBundle().getString(&quot;email&quot;)));</span>
+<span class="fc" id="L44">		JLabel emailField = new JLabel(userData.getLogin());</span>
+<span class="fc" id="L45">		registerPanel.add(emailField);</span>
+		// PASSWORD 
+<span class="fc" id="L47">		registerPanel.add(new JLabel(client.getResourceBundle().getString(&quot;password&quot;)));</span>
+<span class="fc" id="L48">		JPasswordField passwordField = new JPasswordField(userData.getPassword());</span>
+<span class="fc" id="L49">		registerPanel.add(passwordField);</span>
+		// CARD NUMBER
+<span class="fc" id="L51">		registerPanel.add(new JLabel(client.getResourceBundle().getString(&quot;cardNumber&quot;)));</span>
+<span class="fc" id="L52">		JTextField carNumberField = new JTextField(userData.getCardNumber());</span>
+<span class="fc" id="L53">		registerPanel.add(carNumberField);</span>
+		// AGE
+<span class="fc" id="L55">		registerPanel.add(new JLabel(client.getResourceBundle().getString(&quot;age&quot;)));</span>
+<span class="fc" id="L56">		JTextField ageField = new JTextField(Integer.toString(userData.getAge()));</span>
+<span class="fc" id="L57">		registerPanel.add(ageField);</span>
+		// EXPENSE LIMIT
+<span class="fc" id="L59">		registerPanel.add(new JLabel(client.getResourceBundle().getString(&quot;expenseLimit&quot;))); </span>
+<span class="fc" id="L60">		JTextField expenseLimitField = new JTextField(Double.toString(userData.getExpenseLimit()));</span>
+<span class="fc" id="L61">		registerPanel.add(expenseLimitField);</span>
+
+
+<span class="fc" id="L64">		buttonUpdate = new JButton(client.getResourceBundle().getString(&quot;update&quot;));</span>
+<span class="fc" id="L65">		registerPanel.add(buttonUpdate); </span>
+		
+<span class="fc" id="L67">		buttonUpdate.addActionListener(new ActionListener() {</span>
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L71">				logger.info(&quot;Entering Action Listener of the buttonUpdate button&quot;);</span>
+
+<span class="nc" id="L73">                String login = emailField.getText();</span>
+<span class="nc" id="L74">				String password = String.valueOf(passwordField.getPassword()); </span>
+<span class="nc" id="L75">				String cardNumber = carNumberField.getText(); </span>
+<span class="nc" id="L76">				int age = Integer.parseInt(ageField.getText());</span>
+<span class="nc" id="L77">				double expenseLimit = Double.parseDouble(expenseLimitField.getText()); </span>
+				
+<span class="nc" id="L79">				UserData uData = new UserData();</span>
+<span class="nc" id="L80">				uData.setLogin(login);</span>
+<span class="nc" id="L81">				uData.setPassword(password);</span>
+<span class="nc" id="L82">				uData.setCardNumber(cardNumber);</span>
+<span class="nc" id="L83">				uData.setAge(age); </span>
+<span class="nc" id="L84">				uData.setExpenseLimit(expenseLimit);</span>
+<span class="nc" id="L85">				logger.info(&quot;Updating user ...&quot;); </span>
+<span class="nc" id="L86">				UserData usData = client.updateUser(uData);</span>
+<span class="nc" id="L87">                userData.setLogin(usData.getLogin());</span>
+<span class="nc" id="L88">                userData.setPassword(usData.getPassword());</span>
+<span class="nc" id="L89">                userData.setAge(usData.getAge());</span>
+<span class="nc" id="L90">				userData.setCardNumber(usData.getCardNumber());</span>
+<span class="nc" id="L91">				userData.setExpenseLimit(usData.getExpenseLimit());</span>
+<span class="nc" id="L92">			}</span>
+		});
+
+<span class="fc" id="L95">		deleteExpense = new JButton(client.getResourceBundle().getString(&quot;deleteExpense&quot;)); </span>
+<span class="fc" id="L96">        registerPanel.add(deleteExpense); </span>
+<span class="fc" id="L97">        this.deleteExpense.addActionListener(new ActionListener(){</span>
+            @Override
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L100">                logger.info(&quot;Entering Action Listener of the deleteExpense&quot;);</span>
+			
+                
+<span class="nc" id="L103">				setVisible(false);</span>
+<span class="nc" id="L104">                client.deleteUser(userData);</span>
+				
+<span class="nc" id="L106">			}		</span>
+        });
+
+<span class="fc" id="L109">        buttonReturn= new JButton(client.getResourceBundle().getString(&quot;return&quot;));</span>
+<span class="fc" id="L110">		registerPanel.add(buttonReturn); </span>
+<span class="fc" id="L111">        buttonReturn.addActionListener(new ActionListener() {</span>
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L115">				logger.info(&quot;Entering the action listener of the return button&quot;); </span>
+                
+<span class="nc" id="L117">				logger.info(&quot;Opening the AddExpenseWindow&quot;); </span>
+
+<span class="nc" id="L119">                AddExpenseWindow aew = new AddExpenseWindow(userData,client); </span>
+<span class="nc" id="L120">				setVisible(false);</span>
+				
+<span class="nc" id="L122">			}</span>
+		});
+
+	
+        
+        // Adding the listeners to components..
+        
+<span class="fc" id="L129">        add(registerPanel, BorderLayout.CENTER);</span>
+<span class="fc" id="L130">        setTitle(client.getResourceBundle().getString(&quot;modifyUser&quot;));</span>
+<span class="fc" id="L131">        setSize(600, 500);</span>
+        
+        
+<span class="fc" id="L134">        setVisible(true);</span>
+	
+	
+<span class="fc" id="L137">	}</span>
+	
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

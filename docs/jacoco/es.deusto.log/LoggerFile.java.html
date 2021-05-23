@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LoggerFile.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExpeseTracker</a> &gt; <a href="index.source.html" class="el_package">es.deusto.log</a> &gt; <span class="el_source">LoggerFile.java</span></div><h1>LoggerFile.java</h1><pre class="source lang-java linenums">package es.deusto.log;
+
+import java.util.logging.*; 
+import java.io.IOException; 
+import java.util.logging.Logger;
+
+/**
+ * This is a logger class that systematically records events in a log to keep track of changes and communication happening in the execution of the program.
+ */
+
+public class LoggerFile {
+   
+	/**
+	 * Complete constructor.\n
+	 * @param Logger - composed of body text
+	 * @param fileHandler - writes logging records into a specific file
+	*/
+
+    static Logger logger;
+    public Handler fileHandler;
+    Formatter plainText;
+
+<span class="fc" id="L23">    private LoggerFile() throws IOException{</span>
+    	/**
+    	 * Instantiation of the logger
+    	 */
+<span class="fc" id="L27">        logger = Logger.getLogger(LoggerFile.class.getName());</span>
+        
+        /**
+    	 * Instantiation of the fileHandler
+    	 */
+<span class="fc" id="L32">        fileHandler = new FileHandler(&quot;myLog.txt&quot;,true);</span>
+<span class="fc" id="L33">        plainText = new SimpleFormatter();</span>
+<span class="fc" id="L34">        fileHandler.setFormatter(plainText);</span>
+<span class="fc" id="L35">        logger.addHandler(fileHandler);</span>
+
+<span class="fc" id="L37">    }</span>
+    /**
+	 * Method that selects specified file to dump logs into; In case the file is not found by the method, or doesn't exit, it will create one.
+	 */
+    private static Logger getLogger(){
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if(logger == null){</span>
+            try {
+<span class="fc" id="L44">                new LoggerFile();</span>
+<span class="pc" id="L45">            } catch (IOException e) {</span>
+<span class="nc" id="L46">                e.printStackTrace();</span>
+            }
+        }
+<span class="fc" id="L49">        return logger;</span>
+    }
+    /**
+	 * Method to call the log and write in it categorising the entry. The method receives two inputs:\n
+	 * @param level - used to specify by urgency the category of the log entry. 
+	 * @param msg - the body in form of text of the log
+	 */
+    public static void log(Level level, String msg){
+<span class="fc" id="L57">        getLogger().log(level, msg);</span>
+        //System.out.println(msg);
+<span class="fc" id="L59">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

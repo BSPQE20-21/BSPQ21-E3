@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExpenseData.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExpeseTracker</a> &gt; <a href="index.source.html" class="el_package">es.deusto.serialization</a> &gt; <span class="el_source">ExpenseData.java</span></div><h1>ExpenseData.java</h1><pre class="source lang-java linenums">package es.deusto.serialization;
+
+import es.deusto.server.jdo.Category;
+
+/**
+ * This objects collects all the information of an expense
+ */
+public class ExpenseData {
+
+    private String text;
+    private double amount;
+    private Category category;
+
+	/**
+	 * Complete constructor.\n
+	 * @param text - the description of the expense made
+	 * @param amount - the money it cost
+	 * @param category  - the type of expense made
+	 */
+    public ExpenseData(String text, double amount, Category category) {
+<span class="fc" id="L21">		super();</span>
+<span class="fc" id="L22">		this.text = text;</span>
+<span class="fc" id="L23">		this.amount = amount;</span>
+<span class="fc" id="L24">		this.category = category;</span>
+<span class="fc" id="L25">	}</span>
+	/**
+	 * Empty constructor
+	 */
+<span class="fc" id="L29">	public ExpenseData() {</span>
+
+<span class="fc" id="L31">    }</span>
+	
+	/**
+	 * Getters and Setters for the ExpenseData class
+	 */
+
+	public String getText() {
+<span class="fc" id="L38">		return text;</span>
+	}
+
+	public void setText(String text) {
+<span class="fc" id="L42">		this.text = text;</span>
+<span class="fc" id="L43">	}</span>
+
+	public double getAmount() {
+<span class="fc" id="L46">		return amount;</span>
+	}
+
+	public void setAmount(double amount) {
+<span class="fc" id="L50">		this.amount = amount;</span>
+<span class="fc" id="L51">	}</span>
+
+	public Category getCategory() {
+<span class="fc" id="L54">		return category;</span>
+	}
+
+	public void setCategory(Category category) {
+<span class="fc" id="L58">		this.category = category;</span>
+<span class="fc" id="L59">	}</span>
+	/**
+	 * TO STRING\n
+	 * Method that provides a string conversion display to print the data.
+	 * The format is the following:\n
+	 * Description: (amount), category. 
+	 */
+	@Override
+	public String toString() {
+<span class="fc" id="L68">		return &quot;Description:&quot; + text + &quot; (&quot; + amount + &quot;), Category:&quot; + category + &quot;&quot;;</span>
+	}
+
+
+    
+    
+  
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

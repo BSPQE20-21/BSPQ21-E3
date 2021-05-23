@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExampleClient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExpeseTracker</a> &gt; <a href="index.source.html" class="el_package">es.deusto.client</a> &gt; <span class="el_source">ExampleClient.java</span></div><h1>ExampleClient.java</h1><pre class="source lang-java linenums">package es.deusto.client;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+
+import es.deusto.serialization.DirectedMessage;
+import es.deusto.serialization.ExpenseData;
+import es.deusto.serialization.ExpenseList;
+import es.deusto.serialization.UserData;
+import es.deusto.serialization.LoginData;
+import es.deusto.server.jdo.Category;
+import es.deusto.server.jdo.Expense;
+import es.deusto.server.jdo.User;
+import java.util.*; 
+import es.deusto.log.LoggerFile; 
+import java.util.logging.Level; 
+
+import org.apache.log4j.Logger;
+/**
+ * The main CLIENT SIDE class\n
+ * The purpose of this class is to create the client and the WEBTARGET as well as to initialize the first window\n
+ * All the methods defined in this class are a bridge to the server side where the real actions are performed, none of this methods
+ * acces the DB they call the server side methods that acces them.\n
+ * This class has a resourceBoundle that detects the lenguage of the computer and stores the information inside the logger accordly
+ * 
+ * 
+ */
+
+public class ExampleClient {
+
+	private Client client;
+	private WebTarget webTarget;
+	private LoginWindow lw;
+<span class="fc" id="L40">	private static ResourceBundle resourceBundle = ResourceBundle.getBundle(&quot;SystemMessages&quot;, Locale.getDefault()); </span>
+<span class="fc" id="L41">	static Logger logger = Logger.getLogger(ExampleClient.class.getName());</span>
+
+
+	
+	/**
+	 * Constructor of the CLIENT 
+	 * Here is called the @see es.deusto.client.LoginWindow so the first window where the user can loged in is opened
+	 * @param hostname this information is stored insite the pom.xml and will be asigned in the main with an arg
+	 * @param port this information is stored insite the pom.xml and will be asigned in the main with an arg
+	 */
+	
+<span class="fc" id="L52">	public ExampleClient(String hostname, String port) {</span>
+<span class="fc" id="L53">		client = ClientBuilder.newClient();</span>
+<span class="fc" id="L54">		webTarget = client.target(String.format(&quot;http://%s:%s/rest/server&quot;, hostname, port));</span>
+<span class="fc" id="L55">		lw = new LoginWindow(this);</span>
+		//resourceBundle = ResourceBundle.getBundle(&quot;SystemMessages&quot;, Locale.getDefault());
+
+<span class="fc" id="L58">	}</span>
+
+	/**
+	 * This method allows a user to be registered insite the DB 
+	 * It calls the server side method @see es.deusto.server.Server (registerUser)
+	 * @param UserData userData -  the information of the user that sould be register is passed
+	 * @return nothing should be returned in this class 
+	 * 
+	 */
+	public void registerUser(UserData userData) {
+<span class="fc" id="L68">		WebTarget registerUserWebTarget = webTarget.path(&quot;register&quot;);</span>
+<span class="fc" id="L69">		Invocation.Builder invocationBuilder = registerUserWebTarget.request(MediaType.APPLICATION_JSON);</span>
+
+<span class="fc" id="L71">		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">		if (response.getStatus() != Status.OK.getStatusCode()) {</span>
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;error_connecting&quot;));
+<span class="nc" id="L74">			logger.info(resourceBundle.getString(&quot;error_connecting&quot;)); </span>
+			//System.out.println(&quot;Error connecting with the server. Code: &quot; + response.getStatus());
+<span class="nc" id="L76">		} else {</span>
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;persisting_user&quot;));
+<span class="fc" id="L78">			logger.info(resourceBundle.getString(&quot;persisting_user&quot;));</span>
+			//System.out.println(&quot;User correctly registered&quot;);
+
+		}
+<span class="fc" id="L82">	}</span>
+	
+	
+	/**
+	 * This method is called when the user introduces a new EXPENSE and desired to store it into the DB
+	 * Both userData and ExpenseData are needed so the relationship between who buys who is stored
+	 * @param userData - the loged user
+	 * @param expenseData - the expese that he/she desired to store
+	 * 
+	 */
+
+	public void storeExpense(UserData userData, ExpenseData expenseData) {
+<span class="fc" id="L94">		WebTarget storeExpenseWebTarget = webTarget.path(&quot;store&quot;);</span>
+<span class="fc" id="L95">		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);</span>
+
+<span class="fc" id="L97">		DirectedMessage directedMessage = new DirectedMessage();</span>
+
+<span class="fc" id="L99">		directedMessage.setUserData(userData);</span>
+
+<span class="fc" id="L101">		directedMessage.setExpenseData(expenseData);</span>
+
+<span class="fc" id="L103">		Response response = invocationBuilder.post(Entity.entity(directedMessage, MediaType.APPLICATION_JSON));</span>
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">		if (response.getStatus() != Status.OK.getStatusCode()) {</span>
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;error_connecting&quot;)); 
+			//System.out.println(&quot;Error connecting with the server. Code: &quot; + response.getStatus());
+<span class="nc" id="L107">			logger.info(resourceBundle.getString(&quot;error_connecting&quot;));</span>
+<span class="nc" id="L108">		} else {</span>
+			//String responseMessage = response.readEntity(String.class);
+			//System.out.println(&quot;* Message coming from the server: '&quot; + responseMessage + &quot;'&quot;);
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;store_expense&quot;)); 
+<span class="fc" id="L112">			logger.info(resourceBundle.getString(&quot;store_expense&quot;));</span>
+		}
+<span class="fc" id="L114">	}</span>
+	/**
+	 * This method validated if the user that is trying to access the site is already loged in or not
+	 * This will call the @see es.deusto.server.Server (validateUser) which will access the BD and check if the user is registred
+	 * @param login - email
+	 * @param password 
+	 * @return UserData - it will return the actual loged in user
+	 */
+	public UserData validateUser(String login, String password){
+<span class="fc" id="L123">		WebTarget storeExpenseWebTarget = webTarget.path(&quot;validate&quot;);</span>
+<span class="fc" id="L124">		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);</span>
+
+
+<span class="fc" id="L127">		LoginData loginData = new LoginData(); </span>
+<span class="fc" id="L128">		loginData.setLogin(login); </span>
+<span class="fc" id="L129">		loginData.setPassword(password); </span>
+<span class="fc" id="L130">		Response response = invocationBuilder.post(Entity.entity(loginData, MediaType.APPLICATION_JSON));</span>
+<span class="fc" id="L131">		UserData userData = response.readEntity(UserData.class);</span>
+<span class="pc bpc" id="L132" title="1 of 2 branches missed.">		if (response.getStatus() != Status.OK.getStatusCode()) {</span>
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;error_connecting&quot;)); 
+			//System.out.println(&quot;Error connecting with the server. Code: &quot; + response.getStatus());
+<span class="nc" id="L135">			logger.info(resourceBundle.getString(&quot;error_connecting&quot;));</span>
+
+<span class="nc" id="L137">		} else {</span>
+
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;validate_user&quot;)); 
+
+
+<span class="fc" id="L142">			logger.info(resourceBundle.getString(&quot;validate_user&quot;));</span>
+
+			
+		}
+<span class="fc" id="L146">		return userData; </span>
+
+	}
+
+	/**
+	 * This method looks inside the DB for all the expenses of a concrete user
+	 * This method will call the @see es.deusto.server.Server (showExpense) that will be the one accesing the BD
+	 * This method is called inside the @see es.deusto.client.AddExpenseWindow
+	 * @param userData - the user that is logged in
+	 * @return Set&lt;ExpenseData&gt; a set of all the expenses of the concrete user
+	 * 
+	 */
+
+	public 	Set&lt;ExpenseData&gt; showExpenses(UserData userData){
+<span class="fc" id="L160">		WebTarget storeExpenseWebTarget = webTarget.path(&quot;showExpenses&quot;);</span>
+<span class="fc" id="L161">		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);</span>
+
+<span class="fc" id="L163">		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));</span>
+		//ExpenseList expenses = response.readEntity(ExpenseList.class);
+<span class="fc" id="L165">		ExpenseList expenseList = response.readEntity(ExpenseList.class); </span>
+
+
+<span class="pc bpc" id="L168" title="1 of 2 branches missed.">		if (response.getStatus() != Status.OK.getStatusCode()) {</span>
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;error_connecting&quot;)); 
+			//System.out.println(&quot;Error connecting with the server. Code: &quot; + response.getStatus());
+<span class="nc" id="L171">			logger.info(resourceBundle.getString(&quot;error_connecting&quot;));</span>
+<span class="nc" id="L172">		} else {</span>
+			//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;show_expenses&quot;)); 
+<span class="fc" id="L174">			logger.info(resourceBundle.getString(&quot;show_expenses&quot;));</span>
+		}
+
+<span class="fc" id="L177">		Set&lt;ExpenseData&gt; expenses = expenseList.getExpenseList(); </span>
+		//System.out.println(expenses.getExpenseList());
+<span class="fc" id="L179">		return expenses; </span>
+
+	}
+
+
+	/**
+	 * UPDATE USER\n
+	 * This method connects with the server part and request to update the info of the DB
+	 * @param userData - the updated user
+	 * @return user - the updated user so it can be passed trought the windows
+	 */
+	public UserData updateUser(UserData userData){
+<span class="fc" id="L191">		WebTarget storeExpenseWebTarget = webTarget.path(&quot;update&quot;);</span>
+<span class="fc" id="L192">		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);</span>
+
+<span class="fc" id="L194">		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));</span>
+<span class="fc" id="L195">		UserData uData = response.readEntity(UserData.class);</span>
+<span class="pc bpc" id="L196" title="1 of 2 branches missed.">		if (response.getStatus() != Status.OK.getStatusCode()) {</span>
+	
+<span class="nc" id="L198">			logger.info(resourceBundle.getString(&quot;error_connecting&quot;));</span>
+
+<span class="nc" id="L200">		} else {</span>
+<span class="fc" id="L201">			logger.info(resourceBundle.getString(&quot;validate_user&quot;));</span>
+		}
+<span class="fc" id="L203">		System.out.println(uData);</span>
+<span class="fc" id="L204">		return uData; </span>
+	}
+
+	/**
+	 * DELETE USER\n
+	 * This method connects with the server part and request to delete the info of the user inse theDB
+	 * @param userData - the updated user
+	 * 
+	 */
+	public void deleteUser(UserData userData){
+<span class="fc" id="L214">		WebTarget storeExpenseWebTarget = webTarget.path(&quot;deleteUser&quot;);</span>
+<span class="fc" id="L215">		Invocation.Builder invocationBuilder = storeExpenseWebTarget.request(MediaType.APPLICATION_JSON);</span>
+
+<span class="fc" id="L217">		Response response = invocationBuilder.post(Entity.entity(userData, MediaType.APPLICATION_JSON));</span>
+		
+<span class="pc bpc" id="L219" title="1 of 2 branches missed.">		if (response.getStatus() != Status.OK.getStatusCode()) {</span>
+<span class="nc" id="L220">			logger.info(resourceBundle.getString(&quot;error_connecting&quot;));</span>
+
+<span class="nc" id="L222">		} else {</span>
+<span class="fc" id="L223">			logger.info(resourceBundle.getString(&quot;delete_user&quot;));</span>
+		}
+<span class="fc" id="L225">	}</span>
+
+
+
+	public ResourceBundle getResourceBundle(){
+<span class="fc" id="L230">		return resourceBundle; </span>
+	}
+
+	
+	public static void main(String[] args) {
+<span class="nc bnc" id="L235" title="All 2 branches missed.">		if (args.length != 2) {</span>
+<span class="nc" id="L236">			System.out.println(&quot;Use: java Client.Client [host] [port]&quot;);</span>
+<span class="nc" id="L237">			System.exit(0);</span>
+		}
+
+<span class="nc" id="L240">		String hostname = args[0];</span>
+<span class="nc" id="L241">		String port = args[1];</span>
+		
+		//resourceBundle = ResourceBundle.getBundle(&quot;SystemMessages&quot;,	Locale.forLanguageTag(&quot;es&quot;));
+
+<span class="nc" id="L245">		logger.info(resourceBundle.getString(&quot;starting_msg&quot;));</span>
+<span class="nc" id="L246">		logger.info(resourceBundle.getString(&quot;app_title&quot;));</span>
+<span class="nc" id="L247">        logger.info(resourceBundle.getString(&quot;app_underline&quot;));</span>
+		//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;starting_msg&quot;)); 
+		//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;app_title&quot;)); 
+		//LoggerFile.log(Level.INFO, resourceBundle.getString(&quot;app_underline&quot;)); 
+
+<span class="nc" id="L252">		ExampleClient client = new ExampleClient(hostname, port);</span>
+
+<span class="nc" id="L254">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

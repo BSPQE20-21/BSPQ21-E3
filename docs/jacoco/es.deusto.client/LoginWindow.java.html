@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LoginWindow.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExpeseTracker</a> &gt; <a href="index.source.html" class="el_package">es.deusto.client</a> &gt; <span class="el_source">LoginWindow.java</span></div><h1>LoginWindow.java</h1><pre class="source lang-java linenums">package es.deusto.client;
+
+// We need to change it, I just copy paste it from the internet so we can use it as a base
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import es.deusto.serialization.UserData;
+import org.apache.log4j.Logger;
+
+/**
+ * @class LOGIN WINDOW
+ * The initial window that allows each user to enter the aplication if they are already registred.
+ * If the user is not registered there is a way to change the window to @see es.deusto.client.RegisterWindow
+ * 
+ */
+public class LoginWindow extends JFrame implements ActionListener {
+
+  
+	private static final long serialVersionUID = 1L;
+	JPanel panel;
+	JLabel user_label, password_label, message;
+    JTextField userName_text;
+    JPasswordField password_text;
+    JButton login, register;
+    private ExampleClient client;
+<span class="fc" id="L38">    static Logger logger = Logger.getLogger(LoginWindow.class.getName());</span>
+
+    /**
+     * Constructor of the window just receives the client created on the @see es.deusto.client.ExampleClient
+     * All the JLabels, JTextFields and JButtons are created as a form so the users can easily add their data to the window
+     * @param client
+     */
+<span class="fc" id="L45">    LoginWindow(ExampleClient client) {</span>
+<span class="fc" id="L46">        logger.info(&quot;Entering constructor&quot;);</span>
+
+<span class="fc" id="L48">        this.client = client; </span>
+        // User Label
+<span class="fc" id="L50">        user_label = new JLabel();</span>
+<span class="fc" id="L51">        user_label.setText(client.getResourceBundle().getString(&quot;email&quot;));</span>
+<span class="fc" id="L52">        userName_text = new JTextField(15);</span>
+        
+        // Password
+
+<span class="fc" id="L56">        password_label = new JLabel();</span>
+<span class="fc" id="L57">        password_label.setText(client.getResourceBundle().getString(&quot;password&quot;));</span>
+<span class="fc" id="L58">        password_text = new JPasswordField(10);</span>
+
+<span class="fc" id="L60">        panel = new JPanel(new GridLayout(3,1));</span>
+        
+<span class="fc" id="L62">		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</span>
+
+<span class="fc" id="L64">        panel.add(user_label);</span>
+<span class="fc" id="L65">        panel.add(userName_text);</span>
+<span class="fc" id="L66">        panel.add(password_label);</span>
+<span class="fc" id="L67">        panel.add(password_text);</span>
+
+<span class="fc" id="L69">        JPanel buttonPanel = new JPanel();</span>
+        
+<span class="fc" id="L71">        login = new JButton(client.getResourceBundle().getString(&quot;login&quot;));</span>
+        
+<span class="fc" id="L73">        buttonPanel.add(login);</span>
+        
+<span class="fc" id="L75">        login.addActionListener(this);</span>
+        
+<span class="fc" id="L77">        register = new JButton(client.getResourceBundle().getString(&quot;register&quot;));</span>
+        
+<span class="fc" id="L79">        register.addActionListener(new ActionListener() {</span>
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L83">				logger.info(&quot;Entering Action Listener of the register button&quot;);</span>
+<span class="nc" id="L84">				logger.info(&quot;Opening the all RegisterWindow &quot;);</span>
+
+<span class="nc" id="L86">				setVisible(false);</span>
+<span class="nc" id="L87">				RegisterWindow rw = new RegisterWindow(client);</span>
+				//rw.setVisible(true);
+				
+<span class="nc" id="L90">			}</span>
+		});
+        
+<span class="fc" id="L93">        buttonPanel.add(register);</span>
+        
+<span class="fc" id="L95">        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+        
+        // Adding the listeners to components..
+        
+<span class="fc" id="L99">        add(panel, BorderLayout.CENTER);</span>
+<span class="fc" id="L100">        setTitle(client.getResourceBundle().getString(&quot;login_msg&quot;));</span>
+<span class="fc" id="L101">        setSize(600, 500);</span>
+<span class="fc" id="L102">        getContentPane().add(panel,&quot;North&quot;);</span>
+<span class="fc" id="L103">        getContentPane().add(buttonPanel,&quot;South&quot;);</span>
+<span class="fc" id="L104">        setVisible(true);</span>
+
+<span class="fc" id="L106">    }</span>
+
+    /**
+     * The ACTION LISTENER is related to the JButton LoginIn
+     * The user introduces the email and the password and the method validate user @see es.deusto.client.Client.validaUser is called
+     * This method returns a TRUE or FALSE and only if the user is stored(TRUE) he/she will be able to access the program 
+     * 
+     */
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+<span class="nc" id="L116">        logger.info(&quot;Entering Action Listener &quot;);</span>
+
+<span class="nc" id="L118">    	String userName = userName_text.getText();</span>
+<span class="nc" id="L119">        String password = String.valueOf(password_text.getPassword()); </span>
+       // TODO create method validate user
+<span class="nc" id="L121">       logger.info(&quot;Validating the user ... &quot;); </span>
+<span class="nc" id="L122">       UserData userData = client.validateUser(userName, password);</span>
+
+<span class="nc bnc" id="L124" title="All 2 branches missed.">       if(userData.getLogin() != null){</span>
+<span class="nc" id="L125">        this.setVisible(false); </span>
+
+<span class="nc" id="L127">        logger.info(&quot;Opening the AddExpenseWindow&quot;);</span>
+
+<span class="nc" id="L129">        AddExpenseWindow aew = new AddExpenseWindow(userData, client);</span>
+        
+    }
+    
+    
+<span class="nc" id="L134">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

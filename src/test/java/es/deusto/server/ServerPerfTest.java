@@ -27,9 +27,9 @@ import org.junit.Rule;
 import com.github.javatlacati.contiperf.PerfTest;
 import com.github.javatlacati.contiperf.Required;
 import com.github.javatlacati.contiperf.junit.ContiPerfRule;
-@PerfTest(invocations = 5)
-@Required(max = 1200, average = 250)
-@Testable
+//@PerfTest(invocations = 5)
+//@Required(max = 1200, average = 250)
+//@Testable
 public class ServerPerfTest {
 	
 	Server server;
@@ -73,8 +73,8 @@ public class ServerPerfTest {
 	 * @throws Exception
 	 */
 	@Test
-	@PerfTest(invocations = 100, threads = 20)
-	@Required(max = 20000, average = 3000)
+	@PerfTest(invocations = 5, threads = 10)
+	@Required(max = 7000, average = 2000)
 	public void testServer() throws Exception {
 		server = new Server();
 	}
@@ -82,8 +82,8 @@ public class ServerPerfTest {
 	/**This test validates if the response of the method registerUser is the same as the expected
 	 * @throws Exception
 	 */
-	@PerfTest(invocations = 5)
-	@Required(max = 1200, average = 250)
+	@PerfTest(invocations = 5, threads = 10)
+	@Required(max = 1000, average = 250)
 	@Testable
 	public void testRegisterUser() throws Exception {
 		logger.info("Entering testRegisterUser");
@@ -106,8 +106,8 @@ public class ServerPerfTest {
 	 * To do so we look if the RESPONSE is OK and if it we can say that the expense has been correctly stored.
 	 * @throws Exception
 	 */
-	@PerfTest(invocations = 5)
-	@Required(max = 1200, average = 250)
+	@PerfTest(invocations = 5, threads = 10)
+	@Required(max = 1000, average = 250)
 	@Testable
 	public void testStoreExpense() throws Exception {
 		logger.info("Entering testStoreExpense");
@@ -121,8 +121,8 @@ public class ServerPerfTest {
 	/**This test validates if the response obtained when validating the user is the expected
 	 * @throws Exception
 	 */
-	@PerfTest(invocations = 5)
-	@Required(max = 1200, average = 250)
+	@PerfTest(invocations = 5, threads = 10)
+	@Required(max = 1000, average = 250)
 	@Testable
 	public void testValidateUser() throws Exception {
 		logger.info("Entering testValidateUser");
@@ -140,8 +140,8 @@ public class ServerPerfTest {
 	/**This test validates the resonse of the methos show expense is the same as the expected
 	 * @throws Exception
 	 */
-	@PerfTest(invocations = 5)
-	@Required(max = 1200, average = 250)
+	@PerfTest(invocations = 5, threads = 10)
+	@Required(max = 1000, average = 250)
 	@Testable
 	public void testShowExpenses() throws Exception {
 		logger.info("Entering testShowExpenses");
@@ -163,8 +163,8 @@ public class ServerPerfTest {
 	/**This test validates if the response of the method updateUser is the same as the expected
 	 * @throws Exception
 	 */
-	@PerfTest(invocations = 5)
-	@Required(max = 1200, average = 250)
+	@PerfTest(invocations = 5, threads = 10)
+	@Required(max = 1000, average = 250)
 	@Testable
 	public void testUpdateUser()throws Exception{
 		logger.info("Entering testUpdateUser");

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AddExpenseWindow.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExpeseTracker</a> &gt; <a href="index.source.html" class="el_package">es.deusto.client</a> &gt; <span class="el_source">AddExpenseWindow.java</span></div><h1>AddExpenseWindow.java</h1><pre class="source lang-java linenums">package es.deusto.client;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+
+import es.deusto.serialization.*;
+import es.deusto.server.jdo.*;
+import java.util.*; 
+import org.apache.log4j.Logger;
+
+
+/** 
+*@class ADD EXPENSE WINDOW
+*This class constructs the window that allows users to add expenses 
+*The class is based on a form where users can add the following attributes
+* expenseName = description of the purchase \n
+* expenseAmount = the money spent \n
+* expenseCategory (comboBox that gets the data from an Enum) \n
+*/
+
+public class AddExpenseWindow extends JFrame  {
+	
+
+	private static final long serialVersionUID = 1L;
+	
+	JButton submit; /**&lt; JButtons that allow us to add a new expense */
+	JLabel expenseName, expenseAmount, expenseCategory; 
+	JComboBox&lt;Category&gt; comboCategory; /**&lt; Shows all the categories that the user can add*/
+	JTextField name_text, amount_text;
+
+	private ExampleClient client; 
+<span class="fc" id="L42">	static Logger logger = Logger.getLogger(AddExpenseWindow.class.getName());</span>
+
+	/**
+	 * (Not used method) 
+	 * The main purpose is to change from one window to another making the JPanel visible and enabled TRUE, and the other one visible and enabled FALSE 
+	 */
+
+	public void switchPanel(JPanel current, JPanel next) {
+		
+<span class="nc" id="L51">		current.setVisible(false);</span>
+<span class="nc" id="L52">		current.setEnabled(false);</span>
+<span class="nc" id="L53">		next.setVisible(true);</span>
+<span class="nc" id="L54">		next.setEnabled(true);</span>
+		  
+<span class="nc" id="L56">	}</span>
+	/**
+ 	* Constructor of the window
+ 	* UserData is passed as a parameter so the expense can be assigned to the logged in user
+ 	* @param UserData the user that is logged in 
+	* @param ExampleClient the client created in @see es.deusto.client.ExampleClient
+	* 	
+ 	*/
+	
+<span class="fc" id="L65">	public AddExpenseWindow(UserData userData, ExampleClient client) {</span>
+<span class="fc" id="L66">		logger.info(&quot;Entering constructor&quot;);</span>
+<span class="fc" id="L67">		this.client = client; </span>
+		JPanel panelAddExpense;
+<span class="fc" id="L69">		panelAddExpense = new JPanel();</span>
+<span class="fc" id="L70">		panelAddExpense.setLayout(new BoxLayout(panelAddExpense, BoxLayout.Y_AXIS));</span>
+		
+	
+<span class="fc" id="L73">		expenseName = new JLabel(client.getResourceBundle().getString(&quot;description&quot;));</span>
+<span class="fc" id="L74">		name_text = new JTextField(14);</span>
+<span class="fc" id="L75">		panelAddExpense.add(expenseName);</span>
+<span class="fc" id="L76">		panelAddExpense.add(name_text);</span>
+		
+<span class="fc" id="L78">		expenseAmount = new JLabel(client.getResourceBundle().getString(&quot;amount&quot;));</span>
+<span class="fc" id="L79">		amount_text = new JTextField(6);</span>
+<span class="fc" id="L80">		panelAddExpense.add(expenseAmount);</span>
+<span class="fc" id="L81">		panelAddExpense.add(amount_text);</span>
+		
+<span class="fc" id="L83">		expenseCategory = new JLabel(client.getResourceBundle().getString(&quot;category&quot;));</span>
+<span class="fc" id="L84">		comboCategory = new JComboBox&lt;Category&gt;();</span>
+		
+<span class="fc bfc" id="L86" title="All 2 branches covered.">		for (Category c : Category.values()) {</span>
+<span class="fc" id="L87">			comboCategory.addItem(c);</span>
+		}
+		
+<span class="fc" id="L90">		panelAddExpense.add(expenseCategory);</span>
+<span class="fc" id="L91">		panelAddExpense.add(comboCategory);</span>
+		
+		JPanel buttonJPanel;
+<span class="fc" id="L94">		buttonJPanel = new JPanel();</span>
+<span class="fc" id="L95">		buttonJPanel.setLayout(new BoxLayout(buttonJPanel, BoxLayout.Y_AXIS));</span>
+		//Add buttons
+<span class="fc" id="L97">		JButton add = new JButton(client.getResourceBundle().getString(&quot;add&quot;));</span>
+		
+		
+		/** The action listener is assigned to the ADD button
+		 * Each time we click on ADD a new expense is created and stored in the DB 
+		 * The client is called so it can manage the connection with the server and send the request of storage
+		 */
+<span class="fc" id="L104">		add.addActionListener(new ActionListener() {</span>
+
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L109">				logger.info(&quot;Entering Action Listener of the add button&quot;);</span>
+				
+<span class="nc" id="L111">				String name = name_text.getText();</span>
+<span class="nc" id="L112">				double amount = Double.parseDouble(amount_text.getText());</span>
+<span class="nc" id="L113">				Category category = (Category) comboCategory.getSelectedItem();</span>
+				
+<span class="nc" id="L115">				ExpenseData expenseData = new ExpenseData();</span>
+<span class="nc" id="L116">				expenseData.setText(name);</span>
+<span class="nc" id="L117">				expenseData.setAmount(amount);</span>
+<span class="nc" id="L118">				expenseData.setCategory(category);</span>
+<span class="nc" id="L119">				logger.info(&quot;Storing expenses ...&quot;);</span>
+
+<span class="nc" id="L121">				client.storeExpense(userData, expenseData);</span>
+				//switchPanel(panelAddExpense, NEXTPANEL);
+				
+<span class="nc" id="L124">			}</span>
+		});
+		
+		
+		
+<span class="fc" id="L129">		JButton allExepenses = new JButton(client.getResourceBundle().getString(&quot;showExpense&quot;));</span>
+		/**
+		 * This ACTION LISTENER is related to the allExpenses JButton \n
+		 * After clicking on it a new window is opened @see es.deusto.client.AllExpensesWindow \n
+		 * Before changing the window a request is made to the DB where given a USER all the expenses related to he/she are extracted \n
+		 * In order to do so the method showExpenses is called (@see es.Deusto.client.ExampleClient.showExpenses)
+		 */
+<span class="fc" id="L136">		allExepenses.addActionListener(new ActionListener(){</span>
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L140">				logger.info(&quot;Entering Action Listener of the all expenses button&quot;);</span>
+				//switchPanel(panelAddExpense, PREVIOUSPANEL);
+<span class="nc" id="L142">				Set&lt;ExpenseData&gt; expenses = client.showExpenses(userData);</span>
+<span class="nc" id="L143">				System.out.println(expenses);	</span>
+<span class="nc" id="L144">				logger.info(&quot;Opening the all expense window&quot;);</span>
+<span class="nc" id="L145">				AllExpensesWindow allexp = new AllExpensesWindow(client, expenses, userData); </span>
+<span class="nc" id="L146">				setVisible(false); </span>
+<span class="nc" id="L147">			}		</span>
+			
+		});
+<span class="fc" id="L150">		JButton modifyUser = new JButton(client.getResourceBundle().getString(&quot;modifyUser&quot;));</span>
+<span class="fc" id="L151">		modifyUser.addActionListener(new ActionListener(){</span>
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L155">				logger.info(&quot;Entering Action Listener of the modifyUser button&quot;);</span>
+<span class="nc" id="L156">				logger.info(&quot;Opening the ModifyUserWindow&quot;);</span>
+<span class="nc" id="L157">				ModifyUserWindow muw = new ModifyUserWindow(client, userData); </span>
+<span class="nc" id="L158">				setVisible(false); </span>
+<span class="nc" id="L159">			}		</span>
+			
+		});
+
+
+
+<span class="fc" id="L165">		buttonJPanel.add(add); </span>
+<span class="fc" id="L166">		buttonJPanel.add(allExepenses); </span>
+<span class="fc" id="L167">		buttonJPanel.add(modifyUser); </span>
+
+
+
+		
+
+<span class="fc" id="L173">		getContentPane().add(panelAddExpense,&quot;North&quot;); </span>
+<span class="fc" id="L174">		getContentPane().add(buttonJPanel,&quot;South&quot;); </span>
+<span class="fc" id="L175">		setDefaultCloseOperation(EXIT_ON_CLOSE);</span>
+<span class="fc" id="L176">		setTitle(client.getResourceBundle().getString(&quot;addExpenses&quot;));</span>
+<span class="fc" id="L177">		setSize(600, 500);</span>
+<span class="fc" id="L178">		setVisible(true);</span>
+
+		
+<span class="fc" id="L181">	}</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

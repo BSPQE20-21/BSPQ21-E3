@@ -1,0 +1,25 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ExpeseTracker,es.deusto.client,LoginWindow.new ActionListener() {...},17,9,0,0,5,1,1,1,1,1
+ExpeseTracker,es.deusto.client,ModifyUserWindow,0,221,0,0,0,36,0,2,0,2
+ExpeseTracker,es.deusto.client,AllExpensesWindow,0,138,0,2,0,26,0,3,0,2
+ExpeseTracker,es.deusto.client,RegisterWindow,77,194,2,0,21,34,2,2,1,2
+ExpeseTracker,es.deusto.client,AllExpensesWindow.new ActionListener() {...},19,12,0,0,5,1,1,1,1,1
+ExpeseTracker,es.deusto.client,LoginWindow,38,169,2,0,10,31,2,2,1,2
+ExpeseTracker,es.deusto.client,ModifyUserWindow.new ActionListener() {...},19,12,0,0,5,1,1,1,1,1
+ExpeseTracker,es.deusto.client,AddExpenseWindow.new ActionListener() {...},29,12,0,0,7,1,1,1,1,1
+ExpeseTracker,es.deusto.client,AddExpenseWindow.new ActionListener() {...},43,12,0,0,11,1,1,1,1,1
+ExpeseTracker,es.deusto.client,ModifyUserWindow.new ActionListener() {...},13,12,0,0,4,1,1,1,1,1
+ExpeseTracker,es.deusto.client,AddExpenseWindow.new ActionListener() {...},19,12,0,0,5,1,1,1,1,1
+ExpeseTracker,es.deusto.client,ModifyUserWindow.new ActionListener() {...},79,27,0,0,20,1,1,1,1,1
+ExpeseTracker,es.deusto.client,ExampleClient,75,270,8,6,22,55,8,9,1,9
+ExpeseTracker,es.deusto.client,AddExpenseWindow,13,216,0,2,5,38,1,3,1,2
+ExpeseTracker,es.deusto.server.jdo,User,285,659,62,73,1,35,56,81,9,53
+ExpeseTracker,es.deusto.server.jdo,Category,0,64,0,0,0,2,0,1,0,1
+ExpeseTracker,es.deusto.server.jdo,Expense,512,532,109,67,0,27,88,62,14,42
+ExpeseTracker,es.deusto.serialization,ExpenseList,0,15,0,0,0,6,0,3,0,3
+ExpeseTracker,es.deusto.serialization,ExpenseData,0,55,0,0,0,17,0,9,0,9
+ExpeseTracker,es.deusto.serialization,UserData,0,87,0,0,0,25,0,13,0,13
+ExpeseTracker,es.deusto.serialization,DirectedMessage,0,26,0,0,0,12,0,6,0,6
+ExpeseTracker,es.deusto.serialization,LoginData,16,26,0,0,1,12,1,6,1,6
+ExpeseTracker,es.deusto.log,LoggerFile,3,40,0,2,1,13,0,4,0,3
+ExpeseTracker,es.deusto.server,Server,66,452,13,15,17,101,13,8,0,7

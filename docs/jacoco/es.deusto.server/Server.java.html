@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Server.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExpeseTracker</a> &gt; <a href="index.source.html" class="el_package">es.deusto.server</a> &gt; <span class="el_source">Server.java</span></div><h1>Server.java</h1><pre class="source lang-java linenums">package es.deusto.server;
+
+import javax.jdo.PersistenceManager;
+import javax.jdo.PersistenceManagerFactory;
+import javax.jdo.Query;
+import javax.jdo.JDOHelper;
+import javax.jdo.Transaction;
+
+import es.deusto.server.jdo.User;
+import es.deusto.server.jdo.Expense;
+import es.deusto.serialization.DirectedMessage;
+import es.deusto.serialization.ExpenseData;
+import es.deusto.serialization.UserData;
+import es.deusto.serialization.LoginData;
+import es.deusto.serialization.ExpenseList;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+import java.util.*;
+import javax.jdo.Extent;
+import es.deusto.log.LoggerFile;
+import java.util.logging.Level;
+
+/**
+ * This class is the most important part os the server side\n It is filled with
+ * methods that access and store or stract values from the DB\n To acces the DB
+ * we use Jenkins\n The es.deusto.client.ExampleClient methods usually are
+ * connected to the ones in this class
+ */
+
+@Path(&quot;/server&quot;)
+@Produces(MediaType.APPLICATION_JSON)
+public class Server {
+
+<span class="fc" id="L40">	private int cont = 0;</span>
+<span class="fc" id="L41">	private PersistenceManager pm = null;</span>
+<span class="fc" id="L42">	private Transaction tx = null;</span>
+
+	/**
+	 * Constructor. \n
+	 * The PersistenceManager is initialized as well as the Transaction
+	 */
+<span class="fc" id="L48">	public Server() {</span>
+<span class="fc" id="L49">		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory(&quot;datanucleus.properties&quot;);</span>
+<span class="fc" id="L50">		this.pm = pmf.getPersistenceManager();</span>
+<span class="fc" id="L51">		this.tx = pm.currentTransaction();</span>
+<span class="fc" id="L52">	}</span>
+
+	/**
+	 * STORE EXPENSE\n
+	 * The idea is to store the expense and the relationship between the user\n 
+	 * This method is called from the es.deusto.client.ExampleClient.storeExpense class which receives the info from the es.deusto.client.AddExpenseWindow\n
+	 * @param directedExpense - is the object that stores both the user and the expense
+	 * @return RESPONSE (OK or NOT OK)
+	 */
+	@POST
+	@Path(&quot;/store&quot;)
+	public Response storeExpense(DirectedMessage directedExpense) {
+<span class="fc" id="L64">		User user = null;</span>
+		try {
+<span class="fc" id="L66">			tx.begin();</span>
+
+<span class="fc" id="L68">			Query&lt;User&gt; q = pm.newQuery(&quot;SELECT FROM &quot; + User.class.getName() + &quot; WHERE login == \&quot;&quot;</span>
+<span class="fc" id="L69">					+ directedExpense.getUserData().getLogin() + &quot;\&quot; &amp;&amp;  password == \&quot;&quot;</span>
+<span class="fc" id="L70">					+ directedExpense.getUserData().getPassword() + &quot;\&quot;&quot;);</span>
+<span class="fc" id="L71">			q.setUnique(true);</span>
+<span class="fc" id="L72">			user = (User)q.execute();</span>
+			
+			//System.out.println(&quot;User retreived: &quot; + user);
+<span class="fc" id="L75">			LoggerFile.log(Level.INFO,  &quot;User retreived: &quot; + user);</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">			if (user != null)  {</span>
+<span class="fc" id="L77">				Expense expense = new Expense(directedExpense.getExpenseData().getText(), directedExpense.getExpenseData().getAmount(), directedExpense.getExpenseData().getCategory());</span>
+<span class="fc" id="L78">				user.getMessages().add(expense);</span>
+<span class="fc" id="L79">				pm.makePersistent(user);</span>
+			}
+<span class="fc" id="L81">			tx.commit();</span>
+<span class="fc" id="L82">		} finally {</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">			if (tx.isActive()) {</span>
+<span class="nc" id="L84">				tx.rollback();</span>
+			}
+		}
+
+<span class="pc bpc" id="L88" title="1 of 2 branches missed.">		if (user != null) {</span>
+<span class="fc" id="L89">			cont++;</span>
+			// System.out.println(&quot; * Client number: &quot; + cont);
+<span class="fc" id="L91">			LoggerFile.log(Level.INFO, &quot; * Client number: &quot; + cont);</span>
+<span class="fc" id="L92">			ExpenseData expenseData = new ExpenseData();</span>
+<span class="fc" id="L93">			expenseData.setText(directedExpense.getExpenseData().getText());</span>
+<span class="fc" id="L94">			expenseData.setAmount(directedExpense.getExpenseData().getAmount());</span>
+<span class="fc" id="L95">			expenseData.setCategory(directedExpense.getExpenseData().getCategory());</span>
+
+<span class="fc" id="L97">			return Response.ok(expenseData).build();</span>
+		} else {
+<span class="nc" id="L99">			return Response.status(Status.BAD_REQUEST)</span>
+<span class="nc" id="L100">					.entity(&quot;Login details supplied for message delivery are not correct&quot;).build();</span>
+		}
+	}
+
+	/**
+	 * VALIDATE USER.\n
+	 * This method access the DB and searches if the given user is already stored\n
+	 * This method is called from the client side class es.deusto.client.ExampleClient 
+	 * and the data is received from the es.deusto.client.LoginWindow\n
+	 * 
+	 * @param loginData - user and password of the user
+	 * @return - USER DATA it will return the actual user if it is already registred
+	 */
+	@POST
+	@Path(&quot;/validate&quot;)
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response validateUser(LoginData loginData) {
+		try {
+<span class="fc" id="L118">			tx.begin();</span>
+<span class="fc" id="L119">			User user = null;</span>
+<span class="fc" id="L120">			UserData userData = new UserData();</span>
+			try {
+<span class="fc" id="L122">				user = pm.getObjectById(User.class, loginData.getLogin());</span>
+<span class="pc" id="L123">			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {</span>
+				
+<span class="nc" id="L125">				LoggerFile.log(Level.SEVERE, jonfe.getMessage());</span>
+			}
+<span class="fc" id="L127">			System.out.println(&quot;User: &quot; + user);</span>
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">			if (user != null) {</span>
+<span class="pc bpc" id="L129" title="1 of 2 branches missed.">				if ((loginData.getPassword()).equals(user.getPassword())) {</span>
+				
+<span class="fc" id="L131">					userData.setLogin(user.getLogin());</span>
+<span class="fc" id="L132">					userData.setPassword(user.getPassword());</span>
+<span class="fc" id="L133">					userData.setCardNumber(user.getCardNumber());</span>
+<span class="fc" id="L134">					userData.setAge(user.getAge());</span>
+<span class="fc" id="L135">					userData.setExpenseLimit(user.getExpenseLimit());</span>
+				}
+
+<span class="fc" id="L138">			} else {</span>
+<span class="nc" id="L139">				LoggerFile.log(Level.INFO, &quot;User not registred&quot;);</span>
+				
+
+			}
+<span class="fc" id="L143">			tx.commit();</span>
+
+<span class="fc" id="L145">			return Response.ok().entity(userData).build();</span>
+		} finally {
+<span class="pc bpc" id="L147" title="1 of 2 branches missed.">			if (tx.isActive()) {</span>
+<span class="nc" id="L148">				tx.rollback();</span>
+			}
+
+		}
+	}
+
+	/**
+	 * REGISTER USER.\n
+	 * This method stores a new user inside the DB\n
+	 * This method is called in the es.deusto.client.ExampleClient class and the data of the user is obtained in the es.deusto.client.RegisterWindow\n
+	 * @param userData
+	 * @return (OK or not OK)
+	 */
+
+	@POST
+	@Path(&quot;/register&quot;)
+	public Response registerUser(UserData userData) {
+		try {
+<span class="fc" id="L166">			tx.begin();</span>
+<span class="fc" id="L167">			System.out.println(&quot;Checking whether the user already exits or not: '&quot; + userData.getLogin() + &quot;'&quot;);</span>
+<span class="fc" id="L168">			User user = null;</span>
+			try {
+<span class="fc" id="L170">				user = pm.getObjectById(User.class, userData.getLogin());</span>
+<span class="fc" id="L171">			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {</span>
+
+<span class="fc" id="L173">				LoggerFile.log(Level.SEVERE, jonfe.getMessage());</span>
+			}
+<span class="fc" id="L175">			System.out.println(&quot;User: &quot; + user);</span>
+<span class="fc bfc" id="L176" title="All 2 branches covered.">			if (user != null) {</span>
+		
+<span class="fc" id="L178">				LoggerFile.log(Level.INFO, &quot;Setting password user: &quot; + user);</span>
+<span class="fc" id="L179">				user.setPassword(userData.getPassword());</span>
+	
+<span class="fc" id="L181">			} else {</span>
+				
+<span class="fc" id="L183">				user = new User(userData.getLogin(), userData.getPassword(), userData.getCardNumber(),</span>
+<span class="fc" id="L184">						userData.getAge(), userData.getExpenseLimit());</span>
+<span class="fc" id="L185">				pm.makePersistent(user);</span>
+<span class="fc" id="L186">				LoggerFile.log(Level.INFO, &quot;User created: &quot; + user);</span>
+				
+			}
+<span class="fc" id="L189">			tx.commit();</span>
+<span class="fc" id="L190">			return Response.ok().build();</span>
+		} finally {
+<span class="pc bpc" id="L192" title="1 of 2 branches missed.">			if (tx.isActive()) {</span>
+<span class="nc" id="L193">				tx.rollback();</span>
+			}
+
+		}
+	}
+
+	/**
+	 * SHOW EXPENSE.\n This method returns all the expenses related to a concrete
+	 * user. This method is called from the es.deusto.client.ExampleClient class and
+	 * the user is the one that is logged in\n It should return ALL the expenses
+	 * related to one user and in order to do that a SET&lt;ExpenseData&gt; is created so
+	 * we can return all the info.
+	 * 
+	 * @param userData - the user that is logged in
+	 * @return it will return a set of expenses
+	 */
+	@POST
+	@Path(&quot;/showExpenses&quot;)
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response showExpenses(UserData userData) {
+
+		try {
+<span class="fc" id="L215">			tx.begin();</span>
+			// ExpenseList expenses = new ExpenseList();
+<span class="fc" id="L217">			ExpenseList expenseList = new ExpenseList();</span>
+<span class="fc" id="L218">			Set&lt;ExpenseData&gt; expenses = new HashSet&lt;ExpenseData&gt;();</span>
+<span class="fc" id="L219">			User user = null;</span>
+
+			try {
+
+<span class="fc" id="L223">				user = pm.getObjectById(User.class, userData.getLogin());</span>
+<span class="pc bpc" id="L224" title="1 of 2 branches missed.">				if (user != null) {</span>
+<span class="pc bpc" id="L225" title="1 of 2 branches missed.">					for (Expense e : user.getMessages()) {</span>
+<span class="nc" id="L226">						ExpenseData exp = new ExpenseData();</span>
+<span class="nc" id="L227">						exp.setText(e.getText());</span>
+<span class="nc" id="L228">						exp.setAmount(e.getAmount());</span>
+<span class="nc" id="L229">						exp.setCategory(e.getCategory());</span>
+<span class="nc" id="L230">						expenses.add(exp);</span>
+					}
+<span class="fc" id="L232">					expenseList.setExpenseList(expenses);</span>
+				}
+
+<span class="pc" id="L235">			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {</span>
+<span class="nc" id="L236">				LoggerFile.log(Level.SEVERE, jonfe.getMessage());</span>
+				// System.out.println(&quot;Exception launched: &quot; + jonfe.getMessage());
+			}
+
+<span class="fc" id="L240">			tx.commit();</span>
+<span class="fc" id="L241">			return Response.ok().entity(expenseList).build();</span>
+
+		} finally {
+<span class="pc bpc" id="L244" title="1 of 2 branches missed.">			if (tx.isActive()) {</span>
+<span class="nc" id="L245">				tx.rollback();</span>
+			}
+		}
+
+	}
+
+	/**
+	 * UPDATE THE INFO OF A USER\n
+	 * This method makes possible for the user to update some of the information and update it inside the BD
+	 * 
+	 * @param userData -&gt; the user that is logged in after the changes made in the window
+	 * @return the suer with the changes
+	 */
+
+	@POST
+	@Path(&quot;/update&quot;)
+	@Produces(&quot;application/json&quot;)
+	public Response updateuser(UserData userData) {
+		try {
+<span class="fc" id="L264">			tx.begin();</span>
+<span class="fc" id="L265">			User user = null;</span>
+			
+			try {
+<span class="fc" id="L268">				user = pm.getObjectById(User.class, userData.getLogin());</span>
+<span class="fc" id="L269">				pm.retrieve(user);</span>
+<span class="pc" id="L270">			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {</span>
+				
+<span class="nc" id="L272">				LoggerFile.log(Level.SEVERE, jonfe.getMessage());</span>
+			}
+			
+<span class="pc bpc" id="L275" title="1 of 2 branches missed.">			if (user != null) {</span>
+			
+<span class="fc" id="L277">				user.setLogin(userData.getLogin());</span>
+<span class="fc" id="L278">				user.setPassword(userData.getPassword());</span>
+<span class="fc" id="L279">				user.setCardNumber(userData.getCardNumber());</span>
+<span class="fc" id="L280">				user.setAge(userData.getAge());</span>
+<span class="fc" id="L281">				user.setExpenseLimit(userData.getExpenseLimit());</span>
+<span class="fc" id="L282">				pm.makePersistent(user); </span>
+<span class="fc" id="L283">				tx.commit();</span>
+
+			} 
+		
+<span class="fc" id="L287">			return Response.ok().entity(userData).build();</span>
+		} finally {
+<span class="pc bpc" id="L289" title="1 of 2 branches missed.">			if (tx.isActive()) {</span>
+<span class="nc" id="L290">				tx.rollback();</span>
+			}
+
+		}
+	}
+
+	/**
+	 * This method erases from the DB a user and all his or her information
+	 * @param userData
+	 * @return
+	 */
+	@POST
+	@Path(&quot;/deleteUser&quot;)
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response deleteUser(UserData userData) {
+		try {
+<span class="fc" id="L306">			tx.begin();</span>
+<span class="fc" id="L307">			User user = null;</span>
+<span class="fc" id="L308">			user = pm.getObjectById(User.class, userData.getLogin());</span>
+<span class="fc" id="L309">			pm.deletePersistentAll(user);</span>
+<span class="fc" id="L310">			tx.commit();</span>
+			
+<span class="fc" id="L312">		} finally {</span>
+<span class="pc bpc" id="L313" title="1 of 2 branches missed.">			if (tx.isActive()) {</span>
+<span class="nc" id="L314">				tx.rollback();</span>
+			}
+		}
+<span class="fc" id="L317">		return Response.ok().build();</span>
+	}
+
+	
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
