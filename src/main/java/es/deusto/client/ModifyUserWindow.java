@@ -16,7 +16,7 @@ public class ModifyUserWindow extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JFrame frame; 
-	private JButton buttonUpdate, buttonReturn, deleteExpense; 
+	private JButton buttonUpdate, buttonReturn, deleteUser; 
 	
 	
 
@@ -92,16 +92,17 @@ public class ModifyUserWindow extends JFrame {
 			}
 		});
 
-		deleteExpense = new JButton(client.getResourceBundle().getString("deleteExpense")); 
-        registerPanel.add(deleteExpense); 
-        this.deleteExpense.addActionListener(new ActionListener(){
+		deleteUser = new JButton(client.getResourceBundle().getString("deleteUser")); 
+        registerPanel.add(deleteUser); 
+        this.deleteUser.addActionListener(new ActionListener(){
             @Override
 			public void actionPerformed(ActionEvent e) {
-                logger.info("Entering Action Listener of the deleteExpense");
+                logger.info("Entering Action Listener of the deleteUser");
 			
                 
 				setVisible(false);
                 client.deleteUser(userData);
+				LoginWindow lw = new LoginWindow(client);
 				
 			}		
         });
