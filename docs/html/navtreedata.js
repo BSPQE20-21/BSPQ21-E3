@@ -23,7 +23,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_add_expense_window_8java.html",
-"classes_1_1deusto_1_1server_1_1jdo_1_1_expense.html#a3e6eb52eb523e57019cc5680dd10ccb9"
+"classes_1_1deusto_1_1server_1_1jdo_1_1_expense.html#a5fc577cffd2b708187c199ce2e8f0770"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

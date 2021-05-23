@@ -15,5 +15,6 @@ var classes_1_1deusto_1_1server_1_1jdo_1_1_user_perf_test =
     [ "testSetLogin", "classes_1_1deusto_1_1server_1_1jdo_1_1_user_perf_test.html#a10a1fd4974dd2062711534ebb76d76f9", null ],
     [ "testSetPassword", "classes_1_1deusto_1_1server_1_1jdo_1_1_user_perf_test.html#a0ed777a0ed7150eb0a748b90959b5d0b", null ],
     [ "testToString", "classes_1_1deusto_1_1server_1_1jdo_1_1_user_perf_test.html#a6744a929575c948f3a725bc07ea17dd6", null ],
-    [ "testUser", "classes_1_1deusto_1_1server_1_1jdo_1_1_user_perf_test.html#a556ef1732826be65497e0979bb7d063a", null ]
+    [ "testUser", "classes_1_1deusto_1_1server_1_1jdo_1_1_user_perf_test.html#a556ef1732826be65497e0979bb7d063a", null ],
+    [ "rule", "classes_1_1deusto_1_1server_1_1jdo_1_1_user_perf_test.html#af2b161e23a713f11bdff3f0c2a2b7801", null ]
 ];

@@ -25,7 +25,7 @@ a:hover {
 
 body {
 	line-height: 1.75em;
-	background: #A9D0D6;
+	background: #e8978b;
 	font-size: 11.5pt;
 	color: #5A6466;
 }
@@ -99,7 +99,7 @@ a {
 #footer {
 	padding: 50px 0 80px 0;
 	text-align: center;
-	text-shadow: 1px 1px 0px rgba(255,255,255,0.7);
+	text-shadow: 1px 1px 0px rgba(235, 215, 215, 0.7);
 	color: #587477;
 }
 

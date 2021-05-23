@@ -7,5 +7,6 @@ var classes_1_1deusto_1_1server_1_1_server_perf_test =
     [ "testShowExpenses", "classes_1_1deusto_1_1server_1_1_server_perf_test.html#a823b0fc7575feded84e73dc929a32399", null ],
     [ "testStoreExpense", "classes_1_1deusto_1_1server_1_1_server_perf_test.html#a1d4685eb157c172ece9a6ef9ba302696", null ],
     [ "testUpdateUser", "classes_1_1deusto_1_1server_1_1_server_perf_test.html#aeb4e8f76604acdd98213dec2e1f390d6", null ],
-    [ "testValidateUser", "classes_1_1deusto_1_1server_1_1_server_perf_test.html#a9006eeebc72b0f5aa9ee129d11a28b42", null ]
+    [ "testValidateUser", "classes_1_1deusto_1_1server_1_1_server_perf_test.html#a9006eeebc72b0f5aa9ee129d11a28b42", null ],
+    [ "rule", "classes_1_1deusto_1_1server_1_1_server_perf_test.html#a34a5221b5b0280bcdd240acb1d1f681b", null ]
 ];

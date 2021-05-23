@@ -10,5 +10,6 @@ var classes_1_1deusto_1_1server_1_1jdo_1_1_expense_perf_test =
     [ "testSetCategory", "classes_1_1deusto_1_1server_1_1jdo_1_1_expense_perf_test.html#aae4c6f0354a5537b29594b4b6d75818b", null ],
     [ "testSetText", "classes_1_1deusto_1_1server_1_1jdo_1_1_expense_perf_test.html#a17c0cf189f685579b1d74139939956d5", null ],
     [ "testSetUser", "classes_1_1deusto_1_1server_1_1jdo_1_1_expense_perf_test.html#afd633402806a32f1792407b620aac675", null ],
-    [ "testToString", "classes_1_1deusto_1_1server_1_1jdo_1_1_expense_perf_test.html#aceacce2fc2defc16179d2aa2cde8f9df", null ]
+    [ "testToString", "classes_1_1deusto_1_1server_1_1jdo_1_1_expense_perf_test.html#aceacce2fc2defc16179d2aa2cde8f9df", null ],
+    [ "rule", "classes_1_1deusto_1_1server_1_1jdo_1_1_expense_perf_test.html#a4bc33c2146c52fde7cbf361301444ecc", null ]
 ];
