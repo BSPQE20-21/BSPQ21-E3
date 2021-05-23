@@ -261,21 +261,34 @@
 				<version>3.2.0</version>
 				<executions>
 				  <execution>
-					<id>copy-resources</id>
+					<id>copy-resources1</id>
 					<!-- here the phase you need -->
 					<phase>validate</phase>
 					<goals>
 					  <goal>copy-resources</goal>
 					</goals>
 					<configuration>
-					<outputDirectory>${basedir}/docs/contiperf</outputDirectory>
+					
+					 <outputDirectory>${basedir}/docs/contiperf</outputDirectory>
 					  <resources>          
 						<resource>
 						  <directory>${basedir}/target/contiperf-report</directory>
 						  <filtering>true</filtering>
 						</resource>
 					  </resources>
+					
 
+					</configuration>            
+				  </execution>
+				  <execution>
+					<id>copy-resources2</id>
+					<!-- here the phase you need -->
+					<phase>validate</phase>
+					<goals>
+					  <goal>copy-resources</goal>
+					</goals>
+					<configuration>
+		
 					  <outputDirectory>${basedir}/docs/jacoco</outputDirectory>
 					  <resources>          
 						<resource>
@@ -283,11 +296,10 @@
 						  <filtering>true</filtering>
 						</resource>
 					  </resources>
-
-					  
-
+	
 					</configuration>            
 				  </execution>
+
 				</executions>
 			  </plugin>
 			
